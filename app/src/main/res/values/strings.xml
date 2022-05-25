@@ -3,4 +3,18 @@
     <string name="hello">Hello</string>
     <string name="sample">Your phones\'s Lock Screen displays status information and latest notification. \n\nYou can choose what the Lock Screen Displays</string>
     <string name="continu">Continue</string>
+    <string name="start">Start</string>
+    <string name="send">Send</string>
+    <string name="notificationSend">Tap the SEND button to post a notification.</string>
+    <string name="notificationSentChangeText">Swipe down from top to open Notifications list, and tap on the Simm notification to return to this activity.</string>
+    <string name="tapHere">Tap Here</string>
+    <string name="tapHereFull">Tap here to finish the Notifications activity.</string>
+    <string name="notification_channel">Notification learning session</string>
+    <string name="channel_description">This channel is for the notification learning activity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
+    <string name="notificationResult">Good! You finished your first notification exercise.</string>
+
+
 </resources>

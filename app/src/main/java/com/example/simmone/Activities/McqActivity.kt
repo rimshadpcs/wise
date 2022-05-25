@@ -11,7 +11,7 @@ import java.io.IOException
 import java.nio.charset.Charset
 
 class McqActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityMcqBinding
+    private lateinit var mcqBinding: ActivityMcqBinding
     private var currentQuestion = 0
     private var correct = 0
     private var incorrect = 1
@@ -19,8 +19,8 @@ class McqActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMcqBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        mcqBinding = ActivityMcqBinding.inflate(layoutInflater)
+        setContentView(mcqBinding.root)
 
         //load all questions
         this.loadAllQuestions()
@@ -28,7 +28,7 @@ class McqActivity : AppCompatActivity() {
         //load first question
         setQuestionOnPage(currentQuestion)
 
-        binding.btChoice1.setOnClickListener { //check if the answer is correct
+        mcqBinding.btChoice1.setOnClickListener { //check if the answer is correct
             if (questionItems[currentQuestion].choice1 == questionItems[currentQuestion].answer
             ) {
                 correct++
@@ -48,7 +48,8 @@ class McqActivity : AppCompatActivity() {
 
             }
         }
-        binding.btChoice2.setOnClickListener { //check if the answer is correct
+        //click handling
+        mcqBinding.btChoice2.setOnClickListener { //check if the answer is correct
             if (questionItems[currentQuestion].choice2 == questionItems[currentQuestion].answer
             ) {
                 correct++
@@ -67,7 +68,7 @@ class McqActivity : AppCompatActivity() {
                 Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
             }
         }
-        binding.btChoice3.setOnClickListener { //check if the answer is correct
+        mcqBinding.btChoice3.setOnClickListener { //check if the answer is correct
             if (questionItems[currentQuestion].choice3 == questionItems[currentQuestion].answer
             ) {
                 correct++
@@ -85,7 +86,7 @@ class McqActivity : AppCompatActivity() {
                 Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
             }
         }
-        binding.btChoice4.setOnClickListener { //check if the answer is correct
+        mcqBinding.btChoice4.setOnClickListener { //check if the answer is correct
             if (questionItems[currentQuestion].choice4 == questionItems[currentQuestion].answer
             ) {
                 correct++
@@ -106,11 +107,11 @@ class McqActivity : AppCompatActivity() {
 
     }
     private fun setQuestionOnPage(number: Int) {
-        binding.tvQuestion.text = questionItems[number].question
-        binding.btChoice1.text = questionItems[number].choice1
-        binding.btChoice2.text = questionItems[number].choice2
-        binding.btChoice3.text = questionItems[number].choice3
-        binding.btChoice4.text = questionItems[number].choice4
+        mcqBinding.tvQuestion.text = questionItems[number].question
+        mcqBinding.btChoice1.text = questionItems[number].choice1
+        mcqBinding.btChoice2.text = questionItems[number].choice2
+        mcqBinding.btChoice3.text = questionItems[number].choice3
+        mcqBinding.btChoice4.text = questionItems[number].choice4
     }
 
     private fun loadAllQuestions(){
