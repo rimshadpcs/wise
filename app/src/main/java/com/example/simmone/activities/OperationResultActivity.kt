@@ -1,9 +1,8 @@
-package com.example.simmone.Activities
+package com.example.simmone.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.simmone.R
 import com.example.simmone.databinding.ActivityOperationResultBinding
 
 class OperationResultActivity : AppCompatActivity() {
@@ -17,6 +16,7 @@ class OperationResultActivity : AppCompatActivity() {
         
         operationResultBinding.btNext.setOnClickListener{
             val intent = Intent(this,McqActivity::class.java)
+            intent.putExtra("FROM", 1)
             startActivity(intent)
         }
 

@@ -1,9 +1,8 @@
-package com.example.simmone.Activities
+package com.example.simmone.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.simmone.R
 import com.example.simmone.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
 
         mainBinding.btStart.setOnClickListener{
-            val intent = Intent(this, OperationActivity::class.java)
+            val intent = Intent(this, BubbleSample::class.java)
             startActivity(intent)
         }
     }

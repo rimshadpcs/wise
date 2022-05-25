@@ -1,9 +1,8 @@
-package com.example.simmone.Activities
+package com.example.simmone.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.simmone.R
 import com.example.simmone.databinding.ActivityBubbleSampleBinding
 
 class BubbleSample : AppCompatActivity() {
@@ -16,7 +15,9 @@ class BubbleSample : AppCompatActivity() {
 
         bubbleBinding.btContinue.setOnClickListener{
             val intent = Intent(this, McqActivity::class.java)
+            intent.putExtra("FROM", 0)
             startActivity(intent)
+
         }
 
     }

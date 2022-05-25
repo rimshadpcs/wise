@@ -1,4 +1,4 @@
-package com.example.simmone.Activities
+package com.example.simmone.activities
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -27,12 +27,13 @@ class OperationActivity : AppCompatActivity() {
         operationBinding = ActivityOperationBinding.inflate(layoutInflater)
         setContentView(operationBinding.root)
 
+        /* button click to send notification*/
         operationBinding.btSend.setOnClickListener {
             operationBinding.tvNotificationSend.text = getText(com.example.simmone.R.string.notificationSentChangeText)
             this.sendNotificationToDevice()
         }
     }
-
+    /* The notification part for learning session 1 STARTS here*/
     //notification channel required by newer versions
     fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -65,10 +66,10 @@ class OperationActivity : AppCompatActivity() {
             .setContentIntent(pendingIntent)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
 
-        with(NotificationManagerCompat.from(this)){
-            notify(notificationId,builder.build())
+        with(NotificationManagerCompat.from(this)) {
+            notify(notificationId, builder.build())
         }
-
-
     }
+    /* The notification part for learning session 1 ENDS here*/
+
 }

@@ -1,0 +1,20 @@
+{
+  "questions": [
+    {
+      "question": "If you want to zoom into a photo in your phone, which one of the following will you use?",
+      "choice1":"Volume buttons",
+      "choice2":"Multitouch gesture",
+      "choice3":"Shaking the phone",
+      "choice4":"Power button",
+      "answer":"Multitouch gesture"
+    },
+    {
+      "question": "To get information from a QR code, you need to:?",
+      "choice1":"Scan it with your phone’s camera",
+      "choice2":"Enable access to microphone",
+      "choice3":"Enable Bluetooth networking in Quick Settings",
+      "choice4":"Connect your phone to a PC",
+      "answer":"Scan it with your phone’s camera"
+    }
+]
+}

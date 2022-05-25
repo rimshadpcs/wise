@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.BubbleSample">
+    tools:context=".activities.BubbleSample">
 
 
     <ImageView
@@ -16,7 +16,8 @@
         android:src="@drawable/boy"
         tools:ignore="MissingConstraints"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo">
     </ImageView>
 
     <TextView

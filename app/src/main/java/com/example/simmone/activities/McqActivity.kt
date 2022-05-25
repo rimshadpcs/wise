@@ -1,9 +1,10 @@
-package com.example.simmone.Activities
+package com.example.simmone.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.simmone.Data.QuestionItem
+import com.example.simmone.data.QuestionItem
 import com.example.simmone.databinding.ActivityMcqBinding
 import org.json.JSONException
 import org.json.JSONObject
@@ -28,6 +29,7 @@ class McqActivity : AppCompatActivity() {
         //load first question
         setQuestionOnPage(currentQuestion)
 
+        // BUTTON 1 Click
         mcqBinding.btChoice1.setOnClickListener { //check if the answer is correct
             if (questionItems[currentQuestion].choice1 == questionItems[currentQuestion].answer
             ) {
@@ -44,11 +46,18 @@ class McqActivity : AppCompatActivity() {
                 currentQuestion++
                 setQuestionOnPage(currentQuestion)
             } else {
-                Toast.makeText(this@McqActivity, "next", Toast.LENGTH_SHORT).show()
-
+                if (intent.getIntExtra("FROM", 0) == 0) {
+                    Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, OperationActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
-        //click handling
+
+        // BUTTON 2 Click
         mcqBinding.btChoice2.setOnClickListener { //check if the answer is correct
             if (questionItems[currentQuestion].choice2 == questionItems[currentQuestion].answer
             ) {
@@ -60,14 +69,23 @@ class McqActivity : AppCompatActivity() {
                 Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
             }
 
-            // load next question if any
+            // load next question if any else switch to next page
             if (currentQuestion < questionItems.size - 1) {
                 currentQuestion++
                 setQuestionOnPage(currentQuestion)
             } else {
-                Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
+                if (intent.getIntExtra("FROM", 0) == 0) {
+                    Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, OperationActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
+
+        // BUTTON 3 Click
         mcqBinding.btChoice3.setOnClickListener { //check if the answer is correct
             if (questionItems[currentQuestion].choice3 == questionItems[currentQuestion].answer
             ) {
@@ -83,9 +101,18 @@ class McqActivity : AppCompatActivity() {
                 currentQuestion++
                 setQuestionOnPage(currentQuestion)
             } else {
-                Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
+                if (intent.getIntExtra("FROM", 0) == 0) {
+                    Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, OperationActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
+
+        // BUTTON 4 Click
         mcqBinding.btChoice4.setOnClickListener { //check if the answer is correct
             if (questionItems[currentQuestion].choice4 == questionItems[currentQuestion].answer
             ) {
@@ -101,11 +128,19 @@ class McqActivity : AppCompatActivity() {
             if (currentQuestion < questionItems.size - 1) {
                 currentQuestion++
                 setQuestionOnPage(currentQuestion)
-            } else Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                if(intent.getIntExtra("FROM",0)==0){
+                    Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, OperationActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+            //val intent = Intent(this, OperationActivity::class.java)
+            //startActivity(intent)
+            //else Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
         }
-
-
-    }
+  }
     private fun setQuestionOnPage(number: Int) {
         mcqBinding.tvQuestion.text = questionItems[number].question
         mcqBinding.btChoice1.text = questionItems[number].choice1
@@ -115,39 +150,47 @@ class McqActivity : AppCompatActivity() {
     }
 
     private fun loadAllQuestions(){
-        questionItems = ArrayList()
-        val jsonStr = "questions.json".loadJSONFromAsset()
+        var jsonStr: String? = null
 
+        if(intent.getIntExtra("FROM", 0) == 0){
+             jsonStr = "mcq1.json".loadJSONFromAsset()
+        }
+        else if(intent.getIntExtra("FROM", 1) == 1){
+             jsonStr = "mcq2.json".loadJSONFromAsset()
+
+        }
+        questionItems = ArrayList()
+        //val jsonStr = "mcq1.json".loadJSONFromAsset()
         // load all data into list
         try {
-            val jsonObject = JSONObject(jsonStr)
-            val questions = jsonObject.getJSONArray("questions")
-            for (i in 0 until questions.length()) {
-                val question = questions.getJSONObject(i)
-                val questionString = question.getString("question")
-                val choice1String = question.getString("choice1")
-                val choice2String = question.getString("choice2")
-                val choice3String = question.getString("choice3")
-                val choice4String = question.getString("choice4")
-                val answer = question.getString("answer")
-                questionItems.add(
-                    QuestionItem(
-                        questionString,
-                        choice1String,
-                        choice2String,
-                        choice3String,
-                        choice4String,
-                        answer
+            val jsonObject = jsonStr?.let { JSONObject(it) }
+            val questions = jsonObject?.getJSONArray("questions")
+            if (questions != null) {
+                for (i in 0 until questions.length()) {
+                    val question = questions.getJSONObject(i)
+                    val questionString = question.getString("question")
+                    val choice1String = question.getString("choice1")
+                    val choice2String = question.getString("choice2")
+                    val choice3String = question.getString("choice3")
+                    val choice4String = question.getString("choice4")
+                    val answer = question.getString("answer")
+                    questionItems.add(
+                        QuestionItem(
+                            questionString,
+                            choice1String,
+                            choice2String,
+                            choice3String,
+                            choice4String,
+                            answer
+                        )
                     )
-                )
+                }
             }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
     }
-
-
-    private fun String.loadJSONFromAsset(): String {
+ private fun String.loadJSONFromAsset(): String {
         val charset: Charset = Charsets.UTF_8
         var json = ""
         try {
