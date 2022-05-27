@@ -15,6 +15,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="next">Next</string>
     <string name="notificationResult">Good! You finished your first notification exercise.</string>
+    <string name="todo">TODO</string>
 
 
 </resources>

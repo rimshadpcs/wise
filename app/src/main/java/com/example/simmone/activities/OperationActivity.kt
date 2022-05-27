@@ -3,6 +3,7 @@ package com.example.simmone.activities
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.app.PendingIntent.*
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -29,16 +30,16 @@ class OperationActivity : AppCompatActivity() {
 
         /* button click to send notification*/
         operationBinding.btSend.setOnClickListener {
-            operationBinding.tvNotificationSend.text = getText(com.example.simmone.R.string.notificationSentChangeText)
+            operationBinding.tvNotificationSend.text = getText(R.string.notificationSentChangeText)
             this.sendNotificationToDevice()
         }
     }
     /* The notification part for learning session 1 STARTS here*/
     //notification channel required by newer versions
-    fun createNotificationChannel() {
+    private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = getString(com.example.simmone.R.string.notification_channel)
-            val descriptionText = getString(com.example.simmone.R.string.channel_description)
+            val name = getString(R.string.notification_channel)
+            val descriptionText = getString(R.string.channel_description)
             val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
                 description = descriptionText
@@ -54,13 +55,18 @@ class OperationActivity : AppCompatActivity() {
         val intent = Intent(this,OperationResultActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
-        val pendingIntent: PendingIntent = PendingIntent.getActivity(this,0, intent,0)
-        val bitmap = BitmapFactory.decodeResource(applicationContext.resources, R.drawable.boy)
 
-        val notificationTitle = resources.getString(com.example.simmone.R.string.tapHere)
-        val notificationContent = resources.getString(com.example.simmone.R.string.tapHereFull)
+        val pendingIntent: PendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getActivity(this,0, intent,FLAG_IMMUTABLE)
+        } else {
+            getActivity(this,0,intent, FLAG_UPDATE_CURRENT)
+        }
+        BitmapFactory.decodeResource(applicationContext.resources, R.drawable.boy)
+
+        val notificationTitle = resources.getString(R.string.tapHere)
+        val notificationContent = resources.getString(R.string.tapHereFull)
         val builder = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(com.example.simmone.R.drawable.boy)
+            .setSmallIcon(R.drawable.boy)
             .setContentTitle(notificationTitle)
             .setContentText(notificationContent)
             .setContentIntent(pendingIntent)

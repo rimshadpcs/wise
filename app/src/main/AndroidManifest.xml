@@ -18,7 +18,8 @@
             android:exported="false" />
         <activity
             android:name=".activities.OperationActivity"
-            android:exported="false" />
+            android:exported="false"
+            />
         <activity
             android:name=".activities.BubbleSample"
             android:exported="false" />
