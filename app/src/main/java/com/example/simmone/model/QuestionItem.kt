@@ -1,4 +1,4 @@
-package com.example.simmone.data
+package com.example.simmone.model
 
 class QuestionItem(
     val question: String,

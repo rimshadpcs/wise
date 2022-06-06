@@ -4,6 +4,7 @@
     package="com.example.simmone">
 
     <application
+        android:name="com.example.simmone.BaseApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,25 +15,26 @@
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
         <activity
-            android:name=".activities.OperationResultActivity"
+            android:name=".view.OperationResultActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.OperationActivity"
+            android:name=".view.OperationActivity"
             android:exported="false"
             />
         <activity
-            android:name=".activities.BubbleSample"
+            android:name=".view.BubbleSample"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".view.McqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.McqActivity" />
     </application>
 
 </manifest>

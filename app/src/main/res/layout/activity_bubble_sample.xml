@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.BubbleSample">
+    tools:context=".view.BubbleSample">
 
 
     <ImageView
         android:id="@+id/iv_simm"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="250sp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/boy"
+        android:src="@drawable/simm_full_body"
         tools:ignore="MissingConstraints"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.OperationActivity">
+    tools:context=".view.OperationActivity">
   <TextView
       android:id="@+id/tv_notificationSend"
       android:layout_width="match_parent"
