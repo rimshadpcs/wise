@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "question": "You are out shopping in a store, and you want to open the store’s website on your phone. An easy way to do this is to:",
+      "choice1":"connect a USB storage device to your phone",
+      "choice2":"look for a QR code in the store and scan it with your phone’s camera",
+      "choice3":"send an SMS",
+      "choice4":"download a new app",
+      "answer":"look for a QR code in the store and scan it with your phone’s camera"
+    },
+    {
+      "question": "To open Quick Settings, you should do this on your phone:",
+      "choice1":"Double-click the power button",
+      "choice2":"Type Quick Settings in search bar",
+      "choice3":"Swipe right on home screen",
+      "choice4":"Swipe down from top of screen",
+      "answer":"Swipe down from top of screen"
+    },
+    {
+      "question": "An easy way to turn on/off your phone's torch is:",
+      "choice1":"Download an app from the store",
+      "choice2":"Open the system settings",
+      "choice3":"Tap an icon in Quick Settings",
+      "choice4":"Take a photo",
+      "answer":"Tap an icon in Quick Settings"
+    }
+  ]
+}
