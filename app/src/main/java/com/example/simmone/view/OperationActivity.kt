@@ -23,9 +23,8 @@ class OperationActivity : AppCompatActivity() {
             WorkManager
                 .getInstance(this)
                 .enqueue(notificationWorker)
-
         }
 
-
     }
+
 }

@@ -16,6 +16,7 @@
     <string name="next">Next</string>
     <string name="notificationResult">Good! You finished your first notification exercise.</string>
     <string name="todo">TODO</string>
-
+    <string name="dummyNumber">0</string>
+    <string name="sample2">Pinch out with your fingers to magnify the image</string>
 
 </resources>

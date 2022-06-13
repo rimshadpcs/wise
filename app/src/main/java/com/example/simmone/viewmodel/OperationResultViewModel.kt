@@ -2,11 +2,15 @@ package com.example.simmone.viewmodel
 
 import android.database.Observable
 import androidx.lifecycle.ViewModel
+import javax.inject.Inject
+import javax.inject.Named
 
-class OperationResultViewModel: ViewModel() {
+class OperationResultViewModel @Inject constructor(
 
+    @Named("outputMessageForNotification")outputMessageForNotification : String,
+    @Named("NextButton")NextButton : String
 
-    val outputMessage : String = ("Good! You finished your first notification exercise.")
-    val nextButton : String = ("Next")
+) : ViewModel() {
+
 
 }

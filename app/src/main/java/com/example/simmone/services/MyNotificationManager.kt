@@ -26,17 +26,16 @@ class MyNotificationManager(context: Context, workerParams: WorkerParameters):
         return Result.success()
     }
 
-    fun triggerNotify() {
+    private fun triggerNotify() {
         createNotificationChannel()
 
         val notificationStyle = NotificationCompat.BigPictureStyle()
 
-        val remotePicture = BitmapFactory.decodeResource(applicationContext.resources,R.drawable.boy)
+        val remotePicture = BitmapFactory.decodeResource(applicationContext.resources,R.drawable.simm_cover)
         notificationStyle.bigPicture(remotePicture)
-
-
         val intent = Intent(applicationContext, OperationResultActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
 
         val pendingIntent: PendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -48,8 +47,8 @@ class MyNotificationManager(context: Context, workerParams: WorkerParameters):
         val notificationContent = applicationContext.getString(R.string.tapHereFull)
         val builder = NotificationCompat.Builder(applicationContext, channelId)
             .setSmallIcon(R.drawable.simm_cover)
-            .setContentTitle(notificationTitle.toString())
-            .setContentText(notificationContent.toString())
+            .setContentTitle(notificationTitle)
+            .setContentText(notificationContent)
             .setContentIntent(pendingIntent)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
 
@@ -58,7 +57,7 @@ class MyNotificationManager(context: Context, workerParams: WorkerParameters):
         }
     }
 
-    fun createNotificationChannel() {
+    private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = R.string.notification_channel
             val descriptionText = R.string.channel_description

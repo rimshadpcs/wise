@@ -43,18 +43,33 @@ kapt {
 }
 
 dependencies {
+    // Architecture Components
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.fragment:fragment-ktx:1.4.1'
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
+    // Lifecycle components
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+
+    // UI design components
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Testing components
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation 'androidx.fragment:fragment-ktx:1.4.1'
-    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
+    //Dependency Injection
     implementation 'com.google.dagger:hilt-android:2.42'
     kapt 'com.google.dagger:hilt-compiler:2.42'
     annotationProcessor "com.google.dagger:dagger-android-processor:2.11"
+
+    // DB & Preferences
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("androidx.datastore:datastore-preferences-core:1.0.0")
+
 }
 
 kapt {
