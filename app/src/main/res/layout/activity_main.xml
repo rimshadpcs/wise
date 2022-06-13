@@ -6,6 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
     <ImageView
+        android:id="@+id/ivGold"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvGold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        tools:ignore="MissingConstraints"
+        android:src="@drawable/coin"
+        android:contentDescription="TODO" />
+    <TextView
+        android:id="@+id/tvGold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="10dp"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/pacifico"
+        android:textColor="@color/goldColor"
+        tools:ignore="MissingConstraints"
+        android:text="@string/dummyNumber"/>
+
+    <ImageView
         android:id="@+id/iv_simmMain"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -15,7 +40,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="TODO">
     </ImageView>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_start"

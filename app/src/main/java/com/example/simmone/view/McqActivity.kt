@@ -17,25 +17,19 @@ class McqActivity : AppCompatActivity() {
     private var correct = 0
     private var incorrect = 1
     private lateinit var questionItems: List<QuestionItem>
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mcqBinding = ActivityMcqBinding.inflate(layoutInflater)
         setContentView(mcqBinding.root)
-
-        if (intent.getIntExtra("FROM", 0)==0){
-            mcqModel.quizFile.value =  "mcq1.json"
-        } else if(intent.getIntExtra("FROM", 1)==1){
-            mcqModel.quizFile.value =  "mcq2.json"
+        if (intent.getIntExtra("FROM", 0) == 0) {
+            mcqModel.quizFile.value = "mcq1.json"
+        } else if (intent.getIntExtra("FROM", 0) == 1) {
+            mcqModel.quizFile.value = "mcq2.json"
         }
-
         mcqModel.mcqData.observe(this) {
-            questionItems=it
+            questionItems = it
             setQuestionOnPage()
         }
-
-        // mcqModel.quizFile.value =  "mcq5.json"
-
     }
 
     override fun onStart() {
@@ -51,113 +45,89 @@ class McqActivity : AppCompatActivity() {
         mcqBinding.btChoice4.text = questionItems[currentQuestion].choice4
 
         // BUTTON 1 Click
-        mcqBinding.btChoice1.setOnClickListener { //check if the answer is correct
-            if (questionItems[currentQuestion].choice1 == questionItems[currentQuestion].answer
-            ) {
-                correct++
-                Toast.makeText(this@McqActivity, "Well done, right answer", Toast.LENGTH_SHORT)
-                    .show()
-            } else {
-                incorrect++
-                Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
-            }
-
-            // load next question if any
-            if (currentQuestion < questionItems.size - 1) {
-                currentQuestion++
-                setQuestionOnPage()
-            } else {
-                if (intent.getIntExtra("FROM", 0) == 0) {
-                    Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, OperationActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                }
-            }
+        mcqBinding.btChoice1.setOnClickListener {
+            validateChoice1()
+            checkForNextQuestion()
         }
-
         // BUTTON 2 Click
-        mcqBinding.btChoice2.setOnClickListener { //check if the answer is correct
-            if (questionItems[currentQuestion].choice2 == questionItems[currentQuestion].answer
-            ) {
-                correct++
-                Toast.makeText(this@McqActivity, "Well done, right answer", Toast.LENGTH_SHORT)
-                    .show()
-            } else {
-                incorrect++
-                Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
-            }
-
-            // load next question if any else switch to next page
-            if (currentQuestion < questionItems.size - 1) {
-                currentQuestion++
-                setQuestionOnPage()
-            } else {
-                if (intent.getIntExtra("FROM", 0) == 0) {
-                    Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, OperationActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                }
-            }
+        mcqBinding.btChoice2.setOnClickListener {
+            validateChoice2()
+            checkForNextQuestion()
         }
-
         // BUTTON 3 Click
-        mcqBinding.btChoice3.setOnClickListener { //check if the answer is correct
-            if (questionItems[currentQuestion].choice3 == questionItems[currentQuestion].answer
-            ) {
-                correct++
-                Toast.makeText(this@McqActivity, "Well done, right answer", Toast.LENGTH_SHORT)
-                    .show()
-            } else {
-                incorrect++
-                Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
-            }
-            // load next question if any
-            if (currentQuestion < questionItems.size - 1) {
-                currentQuestion++
-                //setQuestionOnPage(currentQuestion)
-            } else {
-                if (intent.getIntExtra("FROM", 0) == 0) {
-                    Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, OperationActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                }
-            }
+        mcqBinding.btChoice3.setOnClickListener {
+            validateChoice3()
+            checkForNextQuestion()
         }
-
         // BUTTON 4 Click
-        mcqBinding.btChoice4.setOnClickListener { //check if the answer is correct
-            if (questionItems[currentQuestion].choice4 == questionItems[currentQuestion].answer
-            ) {
-                correct++
-                Toast.makeText(this@McqActivity, "Well done, right answer", Toast.LENGTH_SHORT)
-                    .show()
-            } else {
-                incorrect++
-                Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
-            }
+        mcqBinding.btChoice4.setOnClickListener {
+            validateChoice4()
+            checkForNextQuestion()
+        }
+    }
 
-            // load next question if any
-            if (currentQuestion < questionItems.size - 1) {
-                currentQuestion++
-                setQuestionOnPage()
-            }
-            else {
-                if(intent.getIntExtra("FROM",0)==0){
-                    Toast.makeText(this@McqActivity, "Game over", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, OperationActivity::class.java)
-                    startActivity(intent)
-                }
+    private fun validateChoice1(){
+        if (questionItems[currentQuestion].choice1==questionItems[currentQuestion].answer){
+            correct++
+            Toast.makeText(this@McqActivity, "Well done, right answer", Toast.LENGTH_SHORT)
+                .show()
+        }
+        else{
+            incorrect++
+            Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun validateChoice2(){
+        if (questionItems[currentQuestion].choice2 == questionItems[currentQuestion].answer
+        ) {
+            correct++
+            Toast.makeText(this@McqActivity, "Well done, right answer", Toast.LENGTH_SHORT)
+                .show()
+        } else {
+            incorrect++
+            Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun validateChoice3(){
+        if (questionItems[currentQuestion].choice3 == questionItems[currentQuestion].answer
+        ) {
+            correct++
+            Toast.makeText(this@McqActivity, "Well done, right answer", Toast.LENGTH_SHORT)
+                .show()
+        } else {
+            incorrect++
+            Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun validateChoice4(){
+        if (questionItems[currentQuestion].choice4 == questionItems[currentQuestion].answer
+        ) {
+            correct++
+            Toast.makeText(this@McqActivity, "Well done, right answer", Toast.LENGTH_SHORT)
+                .show()
+        } else {
+            incorrect++
+            Toast.makeText(this@McqActivity, "Oops, incorrect", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun checkForNextQuestion(){
+        // load next question if any
+        if (currentQuestion < questionItems.size - 1) {
+            currentQuestion++
+            setQuestionOnPage()
+        } else {
+            if (intent.getIntExtra("FROM", 0) == 0) {
+                val intent = Intent(this, OperationActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("NextSession", 2)
+                startActivity(intent)
+                finish()
             }
         }
-
     }
 }

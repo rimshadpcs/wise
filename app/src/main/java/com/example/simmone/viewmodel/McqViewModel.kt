@@ -10,18 +10,14 @@ import java.nio.charset.Charset
 class McqViewModel: ViewModel() {
 
     private var questionItems: ArrayList<QuestionItem> = ArrayList()
-
     val mcqData = MutableLiveData<List<QuestionItem>>()
     fun getMcQData(): ArrayList<QuestionItem> = questionItems
-
     var quizFile = MutableLiveData<String>()
-
 
     fun loadAllQuestions(context: Context) {
         val jsonStr = loadJSONFromAsset(context)
 
         questionItems = ArrayList()
-
         try {
             val jsonObject = JSONObject(jsonStr)
             val questions = jsonObject.getJSONArray("questions")
@@ -44,7 +40,6 @@ class McqViewModel: ViewModel() {
                     )
                 )
             }
-
             mcqData.value = questionItems
         } catch (e: JSONException) {
             e.printStackTrace()

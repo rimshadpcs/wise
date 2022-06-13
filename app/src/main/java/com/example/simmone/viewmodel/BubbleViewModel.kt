@@ -8,7 +8,6 @@ class BubbleViewModel @Inject constructor(
     @Named("bubbleSampleButton")bubbleSampleButton: String
 
 ) : ViewModel() {
-    //val startButton : String = ("Continue")
 
 
 }

@@ -10,5 +10,6 @@
     <color name="QuestionBackground">#F48FB1</color>
     <color name="choiceBackGround">#7986CB</color>
     <color name="choiceText">#66BB6A</color>
+    <color name="goldColor">#FF9800</color>
 
 </resources>

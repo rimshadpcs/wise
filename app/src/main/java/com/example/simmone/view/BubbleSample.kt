@@ -1,17 +1,17 @@
 package com.example.simmone.view
 
-import com.example.simmone.viewmodel.BubbleViewModel
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.example.simmone.databinding.ActivityBubbleSampleBinding
+import com.example.simmone.viewmodel.BubbleViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import javax.inject.Named
+
 @AndroidEntryPoint
 class BubbleSample : AppCompatActivity() {
-
     @Inject
     @Named("bubbleSampleMessage")
     lateinit var bubbleSampleMessage: String
@@ -33,7 +33,7 @@ class BubbleSample : AppCompatActivity() {
             val intent = Intent(this, McqActivity::class.java)
             intent.putExtra("FROM", 0)
             startActivity(intent)
-
+            finish()
         }
 
     }
