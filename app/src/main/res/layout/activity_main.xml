@@ -4,66 +4,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    android:background="@color/black"
+    tools:context=".view.activities.MainActivity">
+
     <ImageView
         android:id="@+id/ivGold"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/tvGold"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
-        tools:ignore="MissingConstraints"
+        android:contentDescription="@null"
         android:src="@drawable/coin"
-        android:contentDescription="TODO" />
+        app:layout_constraintEnd_toStartOf="@+id/tvGold"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvGold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="10dp"
-        android:textSize="27sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/pacifico"
+        android:fontFamily="@font/opensanssemibold"
+        android:text="@string/dummyNumber"
         android:textColor="@color/goldColor"
-        tools:ignore="MissingConstraints"
-        android:text="@string/dummyNumber"/>
-
-    <ImageView
-        android:id="@+id/iv_simmMain"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/simm_cover"
-        tools:ignore="MissingConstraints"
+        android:textSize="27sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="TODO">
-    </ImageView>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/bt_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:backgroundTint="@null"
-        android:text="@string/start"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        android:textColor="@color/choiceText"
-        app:strokeColor="@color/choiceBackGround"
-        app:cornerRadius="24dp"
-        android:textSize="20sp"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        tools:ignore="MissingConstraints">
-    </com.google.android.material.button.MaterialButton>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvGold">
 
+        <ImageView
+            android:id="@+id/ivSimmMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/simm_with_seed_framed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+
+        <ImageView
+            android:id="@+id/iv_plantMain"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/plant_stage3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ivSimmMain"
+            android:contentDescription="@null" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLaunch"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:elevation="20dp"
+        app:cardBackgroundColor="@color/launch_card_top_bg"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDailyTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:text="@string/daily_topic"
+                android:textColor="#263238"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivSessionImageBulb"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="30dp"
+                android:contentDescription="@null"
+                android:src="@drawable/light_bulb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSessionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:text="@string/notifications"
+                android:textColor="#263238"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivSessionImageBulb"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/launch_card_text_bg"
+                android:gravity="center"
+                android:fontFamily="@font/opensanssemibold"
+                android:padding="20dp"
+                android:text="@string/launch_session"
+                android:textColor="@color/launch_card_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

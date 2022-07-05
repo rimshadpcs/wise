@@ -3,6 +3,9 @@ package com.example.simmone.viewmodel
 import android.content.Context
 import androidx.lifecycle.*
 import com.example.simmone.model.QuestionItem
+import com.squareup.moshi.JsonDataException
+import com.squareup.moshi.JsonReader
+import com.squareup.moshi.Moshi
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -62,4 +65,40 @@ class McqViewModel: ViewModel() {
         }
         return json
     }
+/*
+    class MoshiJsonParseTester{
+        fun parse(reader: JsonReader): List<QuestionItem>{
+            val questions = mutableListOf<QuestionItem>()
+
+            reader.beginArray()
+            while (reader.hasNext()) {
+                var question: String  = ""
+                var choice1: String = ""
+                var choice2: String = ""
+                var choice3: String = ""
+                var choice4: String = ""
+                var answer: String = ""
+
+                reader.beginObject()
+                while (reader.hasNext()){
+                    when (reader.nextName()) {
+                        question -> question = reader.nextName()
+                        choice1 -> choice1 = reader.nextName()
+                        choice2 -> choice2 = reader.nextName()
+                        choice3 -> choice3 = reader.nextName()
+                        choice4 -> choice4 = reader.nextName()
+                    }
+                }
+                reader.endObject()
+
+                if (question == ""|| choice1 == ""){
+                    throw JsonDataException("Missing required field")
+                }
+                val questionItem = QuestionItem(question, choice1,choice2,choice3,choice4,answer)
+                questions.add(questionItem)
+            }
+            reader.endArray()
+            return questions
+        }
+    }*/
 }

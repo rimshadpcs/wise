@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    tools:context=".view.fragments.RightBottomSheetDialog"
+    android:background="@color/bottom_sheet_right"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvInCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/correct"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTheQuestionRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:text="@string/the_right_answer"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvCorrectAnswerRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/answer"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btContinueMcqRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:background="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:text="@string/continu"
+        android:layout_marginBottom="20dp"
+        android:paddingStart="70dp"
+        android:paddingEnd="70dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+</LinearLayout>

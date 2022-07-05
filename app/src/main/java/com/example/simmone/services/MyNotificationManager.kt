@@ -13,7 +13,7 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.example.simmone.R
-import com.example.simmone.view.OperationResultActivity
+import com.example.simmone.view.activities.OperationResultActivity
 
 
 class MyNotificationManager(context: Context, workerParams: WorkerParameters):

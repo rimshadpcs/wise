@@ -5,8 +5,8 @@
     <string name="continu">Continue</string>
     <string name="start">Start</string>
     <string name="send">Send</string>
-    <string name="notificationSend">Tap the SEND button to post a notification.</string>
-    <string name="notificationSentChangeText">Swipe down from top to open Notifications list, and tap on the Simm notification to return to this activity.</string>
+    <string name="notificationSend">Time to look at a \nreal notification,\n\nTap the button Below.</string>
+    <string name="notificationSentChangeText">Now tap on the \nnotification to \nfinish the session…</string>
     <string name="tapHere">Tap Here</string>
     <string name="tapHereFull">Tap here to finish the Notifications activity.</string>
     <string name="notification_channel">Notification learning session</string>
@@ -18,5 +18,20 @@
     <string name="todo">TODO</string>
     <string name="dummyNumber">0</string>
     <string name="sample2">Pinch out with your fingers to magnify the image</string>
+    <string name="True">True</string>
+    <string name="False">False</string>
+    <string name="sampleQuestionForTrueOrFalse">Virus is a computer program unintentionally designed to cause annoyance or damage hardware or software.</string>
+    <string name="finish_session">Finish Session</string>
+    <string name="well_done_you_finished_successfully">Well Done, you finished successfully</string>
+    <string name="what_are_the_different_options_of_permissions_you_can_give_apps">What are the different options of permissions you can give apps?</string>
+    <string name="sort_them_based_on_true_and_false">Sort them based on True and false</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect!</string>
+    <string name="daily_topic">Daily topic</string>
+    <string name="notifications">Notifications</string>
+    <string name="launch_session">Launch Session</string>
+    <string name="the_right_answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="answer">answer</string>
+
 
 </resources>

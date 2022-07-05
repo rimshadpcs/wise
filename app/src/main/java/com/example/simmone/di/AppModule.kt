@@ -27,14 +27,6 @@ object AppModule{
         @ApplicationContext context: Context): String = context.getString(R.string.continu)
     /*Bubble sample string resources ENDS here*/
 
-    /* MainActivity string resources STARTS here*/
-    @Singleton
-    @Provides
-    @Named("continueButton")
-    fun provideContinueButton(
-        @ApplicationContext context: Context): String = context.getString(R.string.continu)
-    /* MainActivity string resources ENDS here*/
-
     /* OperationResultActivity string resources STARTS here*/
     @Singleton
     @Provides
