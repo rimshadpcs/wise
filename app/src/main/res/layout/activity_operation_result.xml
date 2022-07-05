@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.OperationResultActivity">
+    tools:context=".view.activities.OperationResultActivity">
     <ImageView
         android:id="@+id/iv_wellDone"
         android:layout_width="150dp"
@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="100dp"
-        android:contentDescription="TODO">
+        android:contentDescription="@null">
     </ImageView>
     <TextView
         android:id="@+id/tvResult"

@@ -1,4 +1,4 @@
-package com.example.simmone.view
+package com.example.simmone.view.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -31,7 +31,7 @@ class OperationResultActivity : AppCompatActivity() {
         operationResultBinding.btNext.text = nextButton
 
         operationResultBinding.btNext.setOnClickListener{
-            val intent = Intent(this,McqActivity::class.java)
+            val intent = Intent(this, McqActivity::class.java)
             intent.putExtra("FROM", 1)
             startActivity(intent)
             finish()

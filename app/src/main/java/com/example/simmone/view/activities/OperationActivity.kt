@@ -1,4 +1,4 @@
-package com.example.simmone.view
+package com.example.simmone.view.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.work.*

@@ -14,21 +14,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
+
         <activity
-            android:name=".view.OperationResultActivity"
+            android:name=".view.activities.EndSessionActivity"
             android:exported="false" />
         <activity
-            android:name=".view.OperationActivity"
-            android:exported="false"
-            />
-        <activity
-            android:name=".view.BubbleSample"
+            android:name=".view.activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.McqActivity"
+            android:name=".view.activities.OperationResultActivity"
             android:exported="false" />
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.activities.OperationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.BubbleSample"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.McqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.TrueOrFalseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

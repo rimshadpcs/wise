@@ -3,13 +3,40 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../layout/custom_preview.xml" value="0.29030797101449274" />
+        <entry key="../Library/Android/sdk/platforms/android-32/data/res/layout/activity_list_item.xml" value="0.2543822146216332" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_corner.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_corner_red.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/chip_statement.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/chips.xml" value="0.11911773681640625" />
+        <entry key="app/src/main/res/drawable/choice_1.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/choice_2.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/choice_3.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/choice_4.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/gradient.xml" value="0.269" />
         <entry key="app/src/main/res/font/lobster.xml" value="0.3390625" />
-        <entry key="app/src/main/res/layout/activity_bubble_sample.xml" value="0.18032786885245902" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_mcq.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_operation.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_bubble_sample.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_end_session.xml" value="0.26226959228515623" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5608688354492188" />
+        <entry key="app/src/main/res/layout/activity_mcq.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_operation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_operation_result.xml" value="0.28892822265625007" />
+        <entry key="app/src/main/res/layout/activity_question_sort.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_right_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_test.xml" value="0.17794253938832252" />
+        <entry key="app/src/main/res/layout/activity_true_or_false.xml" value="0.16883178710937502" />
+        <entry key="app/src/main/res/layout/activity_wrong_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_wrong_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_large_news.xml" value="0.17794253938832252" />
+        <entry key="app/src/main/res/layout/right_bottom_sheet.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/right_dialog.xml" value="0.2543822146216332" />
+        <entry key="app/src/main/res/layout/statement_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/wrong_bottom_sheet.xml" value="0.18946228027343753" />
+        <entry key="app/src/main/res/layout/wrong_dialog.xml" value="0.2543822146216332" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.483" />
       </map>
     </option>
   </component>

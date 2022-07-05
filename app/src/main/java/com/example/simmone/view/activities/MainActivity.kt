@@ -1,30 +1,26 @@
-package com.example.simmone.view
+package com.example.simmone.view.activities
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.asLiveData
 import com.example.simmone.dataStore.GoldManager
 import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityMainBinding
+import com.example.simmone.view.fragments.RightBottomSheetDialog
 import com.example.simmone.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import javax.inject.Inject
-import javax.inject.Named
-
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
   lateinit var goldManager: GoldManager
     private lateinit var mainBinding: ActivityMainBinding
     private val mainModel : MainViewModel by viewModels()
-    @Inject
-    @Named("continueButton")
-    lateinit var continueButton: String
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +31,13 @@ class MainActivity : AppCompatActivity() {
 
         incrementReward(intent.getIntExtra("NextSession", 0))
 
-        mainBinding.btStart.text = continueButton
-        mainBinding.btStart.setOnClickListener{
+        mainBinding.cvLaunch.setOnClickListener{
             val intent = Intent(this, BubbleSample::class.java)
             startActivity(intent)
         }
+
+//        val modalBottomSheet = RightBottomSheetDialog()
+//        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)
     }
 
     private fun incrementReward(nextSession : Int){
