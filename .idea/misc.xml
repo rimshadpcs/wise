@@ -23,10 +23,14 @@
         <entry key="app/src/main/res/layout/activity_operation_result.xml" value="0.28892822265625007" />
         <entry key="app/src/main/res/layout/activity_question_sort.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_right_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_session.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.17794253938832252" />
         <entry key="app/src/main/res/layout/activity_true_or_false.xml" value="0.16883178710937502" />
         <entry key="app/src/main/res/layout/activity_wrong_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/fragment_mcq.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/fragment_operation.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/fragment_operation_result.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_wrong_dialog.xml" value="0.1" />

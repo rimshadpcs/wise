@@ -1,0 +1,17 @@
+{
+
+  "activityId": "question_5_session_1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters": {
+
+    "question": "To open Quick Settings, you should do this on your phone:",
+    "choice1":"Double-click the power button",
+    "choice2":"Type Quick Settings in search bar",
+    "choice3":"Swipe right on home screen",
+    "choice4":"Swipe down from top of screen",
+    "answer":"Swipe down from top of screen"
+
+  }
+}

@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.simmone.databinding.ActivityBubbleSampleBinding
+import com.example.simmone.utils.Constants
 import com.example.simmone.viewmodel.BubbleViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -30,8 +31,8 @@ class BubbleSample : AppCompatActivity() {
         bubbleBinding.tvMessage.text = bubbleSampleMessage
         bubbleBinding.btContinue.text = bubbleSampleButton
         bubbleBinding.btContinue.setOnClickListener{
-            val intent = Intent(this, McqActivity::class.java)
-            intent.putExtra("FROM", 0)
+            val intent = Intent(this, SessionActivity::class.java)
+            intent.putExtra("FROM", Constants.FLAG_BUBBLE_SAMBLE)
             startActivity(intent)
             finish()
         }

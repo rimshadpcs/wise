@@ -1,0 +1,18 @@
+{
+  "sessionList": [
+
+    { "sessionId": "session_1",
+
+      "activityList": [ "question_1_session_1", "question_2_session_1","question_3_session_1","question_4_session_1","question_5_session_1",
+        "question_6_session_1"]
+
+    },
+
+    { "sessionId": "widget-session-1",
+
+      "activityList": [ "widget-activity-1", "widget-activity-2"]
+
+    }
+    ]
+    }
+

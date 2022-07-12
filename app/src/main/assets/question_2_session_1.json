@@ -1,0 +1,17 @@
+{
+
+  "activityId": "question_2_session_1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters": {
+
+    "question": "To get information from a QR code, you need to:?",
+    "choice1":"Scan it with your phone’s camera",
+    "choice2":"Enable access to microphone",
+    "choice3":"Enable Bluetooth networking in Quick Settings",
+    "choice4":"Connect your phone to a PC",
+    "answer":"Scan it with your phone’s camera"
+
+  }
+}

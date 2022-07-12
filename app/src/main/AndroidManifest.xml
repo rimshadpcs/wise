@@ -14,12 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
-
+        <activity
+            android:name=".view.activities.SessionActivity"
+            android:exported="false" />
         <activity
             android:name=".view.activities.EndSessionActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.MainActivity"
+            android:name=".view.activities.TrueOrFalseActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.OperationResultActivity"
@@ -34,10 +36,11 @@
             android:name=".view.activities.McqActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.TrueOrFalseActivity"
+            android:name=".view.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

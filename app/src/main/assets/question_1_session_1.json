@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "question_1_session_1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "If you want to zoom into a photo in your phone, which one of the following will you use?",
+
+      "choice1": "Volume buttons",
+
+      "choice2": "Multitouch gesture",
+
+      "choice3": "Shaking the phone",
+
+      "choice4": "Power button",
+
+      "answer": "Multitouch gesture"
+
+    }
+  }

@@ -1,0 +1,17 @@
+{
+
+  "activityId": "question_4_session_1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters": {
+
+    "question": "You are out shopping in a store, and you want to open the store’s website on your phone. An easy way to do this is to:",
+    "choice1":"connect a USB storage device to your phone",
+    "choice2":"look for a QR code in the store and scan it with your phone’s camera",
+    "choice3":"send an SMS",
+    "choice4":"download a new app",
+    "answer":"look for a QR code in the store and scan it with your phone’s camera"
+
+  }
+}
