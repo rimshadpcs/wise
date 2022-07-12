@@ -1,0 +1,17 @@
+{
+
+  "activityId": "question_6_session_1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters": {
+
+    "question": "An easy way to turn on/off your phone's torch is:",
+    "choice1":"Download an app from the store",
+    "choice2":"Open the system settings",
+    "choice3":"Tap an icon in Quick Settings",
+    "choice4":"Take a photo",
+    "answer":"Tap an icon in Quick Settings"
+
+  }
+}
