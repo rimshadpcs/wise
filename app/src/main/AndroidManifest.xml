@@ -27,13 +27,7 @@
             android:name=".view.activities.OperationResultActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.OperationActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.activities.BubbleSample"
-            android:exported="false" />
-        <activity
-            android:name=".view.activities.McqActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.MainActivity"
