@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.simmone">
+    package="com.example.simmone"
+    android:installLocation="preferExternal">
 
     <application
         android:name="com.example.simmone.BaseApplication"
@@ -14,7 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
-
+        <activity
+            android:name=".view.activities.StoryBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.TrueOrFalseActivity"
+            android:exported="false" />
         <activity
             android:name=".view.activities.EndSessionActivity"
             android:exported="false" />
@@ -34,10 +40,11 @@
             android:name=".view.activities.McqActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.TrueOrFalseActivity"
+            android:name=".view.activities.DrawingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

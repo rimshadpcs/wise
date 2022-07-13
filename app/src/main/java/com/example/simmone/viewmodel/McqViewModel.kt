@@ -65,8 +65,8 @@ class McqViewModel: ViewModel() {
         }
         return json
     }
-/*
-    class MoshiJsonParseTester{
+
+    /*class MoshiJsonParseTester{
         fun parse(reader: JsonReader): List<QuestionItem>{
             val questions = mutableListOf<QuestionItem>()
 
@@ -101,4 +101,5 @@ class McqViewModel: ViewModel() {
             return questions
         }
     }*/
+
 }

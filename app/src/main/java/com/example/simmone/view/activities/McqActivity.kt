@@ -114,7 +114,6 @@ class McqActivity : AppCompatActivity(),
             callWrongBottomSheet()
         }
     }
-
     private fun checkForNextQuestion(){
         // load next question if any
         if (currentQuestion < questionItems.size - 1) {
@@ -131,6 +130,7 @@ class McqActivity : AppCompatActivity(),
                 intent.putExtra("NextSession", 2)
                 startActivity(intent)
                 finish()
+
             }
         }
     }

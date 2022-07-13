@@ -32,6 +32,8 @@
     <string name="launch_session">Launch Session</string>
     <string name="the_right_answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="answer">answer</string>
+    <string name="relive_the_moment">Relive the Moment</string>
+    <string name="complete">Complete</string>
 
 
 </resources>
