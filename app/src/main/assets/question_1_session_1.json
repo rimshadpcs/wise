@@ -9,17 +9,17 @@
   "parameters":
     {
 
-      "question": "If you want to zoom into a photo in your phone, which one of the following will you use?",
+      "question": "How can you identify the app that has posted a notification?",
 
-      "choice1": "Volume buttons",
+      "choice1": "Look at the name and icon",
 
-      "choice2": "Multitouch gesture",
+      "choice2": "No, you can’t identify the app. You have to tap on the notification and open the app",
 
-      "choice3": "Shaking the phone",
+      "choice3": "Dismiss the notification",
 
-      "choice4": "Power button",
+      "choice4": "Check your e-mails",
 
-      "answer": "Multitouch gesture"
+      "answer": "Look at the name and icon"
 
     }
   }
