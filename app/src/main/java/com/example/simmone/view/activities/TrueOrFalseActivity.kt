@@ -83,8 +83,6 @@ class TrueOrFalseActivity : AppCompatActivity(),
                 trueOrFalseBinding.cardTruthBox.alpha = 1.0f
                 trueOrFalseBinding.cardFalseBox.alpha = 1.0f
 
-//                draggableItem.visibility = View.VISIBLE
-//                view.invalidate()
                 true
             }
 
@@ -92,9 +90,8 @@ class TrueOrFalseActivity : AppCompatActivity(),
 
                 trueOrFalseBinding.cardTruthBox.alpha = 1.0f
                 trueOrFalseBinding.cardFalseBox.alpha = 1.0f
-
-//                draggableItem.x = dragEvent.x - (draggableItem.width / 2)
-//                draggableItem.y = dragEvent.y - (draggableItem.height / 2)
+                statementAdapter?.getItemList()?.remove(selectedItemModel)
+                statementAdapter?.notifyDataSetChanged()
 
                 val dropArea = view as TextView
 
@@ -104,23 +101,14 @@ class TrueOrFalseActivity : AppCompatActivity(),
                     showPopUpDialog(R.layout.wrong_dialog)
                 }
                 true
+
             }
             DragEvent.ACTION_DRAG_ENDED -> {
-
-//                draggableItem.visibility = View.INVISIBLE
-//                view.invalidate()
-
-                //on drop event remove the card from parent viewGroup
-//                val parent = draggableItem.parent as RecyclerView
-//                parent.removeView(draggableItem)
-
-                statementAdapter?.getItemList()?.remove(selectedItemModel)
-                statementAdapter?.notifyDataSetChanged()
 
                 if(statementAdapter?.getItemList()?.size == 0){
                     Toast.makeText(this@TrueOrFalseActivity, "Finished!", Toast.LENGTH_SHORT).show()
 
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, SessionActivity::class.java)
                     startActivity(intent)
                 }
                 true

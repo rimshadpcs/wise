@@ -6,7 +6,6 @@ import com.example.simmone.model.Statement
 
 class StatementViewModel : ViewModel
 {
-
     var statementDesc = ""
     var answer = ""
 
