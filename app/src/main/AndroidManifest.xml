@@ -15,9 +15,6 @@
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
         <activity
-            android:name=".view.activities.TrueOrFalseActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.activities.EndSessionActivity"
             android:exported="false" />
         <activity

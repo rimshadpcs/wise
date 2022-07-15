@@ -26,7 +26,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.simmone.R
 import com.example.simmone.adapters.StatementAdapter
-import com.example.simmone.databinding.ActivityTrueOrFalseBinding
 import com.example.simmone.databinding.FragmentOperationBinding
 import com.example.simmone.databinding.FragmentTrueOrFalseBinding
 import com.example.simmone.model.Statement
