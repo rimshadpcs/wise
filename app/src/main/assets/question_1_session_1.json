@@ -11,11 +11,11 @@
 
       "question": "How can you identify the app that has posted a notification?",
 
-      "choice1": "Look at the name and icon",
+      "choice1": "Dismiss the notification",
 
       "choice2": "No, you can’t identify the app. You have to tap on the notification and open the app",
 
-      "choice3": "Dismiss the notification",
+      "choice3": "Look at the name and icon",
 
       "choice4": "Check your e-mails",
 
