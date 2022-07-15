@@ -7,6 +7,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.simmone.model.QuestionItem
 import com.example.simmone.model.SessionModel
+import com.example.simmone.model.Statement
+import com.example.simmone.model.TrueOrFalseModel
 import com.example.simmone.utils.Constants
 import org.json.JSONArray
 import org.json.JSONException
@@ -17,23 +19,33 @@ import java.nio.charset.Charset
 class SessionViewModel:ViewModel() {
 
 
-    //FragmentA
+    //FragmentMcq
     private var questionItems: ArrayList<QuestionItem> = ArrayList()
     private var ListActivity: ArrayList<SessionModel> = ArrayList()
     val mcqData = MutableLiveData<ArrayList<QuestionItem>>()
+    val ToFData = MutableLiveData<TrueOrFalseModel>()
+    val ToFlist = MutableLiveData<ArrayList<Statement>>()
     val ListActivityData = MutableLiveData<ArrayList<SessionModel>>()
     fun getListActivity():LiveData<ArrayList<SessionModel>> = ListActivityData
     fun getMcQData(): LiveData<ArrayList<QuestionItem>> = mcqData
+    fun getToFList(): LiveData<ArrayList<Statement>> = ToFlist
     var quizFile = MutableLiveData<String>()
-    val eventlivedata = MutableLiveData(Constants.EVENT_NONE)
     var current_question = 0;
     var fragmentLiveData = MutableLiveData<String>("")
     var session_num = 0
     var page = 0
 
+    //FragmentTrueOrFalse
+    var answer = ""
+    var newMStatementList = MutableLiveData<ArrayList<Statement>>()
+
+
     fun getFragment():LiveData<String> = fragmentLiveData
 
+    val eventlivedata = MutableLiveData(Constants.EVENT_NONE)
     fun getEvent(): LiveData<Int?> = eventlivedata
+
+
 
 
     fun loadAllQuestions(context: Context) {
@@ -42,8 +54,10 @@ class SessionViewModel:ViewModel() {
         Log.e("json",jsonStr)
 
         try {
+
             val jsonObject = JSONObject(jsonStr)
             var fragment = jsonObject.getString("fragmentClassName")
+            Log.e("frag",fragment)
             if (fragment.equals("FragmentMcq")) {
                 val questions = jsonObject.getJSONObject("parameters")
                 val questionString = questions.getString("question")
@@ -63,6 +77,23 @@ class SessionViewModel:ViewModel() {
                     )
                 )
                 mcqData.value = questionItems
+            } else if(fragment.equals("FragmentTrueOrFalse")){
+                val questions = jsonObject.getJSONObject("parameters")
+                val questionString = questions.getString("question")
+                val answers = questions.getJSONArray("answers")
+                val answerlist = ArrayList<Statement>()
+                for (i in 0..answers.length()-1){
+                    var obj = answers.getJSONObject(i)
+                    var statement = obj.getString("statement")
+                    var status = obj.getString("status")
+                    answerlist.add(Statement(statement,status))
+                }
+                val leftbutton = questions.getString("button_left")
+                val rightbutton = questions.getString("button_right")
+                var tofdata = TrueOrFalseModel(questionString,answerlist,leftbutton,rightbutton)
+                Log.e("TOF",tofdata.list.size.toString())
+                ToFData?.value = tofdata
+                ToFlist.value = tofdata.list
             }
 
             fragmentLiveData.value = fragment

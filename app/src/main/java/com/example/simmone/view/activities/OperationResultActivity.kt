@@ -32,9 +32,9 @@ class OperationResultActivity : AppCompatActivity() {
         operationResultBinding.btNext.text = nextButton
 
         operationResultBinding.btNext.setOnClickListener{
-            val intent = Intent(this, SessionActivity::class.java)
-            intent.putExtra("FROM", Constants.FLAG_OPERATION_RESULT)
-            startActivity(intent)
+//            val intent = Intent(this, SessionActivity::class.java)
+//            intent.putExtra("FROM", Constants.FLAG_OPERATION_RESULT)
+//            startActivity(intent)
             finish()
 //            super.onBackPressed();
 

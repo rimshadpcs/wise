@@ -60,7 +60,7 @@ class StoryBoardActivity : AppCompatActivity() {
 
         })
         storyBoardBinding.btComplete.setOnClickListener {
-            val intent = Intent(this, TrueOrFalseActivity::class.java)
+            val intent = Intent(this, SessionActivity::class.java)
             startActivity(intent)
             vpStoryBoard.unregisterOnPageChangeCallback(object :ViewPager2.OnPageChangeCallback(){
 
