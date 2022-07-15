@@ -6,30 +6,30 @@
 
   "parameters": {
 
-    "question": "Sort them based on True or False",
+    "question": "Notifications are designed to get your attention.\n\nDrag each sentence into True if it indicates you may have received a notification, or into False otherwise.",
     "answers": [
       {
-        "statement": "Lightning is seen before it's heard because light travels faster than sound",
-        "status": "True"
-      },
-      {
-        "statement": "A coconut is a nut",
+        "statement": "Your phone plays a ringtone for incoming call",
         "status": "False"
       },
       {
-        "statement": "Tomatoes are fruit",
+        "statement": "Your phone buzzes/vibrates",
         "status": "True"
       },
       {
-        "statement": "Mercury's atmosphere is made up of carbondioxide",
+        "statement": "You receive a fax message",
         "status": "False"
       },
       {
-        "statement": "A snail can sleep up to 3 years",
+        "statement": "Your phone makes a sound",
         "status": "True"
       },
       {
-        "statement": "Being scared of clouds is called Coulrophobia",
+        "statement": "Your phone screen turns on",
+        "status": "True"
+      },
+      {
+        "statement": "Someone rings the doorbell at home",
         "status": "False"
       }
       ],
