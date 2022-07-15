@@ -15,13 +15,13 @@
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
         <activity
-            android:name=".view.activities.SessionActivity"
+            android:name=".view.activities.TrueOrFalseActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.EndSessionActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.TrueOrFalseActivity"
+            android:name=".view.activities.MainActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.OperationResultActivity"
@@ -30,7 +30,7 @@
             android:name=".view.activities.BubbleSample"
             android:exported="false" />
         <activity
-            android:name=".view.activities.MainActivity"
+            android:name=".view.activities.SessionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

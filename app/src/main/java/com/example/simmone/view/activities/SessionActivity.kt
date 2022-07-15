@@ -13,10 +13,7 @@ import androidx.lifecycle.Observer
 import com.example.simmone.R
 import com.example.simmone.databinding.ActivitySessionBinding
 import com.example.simmone.utils.Constants
-import com.example.simmone.view.fragments.FragmentMcq
-import com.example.simmone.view.fragments.FragmentOperation
-import com.example.simmone.view.fragments.RightBottomSheetDialog
-import com.example.simmone.view.fragments.WrongBottomSheetDialog
+import com.example.simmone.view.fragments.*
 import com.example.simmone.viewmodel.SessionViewModel
 import javax.security.auth.callback.Callback
 
@@ -52,6 +49,12 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                     supportFragmentManager.commit {
                         setReorderingAllowed(true)
                         replace<FragmentOperation>(R.id.fragment_container_view)
+                    }
+                }
+                "FragmentTrueOrFalse" -> {
+                    supportFragmentManager.commit {
+                        setReorderingAllowed(true)
+                        replace<FragmentTrueOrFalse>(R.id.fragment_container_view)
                     }
                 }
             }
