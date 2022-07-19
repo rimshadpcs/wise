@@ -5,16 +5,15 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.simmone.model.QuestionItem
-import com.example.simmone.model.SessionModel
-import com.example.simmone.model.Statement
-import com.example.simmone.model.TrueOrFalseModel
+import com.example.simmone.model.*
 import com.example.simmone.utils.Constants
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
+import java.util.*
+import kotlin.collections.ArrayList
 
 class SessionViewModel:ViewModel() {
 
@@ -23,12 +22,9 @@ class SessionViewModel:ViewModel() {
     private var questionItems: ArrayList<QuestionItem> = ArrayList()
     private var ListActivity: ArrayList<SessionModel> = ArrayList()
     val mcqData = MutableLiveData<ArrayList<QuestionItem>>()
-    val ToFData = MutableLiveData<TrueOrFalseModel>()
-    val ToFlist = MutableLiveData<ArrayList<Statement>>()
     val ListActivityData = MutableLiveData<ArrayList<SessionModel>>()
     fun getListActivity():LiveData<ArrayList<SessionModel>> = ListActivityData
     fun getMcQData(): LiveData<ArrayList<QuestionItem>> = mcqData
-    fun getToFList(): LiveData<ArrayList<Statement>> = ToFlist
     var quizFile = MutableLiveData<String>()
     var current_question = 0;
     var fragmentLiveData = MutableLiveData<String>("")
@@ -38,6 +34,16 @@ class SessionViewModel:ViewModel() {
     //FragmentTrueOrFalse
     var answer = ""
     var newMStatementList = MutableLiveData<ArrayList<Statement>>()
+    val ToFData = MutableLiveData<TrueOrFalseModel>()
+    val ToFlist = MutableLiveData<ArrayList<Statement>>()
+    fun getToFList(): LiveData<ArrayList<Statement>> = ToFlist
+
+    //FragmentOperation
+    var notItems: ArrayList<String> = ArrayList()
+    var notTxtLivedata:MutableLiveData<String> = MutableLiveData("")
+    fun getNotTxt():LiveData<String> = notTxtLivedata
+    var notPage = 0
+
 
 
     fun getFragment():LiveData<String> = fragmentLiveData
@@ -94,6 +100,16 @@ class SessionViewModel:ViewModel() {
                 Log.e("TOF",tofdata.list.size.toString())
                 ToFData?.value = tofdata
                 ToFlist.value = tofdata.list
+            }else if(fragment.equals("FragmentOperation")){
+                val parameter = jsonObject.getJSONObject("parameters")
+                val text1 = parameter.getString("text1")
+                val text2 = parameter.getString("text2")
+                val text3 = parameter.getString("text3")
+                val text4 = parameter.getString("text4")
+                val text5 = parameter.getString("text5")
+                val text6 = parameter.getString("text6")
+                Collections.addAll(notItems,text1,text2,text3,text4,text5,text6)
+                notTxtLivedata.value=notItems[notPage]
             }
 
             fragmentLiveData.value = fragment

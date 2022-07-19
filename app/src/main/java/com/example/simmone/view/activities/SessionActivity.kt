@@ -29,6 +29,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
 
             sessionViewModel.loadSession(this)
 
+
         sessionViewModel.getListActivity().observe(this, Observer {
             if (!it.isEmpty()){
                 sessionViewModel.eventlivedata.value = Constants.EVENT_NEXT_PAGE

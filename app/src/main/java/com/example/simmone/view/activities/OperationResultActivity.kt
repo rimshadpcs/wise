@@ -28,17 +28,21 @@ class OperationResultActivity : AppCompatActivity() {
         operationResultBinding = ActivityOperationResultBinding.inflate(layoutInflater)
         setContentView(operationResultBinding.root)
 
-        operationResultBinding.tvResult.text = outputMessageForNotification
-        operationResultBinding.btNext.text = nextButton
-
-        operationResultBinding.btNext.setOnClickListener{
-//            val intent = Intent(this, SessionActivity::class.java)
-//            intent.putExtra("FROM", Constants.FLAG_OPERATION_RESULT)
-//            startActivity(intent)
+        operationResultBinding.btnContinue.setOnClickListener {
             finish()
-//            super.onBackPressed();
-
         }
+
+//        operationResultBinding.tvResult.text = outputMessageForNotification
+//        operationResultBinding.btNext.text = nextButton
+//
+//        operationResultBinding.btNext.setOnClickListener{
+////            val intent = Intent(this, SessionActivity::class.java)
+////            intent.putExtra("FROM", Constants.FLAG_OPERATION_RESULT)
+////            startActivity(intent)
+//            finish()
+////            super.onBackPressed();
+
+//        }
 
     }
 }

@@ -23,4 +23,9 @@
         <item name="colorPrimaryDark">@color/purple_200</item>
         <item name="colorAccent">@color/purple_200</item>
     </style>
+
+    <style name="progressbarWhite" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
 </resources>
