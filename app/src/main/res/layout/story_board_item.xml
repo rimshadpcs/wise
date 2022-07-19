@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/story_board_container"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_story_board_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/iv_story_board"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:fontFamily="@font/opensanssemibold"
+        android:textSize="22sp"
+        android:text="@string/relive_the_moment"/>
+
+
+    <ImageView
+        android:id="@+id/iv_story_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/boy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null" />
+</androidx.constraintlayout.widget.ConstraintLayout>

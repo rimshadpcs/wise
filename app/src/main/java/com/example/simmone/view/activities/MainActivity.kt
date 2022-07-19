@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         incrementReward(intent.getIntExtra("NextSession", 0))
 
         mainBinding.cvLaunch.setOnClickListener{
-            val intent = Intent(this, BubbleSample::class.java)
+            val intent = Intent(this, StoryBoardActivity::class.java)
             startActivity(intent)
         }
 

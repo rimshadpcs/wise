@@ -19,6 +19,10 @@
         <entry key="app/src/main/res/drawable/progress_drawable.xml" value="0.2745" />
         <entry key="app/src/main/res/font/lobster.xml" value="0.3390625" />
         <entry key="app/src/main/res/layout/activity_bubble_sample.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_button_background.xml" value="0.1" />
+        <entry key="app/src/main/res/font/lobster.xml" value="0.3390625" />
+        <entry key="app/src/main/res/layout/activity_bubble_sample.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_drawing.xml" value="0.1824074074074074" />
         <entry key="app/src/main/res/layout/activity_end_session.xml" value="0.26226959228515623" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5608688354492188" />
         <entry key="app/src/main/res/layout/activity_mcq.xml" value="0.1" />
@@ -27,16 +31,24 @@
         <entry key="app/src/main/res/layout/activity_question_sort.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_session.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/activity_sliding.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/activity_story_board.xml" value="0.17557251908396945" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.17794253938832252" />
         <entry key="app/src/main/res/layout/activity_true_or_false.xml" value="0.16883178710937502" />
         <entry key="app/src/main/res/layout/activity_wrong_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/fragment_mcq.xml" value="0.31567028985507245" />
-        <entry key="app/src/main/res/layout/fragment_operation.xml" value="0.14332247557003258" />
+        <entry key="app/src/main/res/layout/fragment_operation.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/fragment_operation_result.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_story_board.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_true_or_false.xml" value="0.31567028985507245" />
+>>>>>>>>> Temporary merge branch 2
         <entry key="app/src/main/res/layout/fragment_wrong_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_large_news.xml" value="0.17794253938832252" />
         <entry key="app/src/main/res/layout/right_bottom_sheet.xml" value="0.335" />

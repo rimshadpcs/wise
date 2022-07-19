@@ -6,12 +6,12 @@
 
   "parameters": {
 
-    "question": "To get information from a QR code, you need to:?",
-    "choice1":"Scan it with your phone’s camera",
-    "choice2":"Enable access to microphone",
-    "choice3":"Enable Bluetooth networking in Quick Settings",
-    "choice4":"Connect your phone to a PC",
-    "answer":"Scan it with your phone’s camera"
+    "question": "Why do apps send notifications that get your attention?",
+    "choice1":"To help you keep track of what's new",
+    "choice2":"Change your phone's wallpaper",
+    "choice3":"Browse files in your phone",
+    "choice4":"Charge your phone's battery",
+    "answer":"To help you keep track of what's new"
 
   }
 }
