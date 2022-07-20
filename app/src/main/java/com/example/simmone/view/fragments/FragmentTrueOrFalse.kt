@@ -48,6 +48,7 @@ class FragmentTrueOrFalse : Fragment(),StatementAdapter.OnItemLongClickListener 
     private val dragMessage = "Added"
     private lateinit var draggingItem: View
     private lateinit var selectedItemModel: Statement
+    private var finished = false;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -146,10 +147,12 @@ class FragmentTrueOrFalse : Fragment(),StatementAdapter.OnItemLongClickListener 
                 statementAdapter?.notifyDataSetChanged()
 
                 if(statementAdapter?.getItemList()?.size == 0){
-                    Toast.makeText(context, "Finished!", Toast.LENGTH_SHORT).show()
+                    if (!finished) {
+                        finished = true
 
-                    val intent = Intent(context, EndSessionActivity::class.java)
-                    startActivity(intent)
+                        Toast.makeText(context, "Finished!", Toast.LENGTH_SHORT).show()
+                        sessionViewModel.checkForNextQuestion()
+                    }
                 }
                 true
             }
