@@ -22,5 +22,4 @@
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryDark">@color/purple_200</item>
         <item name="colorAccent">@color/purple_200</item>
-    </style>
-</resources>
+    </style></resources>

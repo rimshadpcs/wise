@@ -34,6 +34,12 @@
     <string name="answer">answer</string>
     <string name="relive_the_moment">Relive the Moment</string>
     <string name="complete">Complete</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="loading">loading</string>
+    <string name="plant_status">Awake</string>
 
 
 </resources>

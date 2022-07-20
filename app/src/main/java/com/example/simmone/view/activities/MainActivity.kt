@@ -8,12 +8,12 @@ import androidx.lifecycle.asLiveData
 import com.example.simmone.dataStore.GoldManager
 import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityMainBinding
-import com.example.simmone.view.fragments.RightBottomSheetDialog
 import com.example.simmone.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -32,12 +32,11 @@ class MainActivity : AppCompatActivity() {
         incrementReward(intent.getIntExtra("NextSession", 0))
 
         mainBinding.cvLaunch.setOnClickListener{
-            val intent = Intent(this, BubbleSample::class.java)
+
+            val intent = Intent(this, SplashScreen::class.java)
             startActivity(intent)
         }
 
-//        val modalBottomSheet = RightBottomSheetDialog()
-//        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)
     }
 
     private fun incrementReward(nextSession : Int){
