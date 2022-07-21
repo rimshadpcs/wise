@@ -20,6 +20,14 @@
     <color name="bottom_sheet_right">#4E9D42</color>
     <color name="bottom_sheet_wrong">#E53935</color>
     <color name="card_notification_bg">#DAAFFC</color>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="onboarding_bubbles">#242424</color>
+    <color name="onboarding_background">#6F50A3</color>
+    <color name="onboarding_simm_background">#9171C5</color>
+
 
 
 </resources>
