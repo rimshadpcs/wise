@@ -44,6 +44,8 @@ class SessionViewModel:ViewModel() {
     fun getNotTxt():LiveData<String> = notTxtLivedata
     var notPage = 0
 
+    //FragmentStoryboard
+    var storyboardItems: ArrayList<StoryBoardItem> = ArrayList()
 
 
     fun getFragment():LiveData<String> = fragmentLiveData
@@ -110,6 +112,16 @@ class SessionViewModel:ViewModel() {
                 val text6 = parameter.getString("text6")
                 Collections.addAll(notItems,text1,text2,text3,text4,text5,text6)
                 notTxtLivedata.value=notItems[notPage]
+            } else if (fragment.equals("FragmentStoryboard")) {
+                storyboardItems.clear()
+                val parameters = jsonObject.getJSONObject("parameters")
+                val storyboardPages = parameters.getJSONArray("pages")
+                for (i in 0 until storyboardPages.length()) {
+                    val page = storyboardPages[i] as JSONObject
+                    val title = page.getString("title")
+                    val imageStr = page.getString("image")
+                    storyboardItems.add(StoryBoardItem(title, imageStr))
+                }
             }
 
             fragmentLiveData.value = fragment

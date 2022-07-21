@@ -4,6 +4,20 @@
 
   "activityId": "question_0_session_1",
 
-  "fragmentClassName": "FragmentStoryboard"
-
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "First", "image": "boy"
+      },
+      {
+        "title": "Second", "image": "coin"
+      },
+      {
+        "title": "Third", "image": "medal"
+      }
+    ]
   }
+
+}

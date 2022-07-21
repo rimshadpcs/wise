@@ -1,6 +1,5 @@
 package com.example.simmone.view.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.simmone.R
 import com.example.simmone.adapters.StoryBoardAdapter
 import com.example.simmone.databinding.FragmentStoryboardBinding
-import com.example.simmone.view.activities.SessionActivity
 import com.example.simmone.viewmodel.SessionViewModel
 
 class FragmentStoryboard : Fragment() {
@@ -80,8 +78,9 @@ class FragmentStoryboard : Fragment() {
     }
 
     private fun postToList() {
-        for (i in 1..5) {
-            addToList("Title $i", R.drawable.simm_cover)
+        for (storyboardItem in sessionViewModel.storyboardItems) {
+            val imageId = activity!!.resources.getIdentifier(storyboardItem.storyBoardImage, "drawable", activity!!.packageName)
+            addToList(storyboardItem.storyBoardTitle, imageId)
         }
     }
 
