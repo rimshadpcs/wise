@@ -1,14 +1,17 @@
 package com.example.simmone.view.activities
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
+import androidx.databinding.DataBindingUtil.setContentView
 import androidx.lifecycle.asLiveData
+import com.example.simmone.R
 import com.example.simmone.dataStore.GoldManager
 import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityMainBinding
-import com.example.simmone.view.fragments.RightBottomSheetDialog
 import com.example.simmone.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.DelicateCoroutinesApi
@@ -20,6 +23,15 @@ class MainActivity : AppCompatActivity() {
   lateinit var goldManager: GoldManager
     private lateinit var mainBinding: ActivityMainBinding
     private val mainModel : MainViewModel by viewModels()
+
+    private val plantImages = intArrayOf(
+        R.drawable.tulip_red_stage0,
+        R.drawable.tulip_red_stage1,
+        R.drawable.tulip_red_stage2,
+        R.drawable.tulip_red_stage3,
+        R.drawable.tulip_red_stage4,
+        R.drawable.tulip_red_stage5
+    )
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +47,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SessionActivity::class.java)
             startActivity(intent)
         }
+
+        setPlant()
 
 //        val modalBottomSheet = RightBottomSheetDialog()
 //        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)
@@ -58,6 +72,20 @@ class MainActivity : AppCompatActivity() {
     private fun saveGold() {
         GlobalScope.launch {
             goldManager.storeGold()
+        }
+    }
+
+    private fun setPlant(){
+        var sessionsCompleted = 0
+        goldManager.goldCountFlow.asLiveData().observe(this){
+            if (it != null) {
+                Log.d("sessionsCompletedIt", it.toString())
+                sessionsCompleted = it
+                Log.d("sessionsCompleted", sessionsCompleted.toString())
+                sessionsCompleted %= plantImages.size
+                Log.d("sessionsCompletedMod", sessionsCompleted.toString())
+                mainBinding.ivPlantMain.setImageResource(plantImages[sessionsCompleted])
+            }
         }
     }
 }
