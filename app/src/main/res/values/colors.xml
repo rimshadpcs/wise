@@ -24,6 +24,10 @@
     <color name="light_blue_200">#FF81D4FA</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
+    <color name="onboarding_bubbles">#242424</color>
+    <color name="onboarding_background">#6F50A3</color>
+    <color name="onboarding_simm_background">#9171C5</color>
+
 
 
 </resources>
