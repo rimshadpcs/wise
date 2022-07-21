@@ -16,7 +16,7 @@ import com.example.simmone.viewmodel.SessionViewModel
 
 class FragmentStoryboard : Fragment() {
     private lateinit var storyBoardBinding: FragmentStoryboardBinding
-    private val viewModel: SessionViewModel by activityViewModels()
+    private val sessionViewModel: SessionViewModel by activityViewModels()
 
     private var storyTitleList = mutableListOf<String>()
     private var storyImageList = mutableListOf<Int>()
@@ -68,11 +68,7 @@ class FragmentStoryboard : Fragment() {
         })
 
         storyBoardBinding.btComplete.setOnClickListener {
-            val intent = Intent(this, SessionActivity::class.java)
-            startActivity(intent)
-            vpStoryBoard.unregisterOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
-
-            })
+            sessionViewModel.checkForNextQuestion()
         }
 
         return view
