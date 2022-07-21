@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".view.activities.OperationResultActivity">
+    tools:context=".view.fragments.FragmentOperation">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,6 +23,46 @@
             />
     </FrameLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Thinking / Neutral"
+        android:id="@+id/tv_talking3"
+        android:textColor="@color/white"
+        android:layout_marginTop="33dp"
+        android:visibility="gone"
+        android:layout_marginEnd="15dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Talking"
+        android:id="@+id/tv_talking"
+        android:textColor="@color/white"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="44dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Talking"
+        android:visibility="gone"
+        android:id="@+id/tv_talking2"
+        android:textColor="@color/white"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="44dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,6 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view1"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Smiling"
+        android:visibility="gone"
         android:id="@+id/tv_smile"
         android:textColor="@color/white"
         android:layout_marginTop="94dp"
@@ -42,11 +83,20 @@
         android:layout_height="395dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view1"
+        android:id="@+id/iv_character"
         android:src="@drawable/simm_image"
         android:layout_marginTop="12dp"
-        android:id="@+id/iv_character"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <ImageView
+        android:layout_width="52dp"
+        android:layout_height="27dp"
+        android:id="@+id/tv_beep"
+        app:layout_constraintTop_toTopOf="@+id/iv_character"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="75dp"
+        android:layout_marginTop="68dp"
+        />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -68,13 +118,32 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:text="Looks like you’ve got the hang of notifications. Nice work!"
             android:fontFamily="sans-serif"
             android:id="@+id/tv_txt"
             />
 
+        <ProgressBar
+            android:layout_width="25.6dp"
+            android:layout_height="25.6dp"
+            android:id="@+id/progressbar"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="12.66dp"
+            android:layout_marginBottom="12.66dp"
+            android:theme="@style/progressbarWhite"/>
     </FrameLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 seconds"
+        app:layout_constraintTop_toBottomOf="@id/frame_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:id="@+id/tv_timer"
+        android:layout_marginTop="45dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"/>
 
     <FrameLayout
         android:layout_width="156dp"
@@ -83,6 +152,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="23dp"
+        android:visibility="gone"
         android:background="@drawable/btn_notifn"
         >
 

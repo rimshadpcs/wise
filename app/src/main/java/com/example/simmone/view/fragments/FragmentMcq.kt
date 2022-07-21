@@ -1,45 +1,55 @@
-package com.example.simmone.view.activities
+package com.example.simmone.view.fragments
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import com.example.simmone.databinding.ActivityMcqBinding
+import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import com.example.simmone.databinding.FragmentMcqBinding
 import com.example.simmone.model.QuestionItem
-import com.example.simmone.view.fragments.RightBottomSheetDialog
-import com.example.simmone.view.fragments.WrongBottomSheetDialog
-import com.example.simmone.viewmodel.McqViewModel
+import com.example.simmone.utils.Constants
+import com.example.simmone.view.activities.SessionActivity
+import com.example.simmone.viewmodel.SessionViewModel
 
-class McqActivity : AppCompatActivity(),
-    RightBottomSheetDialog.RightBottomSheetListener,
-    WrongBottomSheetDialog.WrongBottomSheetListener {
 
-    private lateinit var mcqBinding: ActivityMcqBinding
-    private val mcqModel: McqViewModel by viewModels()
+class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
+    WrongBottomSheetDialog.WrongBottomSheetListener ,View.OnClickListener {
+
+    private lateinit var mcqBinding: FragmentMcqBinding
+    private val mcqModel: SessionViewModel by activityViewModels()
     private var currentQuestion = 0
     private var correct = 0
     private var incorrect = 1
     private lateinit var questionItems: List<QuestionItem>
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mcqBinding = ActivityMcqBinding.inflate(layoutInflater)
-        setContentView(mcqBinding.root)
-        if (intent.getIntExtra("FROM", 0) == 0) {
-            mcqModel.quizFile.value = "mcq1.json"
-        } else if (intent.getIntExtra("FROM", 0) == 1) {
-            mcqModel.quizFile.value = "mcq2.json"
-        }
-        mcqModel.mcqData.observe(this) {
-            questionItems = it
-            setQuestionOnPage()
-        }
     }
 
-    override fun onStart() {
-        mcqModel.loadAllQuestions(this)
-        super.onStart()
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        mcqBinding = FragmentMcqBinding.inflate(inflater, container, false)
+        val view = mcqBinding.root
+        Log.e("MCQ", mcqModel.page.toString())
+
+        mcqModel.getMcQData().observe(context as SessionActivity, Observer {
+            if (!it.isEmpty()) {
+                questionItems = it
+                setQuestionOnPage()
+                Log.e("MCQ", questionItems[0].question)
+            }
+        })
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     private fun setQuestionOnPage() {
@@ -51,6 +61,7 @@ class McqActivity : AppCompatActivity(),
 
         // BUTTON 1 Click
         mcqBinding.btChoice1.setOnClickListener {
+            Log.e("MCQ", mcqModel.page.toString())
             validateChoice1()
             //checkForNextQuestion()
         }
@@ -89,7 +100,7 @@ class McqActivity : AppCompatActivity(),
         }
         else{
             incorrect++
-           callWrongBottomSheet()
+            callWrongBottomSheet()
         }
     }
     private fun validateChoice3(){
@@ -107,51 +118,43 @@ class McqActivity : AppCompatActivity(),
         if (questionItems[currentQuestion].choice4 == questionItems[currentQuestion].answer
         ) {
             correct++
-           callRightBottomSheet()
+            callRightBottomSheet()
         }
         else{
             incorrect++
             callWrongBottomSheet()
         }
     }
-    private fun checkForNextQuestion(){
-        // load next question if any
-        if (currentQuestion < questionItems.size - 1) {
-            currentQuestion++
-            setQuestionOnPage()
-        } else {
-            if (intent.getIntExtra("FROM", 0) == 0) {
-                val intent = Intent(this, OperationActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else {
 
-                val intent = Intent(this, MainActivity::class.java)
-                intent.putExtra("NextSession", 2)
-                startActivity(intent)
-                finish()
-
+    companion object {
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            FragmentMcq().apply {
+                arguments = Bundle().apply {
+                }
             }
-        }
     }
+
     private fun callRightBottomSheet(){
-        val theQuestion: String =questionItems[currentQuestion].question
-        val actualRightAnswer: String =questionItems[currentQuestion].answer
-        val modalBottomSheet = RightBottomSheetDialog(actualRightAnswer,theQuestion)
-        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)
+        mcqModel.current_question = currentQuestion
+        mcqModel.eventlivedata.value = Constants.EVENT_SHOW_RIGHT_BOTTOMSHEET
+        mcqModel.eventlivedata.value = Constants.EVENT_NONE
     }
     private fun callWrongBottomSheet(){
-        val theQuestion: String =questionItems[currentQuestion].question
-        val actualRightAnswer: String =questionItems[currentQuestion].answer
-        val modalBottomSheet = WrongBottomSheetDialog(actualRightAnswer,theQuestion)
-        modalBottomSheet.show(supportFragmentManager, WrongBottomSheetDialog.TAG)
+        mcqModel.current_question = currentQuestion
+        mcqModel.eventlivedata.value = Constants.EVENT_SHOW_WRONG_BOTTOMSHEET
+        mcqModel.eventlivedata.value = Constants.EVENT_NONE
     }
 
     override fun onRightButtonClicked(text: String?) {
-        checkForNextQuestion()
-    }
-    override fun onWrongButtonClicked(text: String?) {
-        checkForNextQuestion()
+        mcqModel.checkForNextQuestion()
     }
 
+    override fun onWrongButtonClicked(text: String?) {
+        mcqModel.checkForNextQuestion()
+    }
+
+    override fun onClick(v: View?) {
+
+    }
 }

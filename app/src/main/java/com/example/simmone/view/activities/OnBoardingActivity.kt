@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.simmone.R
 import com.example.simmone.adapters.OnBoardingAdapter
 import com.example.simmone.databinding.ActivityOnboardingBinding
-import com.example.simmone.databinding.ActivityOperationBinding
 import com.example.simmone.viewmodel.OnBoardingViewModel
 
 class OnBoardingActivity : AppCompatActivity() {

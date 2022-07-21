@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.example.simmone.databinding.ActivityOperationResultBinding
+import com.example.simmone.utils.Constants
 import com.example.simmone.viewmodel.OperationResultViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -27,17 +28,21 @@ class OperationResultActivity : AppCompatActivity() {
         operationResultBinding = ActivityOperationResultBinding.inflate(layoutInflater)
         setContentView(operationResultBinding.root)
 
-        operationResultBinding.tvResult.text = outputMessageForNotification
-        operationResultBinding.btNext.text = nextButton
-
-        operationResultBinding.btNext.setOnClickListener{
-            val intent = Intent(this, McqActivity::class.java)
-            intent.putExtra("FROM", 1)
-            startActivity(intent)
+        operationResultBinding.btnContinue.setOnClickListener {
             finish()
-//            super.onBackPressed();
-
         }
+
+//        operationResultBinding.tvResult.text = outputMessageForNotification
+//        operationResultBinding.btNext.text = nextButton
+//
+//        operationResultBinding.btNext.setOnClickListener{
+////            val intent = Intent(this, SessionActivity::class.java)
+////            intent.putExtra("FROM", Constants.FLAG_OPERATION_RESULT)
+////            startActivity(intent)
+//            finish()
+////            super.onBackPressed();
+
+//        }
 
     }
 }

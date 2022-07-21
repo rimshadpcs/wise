@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "question_1_session_1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "How can you identify the app that has posted a notification?",
+
+      "choice1": "Dismiss the notification",
+
+      "choice2": "No, you can’t identify the app. You have to tap on the notification and open the app",
+
+      "choice3": "Look at the name and icon",
+
+      "choice4": "Check your e-mails",
+
+      "answer": "Look at the name and icon"
+
+    }
+  }

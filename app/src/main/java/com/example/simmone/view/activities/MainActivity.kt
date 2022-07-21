@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         mainBinding.cvLaunch.setOnClickListener{
 
-            val intent = Intent(this, SplashScreen::class.java)
+            val intent = Intent(this, StoryBoardActivity::class.java)
             startActivity(intent)
         }
 

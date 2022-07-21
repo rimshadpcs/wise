@@ -1,0 +1,40 @@
+{
+
+  "activityId": "question_7_session_1",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Notifications are designed to get your attention.\n\nDrag each sentence into True if it indicates you may have received a notification, or into False otherwise.",
+    "answers": [
+      {
+        "statement": "Your phone plays a ringtone for incoming call",
+        "status": "False"
+      },
+      {
+        "statement": "Your phone buzzes/vibrates",
+        "status": "True"
+      },
+      {
+        "statement": "You receive a fax message",
+        "status": "False"
+      },
+      {
+        "statement": "Your phone makes a sound",
+        "status": "True"
+      },
+      {
+        "statement": "Your phone screen turns on",
+        "status": "True"
+      },
+      {
+        "statement": "Someone rings the doorbell at home",
+        "status": "False"
+      }
+      ],
+    "button_left": "True",
+    "button_right": "False"
+
+  }
+}

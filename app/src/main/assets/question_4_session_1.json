@@ -1,0 +1,17 @@
+{
+
+  "activityId": "question_4_session_1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters": {
+
+    "question": "STORYBOARD",
+    "choice1":"STORYBOARD",
+    "choice2":"look for a QR code in the store and scan it with your phone’s camera",
+    "choice3":"send an SMS",
+    "choice4":"download a new app",
+    "answer":"STORYBOARD"
+
+  }
+}

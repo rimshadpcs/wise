@@ -1,0 +1,17 @@
+{
+
+  "activityId": "question_2_session_1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters": {
+
+    "question": "Why do apps send notifications that get your attention?",
+    "choice1":"To help you keep track of what's new",
+    "choice2":"Change your phone's wallpaper",
+    "choice3":"Browse files in your phone",
+    "choice4":"Charge your phone's battery",
+    "answer":"To help you keep track of what's new"
+
+  }
+}

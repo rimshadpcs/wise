@@ -33,13 +33,7 @@
             android:name=".view.compose.SquareDrawingActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.activities.StoryBoardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.activities.TrueOrFalseActivity"
+            android:name=".view.activities.SessionActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.EndSessionActivity"
@@ -48,23 +42,19 @@
             android:name=".view.activities.OperationResultActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.OperationActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.activities.BubbleSample"
-            android:exported="false" />
-        <activity
-            android:name=".view.activities.McqActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.SplashScreen"
             android:exported="false" />
         <activity
             android:name=".view.activities.OnBoardingActivity"
-            android:exported="true" >
+            android:exported="true" />
+        <activity
+            android:name=".view.activities.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -83,6 +73,9 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+        <activity
+            android:name=".view.activities.StoryBoardActivity"
+            android:exported="true" >
+        </activity>
     </application>
-
 </manifest>

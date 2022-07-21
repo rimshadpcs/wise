@@ -108,7 +108,7 @@ class TrueOrFalseActivity : AppCompatActivity(),
                 if(statementAdapter?.getItemList()?.size == 0){
                     Toast.makeText(this@TrueOrFalseActivity, "Finished!", Toast.LENGTH_SHORT).show()
 
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, SessionActivity::class.java)
                     startActivity(intent)
                 }
                 true
