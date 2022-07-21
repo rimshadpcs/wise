@@ -58,6 +58,13 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                         replace<FragmentTrueOrFalse>(R.id.fragment_container_view)
                     }
                 }
+                "FragmentStoryboard" -> {
+                    Log.e("storyboard","starting")
+                    supportFragmentManager.commit {
+                        setReorderingAllowed(true)
+                        replace<FragmentStoryboard>(R.id.fragment_container_view)
+                    }
+                }
             }
         })
 
