@@ -11,6 +11,7 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.Observer
 import com.example.simmone.R
+import com.example.simmone.dataStore.SessionManager
 import com.example.simmone.databinding.ActivitySessionBinding
 import com.example.simmone.utils.Constants
 import com.example.simmone.view.fragments.*
@@ -27,8 +28,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
         sessionBinding = ActivitySessionBinding.inflate(layoutInflater)
         setContentView(sessionBinding.root)
 
-            sessionViewModel.loadSession(this)
-
+        sessionViewModel.loadSession(this)
 
         sessionViewModel.getListActivity().observe(this, Observer {
             if (!it.isEmpty()){
@@ -73,13 +73,10 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                 Constants.EVENT_NEXT_PAGE -> {
                     sessionViewModel.eventlivedata.value = Constants.EVENT_NONE
                     var list = sessionViewModel.ListActivityData.value
-                    when(list?.get(sessionViewModel.session_num)?.sessionId){
-                        "session_1" -> {
-                            sessionViewModel.quizFile.value = list[sessionViewModel.session_num].activityList?.get(sessionViewModel.page)
-                            Log.e("quiz",sessionViewModel.quizFile.value!!)
-                            sessionViewModel.loadAllQuestions(this)
-                        }
-                    }
+                    sessionViewModel.quizFile.value =
+                        list?.get(SessionManager.instance.session_num)?.activityList?.get(sessionViewModel.page)
+                    Log.e("quiz", sessionViewModel.quizFile.value!!)
+                    sessionViewModel.loadAllQuestions(this)
                 }
                 Constants.EVENT_FINISH_SESSION -> {
                     startActivity(

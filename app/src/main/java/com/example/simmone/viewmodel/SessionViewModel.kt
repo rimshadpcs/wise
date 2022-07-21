@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.simmone.dataStore.SessionManager
 import com.example.simmone.model.*
 import com.example.simmone.utils.Constants
 import org.json.JSONArray
@@ -28,7 +29,6 @@ class SessionViewModel:ViewModel() {
     var quizFile = MutableLiveData<String>()
     var current_question = 0;
     var fragmentLiveData = MutableLiveData<String>("")
-    var session_num = 0
     var page = 0
 
     //FragmentTrueOrFalse
@@ -149,6 +149,7 @@ class SessionViewModel:ViewModel() {
     }
 
     fun loadSession(context: Context) {
+        Log.i("SessionActivity","Loading session description from json")
         val jsonStr = loadSessionFromAsset(context)
 
         questionItems = ArrayList()
@@ -189,7 +190,7 @@ class SessionViewModel:ViewModel() {
     }
     public fun checkForNextQuestion(){
         // load next question if any
-        if (page < ListActivity[0].activityList!!.size-1) {
+        if (page < ListActivity[SessionManager.instance.session_num].activityList!!.size-1) {
             Log.e("next","sd")
             page++
             eventlivedata.value = Constants.EVENT_NEXT_PAGE
