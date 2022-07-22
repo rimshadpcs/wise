@@ -43,15 +43,17 @@ class FragmentOperation : Fragment() {
         viewModel.getNotTxt().observe(context as SessionActivity, Observer {
             if(it.isNotEmpty()){
                 operationBinding.tvTxt.text = it
-                object : CountDownTimer(6000, 1000) {
+                object : CountDownTimer(5000, 50) {
 
                     override fun onTick(millisUntilFinished: Long) {
-                        operationBinding.tvTimer.setText((millisUntilFinished / 1000 ).toString()+ " seconds remaining")
+//                        operationBinding.tvTimer.setText((millisUntilFinished / 1000 ).toString()+ " seconds remaining")
+                        operationBinding.progressbar.incrementProgressBy(-1)
                     }
 
                     override fun onFinish() {
+                        operationBinding.progressbar.setProgress(100)
                         if (viewModel.notPage == 4){
-                            operationBinding.tvTimer.visibility = View.GONE
+//                            operationBinding.tvTimer.visibility = View.GONE
                             operationBinding.progressbar.visibility = View.GONE
                         }
                         else{
@@ -73,28 +75,27 @@ class FragmentOperation : Fragment() {
                     viewModel.notItems[1] -> {
                         operationBinding.tvTalking.visibility = View.GONE
                         operationBinding.tvTalking2.visibility = View.VISIBLE
+                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_closed)
                     }
                     viewModel.notItems[2] -> {
                         operationBinding.tvTalking2.visibility = View.GONE
                         operationBinding.tvBeep.visibility = View.VISIBLE
+                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_open)
                     }
                     viewModel.notItems[3] -> {
                         operationBinding.tvBeep.visibility = View.GONE
                         operationBinding.tvTalking3.visibility = View.VISIBLE
+                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_closed)
                     }
                     viewModel.notItems[4] -> {
                         operationBinding.tvTalking3.visibility = View.GONE
                         operationBinding.tvTalking.visibility = View.VISIBLE
+                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_open)
                         Constants.PAGE_FLAG = viewModel.page
                         val notificationWorker: WorkRequest = OneTimeWorkRequestBuilder<MyNotificationManager>().build()
                         WorkManager
                             .getInstance(context as SessionActivity)
                             .enqueue(notificationWorker)
-                    }
-                    viewModel.notItems[5] -> {
-                        operationBinding.tvTalking.visibility = View.GONE
-                        operationBinding.tvSmile.visibility = View.VISIBLE
-                        operationBinding.btnContinue.visibility = View.VISIBLE
                     }
                 }
             }

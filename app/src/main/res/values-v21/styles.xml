@@ -11,4 +11,10 @@
         <item name="android:background">@drawable/app_widget_inner_view_background</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_circle</item>
+    </style>
+
 </resources>
