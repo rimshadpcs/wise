@@ -31,27 +31,35 @@
         </receiver>
         <activity
             android:name=".view.compose.SquareDrawingActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activities.SessionActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activities.EndSessionActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activities.OperationResultActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activities.BubbleSample"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activities.SplashScreen"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activities.OnBoardingActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".view.activities.MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -75,6 +83,7 @@
         </service>
         <activity
             android:name=".view.activities.StoryBoardActivity"
+            android:screenOrientation="portrait"
             android:exported="true" >
         </activity>
     </application>
