@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
                 // normalizes growth progress to maximum growth allowed in this interval
                 var plantStageFloat = lerp(
                     0f,
-                    plantImages.size.toFloat(),
+                    plantImages.size.toFloat()-1,
                     sessionsCompleted.toFloat() / plantGrowthIntervals[plantGrowthIndex]
                 )
                 // turn the number back into int
