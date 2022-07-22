@@ -52,12 +52,13 @@
         <ImageView
             android:id="@+id/iv_plantMain"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="0dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/plant_stage3"
+            android:src="@drawable/tulip_red_stage0"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivSimmMain"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/ivSimmMain"
+            app:layout_constraintStart_toEndOf="@+id/ivSimmMain"
             android:contentDescription="@null" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
