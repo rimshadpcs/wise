@@ -13,10 +13,12 @@ import com.example.simmone.dataStore.GoldManager
 import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityMainBinding
 import com.example.simmone.viewmodel.MainViewModel
+import com.google.android.material.math.MathUtils.lerp
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -24,6 +26,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
     private val mainModel : MainViewModel by viewModels()
 
+    // store drawable image references here
+    // will probably change into 2D array when more plants are made
     private val plantImages = intArrayOf(
         R.drawable.tulip_red_stage0,
         R.drawable.tulip_red_stage1,
@@ -31,6 +35,10 @@ class MainActivity : AppCompatActivity() {
         R.drawable.tulip_red_stage3,
         R.drawable.tulip_red_stage4,
         R.drawable.tulip_red_stage5
+    )
+    // The number of sessions to complete for a fully grown plant
+    private val plantGrowthIntervals: MutableList<Int> = mutableListOf(
+        plantImages.size - 1
     )
 
 
@@ -77,14 +85,37 @@ class MainActivity : AppCompatActivity() {
 
     private fun setPlant(){
         var sessionsCompleted = 0
+        var plantGrowthIndex = 0
+        var numberOfPlantsCollected = 0
         goldManager.goldCountFlow.asLiveData().observe(this){
             if (it != null) {
-                Log.d("sessionsCompletedIt", it.toString())
                 sessionsCompleted = it
-                Log.d("sessionsCompleted", sessionsCompleted.toString())
-                sessionsCompleted %= plantImages.size
-                Log.d("sessionsCompletedMod", sessionsCompleted.toString())
+                Log.d("sessionsCompletedIt", sessionsCompleted.toString())
+
+                // Converts sessionsCompleted into a plant growth size depending on sessions done
+                // Basically a % but with variable divisor
+                while (sessionsCompleted > plantGrowthIntervals[plantGrowthIndex]) {
+                    sessionsCompleted -= plantGrowthIntervals[plantGrowthIndex]
+                    plantGrowthIndex++
+                    numberOfPlantsCollected++
+                    if (plantGrowthIndex >= plantGrowthIntervals.size) {  // don't go out of index bounds
+                        plantGrowthIndex = plantGrowthIntervals.size - 1
+                    }
+                }
+
+                // normalizes growth progress to maximum growth allowed in this interval
+                var plantStageFloat = lerp(
+                    0f,
+                    plantImages.size.toFloat(),
+                    sessionsCompleted.toFloat() / plantGrowthIntervals[plantGrowthIndex]
+                )
+                // turn the number back into int
+                sessionsCompleted = plantStageFloat.roundToInt()
+                Log.d("sessionsCompletedFinal", sessionsCompleted.toString())
+
+                // set the images
                 mainBinding.ivPlantMain.setImageResource(plantImages[sessionsCompleted])
+//                mainBinding.ivPlantCounter.text = numberOfPlantsCollected.toString()  // ivPlantCounter is a placeholder, doesn't exist
             }
         }
     }
