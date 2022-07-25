@@ -110,6 +110,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
     override fun onResume() {
         super.onResume()
         if (Constants.PAGE_FLAG>-1) {
+            Constants.PAGE_FLAG = -1
             Log.e("next",sessionViewModel.page.toString())
             sessionViewModel.checkForNextQuestion()
         }
