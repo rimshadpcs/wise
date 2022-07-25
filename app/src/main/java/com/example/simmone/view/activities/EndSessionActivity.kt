@@ -3,7 +3,7 @@ package com.example.simmone.view.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.simmone.dataStore.SessionManager
+import com.example.simmone.ProgressManager
 import com.example.simmone.databinding.ActivityEndSessionBinding
 import com.example.simmone.dataStore.GoldManager
 import com.example.simmone.dataStore.dataStore
@@ -24,7 +24,7 @@ class EndSessionActivity : AppCompatActivity() {
         setContentView(viewBinding.root)
 
         viewBinding.btFinishSession.setOnClickListener {
-            SessionManager.instance.session_num++
+            ProgressManager.instance.sessionNumber++
 
             GlobalScope.launch {
                 goldManager.storeGold()

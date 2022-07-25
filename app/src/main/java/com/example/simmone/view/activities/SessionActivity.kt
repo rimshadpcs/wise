@@ -4,19 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.Observer
 import com.example.simmone.R
-import com.example.simmone.dataStore.SessionManager
+import com.example.simmone.ProgressManager
 import com.example.simmone.databinding.ActivitySessionBinding
 import com.example.simmone.utils.Constants
 import com.example.simmone.view.fragments.*
 import com.example.simmone.viewmodel.SessionViewModel
-import javax.security.auth.callback.Callback
 
 class SessionActivity : AppCompatActivity(),RightBottomSheetDialog.RightBottomSheetListener,
 WrongBottomSheetDialog.WrongBottomSheetListener{
@@ -74,7 +71,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                     sessionViewModel.eventlivedata.value = Constants.EVENT_NONE
                     var list = sessionViewModel.ListActivityData.value
                     sessionViewModel.quizFile.value =
-                        list?.get(SessionManager.instance.session_num)?.activityList?.get(sessionViewModel.page)
+                        list?.get(ProgressManager.instance.sessionNumber)?.activityList?.get(sessionViewModel.page)
                     Log.e("quiz", sessionViewModel.quizFile.value!!)
                     sessionViewModel.loadAllQuestions(this)
                 }
