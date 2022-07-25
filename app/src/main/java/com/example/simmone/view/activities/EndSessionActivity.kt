@@ -32,7 +32,7 @@ class EndSessionActivity : AppCompatActivity() {
 
         // loads gif
         Glide.with(this)
-            .load(R.drawable.celebration_jump)
+            .load(R.drawable.celebration_thumbs_up)
             .into(viewBinding.ivSimmFinish)
 
         // delay for button showing
