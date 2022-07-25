@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.simmone.dataStore.SessionManager
+import com.example.simmone.ProgressManager
 import com.example.simmone.model.*
 import com.example.simmone.utils.Constants
 import org.json.JSONArray
@@ -190,7 +190,7 @@ class SessionViewModel:ViewModel() {
     }
     public fun checkForNextQuestion(){
         // load next question if any
-        if (page < ListActivity[SessionManager.instance.session_num].activityList!!.size-1) {
+        if (page < ListActivity[ProgressManager.instance.sessionNumber].activityList!!.size-1) {
             Log.e("next","sd")
             page++
             eventlivedata.value = Constants.EVENT_NEXT_PAGE

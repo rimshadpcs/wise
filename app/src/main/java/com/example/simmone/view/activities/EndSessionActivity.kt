@@ -8,22 +8,15 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.simmone.R
-import com.example.simmone.dataStore.GoldManager
-import com.example.simmone.dataStore.SessionManager
-import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityEndSessionBinding
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import com.example.simmone.ProgressManager
+
 
 class EndSessionActivity : AppCompatActivity() {
-    private lateinit var goldManager: GoldManager
 
-    private lateinit var viewBinding:ActivityEndSessionBinding
+    private lateinit var viewBinding: ActivityEndSessionBinding
 
-    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
-        goldManager = GoldManager(dataStore)
 
         super.onCreate(savedInstanceState)
 
@@ -31,11 +24,7 @@ class EndSessionActivity : AppCompatActivity() {
         setContentView(viewBinding.root)
 
         viewBinding.btFinishSession.setOnClickListener {
-            SessionManager.instance.session_num++
-
-            GlobalScope.launch {
-                goldManager.storeGold()
-            }
+            ProgressManager.instance.saveProgress(this)
 
             startActivity(Intent(this, MainActivity::class.java))
             finish()

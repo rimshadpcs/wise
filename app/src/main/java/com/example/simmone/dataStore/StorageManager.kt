@@ -1,28 +1,27 @@
 package com.example.simmone.dataStore
 
 import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.MutablePreferences
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class GoldManager(val dataStore: DataStore<Preferences>) {
+class StorageManager(val dataStore: DataStore<Preferences>) {
 
     companion object {
-        val GOLD_COUNT_KEY = intPreferencesKey("GOLD_COUNT")
+        val SESSION_COUNT_KEY = intPreferencesKey("SESSION_COUNT")
     }
 
-    suspend fun storeGold() {
+    suspend fun storeSessionNumber(sessionNumber: Int) {
         dataStore.edit {
-            it[GOLD_COUNT_KEY] = (it[GOLD_COUNT_KEY] ?: 0) + 1
+            it[SESSION_COUNT_KEY] = sessionNumber
         }
     }
 
     // Flow for gold
-    val goldCountFlow: Flow<Int?> = dataStore.data.map {
-        it[GOLD_COUNT_KEY]
+    val sessionCountFlow: Flow<Int?> = dataStore.data.map {
+        it[SESSION_COUNT_KEY]
     }
 
 }
