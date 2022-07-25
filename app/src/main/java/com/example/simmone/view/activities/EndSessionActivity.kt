@@ -5,18 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.simmone.ProgressManager
 import com.example.simmone.databinding.ActivityEndSessionBinding
-import com.example.simmone.dataStore.GoldManager
-import com.example.simmone.dataStore.dataStore
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class EndSessionActivity : AppCompatActivity() {
-    lateinit var goldManager: GoldManager
 
     private lateinit var viewBinding:ActivityEndSessionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        goldManager = GoldManager(dataStore)
 
         super.onCreate(savedInstanceState)
 
@@ -24,11 +18,7 @@ class EndSessionActivity : AppCompatActivity() {
         setContentView(viewBinding.root)
 
         viewBinding.btFinishSession.setOnClickListener {
-            ProgressManager.instance.sessionNumber++
-
-            GlobalScope.launch {
-                goldManager.storeGold()
-            }
+            ProgressManager.instance.saveProgress(this)
 
             startActivity(Intent(this, MainActivity::class.java))
             finish()
