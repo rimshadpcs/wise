@@ -11,7 +11,7 @@
         android:id="@+id/ivSimmFinish"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/simm_half_body"
+        android:src="@drawable/celebration_jump"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
