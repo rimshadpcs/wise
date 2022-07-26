@@ -19,6 +19,9 @@ import kotlin.collections.ArrayList
 class SessionViewModel:ViewModel() {
 
 
+    var progressLiveData = MutableLiveData(0)
+    fun getProgressValue():LiveData<Int> = progressLiveData
+
     //FragmentMcq
     private var questionItems: ArrayList<QuestionItem> = ArrayList()
     private var ListActivity: ArrayList<SessionModel> = ArrayList()
@@ -129,6 +132,9 @@ class SessionViewModel:ViewModel() {
             e.printStackTrace()
         }
     }
+
+
+
     private fun loadJSONFromAsset(context: Context): String {
         Log.e("Quizfile",quizFile.value!!)
         val charset: Charset = Charsets.UTF_8
@@ -207,5 +213,12 @@ class SessionViewModel:ViewModel() {
         }
 
         return list
+    }
+
+    fun getProgress(){
+        var num = ListActivity[SessionManager.instance.session_num].activityList!!.size
+        var i = 100/num
+        Log.e("num=",num.toString() +"-" +i.toString())
+        progressLiveData.value = i*(page+1)
     }
 }

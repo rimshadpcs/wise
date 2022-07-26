@@ -36,7 +36,9 @@ class MyNotificationManager(context: Context, workerParams: WorkerParameters):
         val intent = Intent(applicationContext, OperationResultActivity::class.java).apply {
 //            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             flags = Intent.FLAG_ACTIVITY_NEW_TASK
+
         }
+
 
         val pendingIntent: PendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_IMMUTABLE)

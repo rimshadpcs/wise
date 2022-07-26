@@ -7,26 +7,26 @@
     android:background="@color/black"
     tools:context=".view.fragments.FragmentOperation">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="52dp"
-        android:id="@+id/view1"
-        android:background="#616161"
-        >
-        <View
-            android:layout_width="121dp"
-            android:layout_height="match_parent"
-            android:background="#249E30"
-            />
-    </FrameLayout>
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="4dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_marginTop="52dp"-->
+<!--        android:id="@+id/view1"-->
+<!--        android:background="#616161"-->
+<!--        >-->
+<!--        <View-->
+<!--            android:layout_width="121dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="#249E30"-->
+<!--            />-->
+<!--    </FrameLayout>-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Thinking / Neutral"
         android:id="@+id/tv_talking3"
@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Talking"
         android:id="@+id/tv_talking"
@@ -53,7 +53,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Talking"
         android:visibility="gone"
@@ -67,7 +67,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Smiling"
         android:visibility="gone"

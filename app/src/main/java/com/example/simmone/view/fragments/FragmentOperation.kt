@@ -3,11 +3,14 @@ package com.example.simmone.view.fragments
 import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.transition.TransitionInflater
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -29,8 +32,8 @@ class FragmentOperation : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
+        val inflater = TransitionInflater.from(requireContext())
+        enterTransition = inflater.inflateTransition(R.transition.transition_right)
     }
 
     override fun onCreateView(
@@ -39,6 +42,7 @@ class FragmentOperation : Fragment() {
     ): View? {
         operationBinding = FragmentOperationBinding.inflate(inflater, container, false)
         val view = operationBinding.root
+        var animation = AnimationUtils.loadAnimation(context as SessionActivity,R.anim.slide_right)
 
         viewModel.getNotTxt().observe(context as SessionActivity, Observer {
             if(it.isNotEmpty()){
@@ -63,7 +67,8 @@ class FragmentOperation : Fragment() {
                                 operationBinding.tvTxt.setTextColor(Color.parseColor("#E6E6E6"))
                             viewModel.notPage = viewModel.notPage+1
                             viewModel.notTxtLivedata.value = viewModel.notItems[viewModel.notPage]
-                            operationBinding.tvTxt.text = viewModel.notItems[viewModel.notPage]
+                            operationBinding.tvTxt.startAnimation(animation)
+//                            operationBinding.tvTxt.text = viewModel.notItems[viewModel.notPage]
                         }
                         Log.e("notPage",viewModel.notPage.toString())
                     }
@@ -92,6 +97,7 @@ class FragmentOperation : Fragment() {
                         operationBinding.tvTalking.visibility = View.VISIBLE
                         operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_open)
                         Constants.PAGE_FLAG = viewModel.page
+                        Constants.progressSession = viewModel.progressLiveData.value!!
                         val notificationWorker: WorkRequest = OneTimeWorkRequestBuilder<MyNotificationManager>().build()
                         WorkManager
                             .getInstance(context as SessionActivity)
@@ -101,6 +107,10 @@ class FragmentOperation : Fragment() {
             }
         })
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     companion object {

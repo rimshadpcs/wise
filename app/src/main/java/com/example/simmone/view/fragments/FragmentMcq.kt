@@ -1,6 +1,7 @@
 package com.example.simmone.view.fragments
 
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import com.example.simmone.R
 import com.example.simmone.databinding.FragmentMcqBinding
 import com.example.simmone.model.QuestionItem
 import com.example.simmone.utils.Constants
@@ -28,6 +30,8 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val inflater = TransitionInflater.from(requireContext())
+        enterTransition = inflater.inflateTransition(R.transition.transition_right)
     }
 
     override fun onCreateView(

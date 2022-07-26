@@ -66,6 +66,11 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                     }
                 }
             }
+            sessionViewModel.getProgress()
+        })
+
+        sessionViewModel.getProgressValue().observe(this, Observer {
+            sessionBinding.sessionProgress.progress = it
         })
 
         sessionViewModel.getEvent().observe(this, Observer {
@@ -82,6 +87,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                     startActivity(
                         Intent(this,EndSessionActivity::class.java)
                     )
+                    finish()
                 }
                 Constants.EVENT_SHOW_RIGHT_BOTTOMSHEET -> {
                     val data = sessionViewModel.mcqData.value

@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding.cvLaunch.setOnClickListener{
             val intent = Intent(this, SessionActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_right,0)
         }
 
         setPlant()

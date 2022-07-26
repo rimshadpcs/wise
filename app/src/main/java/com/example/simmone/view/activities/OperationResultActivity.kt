@@ -28,6 +28,8 @@ class OperationResultActivity : AppCompatActivity() {
         operationResultBinding = ActivityOperationResultBinding.inflate(layoutInflater)
         setContentView(operationResultBinding.root)
 
+        operationResultBinding.sessionProgress.progress = Constants.progressSession
+
         operationResultBinding.btnContinue.setOnClickListener {
             finish()
         }

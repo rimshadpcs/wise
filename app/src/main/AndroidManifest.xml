@@ -40,11 +40,13 @@
         <activity
             android:name=".view.activities.EndSessionActivity"
             android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.SimmOne.right_anim"/>
         <activity
             android:name=".view.activities.OperationResultActivity"
             android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.SimmOne.right_anim"/>
         <activity
             android:name=".view.activities.BubbleSample"
             android:screenOrientation="portrait"
