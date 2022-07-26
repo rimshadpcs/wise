@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/opensanssemibold"
+            android:fontFamily="@font/open_sans_semi_bold"
             android:text="@string/complete"
             android:textColor="@color/off_black"
             app:backgroundTint="@color/white"
