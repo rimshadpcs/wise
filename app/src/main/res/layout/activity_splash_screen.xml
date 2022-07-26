@@ -53,74 +53,76 @@
             app:layout_constraintTop_toBottomOf="@id/tvHintText">
 
 
-            <ProgressBar
-                android:id="@+id/pbProgressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:progressDrawable="@drawable/progress_bar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:max="100"
-                android:progress="100"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-            <ImageView
-                android:id="@+id/ivSessionImageBulb"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:contentDescription="@null"
-                android:src="@drawable/light_bulb"
-                app:layout_constraintTop_toTopOf="@id/pbProgressBar"
-                app:layout_constraintBottom_toBottomOf="@id/pbProgressBar"
-                app:layout_constraintStart_toStartOf="@id/pbProgressBar"
-                app:layout_constraintEnd_toEndOf="@id/pbProgressBar"/>
-
-<!--            -->
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/cvLoadingBackground"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="140dp"-->
-<!--                app:cardBackgroundColor="@color/grey_buttons"-->
-<!--                app:cardCornerRadius="20dp"-->
+<!--            <ProgressBar-->
+<!--                android:id="@+id/pbProgressBar"-->
+<!--                style="?android:attr/progressBarStyleHorizontal"-->
+<!--                android:progressDrawable="@drawable/progress_bar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:max="100"-->
+<!--                android:progress="100"-->
 <!--                app:layout_constraintBottom_toBottomOf="parent"-->
 <!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent">-->
+<!--                app:layout_constraintStart_toStartOf="parent"/>-->
 
-<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent">-->
-
-<!--                    <androidx.cardview.widget.CardView-->
-<!--                        android:id="@+id/cvLoadingBar"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_marginStart="5dp"-->
-<!--                        android:layout_marginTop="5dp"-->
-<!--                        android:layout_marginEnd="155dp"-->
-<!--                        android:layout_marginBottom="5dp"-->
-<!--                        app:cardBackgroundColor="@color/launch_card_top_bg"-->
-<!--                        app:cardCornerRadius="15dp"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent">-->
-<!--                    </androidx.cardview.widget.CardView>-->
+<!--            <ImageView-->
+<!--                android:id="@+id/ivSessionImageBulb"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:contentDescription="@null"-->
+<!--                android:src="@drawable/light_bulb"-->
+<!--                app:layout_constraintTop_toTopOf="@id/pbProgressBar"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/pbProgressBar"-->
+<!--                app:layout_constraintStart_toStartOf="@id/pbProgressBar"-->
+<!--                app:layout_constraintEnd_toEndOf="@id/pbProgressBar"/>-->
 
 
-<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvLoadingBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/grey_buttons"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/ivSessionImageBulb"-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:contentDescription="@null"-->
-<!--                    android:src="@drawable/light_bulb" />-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clLoadingBarWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
 
-<!--            </androidx.cardview.widget.CardView>-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvLoadingBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/launch_card_top_bg"
+                        app:cardCornerRadius="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/ivSessionImageBulb"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/light_bulb" />
+
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
