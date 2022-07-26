@@ -6,6 +6,7 @@
         <entry key="../../../layout/custom_preview.xml" value="0.29030797101449274" />
         <entry key="../Library/Android/sdk/platforms/android-32/data/res/layout/activity_list_item.xml" value="0.2543822146216332" />
         <entry key="app/src/main/res/drawable-v21/app_widget_background.xml" value="0.323" />
+        <entry key="app/src/main/res/drawable-v21/app_widget_inner_view_background.xml" value="0.3225" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2105" />
         <entry key="app/src/main/res/drawable/bottom_sheet_corner.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bottom_sheet_corner_green.xml" value="0.2105" />
@@ -17,29 +18,35 @@
         <entry key="app/src/main/res/drawable/choice_2.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/choice_3.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/choice_4.xml" value="0.2035" />
-        <entry key="app/src/main/res/drawable/frame_box_bg.xml" value="0.2745" />
+        <entry key="app/src/main/res/drawable/frame_box_bg.xml" value="0.3225" />
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.269" />
         <entry key="app/src/main/res/drawable/ic_button_background.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/progress_circle.xml" value="0.2745" />
-        <entry key="app/src/main/res/drawable/progress_drawable.xml" value="0.2745" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2105" />
+        <entry key="app/src/main/res/drawable/on_boarding_chip.xml" value="0.323" />
+        <entry key="app/src/main/res/drawable/onboarding_simm_backround.xml" value="0.323" />
+        <entry key="app/src/main/res/drawable/progress_bar.xml" value="0.3225" />
+        <entry key="app/src/main/res/drawable/progress_circle.xml" value="0.3235" />
+        <entry key="app/src/main/res/drawable/progress_drawable.xml" value="0.323" />
         <entry key="app/src/main/res/font/lobster.xml" value="0.3390625" />
         <entry key="app/src/main/res/layout/activity_bubble_sample.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_drawing.xml" value="0.1824074074074074" />
         <entry key="app/src/main/res/layout/activity_end_session.xml" value="0.26226959228515623" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5608688354492188" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16225165562913907" />
         <entry key="app/src/main/res/layout/activity_mcq.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/activity_operation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_operation_result.xml" value="0.28892822265625007" />
         <entry key="app/src/main/res/layout/activity_question_sort.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_right_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_session.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/activity_sliding.xml" value="0.25427350427350426" />
-        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_story_board.xml" value="0.7860476777753758" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.17794253938832252" />
         <entry key="app/src/main/res/layout/activity_true_or_false.xml" value="0.16883178710937502" />
         <entry key="app/src/main/res/layout/activity_wrong_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/fragment_mcq.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/fragment_operation.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
