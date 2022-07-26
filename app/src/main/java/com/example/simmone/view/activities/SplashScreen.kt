@@ -5,13 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
 import com.example.simmone.R
+import com.example.simmone.utils.AppUtil
 import kotlinx.coroutines.*
 
 @DelicateCoroutinesApi
 class SplashScreen : AppCompatActivity() {
+    lateinit var appUtil: AppUtil
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         GlobalScope.launch {
             delay(3000L)

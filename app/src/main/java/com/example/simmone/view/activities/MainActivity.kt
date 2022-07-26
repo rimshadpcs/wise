@@ -10,6 +10,7 @@ import com.example.simmone.R
 import com.example.simmone.dataStore.StorageManager
 import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityMainBinding
+import com.example.simmone.utils.AppUtil
 import com.example.simmone.viewmodel.MainViewModel
 import com.google.android.material.math.MathUtils.lerp
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,6 +20,7 @@ import kotlin.math.roundToInt
 class MainActivity : AppCompatActivity() {
   lateinit var storageManager: StorageManager
     private lateinit var mainBinding: ActivityMainBinding
+    lateinit var appUtil: AppUtil
     private val mainModel : MainViewModel by viewModels()
 
     // store drawable image references here
@@ -43,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
         storageManager = StorageManager(dataStore)
         observeSessionNumber()
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         mainBinding.cvLaunch.setOnClickListener{
             val intent = Intent(this, SessionActivity::class.java)

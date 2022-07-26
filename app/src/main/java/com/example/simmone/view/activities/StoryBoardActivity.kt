@@ -13,18 +13,22 @@ import com.example.simmone.R
 import com.example.simmone.adapters.StoryBoardAdapter
 import com.example.simmone.databinding.ActivityMainBinding
 import com.example.simmone.databinding.ActivityStoryBoardBinding
+import com.example.simmone.utils.AppUtil
 import me.relex.circleindicator.CircleIndicator
 
 class StoryBoardActivity : AppCompatActivity() {
 
     private var storyTitleList = mutableListOf<String>()
     private var storyImageList = mutableListOf<Int>()
+    lateinit var appUtil: AppUtil
 
     private lateinit var storyBoardBinding: ActivityStoryBoardBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         storyBoardBinding = ActivityStoryBoardBinding.inflate(layoutInflater)
         setContentView(storyBoardBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         postToList()
 
