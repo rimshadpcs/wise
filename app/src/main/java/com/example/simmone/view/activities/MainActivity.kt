@@ -5,11 +5,13 @@ import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.asLiveData
+import androidx.work.*
 import com.example.simmone.ProgressManager
 import com.example.simmone.R
 import com.example.simmone.dataStore.StorageManager
 import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityMainBinding
+import com.example.simmone.services.DailyNotificationsManager
 import com.example.simmone.viewmodel.MainViewModel
 import com.google.android.material.math.MathUtils.lerp
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         plantImages.size - 1
     )
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -51,6 +52,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         setPlant()
+
+        //val notificationWorker: WorkRequest = PeriodicWorkRequestBuilder<DailyNotificationsManager>(
+        //    PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS,
+        //    TimeUnit.MILLISECONDS,
+        //    PeriodicWorkRequest.MIN_PERIODIC_FLEX_MILLIS,
+        //    TimeUnit.MILLISECONDS)
+        val notificationWorker: WorkRequest = OneTimeWorkRequestBuilder<DailyNotificationsManager>().build()
+        WorkManager
+            .getInstance(this)
+            .enqueue(notificationWorker)
 
 //        val modalBottomSheet = RightBottomSheetDialog()
 //        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)

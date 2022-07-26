@@ -4,8 +4,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.*
 
 class StorageManager(val dataStore: DataStore<Preferences>) {
 
@@ -17,6 +16,10 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         dataStore.edit {
             it[SESSION_COUNT_KEY] = sessionNumber
         }
+    }
+
+    suspend fun getSessionNumber(): Int? {
+        return dataStore.data.firstOrNull()?.get(SESSION_COUNT_KEY)
     }
 
     // Flow for gold
