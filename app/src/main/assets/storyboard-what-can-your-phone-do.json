@@ -1,0 +1,32 @@
+
+
+{
+
+  "activityId": "storyboard-what-can-your-phone-do",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Connect with People", "image": "connect_with_people"
+      },
+      {
+        "title": "Immerse Yourself", "image": "connect_with_people"
+      },
+      {
+        "title": "Simplify Your Day", "image": "connect_with_people"
+      },
+      {
+        "title": "Work on the Go", "image": "connect_with_people"
+      },
+      {
+        "title": "Live Healthier", "image": "connect_with_people"
+      },
+      {
+        "title": "Live Better", "image": "connect_with_people"
+      }
+    ]
+  }
+
+}

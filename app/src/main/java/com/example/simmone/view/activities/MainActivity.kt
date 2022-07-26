@@ -2,27 +2,22 @@ package com.example.simmone.view.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
-import androidx.databinding.DataBindingUtil.setContentView
 import androidx.lifecycle.asLiveData
+import com.example.simmone.ProgressManager
 import com.example.simmone.R
-import com.example.simmone.dataStore.GoldManager
+import com.example.simmone.dataStore.StorageManager
 import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityMainBinding
 import com.example.simmone.viewmodel.MainViewModel
 import com.google.android.material.math.MathUtils.lerp
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-  lateinit var goldManager: GoldManager
+  lateinit var storageManager: StorageManager
     private lateinit var mainBinding: ActivityMainBinding
     private val mainModel : MainViewModel by viewModels()
 
@@ -46,10 +41,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
-        goldManager = GoldManager(dataStore)
-        observeGold()
-
-        incrementReward(intent.getIntExtra("NextSession", 0))
+        storageManager = StorageManager(dataStore)
+        observeSessionNumber()
 
         mainBinding.cvLaunch.setOnClickListener{
             val intent = Intent(this, SessionActivity::class.java)
@@ -63,24 +56,12 @@ class MainActivity : AppCompatActivity() {
 //        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)
     }
 
-    private fun incrementReward(nextSession : Int){
-        if( nextSession==2) {
-            saveGold()
-            Toast.makeText(applicationContext,"reward", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun observeGold() {
-        goldManager.goldCountFlow.asLiveData().observe(this) {
+    private fun observeSessionNumber() {
+        storageManager.sessionCountFlow.asLiveData().observe(this) {
             if (it != null) {
+                ProgressManager.instance.sessionNumber = it
                 mainBinding.tvGold.text = it.toString()
             }
-        }
-    }
-    @OptIn(DelicateCoroutinesApi::class)
-    private fun saveGold() {
-        GlobalScope.launch {
-            goldManager.storeGold()
         }
     }
 
@@ -88,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         var sessionsCompleted = 0
         var plantGrowthIndex = 0
         var numberOfPlantsCollected = 0
-        goldManager.goldCountFlow.asLiveData().observe(this){
+        storageManager.sessionCountFlow.asLiveData().observe(this){
             if (it != null) {
                 sessionsCompleted = it
                 Log.d("sessionsCompletedIt", sessionsCompleted.toString())

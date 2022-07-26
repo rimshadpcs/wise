@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/off_black"
     tools:context=".view.activities.EndSessionActivity">
 
-    <ImageView
+
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/ivSimmFinish"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/simm_half_body"
+        android:src="@drawable/celebration_thumbs_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/btFinishSession"
-        android:contentDescription="@null" />
+        android:contentDescription="@null"
+        />
     <TextView
         android:id="@+id/tvFinish"
         android:layout_width="wrap_content"

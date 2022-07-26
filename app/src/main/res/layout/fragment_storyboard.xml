@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/off_black"
     tools:context=".view.fragments.FragmentStoryboard">
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vp_story_board"
@@ -28,7 +28,7 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@color/black"
+        android:background="@color/off_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vp_story_board">
@@ -52,7 +52,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/opensanssemibold"
             android:text="@string/complete"
-            android:textColor="@color/black"
+            android:textColor="@color/off_black"
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
