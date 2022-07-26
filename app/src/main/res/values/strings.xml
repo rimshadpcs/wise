@@ -40,6 +40,7 @@
     <string name="app_widget_description">This is an app widget description</string>
     <string name="loading">loading</string>
     <string name="plant_status">Awake</string>
+    <string name="encouragement_text">Keep Learning!</string>
 
 
 </resources>

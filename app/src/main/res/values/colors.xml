@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="off_black">#FF1D1D1D</color>
+    <color name="grey_buttons">#FF3C3C3C</color>
     <color name="white">#FFFFFFFF</color>
     <color name="QuestionBackground">#F48FB1</color>
     <color name="choiceBackGround">#BA68C8</color>
