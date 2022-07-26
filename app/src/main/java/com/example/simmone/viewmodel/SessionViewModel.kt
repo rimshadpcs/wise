@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.simmone.ProgressManager
+import com.example.simmone.dataStore.StorageManager
 import com.example.simmone.model.*
 import com.example.simmone.utils.Constants
 import org.json.JSONArray
@@ -216,9 +217,11 @@ class SessionViewModel:ViewModel() {
     }
 
     fun getProgress(){
-        var num = ListActivity[SessionManager.instance.session_num].activityList!!.size
-        var i = 100/num
-        Log.e("num=",num.toString() +"-" +i.toString())
-        progressLiveData.value = i*(page+1)
+        if (ProgressManager.instance.sessionNumber<ListActivity.size) {
+            var num = ListActivity[ProgressManager.instance.sessionNumber].activityList!!.size
+            var i = 100 / num
+            Log.e("num=", num.toString() + "-" + i.toString())
+            progressLiveData.value = i * page
+        }
     }
 }
