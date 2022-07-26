@@ -36,11 +36,12 @@
         <entry key="app/src/main/res/layout/activity_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_sliding.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.32083333333333336" />
-        <entry key="app/src/main/res/layout/activity_story_board.xml" value="0.17557251908396945" />
+        <entry key="app/src/main/res/layout/activity_story_board.xml" value="0.7860476777753758" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.17794253938832252" />
         <entry key="app/src/main/res/layout/activity_true_or_false.xml" value="0.16883178710937502" />
         <entry key="app/src/main/res/layout/activity_wrong_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/fragment_operation.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_story_board.xml" value="0.1" />

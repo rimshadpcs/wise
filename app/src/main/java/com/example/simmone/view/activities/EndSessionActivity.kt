@@ -6,8 +6,6 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
-import com.example.simmone.R
 import com.example.simmone.databinding.ActivityEndSessionBinding
 import com.example.simmone.ProgressManager
 
@@ -30,10 +28,6 @@ class EndSessionActivity : AppCompatActivity() {
             finish()
         }
 
-        // loads gif
-        Glide.with(this)
-            .load(R.drawable.celebration_thumbs_up)
-            .into(viewBinding.ivSimmFinish)
 
         // delay for button showing
         // not sure if this is the best way to do it

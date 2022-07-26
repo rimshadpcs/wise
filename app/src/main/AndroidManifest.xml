@@ -38,7 +38,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".view.activities.EndSessionActivity"
+            android:name=".view.activities.SplashScreen"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -50,7 +50,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".view.activities.SplashScreen"
+            android:name=".view.activities.MainActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -58,7 +58,7 @@
             android:screenOrientation="portrait"
             android:exported="true" />
         <activity
-            android:name=".view.activities.MainActivity"
+            android:name=".view.activities.EndSessionActivity"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
