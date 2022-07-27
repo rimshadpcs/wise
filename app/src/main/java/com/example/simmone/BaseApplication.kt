@@ -25,7 +25,7 @@ class BaseApplication : Application() {
 
         WorkManager
             .getInstance(this)
-            .enqueueUniquePeriodicWork("periodic_handling", ExistingPeriodicWorkPolicy.REPLACE, notificationWorker)
+            .enqueueUniquePeriodicWork("periodic_handling", ExistingPeriodicWorkPolicy.KEEP, notificationWorker)
     }
 
 }
