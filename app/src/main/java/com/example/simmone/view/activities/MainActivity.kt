@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         appUtil.setDarkMode()
 
         mainBinding.cvLaunch.setOnClickListener{
-            val intent = Intent(this, SessionActivity::class.java)
+            val intent = Intent(this, SplashScreen::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_right,0)
         }
