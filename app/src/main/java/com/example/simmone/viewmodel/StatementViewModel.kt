@@ -10,8 +10,10 @@ class StatementViewModel : ViewModel
     var answer = ""
 
     constructor(): super()
+
     constructor(statement: Statement) : super() {
     }
+
     var mutableStatementList = MutableLiveData<ArrayList<StatementViewModel>>()
     var statementList = ArrayList<StatementViewModel>()
 

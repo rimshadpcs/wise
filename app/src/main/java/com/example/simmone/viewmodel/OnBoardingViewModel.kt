@@ -2,7 +2,12 @@ package com.example.simmone.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.lifecycleScope
 import com.example.simmone.model.OnBoarding
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class OnBoardingViewModel: ViewModel {
 
@@ -15,11 +20,13 @@ class OnBoardingViewModel: ViewModel {
     var onBoardingList = ArrayList<OnBoardingViewModel>()
 
     var newMOnboardingList = MutableLiveData<ArrayList<OnBoarding>>()
+    var sizeOfMessageList = MutableLiveData<Int>()
 
 
 
     fun generateOnBoardingMessage(){
         val newOnboardList = ArrayList<OnBoarding>()
+        val newOnboardList2 = ArrayList<OnBoarding>()
 
         val onBoardMessage1 = OnBoarding("Roses are red, violets are blue, poetry is hard. Avocado.")
         val onBoardMessage2 = OnBoarding("Roses are #FF0000, Violets are #0000FF, All my base belongs to you.")
@@ -28,6 +35,7 @@ class OnBoardingViewModel: ViewModel {
         val onBoardMessage5 = OnBoarding("Roses are red, violets are blue, sheep go baah, and cows go moo.")
         val onBoardMessage6 = OnBoarding("Roses are red, violets are blue, these jokes are getting old, and so are you. ")
 
+
         newOnboardList.add(onBoardMessage1)
         newOnboardList.add(onBoardMessage2)
         newOnboardList.add(onBoardMessage3)
@@ -35,7 +43,17 @@ class OnBoardingViewModel: ViewModel {
         newOnboardList.add(onBoardMessage5)
         newOnboardList.add(onBoardMessage6)
 
-        newMOnboardingList.value = newOnboardList
+        viewModelScope.launch(Dispatchers.Main) {
+            for(i in 1 until newOnboardList.size ){
+                delay(2000)
+                newOnboardList2.add(newOnboardList[i])
+
+            }
+        }
+
+        sizeOfMessageList.value = newOnboardList.size
+        newMOnboardingList.value = newOnboardList2
+
 
 
 

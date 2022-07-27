@@ -177,7 +177,7 @@ fun MyDrawing() {
                     gameState = 2
                     direction = 1
 
-                    nextCheckpoint = nextCheckpoint + direction
+                    nextCheckpoint += direction
                     if (nextCheckpoint > checkPointList.size - 1) nextCheckpoint = 0
 
                 }
