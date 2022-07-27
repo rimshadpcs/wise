@@ -7,16 +7,21 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import com.example.simmone.R
+import com.example.simmone.utils.AppUtil
+import kotlinx.coroutines.*
 import com.example.simmone.databinding.ActivitySplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
+    lateinit var appUtil: AppUtil
     private lateinit var splashBinding: ActivitySplashScreenBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
         splashBinding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(splashBinding.root)
 

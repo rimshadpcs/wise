@@ -29,6 +29,7 @@
     <color name="onboarding_bubbles">#242424</color>
     <color name="onboarding_background">#6F50A3</color>
     <color name="onboarding_simm_background">#9171C5</color>
+    <color name="DialogButton">#2a78f5</color>
     <color name="horizontal_progressbar">#249E30</color>
 
 

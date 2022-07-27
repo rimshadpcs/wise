@@ -1,29 +1,46 @@
 package com.example.simmone.view.activities
 
+import android.R.attr.left
+import android.R.attr.right
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Rect
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowInsets
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.ViewCompat.setSystemGestureExclusionRects
+import androidx.core.view.doOnLayout
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.Observer
-import com.example.simmone.R
 import com.example.simmone.ProgressManager
+import com.example.simmone.R
 import com.example.simmone.databinding.ActivitySessionBinding
+import com.example.simmone.utils.AppUtil
 import com.example.simmone.utils.Constants
 import com.example.simmone.view.fragments.*
 import com.example.simmone.viewmodel.SessionViewModel
+
 
 class SessionActivity : AppCompatActivity(),RightBottomSheetDialog.RightBottomSheetListener,
 WrongBottomSheetDialog.WrongBottomSheetListener{
 
     private lateinit var sessionBinding: ActivitySessionBinding
     private val sessionViewModel:SessionViewModel by viewModels()
+    lateinit var appUtil: AppUtil
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sessionBinding = ActivitySessionBinding.inflate(layoutInflater)
         setContentView(sessionBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
+
+        sessionBinding.btClose.setOnClickListener {
+            appUtil.showLoginDialog()
+        }
 
         sessionViewModel.loadSession(this)
 
@@ -33,6 +50,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
 //                sessionViewModel.eventlivedata.value = Constants.EVENT_NONE
             }
         })
+        DisableRightGesture()
 
         sessionViewModel.getFragment().observe(this, Observer {
             when(it){
@@ -105,12 +123,55 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
 
     }
 
+    private fun DisableRightGesture() {
+        sessionBinding.rootview.doOnLayout {
+            val gestureInsets = sessionBinding.rootview.rootWindowInsets.getInsets(WindowInsets.Type.systemGestures())
+
+            val rectHeight = sessionBinding.rootview.height
+            val rectTop = 0
+            val rectBottom = sessionBinding.rootview.bottom
+
+
+            // Left Rect values
+            val leftExclusionRectLeft = 0
+            val leftExclusionRectRight = gestureInsets.left
+
+            val leftExclusionRect = Rect(
+                leftExclusionRectLeft,
+                rectTop,
+                leftExclusionRectRight,
+                rectBottom
+            )
+
+            // Right Rect values
+            val rightExclusionRectLeft = sessionBinding.rootview.right - gestureInsets.right
+            val rightExclusionRectRight = sessionBinding.rootview.right
+
+
+            // Rect for gestures on the right side of the screen
+            val rightExclusionRect = Rect(
+                rightExclusionRectLeft,
+                rectTop,
+                rightExclusionRectRight,
+                rectBottom
+            )
+
+            // Add both rects and exclude gestures
+            sessionBinding.root.systemGestureExclusionRects = listOf(rightExclusionRect)
+
+        }
+    }
+
     override fun onRightButtonClicked(text: String?) {
         sessionViewModel.checkForNextQuestion()
     }
 
     override fun onWrongButtonClicked(text: String?) {
         sessionViewModel.checkForNextQuestion()
+    }
+
+    override fun onBackPressed() {
+        appUtil.showLoginDialog()
     }
 
     override fun onResume() {
