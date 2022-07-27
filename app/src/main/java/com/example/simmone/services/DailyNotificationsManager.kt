@@ -46,9 +46,10 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
         val sessionNumber = storageManager.getSessionNumber()
         if (sessionNumber != null) {
             Log.i("DailyNotificationsManager", "sessionNumber = " + sessionNumber)
-            triggerNotify()
-            Log.i("DailyNotificationsManager", "finished processing sessionNumber")
         }
+
+        triggerNotify()
+        updateSleepWakeState()
 
         return Result.success()
     }
@@ -101,6 +102,8 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
         }
     }
 
-
+    private fun updateSleepWakeState() {
+        //stub
+    }
 }
 
