@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/off_black"
     tools:context=".view.activities.MainActivity">
 
     <ImageView
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:fontFamily="@font/opensanssemibold"
+        android:fontFamily="@font/open_sans_semi_bold"
         android:text="@string/dummyNumber"
         android:textColor="@color/goldColor"
         android:textSize="27sp"
@@ -52,12 +52,13 @@
         <ImageView
             android:id="@+id/iv_plantMain"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="0dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/plant_stage3"
+            android:src="@drawable/tulip_red_stage0"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivSimmMain"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/ivSimmMain"
+            app:layout_constraintStart_toEndOf="@+id/ivSimmMain"
             android:contentDescription="@null" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -85,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="30dp"
-                android:fontFamily="@font/opensanssemibold"
+                android:fontFamily="@font/open_sans_semi_bold"
                 android:text="@string/daily_topic"
                 android:textColor="#263238"
                 android:textSize="16sp"
@@ -110,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:fontFamily="@font/opensanssemibold"
+                android:fontFamily="@font/open_sans_semi_bold"
                 android:text="@string/notifications"
                 android:textColor="#263238"
                 android:textSize="20sp"
@@ -124,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/launch_card_text_bg"
                 android:gravity="center"
-                android:fontFamily="@font/opensanssemibold"
+                android:fontFamily="@font/open_sans_semi_bold"
                 android:padding="20dp"
                 android:text="@string/launch_session"
                 android:textColor="@color/launch_card_text"

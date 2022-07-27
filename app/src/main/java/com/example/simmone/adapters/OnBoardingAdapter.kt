@@ -1,11 +1,9 @@
 package com.example.simmone.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.Context
-import androidx.core.graphics.alpha
-import androidx.core.graphics.toColor
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.simmone.R
@@ -14,7 +12,6 @@ import com.example.simmone.model.OnBoarding
 
 
 class OnBoardingAdapter(
-    private val context: Context,
     private val onBoardingList: ArrayList<OnBoarding>) :
     RecyclerView.Adapter<OnBoardingAdapter.OnBoardingViewHolder>(){
 

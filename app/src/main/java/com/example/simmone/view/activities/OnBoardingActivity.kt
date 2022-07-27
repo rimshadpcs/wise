@@ -18,6 +18,7 @@ import com.example.simmone.R
 import com.example.simmone.adapters.OnBoardingAdapter
 import com.example.simmone.databinding.ActivityOnboardingBinding
 import com.example.simmone.model.OnBoarding
+import com.example.simmone.utils.AppUtil
 import com.example.simmone.viewmodel.OnBoardingViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -29,11 +30,18 @@ class OnBoardingActivity : AppCompatActivity() {
     private lateinit var onBoardBinding: ActivityOnboardingBinding
     private var onBoardingAdapter: OnBoardingAdapter? = null
     private val milliSecondsPerInch = 200f
+    private var rvOnBoarding: RecyclerView? = null
+    lateinit var appUtil: AppUtil
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         onBoardBinding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(onBoardBinding.root)
+
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
+        rvOnBoarding = findViewById(R.id.rvOnBoarding)
 
         onBoardBinding.btContinueOnBoarding.visibility = View.INVISIBLE
         onBoardBinding.rvOnBoarding.visibility = View.INVISIBLE
@@ -74,7 +82,7 @@ class OnBoardingActivity : AppCompatActivity() {
             val animation: LayoutAnimationController = AnimationUtils.loadLayoutAnimation(this@OnBoardingActivity, animId)
             onBoardBinding.rvOnBoarding.layoutAnimation = animation
 
-            onBoardingAdapter = OnBoardingAdapter(this@OnBoardingActivity, it)
+            onBoardingAdapter = OnBoardingAdapter(it)
             val linearLayoutManager = LinearLayoutManager(this@OnBoardingActivity)
             linearLayoutManager.stackFromEnd = true
             linearLayoutManager.reverseLayout = false

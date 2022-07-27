@@ -1,0 +1,26 @@
+
+
+{
+
+  "activityId": "question_0_session_1",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "First", "image": "storyboard_notification_page_1"
+      },
+      {
+        "title": "Second", "image": "storyboard_notification_page_2"
+      },
+      {
+        "title": "Third", "image": "storyboard_notification_page_3"
+      },
+      {
+        "title": "Fourth", "image": "storyboard_notification_page_4"
+      }
+    ]
+  }
+
+}

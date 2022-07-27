@@ -3,9 +3,11 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_200">#249E30</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="off_black">#FF1D1D1D</color>
+    <color name="grey_buttons">#FF3C3C3C</color>
     <color name="white">#FFFFFFFF</color>
     <color name="QuestionBackground">#F48FB1</color>
     <color name="choiceBackGround">#BA68C8</color>
@@ -27,9 +29,8 @@
     <color name="onboarding_bubbles">#242424</color>
     <color name="onboarding_background">#6F50A3</color>
     <color name="onboarding_simm_background">#9171C5</color>
-    <color name="froly_pink">#EE7A88</color>
-    <color name="jordy_blue">#7AA8EE</color>
-    <color name="manz_yellow">#DEEE7A</color>
+    <color name="DialogButton">#2a78f5</color>
+    <color name="horizontal_progressbar">#249E30</color>
 
 
 

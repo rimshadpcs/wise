@@ -5,6 +5,8 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.simmone.ProgressManager
+import com.example.simmone.dataStore.StorageManager
 import com.example.simmone.model.*
 import com.example.simmone.utils.Constants
 import org.json.JSONArray
@@ -18,6 +20,9 @@ import kotlin.collections.ArrayList
 class SessionViewModel:ViewModel() {
 
 
+    var progressLiveData = MutableLiveData(0)
+    fun getProgressValue():LiveData<Int> = progressLiveData
+
     //FragmentMcq
     private var questionItems: ArrayList<QuestionItem> = ArrayList()
     private var ListActivity: ArrayList<SessionModel> = ArrayList()
@@ -28,7 +33,6 @@ class SessionViewModel:ViewModel() {
     var quizFile = MutableLiveData<String>()
     var current_question = 0;
     var fragmentLiveData = MutableLiveData<String>("")
-    var session_num = 0
     var page = 0
 
     //FragmentTrueOrFalse
@@ -44,6 +48,8 @@ class SessionViewModel:ViewModel() {
     fun getNotTxt():LiveData<String> = notTxtLivedata
     var notPage = 0
 
+    //FragmentStoryboard
+    var storyboardItems: ArrayList<StoryBoardItem> = ArrayList()
 
 
     fun getFragment():LiveData<String> = fragmentLiveData
@@ -110,6 +116,16 @@ class SessionViewModel:ViewModel() {
                 val text6 = parameter.getString("text6")
                 Collections.addAll(notItems,text1,text2,text3,text4,text5,text6)
                 notTxtLivedata.value=notItems[notPage]
+            } else if (fragment.equals("FragmentStoryboard")) {
+                storyboardItems.clear()
+                val parameters = jsonObject.getJSONObject("parameters")
+                val storyboardPages = parameters.getJSONArray("pages")
+                for (i in 0 until storyboardPages.length()) {
+                    val page = storyboardPages[i] as JSONObject
+                    val title = page.getString("title")
+                    val imageStr = page.getString("image")
+                    storyboardItems.add(StoryBoardItem(title, imageStr))
+                }
             }
 
             fragmentLiveData.value = fragment
@@ -117,6 +133,9 @@ class SessionViewModel:ViewModel() {
             e.printStackTrace()
         }
     }
+
+
+
     private fun loadJSONFromAsset(context: Context): String {
         Log.e("Quizfile",quizFile.value!!)
         val charset: Charset = Charsets.UTF_8
@@ -137,6 +156,7 @@ class SessionViewModel:ViewModel() {
     }
 
     fun loadSession(context: Context) {
+        Log.i("SessionActivity","Loading session description from json")
         val jsonStr = loadSessionFromAsset(context)
 
         questionItems = ArrayList()
@@ -177,7 +197,7 @@ class SessionViewModel:ViewModel() {
     }
     public fun checkForNextQuestion(){
         // load next question if any
-        if (page < ListActivity[0].activityList!!.size-1) {
+        if (page < ListActivity[ProgressManager.instance.sessionNumber].activityList!!.size-1) {
             Log.e("next","sd")
             page++
             eventlivedata.value = Constants.EVENT_NEXT_PAGE
@@ -194,5 +214,14 @@ class SessionViewModel:ViewModel() {
         }
 
         return list
+    }
+
+    fun getProgress(){
+        if (ProgressManager.instance.sessionNumber<ListActivity.size) {
+            var num = ListActivity[ProgressManager.instance.sessionNumber].activityList!!.size
+            var i = 100 / num
+            Log.e("num=", num.toString() + "-" + i.toString())
+            progressLiveData.value = i * page
+        }
     }
 }

@@ -9,6 +9,7 @@ import android.graphics.Color
 import android.graphics.Point
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.util.Log
 import android.view.DragEvent
 import androidx.fragment.app.Fragment
@@ -52,7 +53,8 @@ class FragmentTrueOrFalse : Fragment(),StatementAdapter.OnItemLongClickListener 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val inflater = TransitionInflater.from(requireContext())
+        enterTransition = inflater.inflateTransition(R.transition.transition_right)
     }
 
     override fun onCreateView(
@@ -73,6 +75,15 @@ class FragmentTrueOrFalse : Fragment(),StatementAdapter.OnItemLongClickListener 
                 statementAdapter = StatementAdapter(activity!!, it)
                 trueOrFalseBinding.rvStatement.layoutManager = LinearLayoutManager(activity)
                 trueOrFalseBinding.rvStatement.adapter = statementAdapter
+
+                trueOrFalseBinding.rvStatement.apply {
+                    adapter = statementAdapter
+                    postponeEnterTransition()
+                    viewTreeObserver.addOnPreDrawListener {
+                        startPostponedEnterTransition()
+                        true
+                    }
+                }
                 statementAdapter?.setOnItemLongClickListener(this)
             }
         })

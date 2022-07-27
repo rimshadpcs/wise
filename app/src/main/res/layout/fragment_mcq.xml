@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.activities.McqActivity">
+    tools:context=".view.fragments.FragmentMcq">
 
     <TextView
         android:id="@+id/tv_Question"

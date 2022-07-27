@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.simmone.databinding.ActivityBubbleSampleBinding
+import com.example.simmone.utils.AppUtil
 import com.example.simmone.utils.Constants
 import com.example.simmone.viewmodel.BubbleViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,6 +21,8 @@ class BubbleSample : AppCompatActivity() {
     @Named("bubbleSampleButton")
     lateinit var bubbleSampleButton: String
 
+    lateinit var appUtil: AppUtil
+
     private val bubbleViewModel: BubbleViewModel by viewModels()
     private lateinit var bubbleBinding: ActivityBubbleSampleBinding
 
@@ -27,6 +30,8 @@ class BubbleSample : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bubbleBinding = ActivityBubbleSampleBinding.inflate(layoutInflater)
         setContentView(bubbleBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         bubbleBinding.tvMessage.text = bubbleSampleMessage
         bubbleBinding.btContinue.text = bubbleSampleButton

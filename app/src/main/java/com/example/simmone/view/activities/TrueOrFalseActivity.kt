@@ -21,6 +21,7 @@ import com.example.simmone.R
 import com.example.simmone.adapters.StatementAdapter
 import com.example.simmone.databinding.ActivityTrueOrFalseBinding
 import com.example.simmone.model.Statement
+import com.example.simmone.utils.AppUtil
 import com.example.simmone.viewmodel.StatementViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -32,6 +33,7 @@ class TrueOrFalseActivity : AppCompatActivity(),
     private lateinit var trueOrFalseBinding: ActivityTrueOrFalseBinding
     private var rvStatement: RecyclerView? = null
     private var statementAdapter: StatementAdapter? = null
+    lateinit var appUtil: AppUtil
 
     private val dragMessage = "Added"
     private lateinit var draggingItem: View
@@ -41,6 +43,8 @@ class TrueOrFalseActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         trueOrFalseBinding = ActivityTrueOrFalseBinding.inflate(layoutInflater)
         setContentView(trueOrFalseBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         rvStatement = findViewById(R.id.rvStatement)
         val statementViewModel = ViewModelProvider(this)[StatementViewModel::class.java]

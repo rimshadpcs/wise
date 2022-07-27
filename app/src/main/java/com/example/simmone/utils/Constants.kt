@@ -8,8 +8,8 @@ object Constants {
 
 
     //FLAGS
-    const val SESSION_FLAG = 0;
     var PAGE_FLAG = -1;
+    var progressSession = 0;
 
     //Events
     const val EVENT_NONE = 1001

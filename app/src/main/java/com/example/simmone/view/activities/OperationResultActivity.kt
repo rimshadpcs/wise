@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.example.simmone.databinding.ActivityOperationResultBinding
+import com.example.simmone.utils.AppUtil
 import com.example.simmone.utils.Constants
 import com.example.simmone.viewmodel.OperationResultViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,11 +23,16 @@ class OperationResultActivity : AppCompatActivity() {
 
     private lateinit var operationResultBinding:ActivityOperationResultBinding
     private  val operationResultViewModel: OperationResultViewModel by viewModels()
+    lateinit var appUtil: AppUtil
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         operationResultBinding = ActivityOperationResultBinding.inflate(layoutInflater)
         setContentView(operationResultBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
+
+        operationResultBinding.sessionProgress.progress = Constants.progressSession
 
         operationResultBinding.btnContinue.setOnClickListener {
             finish()
