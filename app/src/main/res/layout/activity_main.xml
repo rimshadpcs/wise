@@ -54,7 +54,7 @@
             android:layout_width="100dp"
             android:layout_height="0dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/tulip_red_stage0"
+            android:src="@drawable/tulip_red_awake_stage0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@id/ivSimmMain"
             app:layout_constraintEnd_toEndOf="parent"

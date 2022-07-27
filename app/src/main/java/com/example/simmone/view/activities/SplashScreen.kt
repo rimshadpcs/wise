@@ -8,7 +8,6 @@ import android.os.CountDownTimer
 import android.util.Log
 import com.example.simmone.R
 import com.example.simmone.utils.AppUtil
-import kotlinx.coroutines.*
 import com.example.simmone.databinding.ActivitySplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
@@ -42,7 +41,7 @@ class SplashScreen : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                startActivity(Intent(this@SplashScreen, MainActivity::class.java))
+                startActivity(Intent(this@SplashScreen, SessionActivity::class.java))
                 finish()
             }
         }.start()

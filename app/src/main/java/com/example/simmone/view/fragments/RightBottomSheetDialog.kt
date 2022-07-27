@@ -2,6 +2,7 @@ package com.example.simmone.view.fragments
 
 import android.content.Context
 import android.graphics.Paint
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -35,7 +36,20 @@ class RightBottomSheetDialog(actualRightAnswer: String, private var theQuestion:
         tvCorrectAnswer.paintFlags = tvCorrectAnswer.paintFlags or Paint.UNDERLINE_TEXT_FLAG
         tvCorrectAnswer.text = theRightAnswer
 
+        var mp : MediaPlayer = MediaPlayer.create(context, R.raw.quiz_correct_answer)
+        if(mp.isPlaying) {
+            mp.pause() // Pause the current track
+        }
+        mp.start()
+
         btContinueRight.setOnClickListener {
+            if (mp.isPlaying) {
+                mp.pause() // Pause the current track
+            }
+            mp.release()
+            mp = MediaPlayer.create(context, R.raw.button_press)
+            mp.start()  // play sound
+
             mListenerRightSheet.onRightButtonClicked("Clicked")
             dismiss()
         }
@@ -46,6 +60,7 @@ class RightBottomSheetDialog(actualRightAnswer: String, private var theQuestion:
     interface RightBottomSheetListener {
         fun onRightButtonClicked(text: String?)
     }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         try {

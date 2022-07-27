@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--Shadow Layer-->
-
-
-    <item android:right="10dp">
-        <shape android:shape="rectangle">
-            <corners android:radius="100dp" />
-            <padding
-                android:bottom="1px"
-                android:left="1px"
-                android:right="1px" />
-            <solid android:color="#01000000" />
-        </shape>
-    </item>
-
-    <!--===============-->
-
-
-    <item android:right="10dp">
+    <item android:right="0dp">
         <shape android:shape="rectangle">
             <corners android:radius="100dp" />
             <padding android:bottom="1px" />
@@ -26,31 +9,46 @@
         </shape>
     </item>
 
-    <!--===============-->
 
 
-    <item android:right="10dp">
+    <item android:right="0dp">
         <shape android:shape="rectangle">
             <corners android:radius="100dp" />
             <padding
                 android:bottom="1px"
                 android:left="1px"
-                android:right="1px" />
+                android:right="0px" />
             <solid android:color="#10000000" />
         </shape>
     </item>
 
-    <!--===============-->
 
-
-    <!--ForeGround-->
-
-
-    <item android:right="10dp">
+    <item android:right="0dp">
         <shape android:shape="rectangle">
             <solid android:color="@color/onboarding_bubbles" />
-            <corners android:bottomLeftRadius="0dp" android:radius="100dp" />
+            <corners android:bottomLeftRadius="10dp"
+                android:radius="100dp" />
         </shape>
     </item>
-
+    <item android:left="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/onboarding_bubbles" />
+            <corners android:bottomRightRadius="50dp"
+                android:radius="100dp" />
+        </shape>
+    </item>
+    <item android:top="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/onboarding_bubbles" />
+            <corners android:topRightRadius="50dp"
+                android:radius="100dp" />
+        </shape>
+    </item>
+    <item android:top="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/onboarding_bubbles" />
+            <corners android:topLeftRadius="50dp"
+                android:radius="100dp" />
+        </shape>
+    </item>
 </layer-list>

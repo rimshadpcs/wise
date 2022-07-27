@@ -7,45 +7,82 @@
     android:background="@color/onboarding_background"
     tools:context=".view.activities.OnBoardingActivity">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-      android:id="@+id/cl_simm_on_boarding"
-      android:layout_width="match_parent"
-      android:layout_height="300dp"
-      app:layout_constraintBottom_toTopOf="@id/cl_rv_on_boarding"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent">
 
     <ImageView
         android:id="@+id/iv_on_boarding_simm"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
         android:background="@color/onboarding_simm_background"
         android:contentDescription="@null"
         android:src="@drawable/simm_half_body"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-  </androidx.constraintlayout.widget.ConstraintLayout>
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-      android:id="@+id/cl_rv_on_boarding"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/cl_simm_on_boarding">
+    <TextView
+        android:id="@+id/tv_what_to_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/what_should_i_call_you"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/open_sans_semi_bold"
+        app:layout_constraintTop_toBottomOf="@id/iv_on_boarding_simm"/>
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="name"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/cursor"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColorHint="@color/green"
+        android:textCursorDrawable="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_what_to_call" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvOnBoarding"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@null"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_on_boarding_simm"
+        app:stackFromEnd="true"
+        app:reverseLayout="true"/>
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btContinueOnBoarding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/green_button_bg"
+        android:clipToPadding="false"
+        android:paddingStart="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="40dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="20dp"
+        android:text="@string/continu"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvOnBoarding" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

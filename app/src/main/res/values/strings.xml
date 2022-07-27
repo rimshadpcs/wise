@@ -40,7 +40,11 @@
     <string name="app_widget_description">This is an app widget description</string>
     <string name="loading">loading</string>
     <string name="plant_status">Awake</string>
+    <string name="my_name_is">My name is</string>
+    <string name="cursor">|</string>
+    <string name="what_should_i_call_you">What should i call you?</string>
     <string name="encouragement_text">Keep Learning!</string>
+    <string name="click_me">click me</string>
 
     <string name="hide_and_seek_not_title">Simm’s super secret hiding spot</string>
     <string name="hide_and_seek_not_content">Tap to bring Simm back</string>

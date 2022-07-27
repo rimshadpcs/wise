@@ -1,5 +1,6 @@
 package com.example.simmone.view.activities
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
@@ -16,6 +17,7 @@ import com.google.android.material.math.MathUtils.lerp
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.roundToInt
 
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
   lateinit var storageManager: StorageManager
@@ -25,19 +27,93 @@ class MainActivity : AppCompatActivity() {
 
     // store drawable image references here
     // will probably change into 2D array when more plants are made
-    private val plantImages = intArrayOf(
-        R.drawable.tulip_red_stage0,
-        R.drawable.tulip_red_stage1,
-        R.drawable.tulip_red_stage2,
-        R.drawable.tulip_red_stage3,
-        R.drawable.tulip_red_stage4,
-        R.drawable.tulip_red_stage5
+    // 0 == purple, 1 == red, 2 == yellow
+    // 0 == awake, 1 == asleep, 2 == surprised
+    // tulip_red_**_stage0-2 can be used for tulip_**_**_stage 0-2 to reduce app size
+    private val plantImages = arrayOf(
+        arrayOf(  // purple
+            intArrayOf(  // awake
+                R.drawable.tulip_red_awake_stage0,
+                R.drawable.tulip_red_awake_stage1,
+                R.drawable.tulip_red_awake_stage2,
+                R.drawable.tulip_purple_awake_stage3,
+                R.drawable.tulip_purple_awake_stage4,
+                R.drawable.tulip_purple_awake_stage5
+            ),
+            intArrayOf(  // asleep
+                R.drawable.tulip_red_asleep_stage0,
+                R.drawable.tulip_red_asleep_stage1,
+                R.drawable.tulip_red_asleep_stage2,
+                R.drawable.tulip_purple_asleep_stage3,
+                R.drawable.tulip_purple_asleep_stage4,
+                R.drawable.tulip_purple_asleep_stage5
+            ),
+            intArrayOf(  // surprised
+                R.drawable.tulip_red_surprised_stage0,
+                R.drawable.tulip_red_surprised_stage1,
+                R.drawable.tulip_red_surprised_stage2,
+                R.drawable.tulip_purple_surprised_stage3,
+                R.drawable.tulip_purple_surprised_stage4,
+                R.drawable.tulip_purple_surprised_stage5
+            )
+        ),
+        arrayOf(  //red
+            intArrayOf(  // awake
+                R.drawable.tulip_red_awake_stage0,
+                R.drawable.tulip_red_awake_stage1,
+                R.drawable.tulip_red_awake_stage2,
+                R.drawable.tulip_red_awake_stage3,
+                R.drawable.tulip_red_awake_stage4,
+                R.drawable.tulip_red_awake_stage5
+            ),
+            intArrayOf(  // asleep
+                R.drawable.tulip_red_asleep_stage0,
+                R.drawable.tulip_red_asleep_stage1,
+                R.drawable.tulip_red_asleep_stage2,
+                R.drawable.tulip_red_asleep_stage3,
+                R.drawable.tulip_red_asleep_stage4,
+                R.drawable.tulip_red_asleep_stage5
+            ),
+            intArrayOf(  // surprised
+                R.drawable.tulip_red_surprised_stage0,
+                R.drawable.tulip_red_surprised_stage1,
+                R.drawable.tulip_red_surprised_stage2,
+                R.drawable.tulip_red_surprised_stage3,
+                R.drawable.tulip_red_surprised_stage4,
+                R.drawable.tulip_red_surprised_stage5
+            )
+        ),
+        arrayOf(  // yellow
+            intArrayOf(  // awake
+                R.drawable.tulip_red_awake_stage0,
+                R.drawable.tulip_red_awake_stage1,
+                R.drawable.tulip_red_awake_stage2,
+                R.drawable.tulip_yellow_awake_stage3,
+                R.drawable.tulip_yellow_awake_stage4,
+                R.drawable.tulip_yellow_awake_stage5
+            ),
+            intArrayOf(  // asleep
+                R.drawable.tulip_red_asleep_stage0,
+                R.drawable.tulip_red_asleep_stage1,
+                R.drawable.tulip_red_asleep_stage2,
+                R.drawable.tulip_yellow_asleep_stage3,
+                R.drawable.tulip_yellow_asleep_stage4,
+                R.drawable.tulip_yellow_asleep_stage5
+            ),
+            intArrayOf(  // surprised
+                R.drawable.tulip_red_surprised_stage0,
+                R.drawable.tulip_red_surprised_stage1,
+                R.drawable.tulip_red_surprised_stage2,
+                R.drawable.tulip_yellow_surprised_stage3,
+                R.drawable.tulip_yellow_surprised_stage4,
+                R.drawable.tulip_yellow_surprised_stage5
+            )
+        )
     )
     // The number of sessions to complete for a fully grown plant
     private val plantGrowthIntervals: MutableList<Int> = mutableListOf(
         plantImages.size - 1
     )
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,9 +123,15 @@ class MainActivity : AppCompatActivity() {
         observeSessionNumber()
         appUtil = AppUtil(this)
         appUtil.setDarkMode()
+        val mp : MediaPlayer = MediaPlayer.create(this, R.raw.button_press)
 
         mainBinding.cvLaunch.setOnClickListener{
-            val intent = Intent(this, SessionActivity::class.java)
+            if(mp.isPlaying) {
+                mp.pause() // Pause the current track
+            }
+            mp.start()  // play sound
+
+            val intent = Intent(this, SplashScreen::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_right,0)
         }
@@ -90,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 // normalizes growth progress to maximum growth allowed in this interval
-                var plantStageFloat = lerp(
+                val plantStageFloat = lerp(
                     0f,
                     plantImages.size.toFloat()-1,
                     sessionsCompleted.toFloat() / plantGrowthIntervals[plantGrowthIndex]
@@ -100,7 +182,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("sessionsCompletedFinal", sessionsCompleted.toString())
 
                 // set the images
-                mainBinding.ivPlantMain.setImageResource(plantImages[sessionsCompleted])
+                mainBinding.ivPlantMain.setImageResource(plantImages[1][1][sessionsCompleted])
 //                mainBinding.ivPlantCounter.text = numberOfPlantsCollected.toString()  // ivPlantCounter is a placeholder, doesn't exist
             }
         }

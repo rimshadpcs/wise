@@ -47,7 +47,7 @@ class TrueOrFalseActivity : AppCompatActivity(),
         appUtil.setDarkMode()
 
         rvStatement = findViewById(R.id.rvStatement)
-        val statementViewModel = ViewModelProvider(this).get(StatementViewModel::class.java)
+        val statementViewModel = ViewModelProvider(this)[StatementViewModel::class.java]
         statementViewModel.generateStatement()
 
         statementViewModel.newMStatementList.observe(this) {
@@ -73,7 +73,7 @@ class TrueOrFalseActivity : AppCompatActivity(),
             }
             DragEvent.ACTION_DRAG_ENTERED -> {
 
-                trueOrFalseBinding.cardTruthBox.alpha = 0.3f
+                trueOrFalseBinding.cardTruthBox.alpha = 0.3F
                 trueOrFalseBinding.cardFalseBox.alpha = 0.3f
 
                 true
@@ -94,6 +94,7 @@ class TrueOrFalseActivity : AppCompatActivity(),
 
                 trueOrFalseBinding.cardTruthBox.alpha = 1.0f
                 trueOrFalseBinding.cardFalseBox.alpha = 1.0f
+
                 statementAdapter?.getItemList()?.remove(selectedItemModel)
                 statementAdapter?.notifyDataSetChanged()
 

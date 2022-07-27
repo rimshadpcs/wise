@@ -72,6 +72,13 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                         replace<FragmentOperation>(R.id.fragment_container_view)
                     }
                 }
+                "FragmentPermissions" -> {
+                    Log.e("activity","permissions")
+                    supportFragmentManager.commit {
+                        setReorderingAllowed(true)
+                        replace<FragmentPermissions>(R.id.fragment_container_view)
+                    }
+                }
                 "FragmentTrueOrFalse" -> {
                     supportFragmentManager.commit {
                         setReorderingAllowed(true)
@@ -201,4 +208,16 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
             sessionViewModel.notTxtLivedata.value = sessionViewModel.notItems[sessionViewModel.notPage]
 
     }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        Log.i("SessionActivity", "permission result")
+        sessionViewModel.permissionPage++
+        sessionViewModel.permissionTxtLivedata.value = sessionViewModel.permissionItems[sessionViewModel.permissionPage]
+    }
+
 }
