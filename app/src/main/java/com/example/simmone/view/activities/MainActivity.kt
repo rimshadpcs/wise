@@ -26,12 +26,12 @@ class MainActivity : AppCompatActivity() {
     // store drawable image references here
     // will probably change into 2D array when more plants are made
     private val plantImages = intArrayOf(
-        R.drawable.tulip_red_stage0,
-        R.drawable.tulip_red_stage1,
-        R.drawable.tulip_red_stage2,
-        R.drawable.tulip_red_stage3,
-        R.drawable.tulip_red_stage4,
-        R.drawable.tulip_red_stage5
+        R.drawable.tulip_red_awake_stage0,
+        R.drawable.tulip_red_awake_stage1,
+        R.drawable.tulip_red_awake_stage2,
+        R.drawable.tulip_red_awake_stage3,
+        R.drawable.tulip_red_awake_stage4,
+        R.drawable.tulip_red_awake_stage5
     )
     // The number of sessions to complete for a fully grown plant
     private val plantGrowthIntervals: MutableList<Int> = mutableListOf(
