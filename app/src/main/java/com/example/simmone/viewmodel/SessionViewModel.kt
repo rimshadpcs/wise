@@ -48,6 +48,12 @@ class SessionViewModel:ViewModel() {
     fun getNotTxt():LiveData<String> = notTxtLivedata
     var notPage = 0
 
+    //FragmentPermissions
+    var permissionItems: ArrayList<String> = ArrayList()
+    var permissionTxtLivedata:MutableLiveData<String> = MutableLiveData("")
+    fun getPermissionTxt():LiveData<String> = permissionTxtLivedata
+    var permissionPage = 0
+
     //FragmentStoryboard
     var storyboardItems: ArrayList<StoryBoardItem> = ArrayList()
 
@@ -116,6 +122,13 @@ class SessionViewModel:ViewModel() {
                 val text6 = parameter.getString("text6")
                 Collections.addAll(notItems,text1,text2,text3,text4,text5,text6)
                 notTxtLivedata.value=notItems[notPage]
+            }else if(fragment.equals("FragmentPermissions")){
+                val parameter = jsonObject.getJSONObject("parameters")
+                val text1 = parameter.getString("text1")
+                val text2 = parameter.getString("text2")
+                val text3 = parameter.getString("text3")
+                Collections.addAll(permissionItems,text1,text2,text3)
+                permissionTxtLivedata.value=permissionItems[permissionPage]
             } else if (fragment.equals("FragmentStoryboard")) {
                 storyboardItems.clear()
                 val parameters = jsonObject.getJSONObject("parameters")

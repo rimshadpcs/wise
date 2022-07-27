@@ -1,0 +1,13 @@
+{
+
+  "activityId": "camera_permissions",
+
+  "fragmentClassName": "FragmentPermissions",
+
+  "parameters": {
+
+    "text1": "Camera Permission Page 1",
+    "text2":"Camera Permission Page 2",
+    "text3":"Camera Permission Page 3"
+  }
+}
