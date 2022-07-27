@@ -1,6 +1,7 @@
 package com.example.simmone.view.activities
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,6 +9,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.simmone.databinding.ActivityEndSessionBinding
 import com.example.simmone.ProgressManager
+import com.example.simmone.R
 import com.example.simmone.utils.AppUtil
 
 
@@ -32,6 +34,11 @@ class EndSessionActivity : AppCompatActivity() {
             finish()
         }
 
+        val mp : MediaPlayer = MediaPlayer.create(this, R.raw.session_complete)
+        if(mp.isPlaying) {
+            mp.pause() // Pause the current track
+        }
+        mp.start()  // play sound
 
         // delay for button showing
         // not sure if this is the best way to do it
