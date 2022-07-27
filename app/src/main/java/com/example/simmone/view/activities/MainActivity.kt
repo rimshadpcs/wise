@@ -21,6 +21,7 @@ import kotlin.math.roundToInt
 class MainActivity : AppCompatActivity() {
   lateinit var storageManager: StorageManager
     private lateinit var mainBinding: ActivityMainBinding
+    lateinit var appUtil: AppUtil
     private val mainModel : MainViewModel by viewModels()
 
     // store drawable image references here
@@ -44,9 +45,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
         storageManager = StorageManager(dataStore)
         observeSessionNumber()
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         mainBinding.cvLaunch.setOnClickListener{
-            val intent = Intent(this, SessionActivity::class.java)
+            val intent = Intent(this, SplashScreen::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_right,0)
         }

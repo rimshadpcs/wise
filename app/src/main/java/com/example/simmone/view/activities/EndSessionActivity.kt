@@ -8,11 +8,13 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.simmone.databinding.ActivityEndSessionBinding
 import com.example.simmone.ProgressManager
+import com.example.simmone.utils.AppUtil
 
 
 class EndSessionActivity : AppCompatActivity() {
 
     private lateinit var viewBinding: ActivityEndSessionBinding
+    lateinit var appUtil: AppUtil
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -20,6 +22,8 @@ class EndSessionActivity : AppCompatActivity() {
 
         viewBinding = ActivityEndSessionBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         viewBinding.btFinishSession.setOnClickListener {
             ProgressManager.instance.saveProgress(this)
