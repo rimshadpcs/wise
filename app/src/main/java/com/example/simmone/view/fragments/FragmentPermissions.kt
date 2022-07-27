@@ -1,5 +1,7 @@
 package com.example.simmone.view.fragments
 
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.transition.TransitionInflater
@@ -9,6 +11,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.example.simmone.R
@@ -55,6 +60,7 @@ class FragmentPermissions : Fragment() {
                         }
                         else if (viewModel.permissionPage == 1) {
                             Log.i("FragmentPermissions", "Waiting for user permission")
+                            checkForPermission(android.Manifest.permission.CAMERA,"camera", 101)
                         }
                         else if (viewModel.permissionPage == 0) {
                             viewModel.permissionPage = viewModel.permissionPage+1
@@ -86,6 +92,24 @@ class FragmentPermissions : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun checkForPermission(permission: String, name: String,requestCode: Int ) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            when {
+                ContextCompat.checkSelfPermission(
+                    context!!,
+                    permission
+                ) == PackageManager.PERMISSION_GRANTED -> {
+                    Log.i("FragmentPermissions", "permission granted")
+                }
+                else -> ActivityCompat.requestPermissions(
+                    activity!!,
+                    arrayOf(permission),
+                    requestCode
+                )
+            }
+        }
     }
 
     companion object {

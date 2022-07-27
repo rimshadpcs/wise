@@ -196,6 +196,9 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        Log.i("SessionActivity", "permission result")
+        sessionViewModel.permissionPage++
+        sessionViewModel.permissionTxtLivedata.value = sessionViewModel.permissionItems[sessionViewModel.permissionPage]
     }
 
 }
