@@ -1,6 +1,14 @@
 {
   "sessionList": [
 
+    {
+      "sessionId": "Notification_session_2",
+
+      "activityList": [
+        "Notification_session_2"
+      ]
+    },
+
     { "sessionId": "session_1",
 
       "activityList": ["question_2_session_1", "question_1_session_1", "question_0_session_1", "question_7_session_1", "question_3_session_1"]

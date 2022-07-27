@@ -17,4 +17,5 @@ object Constants {
     const val EVENT_SHOW_WRONG_BOTTOMSHEET = 1003;
     const val EVENT_NEXT_PAGE = 1004
     const val EVENT_FINISH_SESSION = 1005
+    const val EVENT_SEND_NOTIFICATION = 1006
 }

@@ -42,7 +42,7 @@ class SessionViewModel:ViewModel() {
     val ToFlist = MutableLiveData<ArrayList<Statement>>()
     fun getToFList(): LiveData<ArrayList<Statement>> = ToFlist
 
-    //FragmentOperation
+    //FragmentOperation or //FragmentNotification
     var notItems: ArrayList<String> = ArrayList()
     var notTxtLivedata:MutableLiveData<String> = MutableLiveData("")
     fun getNotTxt():LiveData<String> = notTxtLivedata
@@ -106,15 +106,12 @@ class SessionViewModel:ViewModel() {
                 Log.e("TOF",tofdata.list.size.toString())
                 ToFData?.value = tofdata
                 ToFlist.value = tofdata.list
-            }else if(fragment.equals("FragmentOperation")){
-                val parameter = jsonObject.getJSONObject("parameters")
-                val text1 = parameter.getString("text1")
-                val text2 = parameter.getString("text2")
-                val text3 = parameter.getString("text3")
-                val text4 = parameter.getString("text4")
-                val text5 = parameter.getString("text5")
-                val text6 = parameter.getString("text6")
-                Collections.addAll(notItems,text1,text2,text3,text4,text5,text6)
+            }else if(fragment.equals("FragmentOperation")||fragment.equals("FragmentNotification")){
+                val parameter = jsonObject.getJSONArray("parameters")
+                for (i in 0..parameter.length()-1){
+                    var text = parameter.getString(i)
+                    notItems.add(text)
+                }
                 notTxtLivedata.value=notItems[notPage]
             } else if (fragment.equals("FragmentStoryboard")) {
                 storyboardItems.clear()

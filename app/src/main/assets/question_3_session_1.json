@@ -4,14 +4,13 @@
 
   "fragmentClassName": "FragmentOperation",
 
-  "parameters": {
+  "parameters": [
+    "You’ve learned a lot! Now let’s put it to the test with a real notification.",
+    "I have my trusty notification sender with me. Here we go.",
+    "...",
+    "SENDING NOTIFICATION...",
+    "There! Now tap on the notification when you’re ready.",
+    "Looks like you’ve got the hang of notifications. Nice work!"
+  ]
 
-    "text1": "You’ve learned a lot! Now let’s put it to the test with a real notification.",
-    "text2":"I have my trusty notification sender with me. Here we go.",
-    "text3":"...",
-    "text4":"SENDING NOTIFICATION...",
-    "text5":"There! Now tap on the notification when you’re ready.",
-    "text6":"Looks like you’ve got the hang of notifications. Nice work!"
-
-  }
 }

@@ -1,10 +1,13 @@
 package com.example.simmone.utils
 
 import android.app.Activity
+import android.app.ActivityManager
 import android.app.AlertDialog
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.simmone.R
 import org.json.JSONArray
@@ -41,8 +44,11 @@ class AppUtil {
         }
     }
 
+
     fun setDarkMode(){
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
     }
+
+
 
 }
