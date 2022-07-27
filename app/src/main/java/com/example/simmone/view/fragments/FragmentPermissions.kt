@@ -13,6 +13,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.example.simmone.R
 import com.example.simmone.databinding.FragmentOperationBinding
+import com.example.simmone.utils.Constants
 import com.example.simmone.view.activities.SessionActivity
 import com.example.simmone.viewmodel.SessionViewModel
 
@@ -52,7 +53,10 @@ class FragmentPermissions : Fragment() {
                             operationBinding.progressbar.visibility = View.GONE
                             viewModel.checkForNextQuestion()
                         }
-                        else{
+                        else if (viewModel.permissionPage == 1) {
+                            Log.i("FragmentPermissions", "Waiting for user permission")
+                        }
+                        else if (viewModel.permissionPage == 0) {
                             viewModel.permissionPage = viewModel.permissionPage+1
                             viewModel.permissionTxtLivedata.value = viewModel.permissionItems[viewModel.permissionPage]
                             operationBinding.tvTxt.startAnimation(animation)

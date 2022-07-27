@@ -7,7 +7,7 @@
   "parameters": {
 
     "text1": "Camera Permission Page 1",
-    "text2":"Camera Permission Page 2",
+    "text2":"Waiting for you to grant camera permission...",
     "text3":"Camera Permission Page 3"
   }
 }

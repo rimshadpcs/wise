@@ -189,4 +189,13 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
             sessionViewModel.checkForNextQuestion()
         }
     }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
 }
