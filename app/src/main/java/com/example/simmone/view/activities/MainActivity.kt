@@ -12,6 +12,7 @@ import com.example.simmone.dataStore.StorageManager
 import com.example.simmone.dataStore.dataStore
 import com.example.simmone.databinding.ActivityMainBinding
 import com.example.simmone.services.DailyNotificationsManager
+import com.example.simmone.utils.AppUtil
 import com.example.simmone.viewmodel.MainViewModel
 import com.google.android.material.math.MathUtils.lerp
 import dagger.hilt.android.AndroidEntryPoint
