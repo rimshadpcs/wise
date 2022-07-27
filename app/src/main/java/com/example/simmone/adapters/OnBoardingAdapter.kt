@@ -1,8 +1,11 @@
 package com.example.simmone.adapters
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.compose.Context
+import androidx.core.graphics.alpha
+import androidx.core.graphics.toColor
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.simmone.R
@@ -15,7 +18,7 @@ class OnBoardingAdapter(
     private val onBoardingList: ArrayList<OnBoarding>) :
     RecyclerView.Adapter<OnBoardingAdapter.OnBoardingViewHolder>(){
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OnBoardingAdapter.OnBoardingViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):OnBoardingViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val onBoardingBinding: OnBoardingBinding =
             DataBindingUtil.inflate(layoutInflater, R.layout.onboarding_list, parent, false)
@@ -29,7 +32,7 @@ class OnBoardingAdapter(
     fun getItemList() : ArrayList<OnBoarding>{
         return onBoardingList;
     }
-    override fun onBindViewHolder(holder: OnBoardingAdapter.OnBoardingViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: OnBoardingViewHolder, position: Int) {
         val onBoardingViewModel = onBoardingList[position]
         holder.bind(onBoardingViewModel)
     }

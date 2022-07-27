@@ -76,8 +76,6 @@ class FragmentTrueOrFalse : Fragment(),StatementAdapter.OnItemLongClickListener 
                 statementAdapter?.setOnItemLongClickListener(this)
             }
         })
-
-
         trueOrFalseBinding.cardLeftBox.setOnDragListener(statementDragListener)
 
         trueOrFalseBinding.cardRightBox.setOnDragListener(statementDragListener)
