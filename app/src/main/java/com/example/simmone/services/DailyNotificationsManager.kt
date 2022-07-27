@@ -48,6 +48,7 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
             Log.i("DailyNotificationsManager", "sessionNumber = " + sessionNumber)
         }
 
+
         triggerNotify()
         updateSleepWakeState()
 

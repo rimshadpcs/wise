@@ -13,6 +13,6 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:contentDescription="@null"
-        android:src="@drawable/tulip_red_stage3"
+        android:src="@drawable/tulip_red_awake_stage3"
         />
 </LinearLayout>
