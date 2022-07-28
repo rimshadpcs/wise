@@ -22,6 +22,7 @@ import com.example.simmone.dataStore.dataStore
 import com.example.simmone.utils.Plants
 import com.example.simmone.view.activities.MainActivity
 import com.example.simmone.view.widgets.PlantWidget
+import com.example.simmone.view.widgets.updateAppWidget
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
@@ -112,6 +113,7 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
         //stub
 
 //        PlantWidget
+//        updateAppWidget(this.applicationContext, )
         (Plants.plantImages[plantType][plantState][plantGrowth])
 
     }
