@@ -87,6 +87,8 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                         replace<FragmentStoryboard>(R.id.fragment_container_view)
                     }
                 }
+
+
             }
             sessionViewModel.getProgress()
         })

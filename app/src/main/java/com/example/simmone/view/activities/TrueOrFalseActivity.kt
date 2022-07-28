@@ -66,6 +66,7 @@ class TrueOrFalseActivity : AppCompatActivity(),
     private val statementDragListener = View.OnDragListener { view, dragEvent ->
 
         draggingItem
+        val dropArea = view as TextView
 
         when (dragEvent.action) {
             DragEvent.ACTION_DRAG_STARTED -> {
@@ -73,14 +74,28 @@ class TrueOrFalseActivity : AppCompatActivity(),
             }
             DragEvent.ACTION_DRAG_ENTERED -> {
 
-                trueOrFalseBinding.cardTruthBox.alpha = 0.3F
-                trueOrFalseBinding.cardFalseBox.alpha = 0.3f
+
+                if (dropArea.text==trueOrFalseBinding.cardTruthBox.text){
+                    trueOrFalseBinding.cardTruthBox.alpha = 0.3F
+
+                }
+                else{
+                    trueOrFalseBinding.cardFalseBox.alpha = 0.3f
+
+                }
 
                 true
             }
             DragEvent.ACTION_DRAG_LOCATION -> {
-                trueOrFalseBinding.cardTruthBox.alpha = 0.5f
-                trueOrFalseBinding.cardFalseBox.alpha = 0.5f
+
+                if (dropArea.text==trueOrFalseBinding.cardTruthBox.text){
+                    trueOrFalseBinding.cardTruthBox.alpha = 0.5F
+
+                }
+                else{
+                    trueOrFalseBinding.cardFalseBox.alpha = 0.5f
+
+                }
                 true
             }
             DragEvent.ACTION_DRAG_EXITED -> {
@@ -91,6 +106,7 @@ class TrueOrFalseActivity : AppCompatActivity(),
             }
 
             DragEvent.ACTION_DROP -> {
+
 
                 trueOrFalseBinding.cardTruthBox.alpha = 1.0f
                 trueOrFalseBinding.cardFalseBox.alpha = 1.0f
@@ -161,7 +177,7 @@ private class MyDragShadowBuilder(v: View) : View.DragShadowBuilder(v) {
         val height: Int = view.height
         shadow.setBounds(0, 0, width, height)
         size?.set(width, height)
-        touch?.set(width, height)
+        touch?.set(width/2, height/2)
     }
 
     override fun onDrawShadow(canvas: Canvas?) {

@@ -1,9 +1,14 @@
 package com.example.simmone.view.activities
 import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.DisplayMetrics
 import android.view.KeyEvent
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
 import android.view.inputmethod.InputMethodManager
@@ -33,9 +38,18 @@ class OnBoardingActivity : AppCompatActivity() {
     private var rvOnBoarding: RecyclerView? = null
     lateinit var appUtil: AppUtil
 
+    var sharedPreferences: SharedPreferences?=null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if(restorePrefData()){
+            val i = Intent(applicationContext,MainActivity::class.java )
+            startActivity(i)
+            finish()
+        }
+
         onBoardBinding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(onBoardBinding.root)
 
@@ -45,7 +59,11 @@ class OnBoardingActivity : AppCompatActivity() {
 
         onBoardBinding.btContinueOnBoarding.visibility = View.INVISIBLE
         onBoardBinding.rvOnBoarding.visibility = View.INVISIBLE
-
+        onBoardBinding.btContinueOnBoarding.setOnClickListener {
+            savePrefData()
+            val i = Intent(applicationContext, MainActivity::class.java)
+            startActivity(i)
+        }
         onBoardBinding.etUserName.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
                 if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER
@@ -67,6 +85,7 @@ class OnBoardingActivity : AppCompatActivity() {
                 return false
 
             }
+
 
         })
     }
@@ -107,9 +126,22 @@ class OnBoardingActivity : AppCompatActivity() {
                     }
                         if (i == sizeOfTheList - 2) {
                         onBoardBinding.btContinueOnBoarding.visibility = View.VISIBLE
+
                     }
                 }
             }
         }
     }
+    private fun savePrefData(){
+
+        sharedPreferences = applicationContext.getSharedPreferences("pref", Context.MODE_PRIVATE)
+        val editor: SharedPreferences.Editor? = sharedPreferences!!.edit()
+        editor!!.putBoolean("isFirstTime", true)
+        editor!!.apply()
+    }
+
+        private fun restorePrefData(): Boolean {
+            sharedPreferences = applicationContext.getSharedPreferences("pref", Context.MODE_PRIVATE)
+            return sharedPreferences!!.getBoolean("isFirstTime",false)
+        }
 }

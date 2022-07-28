@@ -41,7 +41,6 @@ class PinchAndZoomActivity : AppCompatActivity() {
                     }
                     return true
 
-
                 }
             }
         )
@@ -64,6 +63,4 @@ class PinchAndZoomActivity : AppCompatActivity() {
             dialog.dismiss()
         }
     }
-
-
 }
