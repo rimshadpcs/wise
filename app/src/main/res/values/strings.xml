@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SimmOne</string>
+    <string name="app_name">Simm</string>
     <string name="hello">Hello</string>
     <string name="sample">Your phones\'s Lock Screen displays status information and latest notification. \n\nYou can choose what the Lock Screen Displays</string>
     <string name="continu">Continue</string>

@@ -43,19 +43,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Talking"
-        android:id="@+id/tv_talking"
-        android:textColor="@color/white"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="44dp"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Talking"
         android:visibility="gone"
         android:id="@+id/tv_talking2"
         android:textColor="@color/white"
