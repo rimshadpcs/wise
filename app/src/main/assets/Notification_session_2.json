@@ -1,0 +1,17 @@
+{
+
+  "activityId": "Notification_session_2",
+
+  "fragmentClassName": "FragmentNotification",
+
+  "parameters": [
+  "Hey X. \nI’ve got a great idea. \nLet’s test your knowledge of notifications with a game of Hide and Seek!",
+  "Here’s how it works. I’m going to hide in a notification. You’ll have to tap the notification to bring me back.",
+  "Ready or not here I go!",
+  "Tap the notification to bring Simm back.",
+  "Nice work, you found me!\nLet’s try something a little more challenging. ",
+  "This time, I’m going to send a silent notification. So it won’t appear on the screen. Let’s see how good you really are.",
+  "Find and tap the notification to bring Simm back.",
+  "That was my best hiding spot! You’re too good."
+]
+}

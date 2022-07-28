@@ -46,5 +46,8 @@
     <string name="encouragement_text">Keep Learning!</string>
     <string name="click_me">click me</string>
 
+    <string name="hide_and_seek_not_title">Simm’s super secret hiding spot</string>
+    <string name="hide_and_seek_not_content">Tap to bring Simm back</string>
+
 
 </resources>

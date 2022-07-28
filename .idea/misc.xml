@@ -50,7 +50,12 @@
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.17794253938832252" />
         <entry key="app/src/main/res/layout/activity_true_or_false.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_wrong_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialog_close.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/fragment_mcq.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/fragment_operation.xml" value="0.12903225806451613" />
+        <entry key="app/src/main/res/layout/fragment_operation_result.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.25427350427350426" />
