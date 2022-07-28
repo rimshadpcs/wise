@@ -3,7 +3,7 @@
     <data class="OnBoardingBinding">
         <variable
             name="onboardModel"
-            type="com.example.simmone.model.OnBoarding" />
+            type="com.intractable.simm.model.OnBoarding" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"

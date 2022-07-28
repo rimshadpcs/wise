@@ -3,7 +3,7 @@
     <data class="SwapBinding">
         <variable
             name="swappingItems"
-            type="com.example.simmone.model.SwappingItems" />
+            type="com.intractable.simm.model.SwappingItems" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
