@@ -18,6 +18,12 @@ import com.intractable.simm.dataStore.StorageManager
 import com.intractable.simm.dataStore.dataStore
 import com.intractable.simm.utils.Plants
 import com.intractable.simm.view.activities.MainActivity
+import com.intractable.simm.view.widgets.PlantWidget
+import com.intractable.simm.view.widgets.updateAppWidget
+import kotlinx.coroutines.flow.FlowCollector
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
+import kotlin.coroutines.coroutineContext
 
 class DailyNotificationsManager(context: Context, workerParams: WorkerParameters):
     CoroutineWorker(context, workerParams) {
@@ -104,6 +110,7 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
         //stub
 
 //        PlantWidget
+//        updateAppWidget(this.applicationContext, )
         (Plants.plantImages[plantType][plantState][plantGrowth])
 
     }
