@@ -3,12 +3,15 @@ package com.intractable.simm.services
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.Context.NOTIFICATION_SERVICE
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Build
 import android.util.Log
+import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.work.CoroutineWorker
@@ -19,11 +22,7 @@ import com.intractable.simm.dataStore.dataStore
 import com.intractable.simm.utils.Plants
 import com.intractable.simm.view.activities.MainActivity
 import com.intractable.simm.view.widgets.PlantWidget
-import com.intractable.simm.view.widgets.updateAppWidget
-import kotlinx.coroutines.flow.FlowCollector
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withTimeout
-import kotlin.coroutines.coroutineContext
+
 
 class DailyNotificationsManager(context: Context, workerParams: WorkerParameters):
     CoroutineWorker(context, workerParams) {
@@ -64,7 +63,8 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
 
         val notificationStyle = NotificationCompat.BigPictureStyle()
 
-        val remotePicture = BitmapFactory.decodeResource(applicationContext.resources,R.drawable.simm_cover)
+        val remotePicture = BitmapFactory.decodeResource(applicationContext.resources,
+            R.drawable.simm_cover)
         notificationStyle.bigPicture(remotePicture)
         val intent = Intent(applicationContext, MainActivity::class.java).apply {
 //            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -107,11 +107,14 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
     }
 
     private fun updateSleepWakeState(plantType : Int, plantState : Int, plantGrowth : Int) {
-        //stub
+        // PlantWidget
+        val context: Context = applicationContext
+        val appWidgetManager = AppWidgetManager.getInstance(context)
+        val remoteViews = RemoteViews(context.packageName, R.layout.plant_widget)
+        val thisWidget = ComponentName(context, PlantWidget::class.java)
+        remoteViews.setImageViewResource(R.id.iv_plant, Plants.plantImages[plantType][plantState][plantGrowth])
+        appWidgetManager.updateAppWidget(thisWidget, remoteViews)
 
-//        PlantWidget
-//        updateAppWidget(this.applicationContext, )
-        (Plants.plantImages[plantType][plantState][plantGrowth])
 
     }
 }

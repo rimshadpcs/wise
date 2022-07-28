@@ -1,8 +1,12 @@
 package com.intractable.simm.view.activities
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
+import android.widget.RemoteViews
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.asLiveData
@@ -15,6 +19,8 @@ import com.intractable.simm.utils.Plants.plantGrowthIntervals
 import com.intractable.simm.utils.Plants.plantImages
 import com.intractable.simm.viewmodel.MainViewModel
 import com.google.android.material.math.MathUtils.lerp
+import com.intractable.simm.utils.Plants
+import com.intractable.simm.view.widgets.PlantWidget
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -62,6 +68,7 @@ class MainActivity : AppCompatActivity() {
 //        val modalBottomSheet = RightBottomSheetDialog()
 //        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)
     }
+
 
     private fun observeSessionNumber() {
         storageManager.sessionCountFlow.asLiveData().observe(this) {
@@ -119,7 +126,20 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 mainBinding.ivPlantMain.setImageResource(plantImages[plantType][plantState][sessionsCompleted])
+
+                setWidget(plantType, plantState, sessionsCompleted)
             }
         }
+    }
+
+    private fun setWidget(plantType : Int, plantState : Int, plantGrowth : Int) {
+
+        // PlantWidget
+        val context: Context = applicationContext
+        val appWidgetManager = AppWidgetManager.getInstance(context)
+        val remoteViews = RemoteViews(context.packageName, R.layout.plant_widget)
+        val thisWidget = ComponentName(context, PlantWidget::class.java)
+        remoteViews.setImageViewResource(R.id.iv_plant, Plants.plantImages[plantType][plantState][plantGrowth])
+        appWidgetManager.updateAppWidget(thisWidget, remoteViews)
     }
 }
