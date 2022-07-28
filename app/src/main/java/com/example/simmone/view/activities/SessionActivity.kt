@@ -111,7 +111,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
             when(it){
                 Constants.EVENT_NEXT_PAGE -> {
                     sessionViewModel.eventlivedata.value = Constants.EVENT_NONE
-                    var list = sessionViewModel.ListActivityData.value
+                    val list = sessionViewModel.ListActivityData.value
                     sessionViewModel.quizFile.value =
                         list?.get(ProgressManager.instance.sessionNumber)?.activityList?.get(sessionViewModel.page)
                     Log.e("quiz", sessionViewModel.quizFile.value!!)
