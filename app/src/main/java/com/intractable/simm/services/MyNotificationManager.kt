@@ -31,7 +31,7 @@ class MyNotificationManager(context: Context, workerParams: WorkerParameters):
 
         val notificationStyle = NotificationCompat.BigPictureStyle()
 
-        val remotePicture = BitmapFactory.decodeResource(applicationContext.resources,R.drawable.simm_cover)
+        val remotePicture = BitmapFactory.decodeResource(applicationContext.resources,R.drawable.simm_wave_onboarding)
         notificationStyle.bigPicture(remotePicture)
         val intent = Intent(applicationContext, OperationResultActivity::class.java).apply {
 //            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -52,6 +52,7 @@ class MyNotificationManager(context: Context, workerParams: WorkerParameters):
             .setContentTitle(notificationTitle)
             .setContentText(notificationContent)
             .setContentIntent(pendingIntent)
+            .setStyle(notificationStyle)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
 
         with(NotificationManagerCompat.from(applicationContext)){
