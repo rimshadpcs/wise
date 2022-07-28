@@ -19,7 +19,9 @@ import androidx.work.WorkerParameters
 import com.example.simmone.R
 import com.example.simmone.dataStore.StorageManager
 import com.example.simmone.dataStore.dataStore
+import com.example.simmone.utils.Plants
 import com.example.simmone.view.activities.MainActivity
+import com.example.simmone.view.widgets.PlantWidget
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
@@ -48,9 +50,12 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
             Log.i("DailyNotificationsManager", "sessionNumber = " + sessionNumber)
         }
 
+        val plantType = storageManager.getPlantType() ?: 0
+        val plantState = storageManager.getPlantState() ?: 0
+        val plantGrowth = storageManager.getPlantGrowth() ?: 0
 
         triggerNotify()
-        updateSleepWakeState()
+        updateSleepWakeState(plantType, plantState, plantGrowth)
 
         return Result.success()
     }
@@ -103,8 +108,12 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
         }
     }
 
-    private fun updateSleepWakeState() {
+    private fun updateSleepWakeState(plantType : Int, plantState : Int, plantGrowth : Int) {
         //stub
+
+//        PlantWidget
+        (Plants.plantImages[plantType][plantState][plantGrowth])
+
     }
 }
 

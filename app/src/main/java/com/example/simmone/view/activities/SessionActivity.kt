@@ -6,6 +6,7 @@ import android.content.Intent
 import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.WindowInsets
 import androidx.activity.viewModels
@@ -16,6 +17,7 @@ import androidx.core.view.doOnLayout
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import com.example.simmone.ProgressManager
 import com.example.simmone.R
 import com.example.simmone.databinding.ActivitySessionBinding
@@ -23,6 +25,9 @@ import com.example.simmone.utils.AppUtil
 import com.example.simmone.utils.Constants
 import com.example.simmone.view.fragments.*
 import com.example.simmone.viewmodel.SessionViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class SessionActivity : AppCompatActivity(),RightBottomSheetDialog.RightBottomSheetListener,
@@ -87,8 +92,13 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                         replace<FragmentStoryboard>(R.id.fragment_container_view)
                     }
                 }
-
-
+                "FragmentNotification" -> {
+                    Log.e("storyboard","starting")
+                    supportFragmentManager.commit {
+                        setReorderingAllowed(true)
+                        replace<FragmentNotification>(R.id.fragment_container_view)
+                    }
+                }
             }
             sessionViewModel.getProgress()
         })
@@ -101,7 +111,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
             when(it){
                 Constants.EVENT_NEXT_PAGE -> {
                     sessionViewModel.eventlivedata.value = Constants.EVENT_NONE
-                    var list = sessionViewModel.ListActivityData.value
+                    val list = sessionViewModel.ListActivityData.value
                     sessionViewModel.quizFile.value =
                         list?.get(ProgressManager.instance.sessionNumber)?.activityList?.get(sessionViewModel.page)
                     Log.e("quiz", sessionViewModel.quizFile.value!!)
@@ -190,6 +200,13 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
             Log.e("next",sessionViewModel.page.toString())
             sessionViewModel.checkForNextQuestion()
         }
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        Log.e("New","Intent")
+            sessionViewModel.notPage = sessionViewModel.notPage+1
+            sessionViewModel.notTxtLivedata.value = sessionViewModel.notItems[sessionViewModel.notPage]
+
     }
 
     override fun onRequestPermissionsResult(

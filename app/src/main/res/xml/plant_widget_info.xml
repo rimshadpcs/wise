@@ -4,7 +4,7 @@
     android:initialLayout="@layout/plant_widget"
     android:minHeight="80dp"
     android:minWidth="80dp"
-    android:previewImage="@drawable/plant_stage3"
+    android:previewImage="@drawable/tulip_red_awake_stage2"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="86400000"
     android:widgetCategory="home_screen">
