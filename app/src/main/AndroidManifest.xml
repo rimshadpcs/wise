@@ -9,9 +9,9 @@
     <application
         android:name="com.intractable.simm.BaseApplication"
         android:allowBackup="true"
-        android:icon="@drawable/surprised_close_up"
+        android:icon="@drawable/square_grinning_app_icon_blue"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/surprised_close_up"
+        android:roundIcon="@drawable/round_grinning_app_icon_haloblue"
         android:supportsRtl="true"
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
