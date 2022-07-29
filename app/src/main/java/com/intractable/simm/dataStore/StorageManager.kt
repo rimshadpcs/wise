@@ -13,6 +13,7 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         val PLANT_STATE_KEY = intPreferencesKey("PLANT_STATE")  // 0 == awake, 1 == asleep, 2 == surprised
         val PLANT_GROWTH_KEY = intPreferencesKey("PLANT_GROWTH")  // 0-5 for tulips
         val PLANT_TYPE_KEY = intPreferencesKey("PLANT_TYPE")  // 0 == purple, 1 == red, 2 == yellow
+        val PLANTS_COLLECTED_COUNT = intPreferencesKey("PLANTS_COLLECTED_COUNT")
     }
 
     suspend fun storeSessionNumber(sessionNumber: Int) {
@@ -73,6 +74,15 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
     }
     suspend fun getPlantType(): Int? {
         return dataStore.data.firstOrNull()?.get(PLANT_TYPE_KEY)
+    }
+
+    suspend fun storePlantCount(sessionNumber: Int) {
+        dataStore.edit {
+            it[PLANTS_COLLECTED_COUNT] = sessionNumber
+        }
+    }
+    suspend fun getPlantCount(): Int? {
+        return dataStore.data.firstOrNull()?.get(PLANTS_COLLECTED_COUNT)
     }
 
     // Flow for gold
