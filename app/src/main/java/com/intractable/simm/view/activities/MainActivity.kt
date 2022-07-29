@@ -77,12 +77,12 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun observeSessionNumber() {
-        storageManager.sessionCountFlow.asLiveData().observe(this) {
-            if (it != null) {
-                com.intractable.simm.ProgressManager.instance.sessionNumber = it
-                mainBinding.tvGold.text = it.toString()
-            }
-        }
+//        storageManager.sessionCountFlow.asLiveData().observe(this) {
+//            if (it != null) {
+//                com.intractable.simm.ProgressManager.instance.sessionNumber = it
+//                mainBinding.tvGold.text = it.toString()
+//            }
+//        }
     }
 
 
@@ -129,9 +129,12 @@ class MainActivity : AppCompatActivity() {
 
                 GlobalScope.launch {
                     storageManager.storePlantGrowth(sessionsCompleted)
+                    storageManager.storePlantCount(numberOfPlantsCollected)
                 }
 
                 mainBinding.ivPlantMain.setImageResource(plantImages[plantType][plantState][sessionsCompleted])
+                mainBinding.tvPlantCount.text = numberOfPlantsCollected.toString()
+
 
                 setWidget(plantType, plantState, sessionsCompleted)
             }
