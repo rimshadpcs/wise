@@ -72,26 +72,20 @@ class FragmentOperation : Fragment() {
                 }.start()
                 when(it){
                     viewModel.notItems[0] -> {
-                        operationBinding.tvTalking.visibility = View.VISIBLE
+                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_open)
                     }
                     viewModel.notItems[1] -> {
-                        operationBinding.tvTalking.visibility = View.GONE
-                        operationBinding.tvTalking2.visibility = View.VISIBLE
-                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_closed)
+                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_open)
                     }
                     viewModel.notItems[2] -> {
-                        operationBinding.tvTalking2.visibility = View.GONE
                         operationBinding.tvBeep.visibility = View.VISIBLE
-                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_open)
+                        operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_closed)
                     }
                     viewModel.notItems[3] -> {
                         operationBinding.tvBeep.visibility = View.GONE
-                        operationBinding.tvTalking3.visibility = View.VISIBLE
                         operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_closed)
                     }
                     viewModel.notItems[4] -> {
-                        operationBinding.tvTalking3.visibility = View.GONE
-                        operationBinding.tvTalking.visibility = View.VISIBLE
                         operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_open)
                         Constants.PAGE_FLAG = viewModel.page
                         Constants.progressSession = viewModel.progressLiveData.value!!

@@ -2,37 +2,48 @@
   "sessionList": [
 
     {
-      "sessionId": "Notification_session_2",
-
-      "activityList": [
-        "Notification_session_2"
-      ]
-    },
-
-    { "sessionId": "session_1",
-
-      "activityList": ["question_2_session_1", "question_1_session_1", "question_0_session_1", "question_7_session_1", "question_3_session_1"]
-
-    },
-
-    {
-      "sessionId": "camera_permissions",
-      "activityList": [
-        "camera_permissions"
-      ]
-    },
-
-    {
       "sessionId": "what-can-your-phone-do",
+      "title": "What can your phone do?",
       "activityList": [
         "storyboard-what-can-your-phone-do"
       ]
     },
 
-    { "sessionId": "widget-session-1",
+    {
+      "sessionId": "gesture-navigation",
+      "title": "Gesture Navigation",
+      "activityList": [
+        "gesture-storyboard", "gesture-mcq-1", "gesture-mcq-2", "gesture-mcq-3"
+      ]
+    },
 
-      "activityList": [ "question_4_session_1", "question_5_session_1", "question_6_session_1"]
+    {
+      "sessionId": "notifications",
+      "title": "Notifications",
+      "activityList": ["question_2_session_1", "question_1_session_1", "question_0_session_1", "question_7_session_1", "question_3_session_1"]
 
+    },
+
+    {
+      "sessionId": "quick-settings",
+      "title": "Quick Settings",
+      "activityList": [
+        "quick-settings-sorting", "quick-settings-storyboard", "quick-settings-mcq"
+      ]
+    },
+
+    { "sessionId": "widgets",
+      "title": "Widgets",
+      "activityList": [ "widgets-storyboard", "widgets-mcq-1", "widgets-mcq-2"]
+
+    },
+
+    {
+      "sessionId": "camera_permissions",
+      "title": "App Permissions",
+      "activityList": [
+        "camera-permissions-mcq", "camera-permissions-storyboard", "camera_permissions", "camera-permissions-sorting"
+      ]
     }
   ]
 }

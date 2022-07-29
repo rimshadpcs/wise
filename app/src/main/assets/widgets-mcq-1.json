@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "widgets-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Where can you install widgets in your phone?",
+
+      "choice1": "In your phone’s Home Screen and Lock Screen",
+
+      "choice2": "In a browser tab",
+
+      "choice3": "In Quick Settings view",
+
+      "choice4": "In a screen inside the app",
+
+      "answer": "In your phone’s Home Screen and Lock Screen"
+
+    }
+  }

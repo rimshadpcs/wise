@@ -1,0 +1,52 @@
+{
+
+  "activityId": "quick-settings-sorting",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into True if it can be accessed through a Quick Setting, or into False otherwise.",
+    "answers": [
+      {
+        "statement": "Turn on Bluetooth",
+        "status": "True"
+      },
+      {
+        "statement": "Open Photos App",
+        "status": "False"
+      },
+      {
+        "statement": "Turn on Wifi",
+        "status": "True"
+      },
+      {
+        "statement": "Change wallpaper",
+        "status": "False"
+      },
+      {
+        "statement": "Turn off Wifi",
+        "status": "True"
+      },
+      {
+        "statement": "Enable app permissions",
+        "status": "False"
+      },
+      {
+        "statement": "Turn on plane mode",
+        "status": "True"
+      },
+      {
+        "statement": "Change your phone’s passcode",
+        "status": "False"
+      },
+      {
+        "statement": "Turn off bluetooth",
+        "status": "True"
+      }
+      ],
+    "button_left": "True",
+    "button_right": "False"
+
+  }
+}

@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "widgets-mcq-2",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "How do you view the information in a widget associated with an app?",
+
+      "choice1": "Long-press on the app’s icon in Home Screen",
+
+      "choice2": "Browse the app’s website",
+
+      "choice3": "Find the widget in your phone’s Home Screen or Lock Screen",
+
+      "choice4": "Open your phone’s Settings and find the app associated with the widget",
+
+      "answer": "Find the widget in your phone’s Home Screen or Lock Screen"
+
+    }
+  }

@@ -6,8 +6,8 @@
 
   "parameters": {
 
-    "text1": "Camera Permission Page 1",
-    "text2":"Waiting for you to grant camera permission...",
-    "text3":"Camera Permission Page 3"
+    "text1": "I am going to request camera permissions. Try granting permission to use camera.",
+    "text2":"My permission request for your camera will appear in a moment...",
+    "text3":"Nice work, you are a pro!"
   }
 }

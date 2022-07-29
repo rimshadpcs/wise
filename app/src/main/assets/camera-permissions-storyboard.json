@@ -1,0 +1,29 @@
+
+
+{
+
+  "activityId": "camera-permissions-storyboard",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Learn how apps ask for permission", "image": "connect_with_people"
+      },
+      {
+        "title": "Some apps will request permission to access your information such as your contacts", "image": "connect_with_people"
+      },
+      {
+        "title": "You can choose whether to grant permission or not", "image": "connect_with_people"
+      },
+      {
+        "title": "You can also grant permission only while the app is open", "image": "connect_with_people"
+      },
+      {
+        "title": "To change app permissions go to the Settings app and search for \"permission\"", "image": "connect_with_people"
+      }
+    ]
+  }
+
+}

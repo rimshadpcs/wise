@@ -1,0 +1,40 @@
+{
+
+  "activityId": "camera-permissions-sorting",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into True if it indicates how an app can use a permission, or into False otherwise.",
+    "answers": [
+      {
+        "statement": "Only on Fridays",
+        "status": "False"
+      },
+      {
+        "statement": "Only on my birthday",
+        "status": "False"
+      },
+      {
+        "statement": "Only when using the app",
+        "status": "True"
+      },
+      {
+        "statement": "Only once",
+        "status": "True"
+      },
+      {
+        "statement": "Always",
+        "status": "True"
+      },
+      {
+        "statement": "Never",
+        "status": "True"
+      }
+      ],
+    "button_left": "True",
+    "button_right": "False"
+
+  }
+}

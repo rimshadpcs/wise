@@ -1,10 +1,15 @@
 package com.intractable.simm.view.activities
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
+import android.widget.RemoteViews
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
 import com.intractable.simm.R
 import com.intractable.simm.dataStore.StorageManager
@@ -15,6 +20,10 @@ import com.intractable.simm.utils.Plants.plantGrowthIntervals
 import com.intractable.simm.utils.Plants.plantImages
 import com.intractable.simm.viewmodel.MainViewModel
 import com.google.android.material.math.MathUtils.lerp
+import com.intractable.simm.utils.Constants
+import com.intractable.simm.utils.Plants
+import com.intractable.simm.view.widgets.PlantWidget
+import com.intractable.simm.viewmodel.SessionViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -27,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
     lateinit var appUtil: AppUtil
     private val mainModel : MainViewModel by viewModels()
+    private val sessionViewModel: SessionViewModel by viewModels()
 
 
 
@@ -39,6 +49,8 @@ class MainActivity : AppCompatActivity() {
         appUtil = AppUtil(this)
         appUtil.setDarkMode()
         val mp : MediaPlayer = MediaPlayer.create(this, R.raw.button_press)
+
+        setButtonTexts()
 
         mainBinding.cvLaunch.setOnClickListener{
             if(mp.isPlaying) {
@@ -62,6 +74,7 @@ class MainActivity : AppCompatActivity() {
 //        val modalBottomSheet = RightBottomSheetDialog()
 //        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)
     }
+
 
     private fun observeSessionNumber() {
         storageManager.sessionCountFlow.asLiveData().observe(this) {
@@ -119,7 +132,39 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 mainBinding.ivPlantMain.setImageResource(plantImages[plantType][plantState][sessionsCompleted])
+
+                setWidget(plantType, plantState, sessionsCompleted)
             }
         }
+    }
+
+    private fun setWidget(plantType : Int, plantState : Int, plantGrowth : Int) {
+
+        // PlantWidget
+        val context: Context = applicationContext
+        val appWidgetManager = AppWidgetManager.getInstance(context)
+        val remoteViews = RemoteViews(context.packageName, R.layout.plant_widget)
+        val thisWidget = ComponentName(context, PlantWidget::class.java)
+        remoteViews.setImageViewResource(R.id.iv_plant, Plants.plantImages[plantType][plantState][plantGrowth])
+        appWidgetManager.updateAppWidget(thisWidget, remoteViews)
+    }
+
+    private fun setButtonTexts(){
+
+        storageManager.sessionCountFlow.asLiveData().observe(this) {
+            if (it != null) {
+                com.intractable.simm.ProgressManager.instance.sessionNumber = it
+                sessionViewModel.getListActivity().observe(this, Observer {
+                    // do stuff to get the name of the session
+
+                    // put the text of the name of the session into the right place
+                    mainBinding.tvSessionName.text = "Next Session"
+                })
+            }
+            else{
+                mainBinding.tvSessionName.text = "Let's start!"
+            }
+        }
+
     }
 }

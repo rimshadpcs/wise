@@ -69,17 +69,10 @@ class FragmentPermissions : Fragment() {
                     }
                 }.start()
                 when(it){
-                    viewModel.permissionItems[0] -> {
-                        operationBinding.tvTalking.visibility = View.VISIBLE
-                    }
                     viewModel.permissionItems[1] -> {
-                        operationBinding.tvTalking.visibility = View.GONE
-                        operationBinding.tvTalking2.visibility = View.VISIBLE
                         operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_closed)
                     }
                     viewModel.permissionItems[2] -> {
-                        operationBinding.tvTalking2.visibility = View.GONE
-                        operationBinding.tvBeep.visibility = View.VISIBLE
                         operationBinding.ivCharacter.setImageResource(R.drawable.neutral_mouth_open)
                     }
                 }

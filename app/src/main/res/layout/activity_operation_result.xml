@@ -17,19 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/session_progress"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Smiling"
-        android:id="@+id/tv_smile"
-        android:textColor="@color/white"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="53dp"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif"/>
-
     <ImageView
         android:layout_width="248dp"
         android:layout_height="268dp"
