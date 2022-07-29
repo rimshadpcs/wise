@@ -3,7 +3,7 @@
 
     {
       "sessionId": "what-can-your-phone-do",
-      "title": "What can your phone do?",
+      "title": "Your Phone",
       "activityList": [
         "storyboard-what-can-your-phone-do"
       ]
@@ -11,7 +11,7 @@
 
     {
       "sessionId": "gesture-navigation",
-      "title": "Gesture Navigation",
+      "title": "Navigation",
       "activityList": [
         "gesture-storyboard", "gesture-mcq-1", "gesture-mcq-2", "gesture-mcq-3"
       ]
@@ -40,7 +40,7 @@
 
     {
       "sessionId": "camera_permissions",
-      "title": "App Permissions",
+      "title": "Permissions",
       "activityList": [
         "camera-permissions-mcq", "camera-permissions-storyboard", "camera_permissions", "camera-permissions-sorting"
       ]
