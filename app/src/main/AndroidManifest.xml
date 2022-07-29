@@ -4,10 +4,11 @@
     package="com.intractable.simm">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
-        android:name="com.intractable.simm.BaseApplication"
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@drawable/square_grinning_app_icon_blue"
         android:label="@string/app_name"
@@ -15,9 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
+        <activity
+            android:name=".view.activities.AcknowledgmentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.MainActivity"
+            android:exported="false" />
 
         <receiver
-            android:name="com.intractable.simm.view.widgets.PlantWidget"
+            android:name=".view.widgets.PlantWidget"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -29,44 +36,44 @@
         </receiver>
 
         <activity
-            android:name="com.intractable.simm.view.activities.PermissionActivity"
+            android:name=".view.activities.PermissionActivity"
             android:exported="false" />
         <activity
-            android:name="com.intractable.simm.view.activities.OnBoardingActivity"
+            android:name=".view.activities.OnBoardingActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name="com.intractable.simm.view.activities.SessionActivity"
+            android:name=".view.activities.SessionActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name="com.intractable.simm.view.activities.EndSessionActivity"
-            android:exported="false"
-            android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.SimmOne.right_anim" />
-        <activity
-            android:name="com.intractable.simm.view.activities.OperationResultActivity"
+            android:name=".view.activities.EndSessionActivity"
             android:exported="false"
             android:screenOrientation="fullSensor"
             android:theme="@style/Theme.SimmOne.right_anim" />
         <activity
-            android:name="com.intractable.simm.view.activities.BubbleSample"
+            android:name=".view.activities.OperationResultActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.SimmOne.right_anim" />
+        <activity
+            android:name=".view.activities.BubbleSample"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name="com.intractable.simm.view.activities.SplashScreen"
+            android:name=".view.activities.SplashScreen"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name="com.intractable.simm.view.activities.MainActivity"
+            android:name=".view.compose.SquareDrawingActivity"
             android:exported="true"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name="com.intractable.simm.view.activities.TrueOrFalseActivity"
+            android:name=".view.activities.TrueOrFalseActivity"
             android:exported="true"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name="com.intractable.simm.view.compose.SquareDrawingActivity"
+            android:name=".view.activities.SettingsActivity"
             android:exported="true"
             android:screenOrientation="fullSensor">
             <intent-filter>
@@ -77,7 +84,7 @@
         </activity>
 
         <service
-            android:name="com.intractable.simm.services.SimmTileService"
+            android:name=".services.SimmTileService"
             android:exported="true"
             android:icon="@drawable/simm_cover"
             android:label="@string/app_name"
@@ -91,9 +98,8 @@
             </intent-filter>
         </service>
 
-
         <activity
-            android:name="com.intractable.simm.view.activities.StoryBoardActivity"
+            android:name=".view.activities.StoryBoardActivity"
             android:exported="true"
             android:screenOrientation="fullSensor" />
     </application>
