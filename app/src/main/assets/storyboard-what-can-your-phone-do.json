@@ -9,22 +9,25 @@
     "pages":
     [
       {
-        "title": "Connect with People", "image": "connect_with_people"
+        "title": "Connect with People", "image": "phone_sb_1"
       },
       {
-        "title": "Immerse Yourself", "image": "connect_with_people"
+        "title": "Immerse Yourself", "image": "phone_sb_2"
       },
       {
-        "title": "Simplify Your Day", "image": "connect_with_people"
+        "title": "Simplify Your Day", "image": "phone_sb_3"
       },
       {
-        "title": "Work on the Go", "image": "connect_with_people"
+        "title": "Relive the Moment", "image": "phone_sb_4"
       },
       {
-        "title": "Live Healthier", "image": "connect_with_people"
+        "title": "Work on the Go", "image": "phone_sb_5"
       },
       {
-        "title": "Live Better", "image": "connect_with_people"
+        "title": "Live Healthier", "image": "phone_sb_6"
+      },
+      {
+        "title": "Live Better", "image": "phone_sb_7"
       }
     ]
   }
