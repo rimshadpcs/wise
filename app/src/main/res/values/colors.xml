@@ -14,6 +14,7 @@
     <color name="choiceText">#388E3C</color>
     <color name="goldColor">#FF9800</color>
     <color name="green">#43A047</color>
+    <color name="toxic_green">#FF86C646</color>
     <color name="red">#E53935</color>
     <color name="transparent">#803A3A3A</color>
     <color name="gray">#1d1d1d</color>
@@ -24,11 +25,13 @@
     <color name="bottom_sheet_right">#4E9D42</color>
     <color name="bottom_sheet_wrong">#E53935</color>
     <color name="card_notification_bg">#DAAFFC</color>
+    <color name="icon_blue">#FF42CCFF</color>
+    <color name="grey_blue">#FFA9D2E2</color>
     <color name="light_blue_50">#FFE1F5FE</color>
     <color name="light_blue_200">#FF81D4FA</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
-    <color name="onboarding_bubbles">#242424</color>
+    <color name="onboarding_bubbles">#3C3C3C</color>
     <color name="onboarding_background">#6F50A3</color>
     <color name="onboarding_simm_background">#9171C5</color>
     <color name="DialogButton">#2a78f5</color>
