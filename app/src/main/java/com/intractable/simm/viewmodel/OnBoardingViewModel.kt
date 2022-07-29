@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.math.min
 
 class OnBoardingViewModel: ViewModel {
 
@@ -27,12 +28,12 @@ class OnBoardingViewModel: ViewModel {
         val newOnboardList = ArrayList<OnBoarding>()
         val newOnboardList2 = ArrayList<OnBoarding>()
 
-        val onBoardMessage1 = OnBoarding("Roses are red, violets are blue, poetry is hard. Avocado.")
-        val onBoardMessage2 = OnBoarding("Roses are #FF0000, Violets are #0000FF, All my base belongs to you.")
-        val onBoardMessage3 = OnBoarding("Roses are red, violets are blue, Whoa, déjà vu!")
-        val onBoardMessage4 = OnBoarding("Roses are red, violets are too, I’m colorblind, what about you?")
-        val onBoardMessage5 = OnBoarding("Roses are red, violets are blue, sheep go baah, and cows go moo.")
-        val onBoardMessage6 = OnBoarding("Roses are red, violets are blue, these jokes are getting old, and so are you. ")
+        val onBoardMessage1 = OnBoarding("My name is Simm. I am a Digital Activist.")
+        val onBoardMessage2 = OnBoarding("The world is in crisis, digital technology is getting more complicated every day!")
+        val onBoardMessage3 = OnBoarding("Educational books, websites, and videos just can't keep up with ever-changing technology.")
+        val onBoardMessage4 = OnBoarding("But I see a world where everybody is empowered by Digital Technology.")
+        val onBoardMessage5 = OnBoarding("The power to change your life is in your hands, literally with your smartphone.")
+        val onBoardMessage6 = OnBoarding("Join the revolution, save the world!")
 
 
         newOnboardList.add(onBoardMessage1)
@@ -42,9 +43,11 @@ class OnBoardingViewModel: ViewModel {
         newOnboardList.add(onBoardMessage5)
         newOnboardList.add(onBoardMessage6)
 
+        val delayTimes = longArrayOf(2000, 4000, 6000)
         viewModelScope.launch(Dispatchers.Main) {
             for(i in 1 until newOnboardList.size ){
-                delay(2000)
+                val delayTime = delayTimes[min(i - 1, delayTimes.size - 1)]
+                delay(delayTime)
                 newOnboardList2.add(newOnboardList[i])
 
             }

@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         storageManager.sessionCountFlow.asLiveData().observe(this) {
             if (it != null) {
                 com.intractable.simm.ProgressManager.instance.sessionNumber = it
-                mainBinding.tvGold.text = it.toString()
+                mainBinding.tvPlantCount.text = it.toString()
                 if (!mainModel.activityList.isEmpty())
                 mainBinding.tvSessionName.text = mainModel.activityList[it]
                 Log.e("Session","fd")
@@ -134,9 +134,12 @@ class MainActivity : AppCompatActivity() {
 
                 GlobalScope.launch {
                     storageManager.storePlantGrowth(sessionsCompleted)
+                    storageManager.storePlantCount(numberOfPlantsCollected)
                 }
 
                 mainBinding.ivPlantMain.setImageResource(plantImages[plantType][plantState][sessionsCompleted])
+                mainBinding.tvPlantCount.text = numberOfPlantsCollected.toString()
+
 
                 setWidget(plantType, plantState, sessionsCompleted)
             }

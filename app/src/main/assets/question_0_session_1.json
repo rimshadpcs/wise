@@ -9,16 +9,16 @@
     "pages":
     [
       {
-        "title": "Learn how to access and interact with notifications", "image": "storyboard_notification_page_1"
+        "title": "Learn how to access and interact with notifications", "image": "notifications_page1"
       },
       {
-        "title": "Sometimes apps send notifications that appear at the top of your screen for a short time", "image": "storyboard_notification_page_2"
+        "title": "Sometimes apps send notifications that appear at the top of your screen for a short time", "image": "notifications_page2"
       },
       {
-        "title": "Drag down from the top of the screen to view your notifications", "image": "storyboard_notification_page_3"
+        "title": "Drag down from the top of the screen to view your notifications", "image": "notifications_page3"
       },
       {
-        "title": "Tapping a notification opens the app that sent the notification to you", "image": "storyboard_notification_page_4"
+        "title": "Tapping a notification opens the app that sent the notification to you", "image": "notifications_page4"
       }
     ]
   }

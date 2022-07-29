@@ -9,19 +9,19 @@
     "pages":
     [
       {
-        "title": "Learn how to add new widgets to your home screen", "image": "connect_with_people"
+        "title": "Learn how to add new widgets to your home screen", "image": "widgets_page1"
       },
       {
-        "title": "Hold down on any empty space on the home screen", "image": "connect_with_people"
+        "title": "Hold down on any empty space on the home screen", "image": "widgets_page2"
       },
       {
-        "title": "Tap the button labeled \"Widgets\"", "image": "connect_with_people"
+        "title": "Tap the button labeled \"Widgets\"", "image": "widgets_page3"
       },
       {
-        "title": "Tap and hold the widget you wish to add to the home screen", "image": "connect_with_people"
+        "title": "Tap and hold the widget you wish to add to the home screen", "image": "widgets_page4"
       },
       {
-        "title": "Hold down on any empty space on the home screen", "image": "connect_with_people"
+        "title": "Hold down on any empty space on the home screen", "image": "widgets_page5"
       }
     ]
   }

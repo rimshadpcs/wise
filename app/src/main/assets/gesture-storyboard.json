@@ -9,19 +9,19 @@
     "pages":
     [
       {
-        "title": "Learn some useful gestures for navigating through your phone", "image": "connect_with_people"
+        "title": "Learn some useful gestures for navigating through your phone", "image": "gestures_page1"
       },
       {
-        "title": "Swiping up from the Home Screen opens the app drawer", "image": "connect_with_people"
+        "title": "Swiping up from the Home Screen opens the app drawer", "image": "gestures_page2"
       },
       {
-        "title": "Swiping up from the bottom of an open app brings you back to the Home Screen", "image": "connect_with_people"
+        "title": "Swiping up from the bottom of an open app brings you back to the Home Screen", "image": "gestures_page3"
       },
       {
-        "title": "Swiping across the bottom switches the active app", "image": "connect_with_people"
+        "title": "Swiping across the bottom switches the active app", "image": "gestures_page4"
       },
       {
-        "title": "Swiping left or right brings you back to the previous screen", "image": "connect_with_people"
+        "title": "Swiping left or right brings you back to the previous screen", "image": "gestures_page5"
       }
     ]
   }
