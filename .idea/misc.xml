@@ -30,6 +30,7 @@
         <entry key="app/src/main/res/drawable/shape_roundedcorners_white.xml" value="0.145" />
         <entry key="app/src/main/res/font/lobster.xml" value="0.3390625" />
         <entry key="app/src/main/res/layout-v31/plant_widget.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/activity_acknowledgments.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/activity_bubble_sample.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_drawing.xml" value="0.1824074074074074" />
         <entry key="app/src/main/res/layout/activity_end_session.xml" value="0.26226959228515623" />
@@ -44,6 +45,7 @@
         <entry key="app/src/main/res/layout/activity_question_sort.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_session.xml" value="0.24188034188034188" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/activity_sliding.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/activity_story_board.xml" value="0.17557251908396945" />
@@ -53,6 +55,7 @@
         <entry key="app/src/main/res/layout/activity_wrong_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/fragment_operation.xml" value="0.2572463768115942" />
+        <entry key="app/src/main/res/layout/fragment_mcq.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.25427350427350426" />
