@@ -69,11 +69,18 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_right,0)
         }
 
-        GlobalScope.launch {
-            storageManager.storePlantState(0)
-            storageManager.storePlantType(1)
-        }
-        setPlant()
+//        storageManager.imageFlow.asLiveData().observe(this) {
+//            Log.i("MainActivity", "plantImage = " + it)
+//            if (it != null) {
+//                mainBinding.ivPlantMain.setImageResource(it)
+//            }
+//        }
+
+        //GlobalScope.launch {
+        //    storageManager.storePlantState(0)
+        //    storageManager.storePlantType(1)
+        //}
+        //setPlant()
 
 
 //        val modalBottomSheet = RightBottomSheetDialog()
