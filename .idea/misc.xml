@@ -56,6 +56,7 @@
         <entry key="app/src/main/res/layout/fragment_right_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/fragment_story_board.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_storyboard.xml" value="0.2572463768115942" />
         <entry key="app/src/main/res/layout/fragment_true_or_false.xml" value="0.13148148148148148" />
         <entry key="app/src/main/res/layout/fragment_wrong_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_large_news.xml" value="0.17794253938832252" />
@@ -70,7 +71,7 @@
         <entry key="app/src/main/res/layout/simm_widget.xml" value="0.24273504273504273" />
         <entry key="app/src/main/res/layout/simm_widget_configure.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/statement_list.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/story_board_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/story_board_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/swapping_app_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/test.xml" value="0.1" />
         <entry key="app/src/main/res/layout/wrong_bottom_sheet.xml" value="0.18946228027343753" />
