@@ -76,12 +76,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        //GlobalScope.launch {
-        //    storageManager.storePlantState(0)
-        //    storageManager.storePlantType(1)
-        //}
-        //setPlant()
-
+        storageManager.plantCountFlow.asLiveData().observe(this) {
+            Log.i("MainActivity", "plantCount = " + it)
+            if (it != null) {
+                mainBinding.tvPlantCount.text = it.toString()
+            }
+        }
 
 //        val modalBottomSheet = RightBottomSheetDialog()
 //        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)

@@ -89,9 +89,9 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         return dataStore.data.firstOrNull()?.get(PLANT_TYPE_KEY)
     }
 
-    suspend fun storePlantCount(sessionNumber: Int) {
+    suspend fun storePlantCount(plantCount: Int) {
         dataStore.edit {
-            it[PLANTS_COLLECTED_COUNT] = sessionNumber
+            it[PLANTS_COLLECTED_COUNT] = plantCount
         }
     }
     suspend fun getPlantCount(): Int? {
@@ -105,10 +105,9 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         var plantType = 1 // red plant
         var plantState = 0
 
-        Log.d("plant_type", plantType.toString())
-        Log.d("plant_state", plantState.toString())
-
-        Log.d("plant_sessionsCompletedIt", sessionsCompleted.toString())
+        Log.d("StorageManager","plant_type = " + plantType)
+        Log.d("StorageManager","plant_state = " + plantState)
+        Log.d("StorageManager","plant_sessionsCompleted = " + sessionsCompleted)
 
         // Converts sessionsCompleted into a plant growth size depending on sessions done
         // Basically a % but with variable divisor
@@ -129,13 +128,14 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         )
         // turn the number back into int
         sessionsCompleted = plantStageFloat.roundToInt()
-        Log.d("plant_growth", sessionsCompleted.toString())
+        Log.d("StorageManager", "plant growth = " + sessionsCompleted)
 
         val plantImage = Plants.plantImages[plantType][plantState][sessionsCompleted]
 
         storePlantGrowth(sessionsCompleted)
         storePlantCount(numberOfPlantsCollected)
         storePlantImage(plantImage)
+        Log.i("StorageManager", "plantCount = " + numberOfPlantsCollected)
         Log.i("StorageManager", "plantImage = " + plantImage)
     }
 
@@ -143,7 +143,10 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         it[PLANT_IMAGE_KEY]
     }
 
-    // Flow for gold
+    val plantCountFlow: Flow<Int?> = dataStore.data.map {
+        it[PLANTS_COLLECTED_COUNT]
+    }
+
     val sessionCountFlow: Flow<Int?> = dataStore.data.map {
         it[SESSION_COUNT_KEY]
     }

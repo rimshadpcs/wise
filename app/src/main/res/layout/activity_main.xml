@@ -25,7 +25,7 @@
         android:layout_marginStart="7dp"
         android:fontFamily="@font/open_sans_semi_bold"
         android:paddingTop="4dp"
-        android:text=""
+        android:text="@string/dummyNumber"
         android:textColor="@color/white"
         android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="@id/ivPlantIcon"
