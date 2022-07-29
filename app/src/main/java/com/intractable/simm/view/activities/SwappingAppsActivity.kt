@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.intractable.simm.adapters.SwappingAppsAdapter
 import com.intractable.simm.databinding.ActivitySwappingAppsBinding
 import com.intractable.simm.model.SwappingItems
+import com.intractable.simm.utils.AppUtil
 import com.intractable.simm.utils.SwipeServices
 import com.intractable.simm.viewmodel.SwappingAppViewModel
 
@@ -16,12 +17,15 @@ SwappingAppsAdapter.OnItemClickListener{
     private lateinit var swappingAppsBinding: ActivitySwappingAppsBinding
     private var swappingAppsAdapter: SwappingAppsAdapter? = null
     private lateinit var selectedApp: SwappingItems
+    lateinit var appUtil: AppUtil
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         swappingAppsBinding = ActivitySwappingAppsBinding.inflate(layoutInflater)
         setContentView(swappingAppsBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         val swappingAppViewModel = ViewModelProvider(this)[SwappingAppViewModel::class.java]
         swappingAppViewModel.generateSwapItems()
