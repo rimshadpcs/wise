@@ -47,18 +47,29 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/cvLaunch">
 
-            <ImageView
-                android:id="@+id/ivSimmMain"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSimmContainer"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
-                android:baselineAlignBottom="true"
-                android:src="@drawable/neutral_mouth_closed"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/iv_plantMain"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription,MissingConstraints" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivSimmMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/neutral_mouth_closed"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
             <ImageView
@@ -71,7 +82,7 @@
                 android:src="@drawable/tulip_red_awake_stage0"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/ivSimmMain"
+                app:layout_constraintStart_toEndOf="@+id/clSimmContainer"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
