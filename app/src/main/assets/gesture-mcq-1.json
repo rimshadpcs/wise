@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "gesture-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "What are touch gestures?",
+
+      "choice1": "Gestures in which by swiping you access functions faster",
+
+      "choice2": "Gestures in which by shaking you access functions faster",
+
+      "choice3": "Gestures in which by typing you access functions slower",
+
+      "choice4": "Gestures in which by moving you access functions slower",
+
+      "answer": "Gestures in which by swiping you access functions faster"
+
+    }
+  }

@@ -1,0 +1,29 @@
+
+
+{
+
+  "activityId": "widgets-storyboard",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Learn how to add new widgets to your home screen", "image": "connect_with_people"
+      },
+      {
+        "title": "Hold down on any empty space on the home screen", "image": "connect_with_people"
+      },
+      {
+        "title": "Tap the button labeled \"Widgets\"", "image": "connect_with_people"
+      },
+      {
+        "title": "Tap and hold the widget you wish to add to the home screen", "image": "connect_with_people"
+      },
+      {
+        "title": "Hold down on any empty space on the home screen", "image": "connect_with_people"
+      }
+    ]
+  }
+
+}
