@@ -64,7 +64,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         mainBinding.ivSettings.setOnClickListener {
-            startActivity(Intent(this,SettingsActivity::class.java))
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_right,0)
         }
 
         GlobalScope.launch {
