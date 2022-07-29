@@ -84,8 +84,12 @@ class MainActivity : AppCompatActivity() {
             if (it != null) {
                 com.intractable.simm.ProgressManager.instance.sessionNumber = it
                 mainBinding.tvPlantCount.text = it.toString()
-                if (!mainModel.activityList.isEmpty())
-                mainBinding.tvSessionName.text = mainModel.activityList[it]
+                if (!mainModel.activityList.isEmpty() && it<mainModel.activityList.size) {
+                    mainBinding.tvSessionName.text = mainModel.activityList[it]
+                }else{
+                    mainBinding.tvSessionName.text = "Coming Soon"
+                    mainBinding.cvLaunch.isClickable = false
+                }
                 Log.e("Session","fd")
             }
             else
