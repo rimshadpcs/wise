@@ -61,9 +61,6 @@ class SessionViewModel:ViewModel() {
     val eventlivedata = MutableLiveData(Constants.EVENT_NONE)
     fun getEvent(): LiveData<Int?> = eventlivedata
 
-
-
-
     fun loadAllQuestions(context: Context) {
         questionItems.clear()
         val jsonStr = loadJSONFromAsset(context)
@@ -72,7 +69,7 @@ class SessionViewModel:ViewModel() {
         try {
 
             val jsonObject = JSONObject(jsonStr)
-            var fragment = jsonObject.getString("fragmentClassName")
+            val fragment = jsonObject.getString("fragmentClassName")
             Log.e("frag",fragment)
             if (fragment.equals("FragmentMcq")) {
                 val questions = jsonObject.getJSONObject("parameters")
