@@ -8,7 +8,7 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <application
-        android:name=".BaseApplication"
+        android:name="com.intractable.simm.BaseApplication"
         android:allowBackup="true"
         android:icon="@drawable/square_grinning_app_icon_blue"
         android:label="@string/app_name"
@@ -24,7 +24,7 @@
             android:exported="false" />
 
         <receiver
-            android:name=".view.widgets.PlantWidget"
+            android:name="com.intractable.simm.view.widgets.PlantWidget"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -36,40 +36,40 @@
         </receiver>
 
         <activity
-            android:name=".view.activities.PermissionActivity"
+            android:name="com.intractable.simm.view.activities.PermissionActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.OnBoardingActivity"
+            android:name="com.intractable.simm.view.activities.OnBoardingActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".view.activities.SessionActivity"
+            android:name="com.intractable.simm.view.activities.SessionActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".view.activities.EndSessionActivity"
+            android:name="com.intractable.simm.view.activities.EndSessionActivity"
             android:exported="false"
             android:screenOrientation="fullSensor"
             android:theme="@style/Theme.SimmOne.right_anim" />
         <activity
-            android:name=".view.activities.OperationResultActivity"
+            android:name="com.intractable.simm.view.activities.OperationResultActivity"
             android:exported="false"
             android:screenOrientation="fullSensor"
             android:theme="@style/Theme.SimmOne.right_anim" />
         <activity
-            android:name=".view.activities.BubbleSample"
+            android:name="com.intractable.simm.view.activities.BubbleSample"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".view.activities.SplashScreen"
+            android:name="com.intractable.simm.view.activities.SplashScreen"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".view.compose.SquareDrawingActivity"
+            android:name="com.intractable.simm.view.compose.SquareDrawingActivity"
             android:exported="true"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".view.activities.TrueOrFalseActivity"
+            android:name="com.intractable.simm.view.activities.TrueOrFalseActivity"
             android:exported="true"
             android:screenOrientation="fullSensor" />
         <activity
@@ -84,7 +84,7 @@
         </activity>
 
         <service
-            android:name=".services.SimmTileService"
+            android:name="com.intractable.simm.services.SimmTileService"
             android:exported="true"
             android:icon="@drawable/simm_cover"
             android:label="@string/app_name"
@@ -98,8 +98,9 @@
             </intent-filter>
         </service>
 
+
         <activity
-            android:name=".view.activities.StoryBoardActivity"
+            android:name="com.intractable.simm.view.activities.StoryBoardActivity"
             android:exported="true"
             android:screenOrientation="fullSensor" />
     </application>

@@ -35,9 +35,8 @@ class MainActivity : AppCompatActivity() {
   lateinit var storageManager: StorageManager
     private lateinit var mainBinding: ActivityMainBinding
     lateinit var appUtil: AppUtil
-    private val mainModel : MainViewModel by viewModels()
-    private val sessionViewModel: SessionViewModel by viewModels()
 
+    private val mainModel : MainViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         storageManager = StorageManager(dataStore)
+        mainModel.loadSession(this)
         observeSessionNumber()
         appUtil = AppUtil(this)
         appUtil.setDarkMode()
@@ -80,8 +80,13 @@ class MainActivity : AppCompatActivity() {
         storageManager.sessionCountFlow.asLiveData().observe(this) {
             if (it != null) {
                 com.intractable.simm.ProgressManager.instance.sessionNumber = it
-                mainBinding.tvGold.text = it.toString()
+                mainBinding.tvPlantCount.text = it.toString()
+                if (!mainModel.activityList.isEmpty())
+                mainBinding.tvSessionName.text = mainModel.activityList[it]
+                Log.e("Session","fd")
             }
+            else
+                mainBinding.tvSessionName.text = mainModel.activityList[0]
         }
     }
 
@@ -129,9 +134,12 @@ class MainActivity : AppCompatActivity() {
 
                 GlobalScope.launch {
                     storageManager.storePlantGrowth(sessionsCompleted)
+                    storageManager.storePlantCount(numberOfPlantsCollected)
                 }
 
                 mainBinding.ivPlantMain.setImageResource(plantImages[plantType][plantState][sessionsCompleted])
+                mainBinding.tvPlantCount.text = numberOfPlantsCollected.toString()
+
 
                 setWidget(plantType, plantState, sessionsCompleted)
             }
@@ -151,20 +159,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setButtonTexts(){
 
-        storageManager.sessionCountFlow.asLiveData().observe(this) {
-            if (it != null) {
-                com.intractable.simm.ProgressManager.instance.sessionNumber = it
-                sessionViewModel.getListActivity().observe(this, Observer {
-                    // do stuff to get the name of the session
-
-                    // put the text of the name of the session into the right place
-                    mainBinding.tvSessionName.text = "Next Session"
-                })
-            }
-            else{
-                mainBinding.tvSessionName.text = "Let's start!"
-            }
-        }
 
     }
 }

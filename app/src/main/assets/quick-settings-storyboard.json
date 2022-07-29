@@ -9,22 +9,22 @@
     "pages":
     [
       {
-        "title": "Learn to rearrange Quick Settings on your phone", "image": "connect_with_people"
+        "title": "Learn to rearrange Quick Settings on your phone", "image": "quicksettings_page1"
       },
       {
-        "title": "Swipe down from the top of the screen to view Quick Settings", "image": "connect_with_people"
+        "title": "Swipe down from the top of the screen to view Quick Settings", "image": "quicksettings_page2"
       },
       {
-        "title": "Swipe down again to see the expanded view", "image": "connect_with_people"
+        "title": "Swipe down again to see the expanded view", "image": "quicksettings_page3"
       },
       {
-        "title": "Tap the edit button", "image": "connect_with_people"
+        "title": "Tap the edit button", "image": "quicksettings_page4"
       },
       {
-        "title": "Hold down the Simm Quick Setting and drag it to the top", "image": "connect_with_people"
+        "title": "Hold down the Simm Quick Setting and drag it to the top", "image": "quicksettings_page5"
       },
       {
-        "title": "To remove a Quick Setting drag it down to the bottom", "image": "connect_with_people"
+        "title": "To remove a Quick Setting drag it down to the bottom", "image": "quicksettings_page6"
       }
     ]
   }
