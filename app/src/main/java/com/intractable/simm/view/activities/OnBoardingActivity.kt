@@ -107,6 +107,8 @@ class OnBoardingActivity : AppCompatActivity() {
             onBoardingAdapter!!.getItemList().size
             val sizeOfTheList = onBoardingViewModel.sizeOfMessageList.value
 
+            val delayTimes = longArrayOf(2000, 4000, 6000)
+
             lifecycleScope.launch(Dispatchers.Main) {
                 val smoothScroller: SmoothScroller =
                     object : LinearSmoothScroller(this@OnBoardingActivity) {
@@ -115,7 +117,8 @@ class OnBoardingActivity : AppCompatActivity() {
                         }
                     }
                 for (i in 0 until sizeOfTheList!!) {
-                    delay(2000)
+                    val delayTime = delayTimes[min(i, delayTimes.size - 1)]
+                    delay(delayTime)
                     onBoardingAdapter!!.notifyDataSetChanged()
                     onBoardBinding.rvOnBoarding.run { smoothScroller.targetPosition = min(i+1, sizeOfTheList)
 
