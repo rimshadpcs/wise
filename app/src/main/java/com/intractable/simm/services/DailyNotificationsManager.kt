@@ -51,7 +51,6 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
         val plantState = storageManager.getPlantState() ?: 0
         val plantGrowth = storageManager.getPlantGrowth() ?: 0
 
-        triggerNotify()
         updateSleepWakeState(plantType, plantState, plantGrowth)
 
         return Result.success()
