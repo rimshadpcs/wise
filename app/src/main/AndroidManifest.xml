@@ -79,7 +79,7 @@
         <service
             android:name="com.intractable.simm.services.SimmTileService"
             android:exported="true"
-            android:icon="@drawable/simm_cover"
+            android:icon="@drawable/qs_star"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <meta-data

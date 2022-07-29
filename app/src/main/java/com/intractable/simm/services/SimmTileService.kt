@@ -59,11 +59,11 @@ class SimmTileService : TileService() {
 
         if (isActive) {
             tile.state = Tile.STATE_ACTIVE
-            tile.icon = Icon.createWithResource(this, R.drawable.simm_with_seed)
+            tile.icon = Icon.createWithResource(this, R.drawable.qs_star)
             tile.updateTile()
         }else {
             tile.state = Tile.STATE_INACTIVE
-            tile.icon = Icon.createWithResource(this,R.drawable.simm_cover)
+            tile.icon = Icon.createWithResource(this, R.drawable.qs_star)
             tile.updateTile()
 
         }

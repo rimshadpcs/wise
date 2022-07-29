@@ -47,7 +47,7 @@ class NotificationManager2(context: Context, workerParams: WorkerParameters):
         val notificationTitle = applicationContext.getString(R.string.hide_and_seek_not_title)
         val notificationContent = applicationContext.getString(R.string.hide_and_seek_not_content)
         val builder = NotificationCompat.Builder(applicationContext, channelId)
-            .setSmallIcon(R.drawable.simm_cover)
+            .setSmallIcon(R.drawable.simm_qs_icon2)
             .setContentTitle(notificationTitle)
             .setContentText(notificationContent)
             .setContentIntent(pendingIntent)

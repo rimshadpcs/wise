@@ -48,7 +48,7 @@ class MyNotificationManager(context: Context, workerParams: WorkerParameters):
         val notificationTitle = applicationContext.getString(R.string.tapHere)
         val notificationContent = applicationContext.getString(R.string.tapHereFull)
         val builder = NotificationCompat.Builder(applicationContext, channelId)
-            .setSmallIcon(R.drawable.simm_cover)
+            .setSmallIcon(R.drawable.simm_qs_icon2)
             .setContentTitle(notificationTitle)
             .setContentText(notificationContent)
             .setContentIntent(pendingIntent)
