@@ -6,10 +6,8 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import com.google.android.material.math.MathUtils
-import com.intractable.simm.dataStore.StorageManager.Companion.SESSION_COUNT_KEY
 import com.intractable.simm.utils.Plants
 import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.yield
 import kotlin.math.roundToInt
 
 class StorageManager(val dataStore: DataStore<Preferences>) {
@@ -20,6 +18,7 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         val PLANT_GROWTH_KEY = intPreferencesKey("PLANT_GROWTH")  // 0-5 for tulips
         val PLANT_TYPE_KEY = intPreferencesKey("PLANT_TYPE")  // 0 == purple, 1 == red, 2 == yellow
         val PLANTS_COLLECTED_COUNT = intPreferencesKey("PLANTS_COLLECTED_COUNT")
+        val PLANT_IMAGE_KEY = intPreferencesKey("PLANT_IMAGE")
     }
 
     suspend fun storeSessionNumber(sessionNumber: Int) {
@@ -46,6 +45,13 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
             it[PLANT_GROWTH_KEY] = sessionNumber
         }
     }
+
+    suspend fun storePlantImage(plantImageVal: Int) {
+        dataStore.edit {
+            it[PLANT_IMAGE_KEY] = plantImageVal
+        }
+    }
+
     suspend fun incrementPlantGrowth(){
         val key = PLANT_GROWTH_KEY
         dataStore.edit{
@@ -96,8 +102,8 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         var plantGrowthIndex = 0
         var numberOfPlantsCollected = 0
         var sessionsCompleted = initialSessionsCompleted
-        var plantType: Int = 0
-        var plantState: Int = 0
+        var plantType = 1 // red plant
+        var plantState = 0
 
         Log.d("plant_type", plantType.toString())
         Log.d("plant_state", plantState.toString())
@@ -125,23 +131,21 @@ class StorageManager(val dataStore: DataStore<Preferences>) {
         sessionsCompleted = plantStageFloat.roundToInt()
         Log.d("plant_growth", sessionsCompleted.toString())
 
+        val plantImage = Plants.plantImages[plantType][plantState][sessionsCompleted]
 
         storePlantGrowth(sessionsCompleted)
         storePlantCount(numberOfPlantsCollected)
-
-        plantImage = Plants.plantImages[plantType][plantState][sessionsCompleted]
+        storePlantImage(plantImage)
         Log.i("StorageManager", "plantImage = " + plantImage)
     }
 
-    val imageFlow: Flow<Int> = flow {
-            emit(plantImage)
+    val plantImageFlow: Flow<Int?> = dataStore.data.map {
+        it[PLANT_IMAGE_KEY]
     }
 
     // Flow for gold
     val sessionCountFlow: Flow<Int?> = dataStore.data.map {
         it[SESSION_COUNT_KEY]
     }
-
-    var plantImage = Plants.plantImages[0][0][0]
 
 }

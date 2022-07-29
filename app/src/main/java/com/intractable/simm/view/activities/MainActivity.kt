@@ -69,12 +69,12 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_right,0)
         }
 
-//        storageManager.imageFlow.asLiveData().observe(this) {
-//            Log.i("MainActivity", "plantImage = " + it)
-//            if (it != null) {
-//                mainBinding.ivPlantMain.setImageResource(it)
-//            }
-//        }
+        storageManager.plantImageFlow.asLiveData().observe(this) {
+            Log.i("MainActivity", "plantImage = " + it)
+            if (it != null) {
+                mainBinding.ivPlantMain.setImageResource(it)
+            }
+        }
 
         //GlobalScope.launch {
         //    storageManager.storePlantState(0)
