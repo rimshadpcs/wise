@@ -9,7 +9,6 @@ import android.util.Log
 import android.widget.RemoteViews
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
 import com.intractable.simm.R
 import com.intractable.simm.dataStore.StorageManager
@@ -25,6 +24,7 @@ import com.intractable.simm.utils.Plants
 import com.intractable.simm.view.widgets.PlantWidget
 import com.intractable.simm.viewmodel.SessionViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     private val mainModel : MainViewModel by viewModels()
 
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -49,7 +50,6 @@ class MainActivity : AppCompatActivity() {
         appUtil = AppUtil(this)
         appUtil.setDarkMode()
         val mp : MediaPlayer = MediaPlayer.create(this, R.raw.button_press)
-
         setButtonTexts()
 
         mainBinding.cvLaunch.setOnClickListener{
@@ -63,13 +63,16 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_right,0)
         }
 
+        mainBinding.ivSettings.setOnClickListener {
+            startActivity(Intent(this,SettingsActivity::class.java))
+        }
 
         GlobalScope.launch {
             storageManager.storePlantState(0)
             storageManager.storePlantType(1)
         }
-
         setPlant()
+
 
 //        val modalBottomSheet = RightBottomSheetDialog()
 //        modalBottomSheet.show(supportFragmentManager, RightBottomSheetDialog.TAG)
@@ -80,7 +83,6 @@ class MainActivity : AppCompatActivity() {
         storageManager.sessionCountFlow.asLiveData().observe(this) {
             if (it != null) {
                 com.intractable.simm.ProgressManager.instance.sessionNumber = it
-                mainBinding.tvPlantCount.text = it.toString()
                 if (!mainModel.activityList.isEmpty())
                 mainBinding.tvSessionName.text = mainModel.activityList[it]
                 Log.e("Session","fd")
@@ -95,54 +97,48 @@ class MainActivity : AppCompatActivity() {
         var sessionsCompleted: Int
         var plantGrowthIndex = 0
         var numberOfPlantsCollected = 0
-        var plantType = 0
-        var plantState = 0
-
+        var plantType: Int
+        var plantState: Int
 
         GlobalScope.launch {
             plantType = storageManager.getPlantType() ?: 0
             plantState = storageManager.getPlantState() ?: 0
+            sessionsCompleted = storageManager.getSessionNumber() ?: 0
             Log.d("plant_type", plantType.toString())
             Log.d("plant_state", plantState.toString())
-        }
-        storageManager.sessionCountFlow.asLiveData().observe(this){
-            if (it != null) {
-                sessionsCompleted = it
-                Log.d("plant_sessionsCompletedIt", sessionsCompleted.toString())
 
-                // Converts sessionsCompleted into a plant growth size depending on sessions done
-                // Basically a % but with variable divisor
-                while (sessionsCompleted > plantGrowthIntervals[plantGrowthIndex]) {
-                    sessionsCompleted -= plantGrowthIntervals[plantGrowthIndex]
-                    plantGrowthIndex++
-                    numberOfPlantsCollected++
-                    if (plantGrowthIndex >= plantGrowthIntervals.size) {  // don't go out of index bounds
-                        plantGrowthIndex = plantGrowthIntervals.size - 1
-                    }
+            Log.d("plant_sessionsCompletedIt", sessionsCompleted.toString())
+
+            // Converts sessionsCompleted into a plant growth size depending on sessions done
+            // Basically a % but with variable divisor
+            while (sessionsCompleted > plantGrowthIntervals[plantGrowthIndex]) {
+                sessionsCompleted -= plantGrowthIntervals[plantGrowthIndex]
+                plantGrowthIndex++
+                numberOfPlantsCollected++
+                if (plantGrowthIndex >= plantGrowthIntervals.size) {  // don't go out of index bounds
+                    plantGrowthIndex = plantGrowthIntervals.size - 1
                 }
-
-                // normalizes growth progress to maximum growth allowed in this interval
-                val plantStageFloat = lerp(
-                    0f,
-                    5f,
-                    sessionsCompleted.toFloat() / plantGrowthIntervals[plantGrowthIndex]
-                )
-                // turn the number back into int
-                sessionsCompleted = plantStageFloat.roundToInt()
-                Log.d("plant_growth", sessionsCompleted.toString())
-
-
-                GlobalScope.launch {
-                    storageManager.storePlantGrowth(sessionsCompleted)
-                    storageManager.storePlantCount(numberOfPlantsCollected)
-                }
-
-                mainBinding.ivPlantMain.setImageResource(plantImages[plantType][plantState][sessionsCompleted])
-                mainBinding.tvPlantCount.text = numberOfPlantsCollected.toString()
-
-
-                setWidget(plantType, plantState, sessionsCompleted)
             }
+
+            // normalizes growth progress to maximum growth allowed in this interval
+            val plantStageFloat = lerp(
+                0f,
+                5f,
+                sessionsCompleted.toFloat() / plantGrowthIntervals[plantGrowthIndex]
+            )
+            // turn the number back into int
+            sessionsCompleted = plantStageFloat.roundToInt()
+            Log.d("plant_growth", sessionsCompleted.toString())
+
+
+            storageManager.storePlantGrowth(sessionsCompleted)
+            storageManager.storePlantCount(numberOfPlantsCollected)
+
+            mainBinding.ivPlantMain.setImageResource(plantImages[plantType][plantState][sessionsCompleted])
+            mainBinding.tvPlantCount.text = numberOfPlantsCollected.toString()
+
+
+            setWidget(plantType, plantState, sessionsCompleted)
         }
     }
 
@@ -153,7 +149,7 @@ class MainActivity : AppCompatActivity() {
         val appWidgetManager = AppWidgetManager.getInstance(context)
         val remoteViews = RemoteViews(context.packageName, R.layout.plant_widget)
         val thisWidget = ComponentName(context, PlantWidget::class.java)
-        remoteViews.setImageViewResource(R.id.iv_plant, Plants.plantImages[plantType][plantState][plantGrowth])
+        remoteViews.setImageViewResource(R.id.iv_plant, plantImages[plantType][plantState][plantGrowth])
         appWidgetManager.updateAppWidget(thisWidget, remoteViews)
     }
 

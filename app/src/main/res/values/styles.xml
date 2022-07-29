@@ -18,4 +18,8 @@
     <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_right</item>
     </style>
+
+    <style name="SwitchCompatTheme" >
+        <item name="colorControlActivated">@color/white</item>
+    </style>
 </resources>

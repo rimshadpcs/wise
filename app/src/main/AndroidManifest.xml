@@ -42,7 +42,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.intractable.simm.view.activities.OnBoardingActivity"
+            android:name="com.intractable.simm.view.activities.MainActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -76,7 +76,7 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.activities.MainActivity"
+            android:name=".view.activities.OnBoardingActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

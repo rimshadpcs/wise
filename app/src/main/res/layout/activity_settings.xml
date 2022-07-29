@@ -10,11 +10,12 @@
         android:id="@+id/sw_analytics"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/gray"
+        android:textColor="@color/white"
         android:paddingEnd="50dp"
         android:paddingStart="50dp"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:theme="@style/SwitchCompatTheme"
         android:checked="true"
         android:text="@string/analytics"
         tools:ignore="MissingConstraints" />

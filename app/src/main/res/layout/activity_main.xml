@@ -32,6 +32,16 @@
         app:layout_constraintStart_toEndOf="@id/ivPlantIcon"
         app:layout_constraintTop_toTopOf="@id/ivPlantIcon" />
 
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/iv_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/questionmark"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -62,7 +72,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:paddingBottom="10dp"
                     android:src="@drawable/neutral_mouth_closed"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
