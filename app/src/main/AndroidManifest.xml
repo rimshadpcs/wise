@@ -18,9 +18,11 @@
         tools:targetApi="31">
         <activity
             android:name=".view.activities.AcknowledgmentsActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".view.activities.MainActivity"
+            android:name=".view.activities.SettingsActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
 
         <receiver
@@ -37,45 +39,46 @@
 
         <activity
             android:name="com.intractable.simm.view.activities.PermissionActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name="com.intractable.simm.view.activities.OnBoardingActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.intractable.simm.view.activities.SessionActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.intractable.simm.view.activities.EndSessionActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.SimmOne.right_anim" />
         <activity
             android:name="com.intractable.simm.view.activities.OperationResultActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.SimmOne.right_anim" />
         <activity
             android:name="com.intractable.simm.view.activities.BubbleSample"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.intractable.simm.view.activities.SplashScreen"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.intractable.simm.view.compose.SquareDrawingActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.intractable.simm.view.activities.TrueOrFalseActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".view.activities.SettingsActivity"
+            android:name=".view.activities.MainActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -102,7 +105,7 @@
         <activity
             android:name="com.intractable.simm.view.activities.StoryBoardActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
