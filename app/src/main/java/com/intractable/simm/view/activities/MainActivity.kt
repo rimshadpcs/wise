@@ -63,6 +63,9 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_right,0)
         }
 
+        mainBinding.ivSettings.setOnClickListener {
+            startActivity(Intent(this,SettingsActivity::class.java))
+        }
 
         GlobalScope.launch {
             storageManager.storePlantState(0)

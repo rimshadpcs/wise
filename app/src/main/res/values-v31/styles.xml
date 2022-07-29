@@ -18,4 +18,8 @@
         <item name="android:indeterminateOnly">false</item>
         <item name="android:progressDrawable">@drawable/progress_circle</item>
     </style>
+
+    <style name="SwitchCompatTheme" >
+        <item name="colorControlActivated">@color/white</item>
+    </style>
 </resources>

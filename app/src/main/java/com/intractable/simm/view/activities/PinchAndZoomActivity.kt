@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.intractable.simm.R
 import com.intractable.simm.databinding.ActivityPinchAndZoomBinding
+import com.intractable.simm.utils.AppUtil
 import kotlinx.coroutines.*
 import kotlin.math.max
 import kotlin.math.min
@@ -16,10 +17,13 @@ import kotlin.math.min
 class PinchAndZoomActivity : AppCompatActivity() {
 
     private lateinit var pinchAndZoomBinding: ActivityPinchAndZoomBinding
+    lateinit var appUtil: AppUtil
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         pinchAndZoomBinding = ActivityPinchAndZoomBinding.inflate(layoutInflater)
         setContentView(pinchAndZoomBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
         val insideImage = pinchAndZoomBinding.ivStarInside
         var scaleFactor = 1f
 
