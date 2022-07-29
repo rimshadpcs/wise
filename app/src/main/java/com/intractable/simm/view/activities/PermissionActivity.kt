@@ -9,15 +9,19 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.intractable.simm.databinding.ActivityPermissionBinding
+import com.intractable.simm.utils.AppUtil
 
 class PermissionActivity : AppCompatActivity() {
     val cameraRQ = 101
 
     private lateinit var permissionActivityBinding: ActivityPermissionBinding
+    lateinit var appUtil: AppUtil
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         permissionActivityBinding = ActivityPermissionBinding.inflate(layoutInflater)
         setContentView(permissionActivityBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
         clickMeTap()
     }

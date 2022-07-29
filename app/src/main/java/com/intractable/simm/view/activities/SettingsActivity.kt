@@ -6,13 +6,17 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.intractable.simm.databinding.ActivitySettingsBinding
+import com.intractable.simm.utils.AppUtil
 
 class SettingsActivity : AppCompatActivity() {
     private lateinit var settingsBinding: ActivitySettingsBinding
+    lateinit var appUtil: AppUtil
     override fun onCreate(savedInstanceState: Bundle?) {
         settingsBinding = ActivitySettingsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(settingsBinding.root)
+        appUtil = AppUtil(this)
+        appUtil.setDarkMode()
 
 
         settingsBinding.btPrivacyPolicy.setOnClickListener{
