@@ -32,7 +32,7 @@
             android:name="com.intractable.simm.view.activities.PermissionActivity"
             android:exported="false" />
         <activity
-            android:name="com.intractable.simm.view.compose.SquareDrawingActivity"
+            android:name="com.intractable.simm.view.activities.OnBoardingActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
@@ -62,7 +62,11 @@
             android:exported="true"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name="com.intractable.simm.view.activities.OnBoardingActivity"
+            android:name="com.intractable.simm.view.activities.TrueOrFalseActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.intractable.simm.view.compose.SquareDrawingActivity"
             android:exported="true"
             android:screenOrientation="fullSensor">
             <intent-filter>

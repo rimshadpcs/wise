@@ -1,5 +1,6 @@
 package com.intractable.simm.view.compose
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -7,6 +8,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -15,12 +17,19 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.input.pointer.*
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat.startActivity
+import com.intractable.simm.R
+import com.intractable.simm.view.activities.MainActivity
 import com.smarttoolfactory.gesture.MotionEvent
 import com.smarttoolfactory.gesture.pointerMotionEvents
+import kotlinx.coroutines.delay
+import java.io.Serializable
 
 class SquareDrawingActivity : ComponentActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +40,8 @@ class SquareDrawingActivity : ComponentActivity() {
 }
 @Composable
 fun MyDrawing() {
+    val context = LocalContext.current
+    val composableScope = rememberCoroutineScope()
     // This is motion state. Initially or when touch is completed state is at MotionEvent.Idle
     // When touch is initiated state changes to MotionEvent.Down, when pointer is moved MotionEvent.Move,
     // after removing pointer we go to MotionEvent.Up to conclude drawing and then to MotionEvent.Idle
@@ -42,7 +53,7 @@ fun MyDrawing() {
     // This is previous motion event before next touch is saved into this current position
     var previousPosition by remember { mutableStateOf(Offset.Unspecified) }
 
-    var threshold = 7000  // number of pixels (squared) threshold for checkpoints
+    var threshold = 8000  // number of pixels (squared) threshold for checkpoints
 
     var gameState = 0  // 0 = initial, 1 = touched one, 2 = touched more than one
     var startingCheckpoint = 0  // index of starting checkpoint
@@ -62,7 +73,10 @@ fun MyDrawing() {
 
 
     val drawModifier = Modifier
-        .fillMaxSize()
+        .fillMaxWidth()
+        .padding(20.dp)
+        .padding(0.dp, 200.dp, 0.dp, 0.dp)
+        .height(500.dp)
         .background(Color.Black)
         .pointerMotionEvents(
             onDown = { pointerInputChange: PointerInputChange ->
@@ -88,7 +102,7 @@ fun MyDrawing() {
         val canvasHeight = size.height
         threshold = threshold / 720 * canvasWidth.toInt()  // scale threshold to any screen size
 
-        val outerShapeWidth = canvasWidth * .80f
+        val outerShapeWidth = canvasWidth * .65f
         val innerShapeWidth = canvasWidth * .50f
 
         if (innerPath.isEmpty) {
@@ -103,8 +117,6 @@ fun MyDrawing() {
                 )
             )
         }
-
-
         if (outerPath.isEmpty) {
             outerPath.addRect(
                 Rect(
@@ -117,7 +129,7 @@ fun MyDrawing() {
             )
         }
 
-        val squareSize = .7f
+        val squareSize = .575f
         val checkpointPositionX = (canvasWidth - (canvasWidth * squareSize)) / 2
         val checkpointPositionY = (canvasHeight - (canvasWidth * squareSize)) / 2
 
@@ -155,6 +167,9 @@ fun MyDrawing() {
 
                         if (previousCheckpoint < 0) previousCheckpoint = checkPointList.size - 1
                         if (nextCheckpoint > checkPointList.size - 1) nextCheckpoint = 0
+
+                        Log.d("checkpoints_prev", previousCheckpoint.toString())
+                        Log.d("checkpoints_next", nextCheckpoint.toString())
                         return
                     }
                 }
@@ -169,6 +184,9 @@ fun MyDrawing() {
                     direction = -1
                     nextCheckpoint = previousCheckpoint + direction
                     if (nextCheckpoint < 0) nextCheckpoint = checkPointList.size - 1
+
+
+                    Log.d("checkpoints_next", nextCheckpoint.toString())
                 }
                 else if (offsetDistanceSquared(inputPosition,
                         checkPointList[nextCheckpoint]) < threshold
@@ -180,6 +198,8 @@ fun MyDrawing() {
                     nextCheckpoint += direction
                     if (nextCheckpoint > checkPointList.size - 1) nextCheckpoint = 0
 
+
+                    Log.d("checkpoints_next", nextCheckpoint.toString())
                 }
             }
             else{  // gamestate == 2
@@ -191,15 +211,21 @@ fun MyDrawing() {
                         checkPointList[nextCheckpoint]) < threshold
                 ) {
                     Log.d("checkpoints", "reached another checkpoint")
+
                     if(nextCheckpoint == startingCheckpoint){
                         Log.d("checkpoints", "success")
                         gameSuccess = true
                         gameState = 3
+                        context.startActivity(Intent(context, MainActivity::class.java))
+
                     }
 
                     nextCheckpoint += direction
                     if (nextCheckpoint < 0) nextCheckpoint = checkPointList.size - 1
                     if (nextCheckpoint > checkPointList.size - 1) nextCheckpoint = 0
+
+
+                    Log.d("checkpoints_next", nextCheckpoint.toString())
                 }
             }
         }
@@ -227,6 +253,8 @@ fun MyDrawing() {
                     path.reset()
                     gameFailed = true
                 }
+
+                Log.d("touchDistanceCP1", offsetDistanceSquared(currentPosition, checkpoint1).toString())
 
                 checkCheckpoints(currentPosition)
             }
@@ -261,8 +289,35 @@ fun MyDrawing() {
             center = Offset(100f, 100f),
             radius = 50f
         )
+        drawCircle(
+            color = Color.Cyan,
+            center = checkpoint1,
+            radius = 90f
+        )
+        drawCircle(
+            color = Color.Cyan,
+            center = checkpoint2,
+            radius = 90f
+        )
+        drawCircle(
+            color = Color.Cyan,
+            center = checkpoint3,
+            radius = 90f
+        )
+        drawCircle(
+            color = Color.Cyan,
+            center = checkpoint4,
+            radius = 90f
+        )
+
+        }
+    Box(modifier = Modifier
+        .padding(0.dp, 30.dp,20.dp,10.dp)
+        ){
+        Text(text = "Trace over this square without going outside", color = Color.White, fontSize = 25.sp, maxLines = 2)
     }
-}
+
+    }
 
 private fun isInBound(innerPath: Path, outerPath: Path, position: Offset): Boolean {
     val innerRect = innerPath.getBounds()
@@ -270,3 +325,9 @@ private fun isInBound(innerPath: Path, outerPath: Path, position: Offset): Boole
 
     return !innerRect.contains(position) && outerRect.contains(position)
 }
+
+    //val context = LocalContext.current
+//    context.startActivity(Intent(context, MainActivity::class.java))
+//
+
+
