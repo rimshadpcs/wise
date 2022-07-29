@@ -16,7 +16,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -150,7 +149,6 @@ class FragmentTrueOrFalse : Fragment(),StatementAdapter.OnItemLongClickListener 
                     if (!finished) {
                         finished = true
 
-                        Toast.makeText(context, "Finished!", Toast.LENGTH_SHORT).show()
                         sessionViewModel.checkForNextQuestion()
                     }
                 }
