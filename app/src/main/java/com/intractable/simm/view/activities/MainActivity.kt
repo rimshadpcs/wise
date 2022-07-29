@@ -92,7 +92,6 @@ class MainActivity : AppCompatActivity() {
         storageManager.sessionCountFlow.asLiveData().observe(this) {
             if (it != null) {
                 com.intractable.simm.ProgressManager.instance.sessionNumber = it
-                mainBinding.tvPlantCount.text = it.toString()
                 if (!mainModel.activityList.isEmpty() && it<mainModel.activityList.size) {
                     mainBinding.tvSessionName.text = mainModel.activityList[it]
                 }else{
