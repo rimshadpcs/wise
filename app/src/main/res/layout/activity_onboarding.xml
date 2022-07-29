@@ -4,21 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/onboarding_background"
+    android:background="@color/off_black"
     tools:context=".view.activities.OnBoardingActivity">
 
 
-    <ImageView
+    <androidx.cardview.widget.CardView
         android:id="@+id/iv_on_boarding_simm"
         android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="50dp"
-        android:background="@color/onboarding_simm_background"
-        android:contentDescription="@null"
-        android:src="@drawable/simm_half_body"
+        android:layout_height="240dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:contentDescription="@null"
+            android:id="@+id/iv_on_boarding_simm_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/simm_wave_onboarding"
+            android:background="@color/grey_blue"
+            />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tv_what_to_call"
@@ -44,8 +52,8 @@
         android:hint="@string/cursor"
         android:inputType="textPersonName"
         android:padding="15dp"
-        android:textColorHint="@color/green"
-        android:textCursorDrawable="@color/green"
+        android:textColorHint="@color/toxic_green"
+        android:textCursorDrawable="@color/toxic_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_what_to_call" />
@@ -54,13 +62,13 @@
         android:id="@+id/rvOnBoarding"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/btContinueOnBoarding"
+        app:layout_constraintEnd_toEndOf="@+id/iv_on_boarding_simm"
+        app:layout_constraintStart_toStartOf="@+id/iv_on_boarding_simm"
         app:layout_constraintTop_toBottomOf="@+id/iv_on_boarding_simm"
         app:stackFromEnd="true"
         app:reverseLayout="true"/>
@@ -69,8 +77,8 @@
         android:id="@+id/btContinueOnBoarding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/green_button_bg"
         android:clipToPadding="false"
         android:paddingStart="40dp"
@@ -83,6 +91,6 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rvOnBoarding" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
