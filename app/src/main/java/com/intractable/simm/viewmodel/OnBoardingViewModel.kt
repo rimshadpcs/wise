@@ -31,7 +31,7 @@ class OnBoardingViewModel: ViewModel {
         val onBoardMessage1 = OnBoarding("My name is Simm. I am a Digital Activist.")
         val onBoardMessage2 = OnBoarding("The world is in crisis, digital technology is getting more complicated every day!")
         val onBoardMessage3 = OnBoarding("Educational books, websites, and videos just can't keep up with ever-changing technology.")
-        val onBoardMessage4 = OnBoarding("But I see a world where Everybody is Empowered by Digital Technology.")
+        val onBoardMessage4 = OnBoarding("But I see a world where everybody is empowered by Digital Technology.")
         val onBoardMessage5 = OnBoarding("The power to change your life is in your hands, literally with your smartphone.")
         val onBoardMessage6 = OnBoarding("Join the revolution, save the world!")
 
