@@ -51,7 +51,6 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
         val plantState = storageManager.getPlantState() ?: 0
         val plantGrowth = storageManager.getPlantGrowth() ?: 0
 
-        triggerNotify()
         updateSleepWakeState(plantType, plantState, plantGrowth)
 
         return Result.success()
@@ -81,7 +80,7 @@ class DailyNotificationsManager(context: Context, workerParams: WorkerParameters
         val notificationTitle = "Daily Reminder"
         val notificationContent = "Finish your daily learning session!"
         val builder = NotificationCompat.Builder(applicationContext, channelId)
-            .setSmallIcon(R.drawable.simm_cover)
+            .setSmallIcon(R.drawable.simm_qs_icon2)
             .setContentTitle(notificationTitle)
             .setContentText(notificationContent)
             .setContentIntent(pendingIntent)

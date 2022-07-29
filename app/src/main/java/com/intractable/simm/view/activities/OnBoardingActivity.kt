@@ -69,7 +69,7 @@ class OnBoardingActivity : AppCompatActivity() {
                     executeRecyclerView()
                     val userName = onBoardBinding.etUserName.text.toString()
 
-                        val onBoarding = OnBoarding("Hey $userName")
+                        val onBoarding = OnBoarding("Hey $userName!")
                         onBoardingAdapter!!.getItemList().add(0, onBoarding)
 
                     val ims = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
