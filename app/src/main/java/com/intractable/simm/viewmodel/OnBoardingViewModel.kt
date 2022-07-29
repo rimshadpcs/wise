@@ -29,6 +29,7 @@ class OnBoardingViewModel: ViewModel {
         val newOnboardList2 = ArrayList<OnBoarding>()
 
         val onBoardMessage1 = OnBoarding("My name is Simm. I am a Digital Activist.")
+        val onBoardMessage1a = OnBoarding("My name is Simm. I am a Digital Activist.")
         val onBoardMessage2 = OnBoarding("The world is in crisis, digital technology is getting more complicated every day!")
         val onBoardMessage3 = OnBoarding("Educational books, websites, and videos just can't keep up with ever-changing technology.")
         val onBoardMessage4 = OnBoarding("But I see a world where everybody is empowered by Digital Technology.")
@@ -37,6 +38,7 @@ class OnBoardingViewModel: ViewModel {
 
 
         newOnboardList.add(onBoardMessage1)
+        newOnboardList.add(onBoardMessage1a)
         newOnboardList.add(onBoardMessage2)
         newOnboardList.add(onBoardMessage3)
         newOnboardList.add(onBoardMessage4)
