@@ -11,6 +11,7 @@
     <string name="tapHereFull">Tap here to finish the Notifications activity.</string>
     <string name="notification_channel">Notification learning session</string>
     <string name="channel_description">This channel is for the notification learning activity</string>
+    <string name="license_acknowledgements">2015 Square, Inc: Moshi, Apache License 2.0\n2008 Google, Inc: Gson, Apache License 2.0\n2016 Tommy Buonomo: Material View Pager Dots Indicator, Apache License 2.0\n2013 Karol Wrótniak: android-gif-drawable, The MIT License</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="next">Next</string>

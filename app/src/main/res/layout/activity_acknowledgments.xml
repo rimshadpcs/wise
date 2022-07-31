@@ -9,6 +9,6 @@
         android:id="@+id/tv_acknowledgments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/the_right_answer"
+        android:text="@string/license_acknowledgements"
         app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
