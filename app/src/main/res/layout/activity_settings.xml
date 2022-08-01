@@ -18,6 +18,7 @@
         android:theme="@style/SwitchCompatTheme"
         android:checked="true"
         android:text="@string/analytics"
+        android:visibility="gone"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -33,6 +34,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:cornerRadius="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
