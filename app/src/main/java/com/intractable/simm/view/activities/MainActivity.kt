@@ -5,7 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
+import android.view.View
 import android.widget.RemoteViews
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -67,6 +69,26 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_right,0)
+        }
+
+        mainBinding.tvSimmComment.visibility = View.INVISIBLE
+        mainBinding.ivSimmMain.setOnClickListener {
+            // Display text bubble with Simm comment
+            mainBinding.tvSimmComment.visibility = View.VISIBLE
+            mainBinding.tvSimmComment.text = "Hi I am Simm!"
+
+            val loadTime: Long = 3000
+            val timePerFrame: Long = 16
+            object : CountDownTimer(loadTime, timePerFrame) {
+
+                override fun onTick(millisUntilFinished: Long) {
+
+                }
+
+                override fun onFinish() {
+                    mainBinding.tvSimmComment.visibility = View.INVISIBLE
+                }
+            }.start()
         }
 
         storageManager.plantImageFlow.asLiveData().observe(this) {
