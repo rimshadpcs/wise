@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.intractable.simm">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name="com.intractable.simm.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/square_grinning_app_icon_blue"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/round_grinning_app_icon_haloblue"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SimmOne"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.activities.AcknowledgmentsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.intractable.simm.view.widgets.PlantWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/plant_widget_info" />
+        </receiver>
+
+        <activity
+            android:name="com.intractable.simm.view.activities.PermissionActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name="com.intractable.simm.view.activities.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.intractable.simm.view.activities.SessionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.intractable.simm.view.activities.EndSessionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SimmOne.right_anim" />
+        <activity
+            android:name="com.intractable.simm.view.activities.OperationResultActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SimmOne.right_anim" />
+        <activity
+            android:name="com.intractable.simm.view.activities.BubbleSample"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.intractable.simm.view.activities.SplashScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.intractable.simm.view.compose.SquareDrawingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.intractable.simm.view.activities.OnBoardingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.TrueOrFalseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.intractable.simm.services.SimmTileService"
+            android:exported="true"
+            android:icon="@drawable/qs_star"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="false" />
+
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+
+        <activity
+            android:name="com.intractable.simm.view.activities.StoryBoardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

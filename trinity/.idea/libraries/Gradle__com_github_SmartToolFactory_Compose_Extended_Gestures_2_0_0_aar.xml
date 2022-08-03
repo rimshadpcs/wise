@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.SmartToolFactory:Compose-Extended-Gestures:2.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cdf0f8a04adfb8c20467a966ee8c93b2/transformed/Compose-Extended-Gestures-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cdf0f8a04adfb8c20467a966ee8c93b2/transformed/Compose-Extended-Gestures-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cdf0f8a04adfb8c20467a966ee8c93b2/transformed/Compose-Extended-Gestures-2.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.SmartToolFactory/Compose-Extended-Gestures/2.0.0/e6e09edcaca4d9fe1fee1362785137884a1e8357/Compose-Extended-Gestures-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

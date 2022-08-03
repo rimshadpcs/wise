@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_black"
+    tools:context=".view.activities.OperationResultActivity">
+
+    <ProgressBar
+        android:id="@+id/session_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+        android:layout_width="248dp"
+        android:layout_height="268dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/frame_box"
+        android:src="@drawable/grin"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/iv_character"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@null" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:id="@+id/frame_box"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="90dp"
+        android:paddingEnd="23dp"
+        android:paddingStart="22dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="13dp"
+        android:background="@drawable/frame_box_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="@string/looks_like_you_ve_got_the_hang_of_notifications_nice_work"
+            android:fontFamily="sans-serif"
+            android:id="@+id/tv_txt"
+            />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="156dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/btn_notifn"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_continue"
+            android:text="@string/continu"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

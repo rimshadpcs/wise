@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Simm</string>
+    <string name="hello">Hello</string>
+    <string name="sample">Your phones\'s Lock Screen displays status information and latest notification. \n\nYou can choose what the Lock Screen Displays</string>
+    <string name="continu">Continue</string>
+    <string name="start">Start</string>
+    <string name="send">Send</string>
+    <string name="notificationSend">Time to look at a \nreal notification,\n\nTap the button Below.</string>
+    <string name="notificationSentChangeText">Now tap on the \nnotification to \nfinish the session…</string>
+    <string name="tapHere">Tap Here</string>
+    <string name="tapHereFull">Tap here to finish the Notifications activity.</string>
+    <string name="notification_channel">Notification learning session</string>
+    <string name="channel_description">This channel is for the notification learning activity</string>
+    <string name="license_acknowledgements">2015 Square, Inc: Moshi, Apache License 2.0\n2008 Google, Inc: Gson, Apache License 2.0\n2016 Tommy Buonomo: Material View Pager Dots Indicator, Apache License 2.0\n2013 Karol Wrótniak: android-gif-drawable, The MIT License</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
+    <string name="notificationResult">Good! You finished your first notification exercise.</string>
+    <string name="todo">TODO</string>
+    <string name="dummyNumber">0</string>
+    <string name="sample2">Pinch out with your fingers to magnify the image</string>
+    <string name="True">True</string>
+    <string name="False">False</string>
+    <string name="sampleQuestionForTrueOrFalse">Virus is a computer program unintentionally designed to cause annoyance or damage hardware or software.</string>
+    <string name="finish_session">Finish Session</string>
+    <string name="well_done_you_finished_successfully">Well Done, you finished successfully</string>
+    <string name="what_are_the_different_options_of_permissions_you_can_give_apps">What are the different options of permissions you can give apps?</string>
+    <string name="sort_them_based_on_true_and_false">Sort them based on True and false</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect!</string>
+    <string name="daily_topic">Daily topic</string>
+    <string name="notifications">Notifications</string>
+    <string name="launch_session">Launch Session</string>
+    <string name="the_right_answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="answer">answer</string>
+    <string name="relive_the_moment">Relive the Moment</string>
+    <string name="complete">Complete</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="loading">loading</string>
+    <string name="plant_status">Awake</string>
+    <string name="my_name_is">My name is</string>
+    <string name="cursor">|</string>
+    <string name="what_should_i_call_you">What should I call you?</string>
+    <string name="encouragement_text">Keep Learning!</string>
+    <string name="click_me">click me</string>
+
+    <string name="hide_and_seek_not_title">Simm’s super secret hiding spot</string>
+    <string name="hide_and_seek_not_content">Tap to bring Simm back</string>
+    <string name="analytics">Analytics</string>
+    <string name="delete_analytics_data">Delete analytics data</string>
+    <string name="list_of_acknowledgments">List of acknowledgments</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="do_you_want_to_exit">Do you want to exit?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="looks_like_you_ve_got_the_hang_of_notifications_nice_work">Looks like you’ve got the hang of notifications. Nice work!</string>
+    <string name="talking">Talking</string>
+    <string name="thinking_neutral">Thinking / Neutral</string>
+    <string name="smiling">Smiling</string>
+
+
+</resources>
