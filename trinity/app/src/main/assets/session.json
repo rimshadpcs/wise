@@ -1,50 +1,420 @@
 {
-  "sessionList": [
 
+
+  "sessionList": [
+    {
+      "sessionId": "call",
+      "title": "Call",
+      "iconImg": "settings_icon",
+      "description": "Familiarize yourself with your call app",
+      "longDescription": "a step-by-step guide.",
+      "comment": "Take a look at your plant collection to see all of your plants",
+      "titleAnimation": "settings_title",
+      "activityList": [
+        "call_exercise"
+      ]
+    },
+    {
+      "sessionId": "call",
+      "title": "Screenshot",
+      "iconImg": "settings_icon",
+      "description": "Familiarize yourself with your call app",
+      "longDescription": "a step-by-step guide.",
+      "comment": "Take a look at your plant collection to see all of your plants",
+      "titleAnimation": "settings_title",
+      "activityList": [
+        "screenshot_exercise"
+      ]
+    },
+    {
+      "sessionId": "touch-input",
+      "title": "Touch Input",
+      "iconImg": "touch_icon",
+      "description": "How to use touch input",
+      "longDescription": "Touch with one finger or two fingers, and learn multi-finger gestures.",
+      "comment": "Tap on the lesson title to get more information",
+      "titleAnimation": "gestures_title",
+      "splashComment": "Keep learning!",
+      "activityList": [
+        "touch-input-1-explanation",
+        "touch-input-2-explanation",
+        "touch-input-3-explanation",
+        "touch-input",
+        "touch-input-statement-1",
+        "touch-input-feedback-1",
+        "touch-input-triangle",
+        "touch-input-feedback-2",
+        "touch-input-mcq",
+        "touch-input-sorting",
+        "touch-input-statement-2",
+        "touch-input-feedback-3",
+        "touch-input",
+        "touch-input-triangle",
+        "touch-input-circle",
+        "touch-input-flower",
+        "touch-input-feedback-4"
+      ]
+    },
     {
       "sessionId": "what-can-your-phone-do",
       "title": "Your Phone",
+      "iconImg": "phone_icon",
+      "description": "About your phone",
+      "longDescription": "Learn about your phone's capabilities.",
+      "comment": " #play You can start a new lesson when it has a play icon next to it.",
+      "titleAnimation": "phone_title",
+      "splashComment": "Keep learning!",
       "activityList": [
-        "storyboard-what-can-your-phone-do"
+        "about-phone-explanation-1",
+        "about-phone-explanation-2",
+        "about-phone-statement-1",
+        "about-phone-feedback-1",
+        "about-phone-feedback-2",
+        "storyboard-what-can-your-phone-do",
+        "about-phone-feedback-3",
+        "about-phone-feedback-4",
+        "about-phone-mcq",
+        "about-phone-statement-2",
+        "about-phone-explanation-3",
+        "about-phone-sorting",
+        "about-phone-feedback-5"
       ]
     },
-
-    {
-      "sessionId": "gesture-navigation",
-      "title": "Navigation",
-      "activityList": [
-        "gesture-storyboard", "gesture-mcq-1", "gesture-mcq-2", "gesture-mcq-3"
-      ]
-    },
-
     {
       "sessionId": "notifications",
       "title": "Notifications",
-      "activityList": ["question_2_session_1", "question_1_session_1", "question_0_session_1", "question_7_session_1", "question_3_session_1"]
-
-    },
-
-    {
-      "sessionId": "quick-settings",
-      "title": "Quick Settings",
+      "iconImg": "bell_icon",
+      "description": "Understanding notifications",
+      "longDescription": "Stay updated with new information from notifications.",
+      "comment": "Tap on the leaf above to see how much your plant has grown!",
+      "titleAnimation": "notifications_title",
+      "splashComment": "Keep up the pace!",
       "activityList": [
-        "quick-settings-sorting", "quick-settings-storyboard", "quick-settings-mcq"
+        "notifications-explanation-1",
+        "notifications-explanation-2",
+        "notifications-statement-1",
+        "notifications-mcq-1",
+        "notifications-feedback-1",
+        "notifications-explanation-3",
+        "notifications-explanation-4",
+        "notifications-mcq-2",
+        "notifications-statement-2",
+        "notifications-mcq-3",
+        "notifications-sorting",
+        "notifications-mcq-4",
+        "notifications-statement-3",
+        "notifications-exercise"
       ]
     },
 
-    { "sessionId": "widgets",
-      "title": "Widgets",
-      "activityList": [ "widgets-storyboard", "widgets-mcq-1", "widgets-mcq-2"]
-
+    {
+      "sessionId": "comic-grace-intro",
+      "title": "Introducing Grace",
+      "comment": " #checkmark You can redo previous lessons, look for a checkmark next to the lesson.",
+      "isComic": "true",
+      "expandable": "true",
+      "backgroundImg": "graceintro_hometitle_top",
+      "lowerBackgroundImg": "graceintro_hometitle_bot",
+      "largeBackgroundImg": "graceintro_title",
+      "activityList": [
+        "comic-grace-intro"
+      ]
     },
 
     {
+      "sessionId": "basic-gestures",
+      "title": "Basic Gestures",
+      "iconImg": "navigation",
+      "description": "Learn these easy gestures to help you navigate your phone",
+      "longDescription": "Master the basic gestures to make interacting with your phone easy and enjoyable!",
+      "comment": "Say hello to your new friend Grace in the Basic Gestures lesson!",
+      "titleAnimation": "navigation_title",
+      "splashImage": "grace_encouraging_splash",
+      "splashComment": "Keep learning!",
+      "endAnim": "grace_congrats",
+      "lockPageCharacter": "Grace",
+      "activityList": [
+        "gestures-explanation-1",
+        "gestures-explanation-2",
+        "gestures-storyboard-1",
+        "gestures-statement-1",
+        "gestures-feedback-1",
+        "gestures-mcq-1",
+        "gestures-mcq-2",
+        "gestures-mcq-3",
+        "gestures-explanation-3",
+        "gestures-exercise-1",
+        "gestures-mcq-4",
+        "gestures-mcq-5",
+        "gestures-feedback-2",
+        "gestures-explanation-4",
+        "gestures-exercise-2"
+      ]
+    },
+    {
+      "sessionId": "widgets",
+      "title": "Widgets",
+      "iconImg": "widgets_icon",
+      "description": "Stay informed with Widgets",
+      "longDescription": "Learn to add widgets to your phone's Home Screen.",
+      "comment": "Keep learning to unlock mini-games and stories!",
+      "titleAnimation": "widgets_title",
+      "splashImage": "grace_encouraging_splash",
+      "splashComment": "Keep going!",
+      "endAnim": "grace_congrats",
+      "lockPageCharacter": "Grace",
+      "activityList": [
+        "widgets-explanation-1",
+        "widgets-explanation-2",
+        "widgets-storyboard-1",
+        "widgets-explanation-4",
+        "widgets-statement-1",
+        "widgets-feedback-1",
+        "widgets-explanation-5",
+        "widgets-explanation-6",
+        "widgets-explanation-7",
+        "widgets-explanation-8",
+        "widgets-mcq-1",
+        "widgets-mcq-2",
+        "widgets-statement-2",
+        "widgets-statement-3",
+        "widgets-sorting-1",
+        "widgets-feedback-2",
+        "widgets-explanation-9",
+        "widgets-storyboard-2",
+        "widgets-exercise-2"
+      ]
+    },
+    {
+      "sessionId": "hide-and-seek",
+      "title": "A Game of Hide-and-Seek \uD83C\uDFB2",
+      "iconImg": "bell_icon",
+      "description": "Play a quick mini-game to test your skills",
+      "longDescription": "Ready for some games? Play Hide-and-Seek with Simm!",
+      "comment": "Tap on the leaves above to view your plant collection!",
+      "titleAnimation": "notifications_title",
+      "splashComment": "Enjoy your learning!",
+      "activityList": [
+        "notifications-exercise-advanced"
+      ]
+    },
+    {
+      "sessionId": "quick-settings",
+      "title": "Quick Settings",
+      "iconImg": "settings_icon",
+      "description": "Access your Quick Settings with a swipe gesture",
+      "longDescription": "Customize your Quick Settings for frequently used settings.",
+      "comment": "You have made a great start in your learning journey!",
+      "titleAnimation": "settings_title",
+      "splashComment": "Happy Learning!",
+      "activityList": [
+        "quick-settings-explanation-1",
+        "quick-settings-explanation-2",
+        "quick-settings-explanation-2a",
+        "quick-settings-mcq-1",
+        "quick-settings-feedback-1",
+        "quick-settings-explanation-3",
+        "quick-settings-explanation-4",
+        "quick-settings-explanation-5",
+        "quick-settings-explanation-6",
+        "quick-settings-statement-1",
+        "quick-settings-explanation-7",
+        "quick-settings-sorting-1",
+        "quick-settings-explanation-8",
+        "quick-settings-storyboard-1",
+        "quick-settings-mcq-2",
+        "quick-settings-storyboard-2",
+        "quick-settings-feedback-2",
+        "quick-settings-exercise"
+      ]
+    },
+    {
+      "sessionId": "simm-widget-notification",
+      "title": "Simm Widget Revealed! \uD83E\uDD2B",
+      "iconImg": "widgets_icon",
+      "description": "What does the Simm widget do?",
+      "longDescription": "Complete this lesson to uncover the mystery of Simm widget.",
+      "comment": "Your widget is ready to view in the next lesson!",
+      "titleAnimation": "widgets_title",
+      "splashComment": "Play and Learn!",
+      "hasWidgetReveal": "true",
+      "activityList": [
+        "simm-widget-feedback-1",
+        "simm-widget-explanation-0",
+        "simm-widget-explanation-1",
+        "simm-widget-storyboard-1",
+        "simm-widget-explanation-2",
+        "simm-widget-explanation-3",
+        "simm-widget-feedback-2",
+        "simm-widget-exercise-1"
+      ]
+    },
+    {
       "sessionId": "camera_permissions",
       "title": "Permissions",
+      "iconImg": "camera_icon",
+      "description": "Understanding app permissions",
+      "longDescription": "Learn about how you can control an app's access to your phone and its data.",
+      "comment": "There are so many things to do with your phone, it's exciting just thinking about it!",
+      "titleAnimation": "settings_title",
+      "splashImage": "grace_encouraging_splash",
+      "splashComment": "Do your best!",
+      "endAnim": "grace_congrats",
+      "lockPageCharacter": "Grace",
       "activityList": [
-        "camera-permissions-mcq", "camera-permissions-storyboard", "camera_permissions", "camera-permissions-sorting"
+        "camera-permissions-explanation-1",
+        "camera-permissions-explanation-2",
+        "camera-permissions-explanation-3",
+        "camera-permissions-mcq-1",
+        "camera-permissions-feedback-1",
+        "camera-permissions-explanation-4",
+        "camera-permissions-mcq-2",
+        "camera-permissions-explanation-5",
+        "camera-permissions-sorting-1",
+        "camera-permissions-feedback-2",
+        "camera-permissions-exercise-1"
+      ]
+    },
+
+    {
+      "sessionId": "comic-grace-story",
+      "title": "Meeting in the Park",
+      "comment": "Check out the next story about how Simm and Grace met each other!",
+      "isComic": "true",
+      "expandable": "true",
+      "backgroundImg": "gracestory_hometitle_top",
+      "lowerBackgroundImg": "gracestory_hometitle_bot",
+      "largeBackgroundImg": "gracestory_title",
+      "activityList": [
+        "comic-grace-story"
+      ]
+    },
+
+    {
+      "sessionId": "using-camera",
+      "title": "Camera",
+      "iconImg": "camera_icon",
+      "description": "How to use your phone's camera to take great photos",
+      "longDescription": "Take your photography skills to the next level with these camera tips and techniques!",
+      "comment": "Grace has some photography tips for you in the next lesson.",
+      "titleAnimation": "navigation_title",
+      "splashImage": "grace_encouraging_splash",
+      "splashComment": "Go for it!",
+      "lockPageCharacter": "Grace",
+      "endAnim": "grace_congrats",
+      "activityList": [
+        "camera-explanation-1",
+        "camera-explanation-2",
+        "camera-statement-1",
+        "camera-feedback-1",
+        "camera-explanation-3",
+        "camera-mcq-1",
+        "camera-feedback-2",
+        "camera-feedback-3",
+        "camera-exercise"
+      ]
+    },
+    {
+      "sessionId": "phone-orientation",
+      "title": "Phone Orientation",
+      "iconImg": "phone_icon",
+      "description": "Learn how phone orientation makes it easy to view content",
+      "longDescription": "Learn how orientation works and settings to optimize content viewing.",
+      "comment": "Wow, you have collected so many plants!",
+      "titleAnimation": "phone_title",
+      "splashComment": "Try your level best!",
+      "activityList": [
+        "phone-orientation-explanation-1",
+        "phone-orientation-explanation-2",
+        "phone-orientation-statement-1",
+        "phone-orientation-feedback-1",
+        "phone-orientation-mcq-1",
+        "phone-orientation-mcq-2",
+        "phone-orientation-statement-2",
+        "phone-orientation-feedback-2",
+        "orientation-exercise"
+      ]
+    },
+    {
+      "sessionId": "contacts",
+      "title": "Contacts",
+      "iconImg": "navigation",
+      "description": "Organize your phone's contacts",
+      "longDescription": "Create new contacts, find phone numbers and email addresses, and more.",
+      "comment": "Learn how to organize information about your friends through your Contacts app.",
+      "titleAnimation": "navigation_title",
+      "splashComment": "Practice makes perfect!",
+      "activityList": [
+        "contacts-explanation-1",
+        "contacts-explanation-2",
+        "contacts-statement-1",
+        "contacts-feedback-1",
+        "contacts-mcq-1",
+        "contacts-statement-2",
+        "contacts-sorting-1",
+        "contacts-mcq-2",
+        "contacts-feedback-2",
+        "contact_exercise"
+      ]
+    },
+    {
+      "sessionId": "sharing",
+      "title": "Sharing",
+      "iconImg": "widgets_icon",
+      "description": "How to share photos and files with your contacts",
+      "longDescription": "Share content like photos, files, links with people.",
+      "comment": "Next, some tips about sharing content with your friends!",
+      "titleAnimation": "widgets_title",
+      "splashImage": "grace_encouraging_splash",
+      "splashComment": "Keep up the good work!",
+      "lockPageCharacter": "Grace",
+      "endAnim": "grace_congrats",
+      "activityList": [
+        "sharing-explanation-1",
+        "sharing-explanation-2",
+        "sharing-mcq-1",
+        "sharing-feedback-1",
+        "sharing-mcq-2",
+        "sharing-mcq-3",
+        "sharing-feedback-2",
+        "sharesheet_exercise_1"
+      ]
+    },
+    {
+      "sessionId": "phone-settings",
+      "title": "Phone Settings",
+      "iconImg": "settings_icon",
+      "description": "Familiarize yourself with your phone's settings",
+      "longDescription": "How to customize your phone's settings: a step-by-step guide.",
+      "comment": "Fantastic work! You are about to complete all lessons.",
+      "titleAnimation": "settings_title",
+      "splashComment": "Stay focused!",
+      "activityList": [
+        "phone-settings-explanation-1",
+        "phone-settings-explanation-2",
+        "phone-settings-explanation-3",
+        "phone-settings-mcq-1",
+        "phone-settings-feedback-1",
+        "phone-settings-mcq-2",
+        "phone-settings-sorting-1",
+        "phone-settings-statement-1",
+        "phone-settings-feedback-2",
+        "notification-settings-exercise"
+      ]
+    },
+
+    {
+      "sessionId": "comic",
+      "title": "Simm's Exciting Plan!",
+      "comment": "Learn about my grand vision in the next story. \uD83C\uDF0E",
+      "isComic": "true",
+      "expandable": "true",
+      "backgroundImg": "savetheworld_hometitle_top",
+      "lowerBackgroundImg": "savetheworld_hometitle_bot",
+      "largeBackgroundImg": "savetheworld_title",
+      "activityList": [
+        "comic-simm-plan"
       ]
     }
   ]
 }
-

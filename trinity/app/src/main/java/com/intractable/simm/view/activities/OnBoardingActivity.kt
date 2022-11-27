@@ -1,137 +1,138 @@
 package com.intractable.simm.view.activities
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.Bundle
-import android.util.DisplayMetrics
+import android.media.MediaPlayer
+import android.net.Uri
+import android.os.*
+import android.util.Log
 import android.view.KeyEvent
+import android.view.MotionEvent
 import android.view.View
-import android.view.animation.AnimationUtils
-import android.view.animation.LayoutAnimationController
+import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.webkit.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSmoothScroller
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.SmoothScroller
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.ktx.Firebase
 import com.intractable.simm.R
 import com.intractable.simm.databinding.ActivityOnboardingBinding
-import com.intractable.simm.model.OnBoarding
-import com.intractable.simm.adapters.OnBoardingAdapter
+import com.intractable.simm.gamelogic.Config
 import com.intractable.simm.utils.AppUtil
 import com.intractable.simm.viewmodel.OnBoardingViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlin.math.min
 
 
-class OnBoardingActivity : AppCompatActivity() {
+class OnBoardingActivity : AppCompatActivity(){
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
     private lateinit var onBoardBinding: ActivityOnboardingBinding
-    private var onBoardingAdapter:OnBoardingAdapter? = null
-    private val milliSecondsPerInch = 200f
-    private var rvOnBoarding: RecyclerView? = null
     lateinit var appUtil: AppUtil
 
     private var sharedPreferences: SharedPreferences?=null
+    private lateinit var viewBinding: ActivityOnboardingBinding
 
-
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        firebaseAnalytics = Firebase.analytics
+        val mp : MediaPlayer = MediaPlayer.create(this, R.raw.soft_notification)
+        val viewModel = ViewModelProvider(this)[OnBoardingViewModel::class.java]
+        firebaseAnalytics.logEvent("simm_onboarding_started", null)
+        viewBinding = ActivityOnboardingBinding.inflate(layoutInflater)
+
+
+        Config.instance.progressManager.checkAndUpdateAppIfNeeded()
+
 
         if(restorePrefData()){
-            val i = Intent(applicationContext,MainActivity::class.java )
+            val i = Intent(applicationContext,HomeActivity::class.java )
             startActivity(i)
             finish()
         }
 
         onBoardBinding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(onBoardBinding.root)
-
         appUtil = AppUtil(this)
         appUtil.setDarkMode()
-        rvOnBoarding = findViewById(R.id.rvOnBoarding)
 
-        onBoardBinding.btContinueOnBoarding.visibility = View.INVISIBLE
-        onBoardBinding.rvOnBoarding.visibility = View.INVISIBLE
+
         onBoardBinding.btContinueOnBoarding.setOnClickListener {
+            firebaseAnalytics.logEvent("simm_onboarding_completed", null)
+
+
             savePrefData()
-            val i = Intent(applicationContext, MainActivity::class.java)
+            val i = Intent(applicationContext, HomeActivity::class.java)
             startActivity(i)
+            finish()
         }
+        onBoardBinding.btContinueOnBoarding.setOnTouchListener { _, motionEvent: MotionEvent ->
+            when (motionEvent.actionMasked) {
+                MotionEvent.ACTION_DOWN -> {
+                    onBoardBinding.btContinueOnBoarding.setBackgroundResource(R.drawable.no_shadow_bg_green)
+                    val params =
+                        onBoardBinding.btContinueOnBoarding.layoutParams as ViewGroup.MarginLayoutParams
+                    params.bottomMargin = params.bottomMargin - 15
+                    onBoardBinding.btContinueOnBoarding.layoutParams = params
+                }
+
+                MotionEvent.ACTION_UP -> {
+                    onBoardBinding.btContinueOnBoarding.setBackgroundResource(R.drawable.shadow_button_bg)
+                    val params =
+                        onBoardBinding.btContinueOnBoarding.layoutParams as ViewGroup.MarginLayoutParams
+                    params.bottomMargin = params.bottomMargin + 15
+                    onBoardBinding.btContinueOnBoarding.layoutParams = params
+                }
+            }
+            false
+        }
+
+
+        val onboardingActivityOwner = this
+
         onBoardBinding.etUserName.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
                 if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER
                 ) {
-                    onBoardBinding.tvWhatToCall.visibility = View.INVISIBLE
-                    executeRecyclerView()
                     val userName = onBoardBinding.etUserName.text.toString()
+                    val message1 = "Hey $userName!"
 
-                        val onBoarding = OnBoarding("Hey $userName!")
-                        onBoardingAdapter!!.getItemList().add(0, onBoarding)
+                    Config.instance.progressManager.storeUserName(userName)
+
+                    onBoardBinding.tvWhatToCall.text = message1
+                    if(mp.isPlaying) {
+                        mp.pause() // Pause the current track
+                    }
+                    mp.start()  // play sound
 
                     val ims = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                     ims.hideSoftInputFromWindow(onBoardBinding.etUserName.windowToken, 0)
 
                     onBoardBinding.etUserName.visibility = View.INVISIBLE
 
+                    lifecycleScope.launch (Dispatchers.Main){
+                        delay(2000)
+
+                        val i = Intent(applicationContext, OnBoardingComicActivity::class.java)
+                        startActivity(i)
+                        finish()
+                    }
+
                     return true
                 }
                 return false
 
             }
-
-
         })
+
     }
 
-    fun executeRecyclerView() {
-        val onBoardingViewModel = ViewModelProvider(this)[OnBoardingViewModel::class.java]
-
-        onBoardingViewModel.generateOnBoardingMessage()
-        onBoardBinding.rvOnBoarding.visibility = View.VISIBLE
-        onBoardingViewModel.sizeOfMessageList
-        onBoardingViewModel.newMOnboardingList.observe(this@OnBoardingActivity) {
-            val animId = R.anim.animation_from_bottom_layout
-            val animation: LayoutAnimationController = AnimationUtils.loadLayoutAnimation(this@OnBoardingActivity, animId)
-            onBoardBinding.rvOnBoarding.layoutAnimation = animation
-
-            onBoardingAdapter = OnBoardingAdapter(it)
-            val linearLayoutManager = LinearLayoutManager(this@OnBoardingActivity)
-            linearLayoutManager.stackFromEnd = true
-            linearLayoutManager.reverseLayout = false
-            onBoardBinding.rvOnBoarding.layoutManager = linearLayoutManager
-            onBoardBinding.rvOnBoarding.adapter = onBoardingAdapter
-            onBoardingAdapter!!.getItemList().size
-            val sizeOfTheList = onBoardingViewModel.sizeOfMessageList.value
-
-            val delayTimes = longArrayOf(2000, 4000, 6000)
-
-            lifecycleScope.launch(Dispatchers.Main) {
-                val smoothScroller: SmoothScroller =
-                    object : LinearSmoothScroller(this@OnBoardingActivity) {
-                        override fun calculateSpeedPerPixel(displayMetrics: DisplayMetrics): Float {
-                            return milliSecondsPerInch / displayMetrics.densityDpi
-                        }
-                    }
-                for (i in 0 until sizeOfTheList!!) {
-                    val delayTime = delayTimes[min(i, delayTimes.size - 1)]
-                    delay(delayTime)
-                    onBoardingAdapter!!.notifyDataSetChanged()
-                    onBoardBinding.rvOnBoarding.run { smoothScroller.targetPosition = min(i+1, sizeOfTheList)
-
-                        (onBoardBinding.rvOnBoarding.layoutManager as LinearLayoutManager).startSmoothScroll(smoothScroller)
-                    }
-                        if (i == sizeOfTheList - 2) {
-                        onBoardBinding.btContinueOnBoarding.visibility = View.VISIBLE
-
-                    }
-                }
-            }
-        }
-    }
     private fun savePrefData(){
 
         sharedPreferences = applicationContext.getSharedPreferences("pref", Context.MODE_PRIVATE)
@@ -140,8 +141,13 @@ class OnBoardingActivity : AppCompatActivity() {
         editor.apply()
     }
 
-        private fun restorePrefData(): Boolean {
-            sharedPreferences = applicationContext.getSharedPreferences("pref", Context.MODE_PRIVATE)
-            return sharedPreferences!!.getBoolean("isFirstTime",false)
-        }
+    private fun restorePrefData(): Boolean {
+        sharedPreferences = applicationContext.getSharedPreferences("pref", Context.MODE_PRIVATE)
+        return sharedPreferences!!.getBoolean("isFirstTime",false)
+    }
+
+    suspend fun storeUserName(input: String){
+        Config.instance.storageManager?.storeUserInputName(input)
+
+    }
 }

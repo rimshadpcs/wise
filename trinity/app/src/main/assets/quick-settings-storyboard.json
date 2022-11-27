@@ -9,6 +9,26 @@
     "pages":
     [
       {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "quicksettings_one"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "quicksettings_two"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "quicksettings_three"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "quicksettings_four"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "quicksettings_five"
+      },
+      {
         "title": "Learn to rearrange Quick Settings on your phone", "image": "quicksettings_page1"
       },
       {

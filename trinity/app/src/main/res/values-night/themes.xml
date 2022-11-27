@@ -18,9 +18,6 @@
 
     </style>
 
-    <style name="customfontstyle" parent="@android:style/TextAppearance.Small">
-        <item name="android:fontFamily">@font/pacifico</item>
-    </style>
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/purple_200</item>
@@ -32,4 +29,5 @@
         <item name="colorPrimary">@color/white</item>
         <item name="colorAccent">@color/white</item>
     </style>
+
 </resources>

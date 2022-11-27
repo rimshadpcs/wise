@@ -22,4 +22,5 @@
     <style name="SwitchCompatTheme" >
         <item name="colorControlActivated">@color/white</item>
     </style>
+
 </resources>

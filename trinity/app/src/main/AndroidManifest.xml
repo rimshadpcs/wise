@@ -1,29 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.intractable.simm">
+    package="com.intractable.simm"
+    tools:ignore="LockedOrientationActivity">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:name="com.intractable.simm.BaseApplication"
         android:allowBackup="true"
-        android:icon="@drawable/square_grinning_app_icon_blue"
+        android:icon="@drawable/simm_app_icon_square"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/round_grinning_app_icon_haloblue"
-        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/simm_app_icon_round"
         android:theme="@style/Theme.SimmOne"
         tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name=".view.activities.ScreenShotTest"-->
+<!--            android:exported="false">-->
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
+
+        <receiver
+            android:name=".view.fragments.FragmentShareSheet$TextShareBroadcast"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+        </receiver>
+
+        <activity
+            android:name=".view.activities.OnBoardingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activities.ScreenShotTest"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.OnBoardingComicActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.PlantAnimationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.LessonCompleteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.LockOrUnlockActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.PlantedexActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.PlantStageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".view.activities.AcknowledgmentsActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".view.activities.SettingsActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <receiver
             android:name="com.intractable.simm.view.widgets.PlantWidget"
@@ -38,53 +111,30 @@
         </receiver>
 
         <activity
-            android:name="com.intractable.simm.view.activities.PermissionActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
-        <activity
-            android:name="com.intractable.simm.view.activities.MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.intractable.simm.view.activities.SessionActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.intractable.simm.view.activities.EndSessionActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.SimmOne.right_anim" />
-        <activity
-            android:name="com.intractable.simm.view.activities.OperationResultActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.SimmOne.right_anim" />
-        <activity
-            android:name="com.intractable.simm.view.activities.BubbleSample"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.intractable.simm.view.activities.SplashScreen"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.intractable.simm.view.compose.SquareDrawingActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.intractable.simm.view.activities.OnBoardingActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".view.activities.TrueOrFalseActivity"
+            android:name=".view.activities.HomeActivity"
             android:exported="true"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity
+            android:name=".view.activities.SessionActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.EndSessionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SimmOne.right_anim" />
+        <activity
+            android:name=".view.activities.SplashScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.TextShareActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"></activity>
 
         <service
             android:name="com.intractable.simm.services.SimmTileService"
@@ -101,11 +151,10 @@
             </intent-filter>
         </service>
 
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
 
-        <activity
-            android:name="com.intractable.simm.view.activities.StoryBoardActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

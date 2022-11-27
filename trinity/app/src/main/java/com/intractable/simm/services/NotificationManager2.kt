@@ -1,24 +1,28 @@
 package com.intractable.simm.services
 
 import android.app.NotificationChannel
+import android.app.NotificationChannelGroup
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Build
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.intractable.simm.R
+import com.intractable.simm.utils.Constants
 import com.intractable.simm.view.activities.SessionActivity
 
 
 class NotificationManager2(context: Context, workerParams: WorkerParameters):
     Worker(context, workerParams) {
 
-    private val channelId = "channel_ID"
+    private val channelId1 = "channel_ID_1"
+    private val channelId2 = "channel_ID_2"
     private val notificationID = 102
     override fun doWork(): Result{
 
@@ -44,32 +48,74 @@ class NotificationManager2(context: Context, workerParams: WorkerParameters):
         } else {
             PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
         }
-        val notificationTitle = applicationContext.getString(R.string.hide_and_seek_not_title)
-        val notificationContent = applicationContext.getString(R.string.hide_and_seek_not_content)
-        val builder = NotificationCompat.Builder(applicationContext, channelId)
-            .setSmallIcon(R.drawable.simm_qs_icon2)
-            .setContentTitle(notificationTitle)
-            .setContentText(notificationContent)
-            .setContentIntent(pendingIntent)
-            .setAutoCancel(true)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
-
-        with(NotificationManagerCompat.from(applicationContext)){
-            notify(notificationID,builder.build())
+        var notificationTitle = ""
+        var notificationContent = ""
+        if (Constants.notification_session_type == 1){
+            notificationTitle = applicationContext.getString(R.string.tapHere)
+            notificationContent = applicationContext.getString(R.string.tapHereFull)
+            val builder = NotificationCompat.Builder(applicationContext, channelId1)
+                .setSmallIcon(R.drawable.simm_qs_icon2)
+                .setContentTitle(notificationTitle)
+                .setContentText(notificationContent)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+            with(NotificationManagerCompat.from(applicationContext)){
+                notify(notificationID,builder.build())
+            }
         }
+        else if (Constants.notification_session_type == 2){
+            notificationTitle = applicationContext.getString(R.string.hide_and_seek_not_title)
+            notificationContent = applicationContext.getString(R.string.hide_and_seek_not_content)
+            val builder = NotificationCompat.Builder(applicationContext, channelId2)
+                .setSmallIcon(R.drawable.simm_qs_icon2)
+                .setContentTitle(notificationTitle)
+                .setContentText(notificationContent)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+            with(NotificationManagerCompat.from(applicationContext)){
+                notify(notificationID,builder.build())
+            }
+        }
+        else if (Constants.notification_session_type == 3) {
+            notificationTitle = "Hey, got a minute?"
+            notificationContent = "I've prepared some interesting content for today's session. Come take a look!"
+            val builder = NotificationCompat.Builder(applicationContext, channelId1)
+                .setSmallIcon(R.drawable.simm_qs_icon2)
+                .setContentTitle(notificationTitle)
+                .setContentText(notificationContent)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+            with(NotificationManagerCompat.from(applicationContext)){
+                notify(notificationID,builder.build())
+            }
+        }
+
     }
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = R.string.notification_channel
-            val descriptionText = R.string.channel_description
-            val importance = NotificationManager.IMPORTANCE_HIGH
-            val channel = NotificationChannel(channelId, name.toString(), importance).apply {
-                description = descriptionText.toString()
+            val name:String = applicationContext.getString(R.string.notification_channel)
+            val descriptionText = applicationContext.getString(R.string.channel_description)
+            var importance:Int? = null
+            var channel:NotificationChannel? = null
+            Log.e("session",Constants.notification_session_type.toString())
+            if (Constants.notification_session_type == 1 || Constants.notification_session_type == 3) {
+                importance = NotificationManager.IMPORTANCE_HIGH
+                channel = NotificationChannel(channelId1, name, importance).apply {
+                    description = descriptionText.toString()
+                }
             }
-            // Register the channel with the system
+            else if (Constants.notification_session_type == 2) {
+                importance = NotificationManager.IMPORTANCE_MIN
+                channel = NotificationChannel(channelId2, "Simm's hiding spot", importance).apply {
+                    description = descriptionText.toString()
+                }
+            }
             val notificationManager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            notificationManager.createNotificationChannel(channel)
+            notificationManager.createNotificationChannel(channel!!)
         }
     }
 }

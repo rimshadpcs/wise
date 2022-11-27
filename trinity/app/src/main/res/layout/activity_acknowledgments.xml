@@ -10,5 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/license_acknowledgements"
+        style="@style/SourceSans.Body1"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
         app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

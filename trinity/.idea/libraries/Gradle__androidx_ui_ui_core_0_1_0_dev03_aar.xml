@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.ui:ui-core:0.1.0-dev03@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/945d9e7f2f7bfddadb1fa1e803ce6852/transformed/ui-core-0.1.0-dev03/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/945d9e7f2f7bfddadb1fa1e803ce6852/transformed/ui-core-0.1.0-dev03/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/945d9e7f2f7bfddadb1fa1e803ce6852/transformed/ui-core-0.1.0-dev03/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/efcd2f6c8793576fac19d13104715143/transformed/ui-core-0.1.0-dev03/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c431f85b0f2702127545a3935e009597/transformed/ui-core-0.1.0-dev03/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b45739079f9bf28336c9e9e05c2541e0/transformed/ui-core-0.1.0-dev03/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b45739079f9bf28336c9e9e05c2541e0/transformed/ui-core-0.1.0-dev03/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

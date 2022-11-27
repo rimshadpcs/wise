@@ -22,6 +22,22 @@
       },
       {
         "title": "Hold down on any empty space on the home screen", "image": "widgets_page5"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "widgets_one"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "widgets_two"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "widgets_three"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "widgets_four"
       }
     ]
   }

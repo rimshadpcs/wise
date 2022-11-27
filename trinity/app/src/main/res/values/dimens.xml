@@ -6,5 +6,47 @@ Refer to App Widget Documentation for margin information
 http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
     -->
     <dimen name="widget_margin">0dp</dimen>
+    <dimen name="top_bar_height">72dp</dimen>
+    <dimen name="top_bar_icon_size">24dp</dimen>
+    <dimen name="top_bar_icon_size_adjusted">20dp</dimen>
+    <dimen name="top_bar_text_size">32dp</dimen>
+    <dimen name="top_bar_text_size_small">20dp</dimen>
+    <dimen name="top_bar_animation_size">48dp</dimen>
+    <dimen name="top_bar_animation_size_medium">40dp</dimen>
+    <dimen name="top_bar_animation_size_small">32dp</dimen>
+    <dimen name="session_top_margin">24dp</dimen>
+    <dimen name="session_side_margin">24dp</dimen>
+    <dimen name="session_bottom_margin">32dp</dimen>
+    <dimen name="session_bottom_margin_pressed">26dp</dimen>
+    <dimen name="session_bottom_margin_pressed_bs">6dp</dimen>
 
+
+    <dimen name="title_text_size">24dp</dimen>
+    <dimen name="subtitle_text_size">20dp</dimen>
+    <dimen name="title_text_body_size">20dp</dimen>
+    <dimen name="title_image_size">256dp</dimen>
+    <dimen name="comment_height">104dp</dimen>
+    <dimen name="comment_text_size">16dp</dimen>
+    <dimen name="large_box_size">152dp</dimen>
+    <dimen name="text_size_lesson_title">20dp</dimen>
+    <dimen name="text_size_lesson_description">16dp</dimen>
+    <dimen name="text_size_small">12dp</dimen>
+    <dimen name="lesson_title_bar_size">88dp</dimen>
+    <dimen name="lesson_icon_size">56dp</dimen>
+    <dimen name="lesson_expandable_bar_size">96dp</dimen>
+    <dimen name="lesson_next_arrow_width">26dp</dimen>
+    <dimen name="lesson_comic_title_size">56dp</dimen>
+    <dimen name="plant_animation_height">512dp</dimen>
+    <dimen name="plant_collection_height">416dp</dimen>
+    <dimen name="internal_margin">8dp</dimen>
+    <dimen name="button_padding">48dp</dimen>
+    <dimen name="text_body_padding">24dp</dimen>
+    <dimen name="unit4">4dp</dimen>
+    <dimen name="unit8">8dp</dimen>
+    <dimen name="unit8_2">16dp</dimen>
+    <dimen name="unit8_3">24dp</dimen>
+    <dimen name="unit8_6">48dp</dimen>
+    <dimen name="unit8_7">56dp</dimen>
+    <dimen name="unit6">6dp</dimen>
+    <dimen name="fragment_margin_bottom">96dp</dimen>
 </resources>

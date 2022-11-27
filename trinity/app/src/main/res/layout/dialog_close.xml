@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/do_you_want_to_exit"
+            style="@style/SourceSans.Body1"
             android:id="@+id/tv_dialog"
             android:gravity="center"
             android:layout_margin="16dp"
@@ -41,7 +42,7 @@
                     android:textColor="@color/DialogButton"
                     android:id="@+id/button1"
                     android:text="@string/no"
-                    android:textSize="16sp"
+                    style="@style/SourceSans.Button"
                     android:layout_gravity="center" />
             </FrameLayout>
             <View
@@ -59,7 +60,7 @@
                     android:textColor="@color/DialogButton"
                     android:text="@string/yes"
                     android:id="@+id/button2"
-                    android:textSize="16sp"
+                    style="@style/SourceSans.Button"
                     android:layout_gravity="center">
                 </TextView>
             </FrameLayout>

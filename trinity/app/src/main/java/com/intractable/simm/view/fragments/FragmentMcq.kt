@@ -8,7 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
 import com.intractable.simm.R
 import com.intractable.simm.databinding.FragmentMcqBinding
 import com.intractable.simm.model.QuestionItem
@@ -25,7 +28,7 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
     private var currentQuestion = 0
     private var correct = 0
     private var incorrect = 1
-    private lateinit var questionItems: List<QuestionItem>
+    private lateinit var questionItems: QuestionItem
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,67 +40,74 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         mcqBinding = FragmentMcqBinding.inflate(inflater, container, false)
         val view = mcqBinding.root
         Log.e("MCQ", mcqModel.page.toString())
 
-        mcqModel.getMcQData().observe(context as SessionActivity, Observer {
-            if (!it.isEmpty()) {
+
+        mcqModel.mcqData.observe(context as SessionActivity) {
+            if (it != null) {
                 questionItems = it
+                mcqModel.questionItem = it
                 setQuestionOnPage()
-                Log.e("MCQ", questionItems[0].question)
+                Log.e("MCQ", questionItems.question)
+                Firebase.analytics.logEvent("simm_mcq_started", null)
             }
-        })
+        }
         return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
     private fun setQuestionOnPage() {
-        mcqBinding.tvQuestion.text = questionItems[currentQuestion].question
-        mcqBinding.btChoice1.text = questionItems[currentQuestion].choice1
-        mcqBinding.btChoice2.text = questionItems[currentQuestion].choice2
-        mcqBinding.btChoice3.text = questionItems[currentQuestion].choice3
-        mcqBinding.btChoice4.text = questionItems[currentQuestion].choice4
+        mcqBinding.tvQuestion.text = questionItems.question
+        mcqBinding.btChoice1.text = questionItems.choice1
+        mcqBinding.btChoice2.text = questionItems.choice2
+        mcqBinding.btChoice3.text = questionItems.choice3
+        mcqBinding.btChoice4.text = questionItems.choice4
 
         // BUTTON 1 Click
         mcqBinding.btChoice1.setOnClickListener {
             Log.e("MCQ", mcqModel.page.toString())
             validateChoice1()
+
             //checkForNextQuestion()
         }
         // BUTTON 2 Click
         mcqBinding.btChoice2.setOnClickListener {
             validateChoice2()
+
             //checkForNextQuestion()
         }
         // BUTTON 3 Click
         mcqBinding.btChoice3.setOnClickListener {
             validateChoice3()
+
             //checkForNextQuestion()
         }
         // BUTTON 4 Click
         mcqBinding.btChoice4.setOnClickListener {
             validateChoice4()
+
             //checkForNextQuestion()
         }
     }
 
     private fun validateChoice1(){
-        if (questionItems[currentQuestion].choice1==questionItems[currentQuestion].answer){
+        mcqBinding.btChoice1.setBackgroundResource(R.drawable.choice1_selected)
+        if (questionItems.choice1==questionItems.answer){
             correct++
             callRightBottomSheet()
         }
         else{
             incorrect++
             callWrongBottomSheet()
+
         }
     }
+
     private fun validateChoice2(){
-        if (questionItems[currentQuestion].choice2 == questionItems[currentQuestion].answer
+        mcqBinding.btChoice2.setBackgroundResource(R.drawable.choice2_selected)
+        if (questionItems.choice2 == questionItems.answer
         ) {
             correct++
             callRightBottomSheet()
@@ -108,7 +118,8 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
         }
     }
     private fun validateChoice3(){
-        if (questionItems[currentQuestion].choice3 == questionItems[currentQuestion].answer
+        mcqBinding.btChoice3.setBackgroundResource(R.drawable.choice3_selected)
+        if (questionItems.choice3 == questionItems.answer
         ) {
             correct++
             callRightBottomSheet()
@@ -119,7 +130,9 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
         }
     }
     private fun validateChoice4(){
-        if (questionItems[currentQuestion].choice4 == questionItems[currentQuestion].answer
+        mcqBinding.btChoice4.setBackgroundResource(R.drawable.choice4_selected)
+
+        if (questionItems.choice4 == questionItems.answer
         ) {
             correct++
             callRightBottomSheet()
@@ -132,7 +145,7 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             FragmentMcq().apply {
                 arguments = Bundle().apply {
                 }
@@ -140,22 +153,28 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
     }
 
     private fun callRightBottomSheet(){
-        mcqModel.current_question = currentQuestion
-        mcqModel.eventlivedata.value = Constants.EVENT_SHOW_RIGHT_BOTTOMSHEET
-        mcqModel.eventlivedata.value = Constants.EVENT_NONE
+        logEndOfMcq()
+        mcqModel.currentQuestion = currentQuestion
+        mcqModel.eventlivedata.value = SessionViewModel.EVENT_SHOW_RIGHT_BOTTOMSHEET
+        mcqModel.eventlivedata.value = SessionViewModel.EVENT_NONE
     }
     private fun callWrongBottomSheet(){
-        mcqModel.current_question = currentQuestion
-        mcqModel.eventlivedata.value = Constants.EVENT_SHOW_WRONG_BOTTOMSHEET
-        mcqModel.eventlivedata.value = Constants.EVENT_NONE
+        logEndOfMcq()
+        mcqModel.currentQuestion = currentQuestion
+        mcqModel.eventlivedata.value = SessionViewModel.EVENT_SHOW_WRONG_BOTTOMSHEET
+        mcqModel.eventlivedata.value = SessionViewModel.EVENT_NONE
     }
 
     override fun onRightButtonClicked(text: String?) {
-        mcqModel.checkForNextQuestion()
+        mcqModel.checkForNextQuestion(true)
     }
 
     override fun onWrongButtonClicked(text: String?) {
-        mcqModel.checkForNextQuestion()
+        mcqModel.checkForNextQuestion(true)
+    }
+
+    private fun logEndOfMcq() {
+        Firebase.analytics.logEvent("simm_mcq_completed", null)
     }
 
     override fun onClick(v: View?) {

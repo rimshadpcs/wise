@@ -7,118 +7,94 @@
     android:background="@color/off_black"
     tools:context=".view.fragments.FragmentOperation">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/thinking_neutral"
-        android:id="@+id/tv_talking3"
-        android:textColor="@color/white"
-        android:layout_marginTop="33dp"
-        android:visibility="gone"
-        android:layout_marginEnd="15dp"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/talking"
-        android:visibility="gone"
-        android:id="@+id/tv_talking2"
-        android:textColor="@color/white"
-        android:layout_marginTop="139dp"
-        android:layout_marginEnd="44dp"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/smiling"
-        android:visibility="gone"
-        android:id="@+id/tv_smile"
-        android:textColor="@color/white"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="53dp"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif"/>
-
-    <ImageView
-        android:id="@+id/iv_character"
-        android:layout_width="248dp"
-        android:layout_height="268dp"
-        android:layout_marginBottom="2dp"
-        android:src="@drawable/happy_mouth_open"
-        app:layout_constraintBottom_toTopOf="@+id/frame_box"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@null" />
-
-    <ImageView
-        android:layout_width="52dp"
-        android:layout_height="27dp"
-        android:id="@+id/tv_beep"
-        app:layout_constraintTop_toTopOf="@+id/iv_character"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="75dp"
-        android:layout_marginTop="68dp"
-        android:contentDescription="@null" />
-
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="175dp"
-        android:id="@+id/frame_box"
-        android:layout_marginBottom="90dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:layout_marginBottom="@dimen/unit8_2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_character"
+            android:layout_width="@dimen/large_box_size"
+            android:layout_height="@dimen/large_box_size"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:contentDescription="@null"
+            android:src="@drawable/happy_mouth_open"
+            app:layout_constraintBottom_toTopOf="@+id/frame_box"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frame_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_image_size"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:background="@drawable/frame_box_bg"
+            android:padding="@dimen/text_body_padding"
+            android:paddingBottom="@dimen/unit8_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                style="@style/SourceSans.Body1"
+                tools:targetApi="o" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="@dimen/top_bar_icon_size"
+                android:layout_height="@dimen/top_bar_icon_size"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/unit8_2"
+                android:layout_marginBottom="@dimen/unit8_2"
+                android:indeterminateOnly="false"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_circle" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:layout_marginTop="@dimen/unit8"
+        android:layout_marginBottom="@dimen/session_bottom_margin"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:background="@drawable/shadow_button_bg"
+        android:textColor="@color/white"
+        android:text="@string/continu"
+        android:visibility="invisible"
+        style="@style/SourceSans.Button"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingEnd="23dp"
-        android:paddingStart="23dp"
-        android:paddingTop="25dp"
-        android:paddingBottom="13dp"
-        android:background="@drawable/frame_box_bg">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif"
-            android:id="@+id/tv_txt"
-            />
-
-        <ProgressBar
-            android:layout_width="25.6dp"
-            android:layout_height="25.6dp"
-            android:id="@+id/progressbar"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="12.66dp"
-            android:layout_marginBottom="12.66dp"
-            android:progress="100"
-            android:indeterminateOnly="false"
-            android:progressDrawable="@drawable/progress_circle"
-            />
-    </FrameLayout>
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="5 seconds"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/frame_box"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:id="@+id/tv_timer"-->
-<!--        android:layout_marginTop="45dp"-->
-<!--        android:textSize="20sp"-->
-<!--        android:fontFamily="sans-serif"/>-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btSkip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:layout_marginTop="@dimen/unit8"
+        android:layout_marginBottom="@dimen/session_bottom_margin"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:background="@drawable/shadow_button_blue"
+        android:textColor="@color/white"
+        android:text="@string/skip"
+        android:visibility="invisible"
+        style="@style/SourceSans.Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

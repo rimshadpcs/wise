@@ -9,25 +9,25 @@
     "pages":
     [
       {
-        "title": "Connect with People", "image": "phone_sb_1"
+        "title": "Connect with people with social apps", "image": "phone_sb_1"
       },
       {
-        "title": "Immerse Yourself", "image": "phone_sb_2"
+        "title": "Immerse yourself in your favorite entertainment", "image": "phone_sb_2"
       },
       {
-        "title": "Simplify Your Day", "image": "phone_sb_3"
+        "title": "Simplify your day with these apps", "image": "phone_sb_3"
       },
       {
-        "title": "Relive the Moment", "image": "phone_sb_4"
+        "title": "Relive great memories with photos and videos", "image": "phone_sb_4"
       },
       {
-        "title": "Work on the Go", "image": "phone_sb_5"
+        "title": "Work on the go with productivity apps", "image": "phone_sb_5"
       },
       {
-        "title": "Live Healthier", "image": "phone_sb_6"
+        "title": "Live healthier and improve your fitness", "image": "phone_sb_6"
       },
       {
-        "title": "Live Better", "image": "phone_sb_7"
+        "title": "Live better with apps that help you grow", "image": "phone_sb_7"
       }
     ]
   }

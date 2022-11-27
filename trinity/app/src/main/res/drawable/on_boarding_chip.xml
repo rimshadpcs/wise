@@ -4,16 +4,6 @@
     <item android:right="0dp">
         <shape android:shape="rectangle">
             <corners android:radius="100dp" />
-            <padding android:bottom="1px" />
-            <solid android:color="#093C3C3C" />
-        </shape>
-    </item>
-
-
-
-    <item android:right="0dp">
-        <shape android:shape="rectangle">
-            <corners android:radius="100dp" />
             <padding
                 android:bottom="1px"
                 android:left="1px"
@@ -21,7 +11,6 @@
             <solid android:color="#103C3C3C" />
         </shape>
     </item>
-
 
     <item android:right="0dp">
         <shape android:shape="rectangle">

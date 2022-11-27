@@ -13,7 +13,7 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.intractable.simm.R
-import com.intractable.simm.view.activities.OperationResultActivity
+import com.intractable.simm.view.activities.SessionActivity
 
 
 class MyNotificationManager(context: Context, workerParams: WorkerParameters):
@@ -33,7 +33,7 @@ class MyNotificationManager(context: Context, workerParams: WorkerParameters):
 
         val remotePicture = BitmapFactory.decodeResource(applicationContext.resources,R.drawable.simm_wave_onboarding)
         notificationStyle.bigPicture(remotePicture)
-        val intent = Intent(applicationContext, OperationResultActivity::class.java).apply {
+        val intent = Intent(applicationContext, SessionActivity::class.java).apply {
 //            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             flags = Intent.FLAG_ACTIVITY_NEW_TASK
 

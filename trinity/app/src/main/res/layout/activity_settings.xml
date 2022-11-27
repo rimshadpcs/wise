@@ -6,81 +6,117 @@
     android:layout_height="match_parent"
     tools:context=".view.activities.SettingsActivity">
 
+    <View
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back_button"
+        android:layout_width="@dimen/top_bar_icon_size"
+        android:layout_height="@dimen/top_bar_icon_size"
+        android:layout_marginStart="@dimen/session_side_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+        android:src="@drawable/back"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tv_screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        style="@style/SourceSans.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+        android:padding="@dimen/unit8"
+        />
+
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/sw_analytics"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:paddingEnd="50dp"
-        android:paddingStart="50dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        style="@style/SourceSans.Body1"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
         android:theme="@style/SwitchCompatTheme"
-        android:checked="true"
+        android:checked="false"
         android:text="@string/analytics"
-        android:visibility="gone"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_DeleteAnalytics"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:paddingStart="@dimen/button_padding"
+        android:paddingEnd="@dimen/button_padding"
         android:background="@drawable/choice_2"
         android:text="@string/delete_analytics_data"
-        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:cornerRadius="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sw_analytics">
-
-    </androidx.appcompat.widget.AppCompatButton>
+        style="@style/SourceSans.Body1"
+        app:layout_constraintTop_toBottomOf="@id/sw_analytics"
+        android:theme="@style/SwitchCompatTheme"
+        android:checked="true"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_privacy_policy"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/choice_3"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:paddingStart="@dimen/button_padding"
+        android:paddingEnd="@dimen/button_padding"
+        android:background="@drawable/choice_2"
         android:text="@string/privacy_policy"
-        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:cornerRadius="24dp"
-        app:layout_constraintBottom_toTopOf="@id/bt_list_of_acknowledgments"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_DeleteAnalytics">
-
-    </androidx.appcompat.widget.AppCompatButton>
+        style="@style/SourceSans.Body1"
+        app:layout_constraintTop_toBottomOf="@id/bt_DeleteAnalytics"
+        android:theme="@style/SwitchCompatTheme"
+        android:checked="true"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_list_of_acknowledgments"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/choice_4"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:paddingStart="@dimen/button_padding"
+        android:paddingEnd="@dimen/button_padding"
+        android:background="@drawable/choice_2"
         android:text="@string/list_of_acknowledgments"
-        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:cornerRadius="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_privacy_policy">
+        style="@style/SourceSans.Body1"
+        app:layout_constraintTop_toBottomOf="@id/bt_privacy_policy"
+        android:theme="@style/SwitchCompatTheme"
+        android:checked="true"
+        tools:ignore="MissingConstraints" />
 
-    </androidx.appcompat.widget.AppCompatButton>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/comment_height"
+        android:layout_marginTop="@dimen/unit8"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:layout_marginBottom="@dimen/session_bottom_margin"
+        android:visibility="invisible"
+        android:animateLayoutChanges="true"
+        android:text="You can configure your app settings in this screen"
+        style="@style/Lato.Body1"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

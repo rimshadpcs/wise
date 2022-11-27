@@ -4,10 +4,38 @@
 
   "fragmentClassName": "FragmentPermissions",
 
-  "parameters": {
-
-    "text1": "I am going to request camera permissions. Try granting permission to use camera.",
-    "text2":"My permission request for your camera will appear in a moment...",
-    "text3":"Nice work, you are a pro!"
-  }
+  "parameters": [
+    {
+      "text": "I am going to request camera permissions. Try granting permission to use camera.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "My permission request for your camera will appear in a moment...",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "Nice work, you are a pro!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "",
+      "hasCountDown": "false"
+    }
+  ]
 }

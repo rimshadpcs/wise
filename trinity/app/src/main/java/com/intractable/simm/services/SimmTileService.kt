@@ -6,18 +6,20 @@ import android.hardware.camera2.CameraManager
 import android.os.Build
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.compose.Context
 import com.intractable.simm.R
+import com.intractable.simm.gamelogic.Config
+import com.intractable.simm.utils.Constants
 
 @SuppressLint("NewApi")
 @RequiresApi(Build.VERSION_CODES.M)
 class SimmTileService : TileService() {
     private lateinit var cameraM: CameraManager
-    var isFlash: Boolean = false
+    private var isFlash: Boolean = false
 
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onClick() {
         cameraM = getSystemService(Context.CAMERA_SERVICE)as CameraManager
 
@@ -26,13 +28,17 @@ class SimmTileService : TileService() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     private fun flashLightOnOrOff() {
         if(!isFlash){
             val cameraListId = cameraM.cameraIdList[0]
             cameraM.setTorchMode(cameraListId, true)
             isFlash = true
             changeTile(true)
+            Log.e("Flash","On")
+            Config.instance.progressManager.updateState("case 2")
+            //var isClicked: String = "CLICKED";
+
+
 
 
         }
@@ -41,6 +47,8 @@ class SimmTileService : TileService() {
             cameraM.setTorchMode(cameraListId,false)
             isFlash = false
             changeTile(false)
+            Constants.QSClicked = true
+            Log.e("Flash","Off")
         }
     }
 
@@ -50,8 +58,8 @@ class SimmTileService : TileService() {
     }
 
     override fun onTileAdded() {
-
-
+        Log.e("Tile","Added")
+        Config.instance.progressManager.updateState("case 1")
     }
 
     private fun changeTile(isActive: Boolean) {

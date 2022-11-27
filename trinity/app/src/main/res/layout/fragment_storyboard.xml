@@ -6,57 +6,59 @@
     android:layout_height="match_parent"
     android:background="@color/off_black"
     tools:context=".view.fragments.FragmentStoryboard">
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vp_story_board"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/gl_SlidePage"
+        app:layout_constraintBottom_toTopOf="@id/storyboard_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_SlidePage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="140dp" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/storyboard_navigation"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="@dimen/large_box_size"
         android:background="@color/off_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vp_story_board">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
             android:id="@+id/circle_indicator"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_height="@dimen/unit8_2"
+            android:layout_marginTop="@dimen/unit8_2"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
             app:dotsColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:dotsStrokeColor="#FFFFFF" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_complete"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/open_sans_semi_bold"
-            android:text="@string/complete"
+            android:gravity="center|top"
+            android:layout_marginTop="@dimen/unit8"
+            android:layout_marginBottom="@dimen/session_bottom_margin"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:background="@drawable/shadow_button_bg"
             android:textColor="@color/white"
-            app:backgroundTint="@color/toxic_green"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/continu"
+            style="@style/SourceSans.Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/circle_indicator" />
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

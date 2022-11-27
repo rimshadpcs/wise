@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="fill_horizontal"
@@ -10,8 +11,12 @@
         android:id="@+id/iv_plant"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/unit8_2"
+        android:layout_marginEnd="@dimen/unit8_2"
+        android:layout_marginTop="@dimen/unit8_2"
+        android:layout_marginBottom="@dimen/unit8_2"
         android:contentDescription="@null"
-        android:src="@drawable/tulip_red_asleep_stage0" />
+        android:src="@drawable/workinprogress_widget" />
 
     <ImageView
         android:id="@+id/iv_dirt"

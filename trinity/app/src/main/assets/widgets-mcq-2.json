@@ -9,17 +9,17 @@
   "parameters":
     {
 
-      "question": "How do you view the information in a widget associated with an app?",
+      "question": "Which action would you use to view the information in a widget?",
 
-      "choice1": "Long-press on the app’s icon in Home Screen",
+      "choice1": "Long-pressing on the app’s icon in Home Screen",
 
-      "choice2": "Browse the app’s website",
+      "choice2": "Browsing the app’s website",
 
-      "choice3": "Find the widget in your phone’s Home Screen or Lock Screen",
+      "choice3": "Finding the widget in your phone’s Home Screen or Lock Screen, and reading the information.",
 
-      "choice4": "Open your phone’s Settings and find the app associated with the widget",
+      "choice4": "Opening your phone’s Settings, and finding the app associated with the widget",
 
-      "answer": "Find the widget in your phone’s Home Screen or Lock Screen"
+      "answer": "Finding the widget in your phone’s Home Screen or Lock Screen, and reading the information."
 
     }
   }

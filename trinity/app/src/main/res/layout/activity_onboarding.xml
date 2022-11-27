@@ -4,38 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_black"
+    android:background="@color/black"
+
     tools:context=".view.activities.OnBoardingActivity">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/iv_on_boarding_simm"
-        android:layout_width="300dp"
-        android:layout_height="240dp"
-        android:layout_marginTop="30dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
         <ImageView
-            android:contentDescription="@null"
-            android:id="@+id/iv_on_boarding_simm_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/simm_wave_onboarding"
-            android:background="@color/grey_blue"
-            />
-    </androidx.cardview.widget.CardView>
 
+            android:contentDescription="@null"
+            android:id="@+id/iv_on_boarding_simm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_image_size"
+            android:layout_marginTop="@dimen/session_top_margin"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:src="@drawable/simm_wave_onboarding"
+            android:scaleType="centerInside"
+            android:background="@color/grey_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
     <TextView
         android:id="@+id/tv_what_to_call"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/what_should_i_call_you"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
+        android:gravity="center|top"
+        android:layout_marginTop="@dimen/unit8"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        style="@style/Lato.Body1"
         android:textColor="@color/white"
         android:fontFamily="@font/open_sans_semi_bold"
         app:layout_constraintTop_toBottomOf="@id/iv_on_boarding_simm"/>
@@ -44,53 +43,39 @@
         android:id="@+id/etUserName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
         android:autofillHints="name"
         android:background="@drawable/edit_text_bg"
         android:hint="@string/cursor"
         android:inputType="textPersonName"
-        android:padding="15dp"
+        android:padding="@dimen/unit8_2"
         android:textColorHint="@color/toxic_green"
         android:textCursorDrawable="@color/toxic_green"
+        style="@style/Lato.Body2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_what_to_call" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvOnBoarding"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@id/btContinueOnBoarding"
-        app:layout_constraintEnd_toEndOf="@+id/iv_on_boarding_simm"
-        app:layout_constraintStart_toStartOf="@+id/iv_on_boarding_simm"
-        app:layout_constraintTop_toBottomOf="@+id/iv_on_boarding_simm"
-        app:stackFromEnd="true"
-        app:reverseLayout="true"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btContinueOnBoarding"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/green_button_bg"
-        android:clipToPadding="false"
-        android:paddingStart="40dp"
-        android:paddingLeft="40dp"
-        android:paddingTop="20dp"
-        android:paddingEnd="40dp"
-        android:paddingRight="40dp"
-        android:paddingBottom="20dp"
-        android:text="@string/continu"
+        android:gravity="center|top"
+        android:layout_marginTop="@dimen/unit8"
+        android:layout_marginBottom="@dimen/session_bottom_margin"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:background="@drawable/shadow_button_bg"
         android:textColor="@color/white"
+        android:text="@string/start"
+        android:visibility="invisible"
+        style="@style/SourceSans.Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

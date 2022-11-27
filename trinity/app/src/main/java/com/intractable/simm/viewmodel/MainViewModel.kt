@@ -1,23 +1,34 @@
 package com.intractable.simm.viewmodel
 import android.content.Context
 import android.util.Log
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.intractable.simm.model.SessionModel
+import androidx.lifecycle.*
+import com.intractable.simm.gamelogic.Config
+import kotlinx.coroutines.flow.Flow
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
-import javax.inject.Inject
-import javax.inject.Named
 
-class MainViewModel : ViewModel(){
+class MainViewModel() : ViewModel() {
 
     val activityList = ArrayList<String>()
+    var sessionNumLiveData  =MutableLiveData(0)
+    fun getSessionNum():LiveData<Int> = sessionNumLiveData
 
+    val plantImageFlow: LiveData<Int>
+        get() {
+            val progressManager = Config.instance.progressManager
+            return progressManager.getPlantImageFlow().asLiveData()
+        }
+
+    val plantCountFlow: LiveData<Int>
+        get() {
+            val progressManager = Config.instance.progressManager
+            return progressManager.getPlantCountFlow().asLiveData()
+        }
 
     fun loadSession(context: Context) {
-        Log.i("SessionActivity","Loading session description from json")
+        Log.i("SessionActivity", "Loading session description from json")
         val jsonStr = loadSessionFromAsset(context)
 
         try {
@@ -47,9 +58,14 @@ class MainViewModel : ViewModel(){
         } catch (e: IOException) {
             e.printStackTrace()
         }
-        Log.e("Json:",json)
+        Log.e("Json:", json)
         return json
     }
+
+    fun getSessionModelLiveData(): Any {
+         val sessionModelFlow = Config.instance.progressManager.getSessionModelFlow()
+         return (sessionModelFlow as Flow<*>).asLiveData()
+     }
 
 }
 

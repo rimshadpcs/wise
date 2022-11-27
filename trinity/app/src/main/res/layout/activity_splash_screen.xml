@@ -11,47 +11,49 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="64dp">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:id="@+id/ivSimmStart"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="20dp"
+            android:id="@+id/iv_splash_image"
+            android:layout_width="@dimen/title_image_size"
+            android:layout_height="@dimen/title_image_size"
             android:contentDescription="@null"
-            android:src="@drawable/simm_encouraging"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <TextView
-            android:id="@+id/tvHintText"
+            android:id="@+id/tv_splash_comment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/unit8_2"
             android:fontFamily="@font/open_sans_semi_bold"
-            android:text="@string/encouragement_text"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold|italic"
+            android:text="Happy Learning!"
+            style="@style/Lato.Headline6"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivSimmStart" />
-
+            app:layout_constraintTop_toBottomOf="@id/iv_splash_image" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/loadingBar"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvHintText">
-
+            android:layout_width="@dimen/title_image_size"
+            android:layout_height="@dimen/unit8_3"
+            android:layout_marginTop="@dimen/unit8_2"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:paddingLeft="@dimen/unit8_6"
+            android:paddingRight="@dimen/unit8_6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_splash_comment">
 
             <ProgressBar
                 android:id="@+id/pbProgressBar"
@@ -66,18 +68,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
-
-            <ImageView
-                android:id="@+id/ivSessionImageBulb"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:contentDescription="@null"
-                android:src="@drawable/light_bulb"
-                app:layout_constraintTop_toTopOf="@id/pbProgressBar"
-                app:layout_constraintBottom_toBottomOf="@id/pbProgressBar"
-                app:layout_constraintStart_toStartOf="@id/pbProgressBar"
-                app:layout_constraintEnd_toEndOf="@id/pbProgressBar"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

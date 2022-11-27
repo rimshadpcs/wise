@@ -6,13 +6,14 @@
     android:background="@color/off_black"
     android:layout_height="match_parent">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
+        xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
         android:id="@+id/iv_story_board"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/unit8_2"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         android:contentDescription="@null"
         app:layout_constraintBottom_toTopOf="@+id/tv_story_board_title"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,13 +24,14 @@
     <TextView
         android:id="@+id/tv_story_board_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:fontFamily="@font/open_sans_semi_bold"
-        android:gravity="center"
+        android:layout_height="@dimen/top_bar_height"
+        android:layout_marginStart="@dimen/unit8"
+        android:layout_marginEnd="@dimen/unit8"
+        android:layout_marginBottom="@dimen/unit8"
+        android:gravity="left"
         android:text="@string/relive_the_moment"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        style="@style/SourceSans.Body1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

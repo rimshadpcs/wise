@@ -9,6 +9,7 @@
     <color name="off_black">#FF1D1D1D</color>
     <color name="grey_buttons">#FF3C3C3C</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent_50_white">#80FFFFFF</color>
     <color name="QuestionBackground">#F48FB1</color>
     <color name="choiceBackGround">#BA68C8</color>
     <color name="choiceText">#388E3C</color>
@@ -37,8 +38,15 @@
     <color name="DialogButton">#2a78f5</color>
     <color name="horizontal_progressbar">#249E30</color>
     <color name="candy_green">#8bbb5a</color>
+    <color name="thunderbird_red">#b7281d</color>
+    <color name="thunderbird_green">#539b36</color>
     <color name="candy_red">#e14b42</color>
-
-
+    <color name="off_white">#585858</color>
+    <color name="dove_gray">#6f6f6f</color>
+    <color name="kinda_white">#BEBEBE</color>
+    <color name="simm_dashboard_separator_color">#BEBEBE</color>
+    <color name="session_list_separator_color">#AFB0B0</color>
+    <color name="honeydew">#D4FB79</color>
+    <color name="system_action_text_background">#4a525a</color>
 
 </resources>

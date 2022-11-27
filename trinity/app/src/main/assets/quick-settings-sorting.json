@@ -6,47 +6,47 @@
 
   "parameters": {
 
-    "question": "Drag each item into True if it can be accessed through a Quick Setting, or into False otherwise.",
+    "question": "Drag each item into a box.\nHint: is it a Quick Setting?",
     "answers": [
       {
         "statement": "Turn on Bluetooth",
-        "status": "True"
+        "status": "Quick Setting"
       },
       {
         "statement": "Open Photos App",
-        "status": "False"
+        "status": "Not a Quick Setting"
       },
       {
         "statement": "Turn on Wifi",
-        "status": "True"
+        "status": "Quick Setting"
       },
       {
         "statement": "Change wallpaper",
-        "status": "False"
+        "status": "Not a Quick Setting"
       },
       {
         "statement": "Turn off Wifi",
-        "status": "True"
+        "status": "Quick Setting"
       },
       {
         "statement": "Enable app permissions",
-        "status": "False"
+        "status": "Not a Quick Setting"
       },
       {
         "statement": "Turn on plane mode",
-        "status": "True"
+        "status": "Quick Setting"
       },
       {
         "statement": "Change your phone’s passcode",
-        "status": "False"
+        "status": "Not a Quick Setting"
       },
       {
         "statement": "Turn off bluetooth",
-        "status": "True"
+        "status": "Quick Setting"
       }
       ],
-    "button_left": "True",
-    "button_right": "False"
+    "button_left": "Quick Setting",
+    "button_right": "Not a Quick Setting"
 
   }
 }

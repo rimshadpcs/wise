@@ -1,5 +1,6 @@
 package com.intractable.simm.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -10,8 +11,12 @@ import com.intractable.simm.model.OnBoarding
 
 
 class OnBoardingAdapter(
+    private val context: Context,
+
     private val onBoardingList: ArrayList<OnBoarding>) :
     RecyclerView.Adapter<com.intractable.simm.adapters.OnBoardingAdapter.OnBoardingViewHolder>(){
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):OnBoardingViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

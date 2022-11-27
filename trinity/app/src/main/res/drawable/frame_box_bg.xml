@@ -4,10 +4,10 @@
 
     // The width and color of the border
     <stroke
-        android:width="3dp"
-        android:color="#B8B8B8" />
+        android:width="2dp"
+        android:color="@color/dove_gray" />
 
-    <solid android:color="#020202" />
+    <solid android:color="@color/system_action_text_background" />
 
     // The corner radius, reduce it to make it more square
     <corners android:radius="8dp"/>

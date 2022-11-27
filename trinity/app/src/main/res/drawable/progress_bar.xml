@@ -3,13 +3,8 @@
     <!-- Define the background properties like color etc -->
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
-            <solid android:color="@color/grey_buttons" />
+            <solid android:color="@color/black" />
             <corners android:radius="20dp" />
-            <padding
-                android:bottom="5dp"
-                android:left="5dp"
-                android:right="5dp"
-                android:top="5dp" />
         </shape>
     </item>
 
@@ -17,7 +12,7 @@
     <item android:id="@android:id/progress">
         <clip>
             <shape android:shape="rectangle">
-                <solid android:color="@color/launch_card_top_bg" />
+                <solid android:color="@color/honeydew" />
                 <corners android:radius="15dp" />
             </shape>
         </clip>

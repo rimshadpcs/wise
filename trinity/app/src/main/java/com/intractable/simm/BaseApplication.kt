@@ -2,6 +2,7 @@ package com.intractable.simm
 
 import android.app.Application
 import androidx.work.*
+import com.intractable.simm.gamelogic.Config
 import com.intractable.simm.services.DailyNotificationsManager
 import dagger.hilt.android.HiltAndroidApp
 import java.util.concurrent.TimeUnit
@@ -11,6 +12,9 @@ class BaseApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
+        val config = Config.instance
+        config.initStorageManager(this)
 
         //Start daily notification handling in background.
 

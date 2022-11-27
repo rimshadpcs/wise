@@ -1,32 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/off_black"
     android:id="@+id/rootview">
 
-    <androidx.constraintlayout.utils.widget.ImageFilterView
-        android:layout_width="35dp"
-        android:layout_height="26dp"
-        android:src="@drawable/ic_action_close"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="14dp"
-        android:id="@+id/bt_close"
-        />
-
-    <ProgressBar
-        android:id="@+id/session_progress"
-        style="?android:attr/progressBarStyleHorizontal"
+    <LinearLayout
+        android:id="@+id/progress_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:progress="30"
-        android:layout_marginTop="52dp" />
+        android:layout_height="@dimen/top_bar_height"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/bt_close"
+            android:layout_width="@dimen/top_bar_icon_size"
+            android:layout_height="@dimen/top_bar_icon_size_adjusted"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:src="@drawable/x_icon" />
+
+        <RelativeLayout
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/session_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/internal_margin"
+                android:progress="40"
+                app:indicatorColor="#97D857"
+                app:trackColor="#626262"
+                app:trackCornerRadius="20dp"
+                app:trackThickness="@dimen/unit8_2" />
+
+            <com.airbnb.lottie.LottieAnimationView xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+                android:id="@+id/iv_session_lottie"
+                android:layout_width="@dimen/top_bar_animation_size"
+                android:layout_height="@dimen/top_bar_animation_size"
+                android:layout_centerVertical="true"
+                android:layout_alignStart="@+id/session_progress"
+                android:contentDescription="@null"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/progressbar_sparkle" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_heart"
+            android:layout_width="@dimen/top_bar_icon_size"
+            android:layout_height="@dimen/top_bar_icon_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/internal_margin"
+            android:src="@drawable/heart_icon_noline" />
+        
+        <TextView
+            android:id="@+id/tv_heart_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:text="5"
+            android:textColor="@color/candy_red"
+            style="@style/SourceCodeProBold.Headline5" />
+
+    </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/session_progress" />
+        android:layout_below="@+id/progress_view" />
 
 </RelativeLayout>

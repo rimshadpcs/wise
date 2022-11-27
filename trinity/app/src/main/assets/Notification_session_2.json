@@ -3,6 +3,7 @@
   "activityId": "Notification_session_2",
 
   "fragmentClassName": "FragmentNotification",
+  "notification_session_type": 2,
 
   "parameters": [
   "Hey there. \nI’ve got a great idea. \nLet’s test your knowledge of notifications with a game of Hide and Seek!",

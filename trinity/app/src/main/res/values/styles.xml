@@ -22,4 +22,316 @@
     <style name="SwitchCompatTheme" >
         <item name="colorControlActivated">@color/white</item>
     </style>
+
+    <style name="SourceSans.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">104sp</item>
+    </style>
+
+    <style name="SourceSans.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">65sp</item>
+    </style>
+
+    <style name="SourceSans.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">52sp</item>
+    </style>
+
+    <style name="SourceSans.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">37sp</item>
+    </style>
+
+    <style name="SourceSans.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="SourceSans.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="SourceSans.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SourceSans.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceSans.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SourceSans.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceSans.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceSans.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="SourceSans.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Lato.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">100sp</item>
+    </style>
+
+    <style name="Lato.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">62sp</item>
+    </style>
+
+    <style name="Lato.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="Lato.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="Lato.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="Lato.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="Lato.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Lato.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Lato.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Lato.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Lato.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Lato.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Lato.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="SourceCodePro.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">104sp</item>
+    </style>
+
+    <style name="SourceCodePro.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">65sp</item>
+    </style>
+
+    <style name="SourceCodePro.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">52sp</item>
+    </style>
+
+    <style name="SourceCodePro.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">37sp</item>
+    </style>
+
+    <style name="SourceCodePro.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="SourceCodePro.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="SourceCodePro.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SourceCodePro.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceCodePro.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SourceCodePro.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceCodePro.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceCodePro.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="SourceCodePro.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/source_code_pro</item>
+        <item name="android:fontFamily">@font/source_code_pro</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">104sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">65sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">52sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">37sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="SourceCodeProBold.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:fontFamily">@font/source_code_pro_bold</item>
+        <item name="android:textSize">11sp</item>
+    </style>
 </resources>

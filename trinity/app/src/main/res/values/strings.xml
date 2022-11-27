@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Simm</string>
+    <string name="facebook_app_id">3246181195648434</string>
+    <string name="facebook_client_token">d2a0036a8f3193d6a32d6be095aa1f94</string>
     <string name="hello">Hello</string>
     <string name="sample">Your phones\'s Lock Screen displays status information and latest notification. \n\nYou can choose what the Lock Screen Displays</string>
     <string name="continu">Continue</string>
@@ -11,7 +13,7 @@
     <string name="tapHereFull">Tap here to finish the Notifications activity.</string>
     <string name="notification_channel">Notification learning session</string>
     <string name="channel_description">This channel is for the notification learning activity</string>
-    <string name="license_acknowledgements">2015 Square, Inc: Moshi, Apache License 2.0\n2008 Google, Inc: Gson, Apache License 2.0\n2016 Tommy Buonomo: Material View Pager Dots Indicator, Apache License 2.0\n2013 Karol Wrótniak: android-gif-drawable, The MIT License</string>
+    <string name="license_acknowledgements">2015 Square, Inc: Moshi, Apache License 2.0\n2008 Google, Inc: Gson, Apache License 2.0\n2016 Tommy Buonomo: Material View Pager Dots Indicator, Apache License 2.0\n2013 Karol Wrótniak: android-gif-drawable, The MIT License\n2021 Daniel Lochner: Simple Scroll-Snap, The MIT License\nAdditional Music and Sound effects provided by Zapsplat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="next">Next</string>
@@ -23,7 +25,8 @@
     <string name="False">False</string>
     <string name="sampleQuestionForTrueOrFalse">Virus is a computer program unintentionally designed to cause annoyance or damage hardware or software.</string>
     <string name="finish_session">Finish Session</string>
-    <string name="well_done_you_finished_successfully">Well Done, you finished successfully</string>
+    <string name="well_done_you_finished_successfully">Well done! You completed the lesson!</string>
+    <string name="well_done">Well done!</string>
     <string name="what_are_the_different_options_of_permissions_you_can_give_apps">What are the different options of permissions you can give apps?</string>
     <string name="sort_them_based_on_true_and_false">Sort them based on True and false</string>
     <string name="correct">Correct!</string>
@@ -53,13 +56,46 @@
     <string name="delete_analytics_data">Delete analytics data</string>
     <string name="list_of_acknowledgments">List of acknowledgments</string>
     <string name="privacy_policy">Privacy policy</string>
-    <string name="do_you_want_to_exit">Do you want to exit?</string>
+    <string name="do_you_want_to_exit">Do you want to cancel this lesson?</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="looks_like_you_ve_got_the_hang_of_notifications_nice_work">Looks like you’ve got the hang of notifications. Nice work!</string>
     <string name="talking">Talking</string>
     <string name="thinking_neutral">Thinking / Neutral</string>
     <string name="smiling">Smiling</string>
-
+    <string name="_1_5">1/5</string>
+    <string name="_5">5</string>
+    <string name="home_description">Tap on the lesson title to get more information</string>
+    <string name="lesson_name">Lesson name</string>
+    <string name="lesson_explained">lesson explained</string>
+    <string name="lesson_1">Lesson 1</string>
+    <string name="learn_what_your_phone_can_do">Learn what your phone can do!</string>
+    <string name="lesson_stage_plant">One more lesson to go and your plant will be fully grown!</string>
+    <string name="complete_more_lessons">Complete more lessons to discover plants with exciting new colors!</string>
+    <string name="select_true_or_false">Select True or False</string>
+    <string name="use_your_phone_to_take_great_photos_and_videos_that_reflect_your_style_and_creativity">Use your phone to take great photos and videos that reflect your style and creativity!</string>
+    <string name="nice_work_let_s_dive_into_more_details_about_notifications">Nice work! Let’s dive into more details about notifications.</string>
+    <string name="heart_bottom_sheet_txt">You have run out of Hearts.\n
+ Come back in 20 minutes to receive new Hearts.</string>
+    <string name="_1">1</string>
+    <string name="tulip">Tulip</string>
+    <string name="_4_5">4/5</string>
+    <string name="stage_4_5">stage 4/5</string>
+    <string name="_3_30">3/30</string>
+    <string name="ok">OK</string>
+    <string name="nice_work_lets_move_to_next_lesson">Nice work, lets move to next lesson !</string>
+    <string name="you_can_change_the_app_settings_in_this_screen">You can change the app settings in this screen.</string>
+    <string name="plant_collection">Plant Collection</string>
+    <string name="settings">Settings</string>
+    <string name="well_done_n_nkeep_going">Well done!\n\nKeep going.</string>
+    <string name="skip">Skip</string>
+    <string name="orientation_screen_portrait">Rotate your phone to Landscape Mode to get a better view of this image.</string>
+    <string name="orientation_screen_land">Good! You can see a larger image in this mode. \n\nNow rotate your phone back to Portrait Mode.</string>
+    <string name="tap_on_true_or_false">Tap on True or False</string>
+    <string name="a_game_of_hide_and_seek">A Game of Hide-and-Seek 🎲</string>
+    <string name="Log">Log</string>
+    <string name="dialer">Dialer</string>
+    <string name="community_progress">Community Progress</string>
+    <string name="campaign_completed">Campaign completed</string>
 
 </resources>
