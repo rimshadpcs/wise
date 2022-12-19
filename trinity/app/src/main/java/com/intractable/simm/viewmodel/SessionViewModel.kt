@@ -251,6 +251,9 @@ class SessionViewModel:ViewModel() {
     }
 
     companion object sessionFlags{
+
+        const val REQUEST_CODE_READ_AND_WRITE = 141
+
         //flags
         var launchedPermissionScreen = false
 
@@ -273,5 +276,6 @@ class SessionViewModel:ViewModel() {
         const val EVENT_CAPTURE_IMAGE = 1011
         const val EVENT_SHOW_SKIP_BUTTON = 1012
         const val EVENT_SHOW_NOTIFICATION_BAR = 1013
+        const val EVENT_CHECK_NEARBY_PERMISSION = 1014
     }
 }

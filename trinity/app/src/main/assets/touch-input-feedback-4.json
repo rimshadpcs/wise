@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "touch-input-feedback-4",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Great work! You completed your first lesson!",
+    "animation": "simm_feedback"
+  }
+
+}

@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "camera-permissions-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Here is an app request to access your contacts. You can control access by selecting Deny or Allow.",
+    "animation": "systemsettings_one"
+  }
+
+}

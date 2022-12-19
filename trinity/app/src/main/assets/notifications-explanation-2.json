@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "notifications-explanation-2",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "There are many kinds of notifications. Some have images in them, and some even have action buttons on them.\n\nWe will take a look at all of these, starting with basic notifications!"
+  }
+
+}

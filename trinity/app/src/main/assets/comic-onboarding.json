@@ -1,0 +1,249 @@
+{
+
+  "activityId": "comic-onboarding",
+
+  "fragmentClassName": "FragmentComic",
+  "parameters": {
+    "title": "Onboardinggggggggggggggg",
+    "sceneOption": "3",
+    "sessionOption": "3",
+    "comic": [
+      {
+        "background": "onboarding_1",
+        "speechBubbles": [
+          {
+            "displayText": "Hi%user_name! My Name is Simm. I am a Digital Activist!",
+            "fontSize": "35",
+            "textPosition": "0,105",
+            "textBoxSize": "400,131",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p1",
+            "bubblePosition": "0.5,294",
+            "bubbleSize": "500,390"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_2",
+        "speechBubbles": [
+          {
+            "displayText": "I see you are here to learn about smartphones and digital technology",
+            "fontSize": "30",
+            "textPosition": "0,67",
+            "textBoxSize": "405,80",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p2_1",
+            "bubblePosition": "14,300",
+            "bubbleSize": "478,288"
+          },
+          {
+            "displayText": "I'm happy to guide you on your learning journey!",
+            "fontSize": "25",
+            "textPosition": "1.5,-20",
+            "textBoxSize": "233,-105",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p2_2",
+            "bubblePosition": "92,213",
+            "bubbleSize": "277,195"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_3",
+        "speechBubbles": [
+          {
+            "displayText": "Digital technology is getting more complicated everyday!",
+            "fontSize": "35",
+            "textPosition": "0,92",
+            "textBoxSize": "444,157",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p3",
+            "bubblePosition": "0,293",
+            "bubbleSize": "513,341"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_5",
+        "speechBubbles": [
+          {
+            "displayText": "There is so much technology in our lives!",
+            "fontSize": "35",
+            "textPosition": "0,0",
+            "textBoxSize": "443,105",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p5_1",
+            "bubblePosition": "0,415",
+            "bubbleSize": "528,121"
+          },
+          {
+            "displayText": "Where do I even start?",
+            "fontSize": "25",
+            "textPosition": "0,0",
+            "textBoxSize": "164,163",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p5_2",
+            "bubblePosition": "-135,-202",
+            "bubbleSize": "164,163"
+          },
+          {
+            "displayText": "",
+            "fontSize": "",
+            "textPosition": "",
+            "textBoxSize": "",
+            "textAlignment": "",
+            "bubbleImage": "ZigZag",
+            "bubblePosition": "221,242",
+            "bubbleSize": "100,100"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_6",
+        "speechBubbles": [
+          {
+            "displayText": "Textbooks, websites, and videos just can't seem to keep up!",
+            "fontSize": "28",
+            "textPosition": "0,0",
+            "textBoxSize": "444,127",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p6",
+            "bubblePosition": "-14,407",
+            "bubbleSize": "444,127"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_4",
+        "speechBubbles": [
+          {
+            "displayText": "The world is in <b>CRISIS</b>!",
+            "fontSize": "38",
+            "textPosition": "0,0",
+            "textBoxSize": "444,145",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p4",
+            "bubblePosition": "0,407",
+            "bubbleSize": "500,145"
+          },
+          {
+            "displayText": "",
+            "fontSize": "",
+            "textPosition": "",
+            "textBoxSize": "",
+            "textAlignment": "",
+            "bubbleImage": "Beep",
+            "bubblePosition": "143,62",
+            "bubbleSize": "100,30"
+          },
+          {
+            "displayText": "",
+            "fontSize": "",
+            "textPosition": "",
+            "textBoxSize": "",
+            "textAlignment": "",
+            "bubbleImage": "Ping",
+            "bubblePosition": "226,-274",
+            "bubbleSize": "100,30"
+          },
+          {
+            "displayText": "",
+            "fontSize": "",
+            "textPosition": "",
+            "textBoxSize": "",
+            "textAlignment": "",
+            "bubbleImage": "Ding",
+            "bubblePosition": "-200,-380",
+            "bubbleSize": "100,30"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_7",
+        "speechBubbles": [
+          {
+            "displayText": "Yet I see a world...",
+            "fontSize": "40",
+            "textPosition": "-17,6",
+            "textBoxSize": "440,129",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p7",
+            "bubblePosition": "-41,345",
+            "bubbleSize": "447,192"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_8",
+        "speechBubbles": [
+          {
+            "displayText": "...where Everybody is Empowered by Digital Technology!",
+            "fontSize": "30",
+            "textPosition": "11,0",
+            "textBoxSize": "415,111",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p8",
+            "bubblePosition": "-15,355",
+            "bubbleSize": "510,170"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_9",
+        "speechBubbles": [
+          {
+            "displayText": "I am happy to guide you on your journey, through my interactive lessons.",
+            "fontSize": "35",
+            "textPosition": "0,92",
+            "textBoxSize": "444,185",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p9",
+            "bubblePosition": "0,300",
+            "bubbleSize": "518,370"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_10",
+        "speechBubbles": [
+          {
+            "displayText": "The power to change your life is in your hands, <b>LITERALLY</b> with your smartphone!",
+            "fontSize": "28",
+            "textPosition": "0,82",
+            "textBoxSize": "388,178",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p10",
+            "bubblePosition": "0,300",
+            "bubbleSize": "511,333"
+          },
+          {
+            "displayText": "",
+            "fontSize": "",
+            "textPosition": "",
+            "textBoxSize": "",
+            "textAlignment": "",
+            "bubbleImage": "Wow",
+            "bubblePosition": "-184,-78",
+            "bubbleSize": "152,100"
+          }
+        ]
+      },
+      {
+        "background": "onboarding_11",
+        "speechBubbles": [
+          {
+            "displayText": "Join the Revolution, Save the World!",
+            "fontSize": "41",
+            "textPosition": "0,-4",
+            "textBoxSize": "444,171",
+            "textAlignment": "Center",
+            "bubbleImage": "onboardingbubble_p11",
+            "bubblePosition": "0,362",
+            "bubbleSize": "511,171"
+          }
+        ]
+      }
+    ]
+  }
+
+}

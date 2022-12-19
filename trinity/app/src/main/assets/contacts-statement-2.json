@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "contacts-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "You can make a phone call to a person directly from the Contacts app.",
+    "answer": "true"
+  }
+
+}

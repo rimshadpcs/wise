@@ -1,0 +1,22 @@
+{
+  "activityId": "widgets-exercise-1",
+  "fragmentClassName": "FragmentWidget",
+  "parameters": [
+    {
+      "text": "Ok, I have prepared a new widget just for you.\n\nThe widget will display some special information—it's a secret for now!\n\nFirst, let’s do a quick review of how to add widgets.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    }
+  ]
+}

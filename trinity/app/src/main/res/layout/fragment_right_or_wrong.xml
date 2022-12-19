@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.RightOrWrongFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_bar_height"
+            android:layout_marginTop="@dimen/session_top_margin"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:contentDescription="@null"
+            android:padding="@dimen/unit8_2"
+            android:gravity="center"
+            android:text="@string/tap_on_true_or_false"
+            style="@style/SourceSans.Subtitle1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_statement"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_image_size"
+            android:layout_marginTop="@dimen/session_top_margin"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:contentDescription="@null"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/sample"
+            style="@style/SourceSans.Body1"
+            android:padding="@dimen/text_body_padding"
+            android:gravity="left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_top_title"/>
+
+        <TextView
+            android:id="@+id/tv_true"
+            android:layout_width="@dimen/large_box_size"
+            android:layout_height="@dimen/large_box_size"
+            android:layout_marginBottom="@dimen/session_bottom_margin"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:background="@drawable/true_bg"
+            android:text="@string/True"
+            style="@style/SourceSans.Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            android:textColor="@color/white">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_false"
+            android:layout_width="@dimen/large_box_size"
+            android:layout_height="@dimen/large_box_size"
+            android:layout_marginBottom="@dimen/session_bottom_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:background="@drawable/false_bg"
+            android:gravity="center"
+            android:text="@string/False"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/white"
+            style="@style/SourceSans.Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" >
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

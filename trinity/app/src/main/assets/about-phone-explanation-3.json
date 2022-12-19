@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "about-phone-explanation-3",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "To complete the exercise, drag each item into a box as indicated on the screen.\n\nHint: Tap and hold the item, drag it to a box, and lift your finger to drop it into the box."
+  }
+
+}

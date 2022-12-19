@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "notifications-mcq-3",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "What action would a chat notification present to you?",
+
+      "choice1": "An action to display stock information.",
+
+      "choice2": "An action to quickly reply to the message shown in notification.",
+
+      "choice3": "An action to display the phone’s battery level.",
+
+      "choice4": "An action to change the phone’s wallpaper.",
+
+      "answer": "An action to quickly reply to the message shown in notification."
+
+    }
+  }

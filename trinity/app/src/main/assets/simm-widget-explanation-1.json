@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "simm-widget-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "So here is the secret of your Simm widget.\n\nIt will show you your plant’s growth as you complete more lessons!\n\nThis is how the widget will look..."
+  }
+
+}

@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "simm-widget-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Oh, and one more thing. I will send you daily notifications to help you complete your exercises every day.",
+    "animation": "simm_feedback"
+  }
+
+}

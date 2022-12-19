@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "camera-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "Apps must obtain your permission before they use your phone’s camera.",
+    "answer": "true"
+  }
+
+}

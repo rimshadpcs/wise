@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-feedback-4",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Let’s finish up with a couple of quick exercises.",
+    "animation": "simm_feedback"
+  }
+
+}

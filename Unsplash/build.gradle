@@ -1,6 +1,51 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-    id 'com.android.application' version '7.3.0' apply false
-    id 'com.android.library' version '7.3.0' apply false
-    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+buildscript {
+    ext {
+        kotlinVersion = '1.6.0'
+        navigationVersion = '2.3.0'
+        hiltVersion = '2.28.3-alpha'
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'com.google.gms:google-services:4.3.14'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdkVersion = 21
+    targetSdkVersion = 33
+    compileSdkVersion = 33
+
+    // App dependencies
+    appCompatVersion = '1.2.0'
+    constraintLayoutVersion = '1.1.3'
+    espressoVersion = '3.2.0'
+    glideVersion = '4.11.0'
+    hiltAndroidXVersion = '2.44.2'
+    junitVersion = '4.13'
+    ktxVersion = '1.3.1'
+    pagingVersion = '3.1.1'
+    retrofitVersion = '2.9.0'
+    testExtJunitVersion = '1.1.1'
+    hiltVersion = '1.0.0'
 }

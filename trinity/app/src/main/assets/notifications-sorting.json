@@ -1,0 +1,40 @@
+{
+
+  "activityId": "notifications-sorting",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into a box.\nHint: did your phone just receive a notification?",
+    "answers": [
+      {
+        "statement": "Your phone buzzes/vibrates",
+        "status": "Notification"
+      },
+      {
+        "statement": "You receive a fax message",
+        "status": "Not a notification"
+      },
+      {
+        "statement": "Your phone makes a sound",
+        "status": "Notification"
+      },
+      {
+        "statement": "Your phone plays a ringtone for incoming call",
+        "status": "Not a notification"
+      },
+      {
+        "statement": "Your phone screen turns on",
+        "status": "Notification"
+      },
+      {
+        "statement": "Someone rings the doorbell at home",
+        "status": "Not a notification"
+      }
+      ],
+    "button_left": "Notification",
+    "button_right": "Not a notification"
+
+  }
+}

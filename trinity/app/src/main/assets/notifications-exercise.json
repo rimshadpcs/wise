@@ -1,0 +1,62 @@
+{
+
+  "activityId": "notifications-exercise",
+
+  "fragmentClassName": "FragmentNotification",
+  "notification_session_type": 1,
+
+  "skipText": "You can skip this lesson for now.\n\nCome back again another time to complete it.",
+
+  "parameters": [
+    {
+      "text": "You’ve learned a lot! Now let’s put it to the test with a real notification.\n\nIn the next screen, I am going to send you a notification. \n\nTo complete this exercise, tap on the notification and come back here.",
+
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Ok, preparing your notification...",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "SENDING NOTIFICATION...",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "I just sent the notification!\n\nTap on the notification and come back here to complete the exercise.",
+      "color": "white",
+      "shouldSendNotification": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "Excellent! You found the notification.\n\nYou completed the exercise!",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_excited_feedback",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "true",
+      "hasCountDown": "false",
+      "img": ""
+    }
+  ]
+
+}

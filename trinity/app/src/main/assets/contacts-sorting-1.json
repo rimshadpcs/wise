@@ -1,0 +1,64 @@
+{
+
+  "activityId": "contacts-sorting-1",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into a box.\nHint: is it something you would store in a contact?",
+    "answers": [
+      {
+        "statement": "First Name",
+        "status": "In Contact"
+      },
+      {
+        "statement": "Home Address",
+        "status": "In Contact"
+      },
+      {
+        "statement": "Notification",
+        "status": "Not in Contact"
+      },
+      {
+        "statement": "Quick Setting",
+        "status": "Not in Contact"
+      },
+      {
+        "statement": "Last Name",
+        "status": "In Contact"
+      },
+      {
+        "statement": "Software Update",
+        "status": "Not in Contact"
+      },
+      {
+        "statement": "Office Address",
+        "status": "In Contact"
+      },
+      {
+        "statement": "App Icon",
+        "status": "Not in Contact"
+      },
+      {
+        "statement": "Email Address",
+        "status": "In Contact"
+      },
+      {
+        "statement": "Movie",
+        "status": "Not in Contact"
+      },
+      {
+        "statement": "A PDF file",
+        "status": "Not in Contact"
+      },
+      {
+        "statement": "Link to Person’s Website",
+        "status": "In Contact"
+      }
+    ],
+    "button_left": "In Contact",
+    "button_right": "Not in Contact"
+
+  }
+}

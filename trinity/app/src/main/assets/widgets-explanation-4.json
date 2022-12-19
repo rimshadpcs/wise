@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "widgets-explanation-4",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "You can customize your Home Screen with widgets from your favorite apps.\n\nWe will add a real widget to your Home Screen in this lesson!"
+  }
+
+}

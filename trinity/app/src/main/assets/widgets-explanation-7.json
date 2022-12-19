@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "widgets-explanation-7",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Select the Widgets option in this menu. You will get a selection of apps. Tap on an app to see its widgets.",
+    "animation": "widgets_two"
+  }
+
+}

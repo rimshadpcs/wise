@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good! Let’s look at the many things you can do with your phone \uD83D\uDE42",
+    "animation": "simm_feedback"
+  }
+
+}

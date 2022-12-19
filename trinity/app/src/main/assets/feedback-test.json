@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "feedback-test",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "animation": "simm_feedback",
+    "text": "There are so many things you can do with your smartphone!\n\nYour phone empowers you to live better through digital technology, by giving you easy access to the digital world!"
+  }
+
+}

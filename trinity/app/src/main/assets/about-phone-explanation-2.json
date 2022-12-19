@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "about-phone-explanation-2",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Your phone has many apps that help you get information, accomplish tasks, and stay in touch with people.\n\nAnd what’s really great—you can use your phone anytime you want, and practically anywhere!\n\n"
+  }
+
+}

@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "contacts-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which action describes how you would use the Contacts app?",
+
+      "choice1": "Saving a persons information in order to easily get in touch with them.",
+
+      "choice2": "Viewing your meetings with people from your office.",
+
+      "choice3": "Searching the web for information.",
+
+      "choice4": "Paying your bills using your bank account.",
+
+      "answer": "Saving a persons information in order to easily get in touch with them."
+
+    }
+  }

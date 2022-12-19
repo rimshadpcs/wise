@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "phone-settings-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which one of these would you use to change the notification behavior of an app?",
+
+      "choice1": "Home Screen",
+
+      "choice2": "Calendar app",
+
+      "choice3": "Email app",
+
+      "choice4": "Settings app",
+
+      "answer": "Settings app"
+
+    }
+  }

@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "notifications-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good start! Let’s dive into more details about notifications.",
+    "animation": "simm_feedback"
+  }
+
+}

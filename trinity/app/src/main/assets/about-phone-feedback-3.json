@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-feedback-3",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "You can do so much more with your phone!\n\nI will help you learn all about it in your daily sessions.",
+    "animation": "simm_feedback"
+  }
+
+}

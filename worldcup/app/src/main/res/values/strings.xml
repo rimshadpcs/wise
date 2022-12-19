@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">worldcup</string>
+    <string name="cup">cup</string>
+    <string name="team">team</string>
+</resources>

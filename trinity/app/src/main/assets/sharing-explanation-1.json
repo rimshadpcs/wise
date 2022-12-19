@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "sharing-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "With Android’s sharing feature, you can easily share content like photos, videos, and text with your friends.\n\nYou do this by selecting what you want to share, then tapping the Share button, then select a receiving app."
+  }
+
+}

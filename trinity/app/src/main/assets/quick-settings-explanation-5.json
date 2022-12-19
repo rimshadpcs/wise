@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Example 2:\n\nDo not disturb: silence calls and notifications when you don't want to be interrupted by your phone."
+  }
+
+}

@@ -1,0 +1,23 @@
+
+
+{
+
+  "activityId": "widgets-storyboard-1",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Touch and hold an empty spot in your Home Screen.", "animation": "widgets_one"
+      },
+      {
+        "title": "Find the Simm widget in this list.", "animation": "widgets_two"
+      },
+      {
+        "title": "Drag the Simm widget to your Home Screen.", "animation": "widgets_four"
+      }
+    ]
+  }
+
+}

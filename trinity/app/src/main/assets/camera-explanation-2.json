@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "camera-explanation-3",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Remember that if an app wants to use your phone’s camera, it must first ask your permission to do so.\n\nThis is an important privacy consideration."
+  }
+
+}

@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "gesture-mcq-3",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "How do you drag an item across the screen?",
+
+      "choice1": "Tap twice on the item, then move your finger to another part of the screen.",
+
+      "choice2": "Touch and hold the item, then move your finger on the screen without lifting it.",
+
+      "choice3": "Touch the item, then shake the phone.",
+
+      "choice4": "Touch the item, then press hard on the screen.",
+
+      "answer": "Touch and hold the item, then move your finger on the screen without lifting it."
+
+    }
+  }

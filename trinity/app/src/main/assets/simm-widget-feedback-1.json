@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "simm-widget-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good news! Your Simm widget is finally ready to be revealed!",
+    "animation": "simm_feedback"
+  }
+
+}

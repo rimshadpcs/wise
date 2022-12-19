@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-feedback-5",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Well done!\n\nYou have completed another lesson!",
+    "animation": "simm_feedback"
+  }
+
+}

@@ -38,7 +38,10 @@ class StorageManager(private val dataStore: DataStore<Preferences>) {
         val PLANT_GROWTH_MAX_ADJUSTED = intPreferencesKey("PLANT_GROWTH_MAX_ADJUSTED")
         val APP_VERSION_KEY = intPreferencesKey("APP_VERSION")
         val LAST_SESSION_TIMESTAMP_KEY = longPreferencesKey("LAST_SESSION_TIMESTAMP")
+        val GAME_HIGHSCORE_KEY = stringPreferencesKey("GAME_HIGHSCORE")
     }
+    var gameHighscores: MutableMap<String, String> = mutableMapOf()
+
 
     suspend fun storeAnalyticsStatus(permission: Boolean) {
         dataStore.edit {
@@ -407,6 +410,8 @@ class StorageManager(private val dataStore: DataStore<Preferences>) {
     suspend fun getUserInputName(): String? {
         return dataStore.data.firstOrNull()?.get(USER_INPUT_NAME_KEY)
     }
+
+
 
     suspend fun storeAppVersion(input: Int){
         dataStore.edit{

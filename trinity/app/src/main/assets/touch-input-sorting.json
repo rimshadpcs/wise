@@ -1,0 +1,36 @@
+{
+
+  "activityId": "touch-input-sorting",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into a box.\nHint: is it a Touch Input action?",
+    "answers": [
+      {
+        "statement": "Tapping on the screen",
+        "status": "Touch Input"
+      },
+      {
+        "statement": "Rotating the phone to landscape mode",
+        "status": "Not a Touch Input"
+      },
+      {
+        "statement": "Dragging an item on the screen",
+        "status": "Touch Input"
+      },
+      {
+        "statement": "Zooming in to an image with pinch-and-zoom gesture",
+        "status": "Touch Input"
+      },
+      {
+        "statement": "Adding a SIM card to your phone",
+        "status": "Not a Touch Input"
+      }
+      ],
+    "button_left": "Touch Input",
+    "button_right": "Not a Touch Input"
+
+  }
+}

@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "gestures-explanation-4",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "In the next screen, try activating the touch gesture to navigate to a recently opened app."
+  }
+
+}

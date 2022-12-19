@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "sharing-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Nice start! Let’s review a few things about Android sharing.",
+    "animation": "grace_feedback1"
+  }
+
+}

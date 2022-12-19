@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.PlantStageActivity">
+
+    <View
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back_button"
+        android:layout_width="@dimen/top_bar_icon_size"
+        android:layout_height="@dimen/top_bar_icon_size"
+        android:layout_marginStart="@dimen/session_side_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+        android:src="@drawable/back"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tv_plant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tulip"
+        style="@style/SourceSans.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+        android:padding="@dimen/unit8"
+        />
+
+    <TextView
+        android:id="@+id/tv_stage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:padding="@dimen/unit8"
+        android:text="@string/stage_4_5"
+        android:textColor="@color/candy_green"
+        style="@style/SourceCodeProBold.Headline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar" />
+
+    <ImageView
+        android:id="@+id/my_plant"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/stage_five"
+        android:layout_marginTop="@dimen/top_bar_height"
+        android:layout_marginBottom="@dimen/top_bar_height"
+        app:layout_constraintTop_toBottomOf="@id/tv_stage"
+        app:layout_constraintBottom_toTopOf="@id/tv_plant_stage_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tv_plant_stage_description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/comment_height"
+        android:layout_marginTop="@dimen/unit8"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:layout_marginBottom="@dimen/session_bottom_margin"
+        style="@style/Lato.Body1"
+        android:visibility="invisible"
+        android:animateLayoutChanges="true"
+        android:text="@string/lesson_stage_plant"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

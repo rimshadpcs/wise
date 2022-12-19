@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "385701476559",
+    "project_id": "simm-f1ee3",
+    "storage_bucket": "simm-f1ee3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385701476559:android:0aece48b7e80aa0a861fba",
+        "android_client_info": {
+          "package_name": "com.intractable.simm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385701476559-c3kabus7qkva76hnto6k9t28oi8rp6l9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvbF28KrPRcYq6N89b_F7S9MlAc9NT4xc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385701476559-c3kabus7qkva76hnto6k9t28oi8rp6l9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

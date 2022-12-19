@@ -1,0 +1,23 @@
+
+
+{
+
+  "activityId": "widgets-storyboard-1",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Get the current weather and the day's summary.", "image": "widget_weather_example"
+      },
+      {
+        "title": "Find your next calendar meeting.", "image": "widget_calendar_example"
+      },
+      {
+        "title": "Listen to your favorite music and even control playback.", "image": "widget_music_example"
+      }
+    ]
+  }
+
+}

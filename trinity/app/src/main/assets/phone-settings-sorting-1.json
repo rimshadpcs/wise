@@ -1,0 +1,68 @@
+{
+
+  "activityId": "phone-settings-sorting-1",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into a box.\nHint: is it a setting in your phone?",
+    "answers": [
+      {
+        "statement": "Notification",
+        "status": "Not a Setting"
+      },
+      {
+        "statement": "Airplane mode",
+        "status": "Setting"
+      },
+      {
+        "statement": "Home Screen",
+        "status": "Not a Setting"
+      },
+      {
+        "statement": "WiFi ON/OFF",
+        "status": "Setting"
+      },
+      {
+        "statement": "Monthly phone bill",
+        "status": "Not a Setting"
+      },
+      {
+        "statement": "System text size",
+        "status": "Setting"
+      },
+      {
+        "statement": "Wallpaper in Home Screen",
+        "status": "Setting"
+      },
+      {
+        "statement": "Storage space",
+        "status": "Not a Setting"
+      },
+      {
+        "statement": "Screen brightness",
+        "status": "Setting"
+      },
+      {
+        "statement": "Passcode",
+        "status": "Setting"
+      },
+      {
+        "statement": "Health sensors",
+        "status": "Not a Setting"
+      },
+      {
+        "statement": "GPS",
+        "status": "Not a Setting"
+      },
+      {
+        "statement": "Date and time",
+        "status": "Setting"
+      }
+    ],
+    "button_left": "Setting",
+    "button_right": "Not a Setting"
+
+  }
+}

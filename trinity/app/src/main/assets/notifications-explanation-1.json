@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "notifications-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Notifications help you keep track of what’s new.\n\nTo view your notifications, just swipe down from the top of the screen—we will do just that later in this lesson!"
+  }
+
+}

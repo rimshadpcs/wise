@@ -8,4 +8,6 @@ object Constants {
     var QSClicked = false
     var notification_session_type =0
 
+    var deeplinkUrl = "https://simm.page.link/tobR"
+
 }

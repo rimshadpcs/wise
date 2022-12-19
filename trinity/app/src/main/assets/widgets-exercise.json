@@ -1,0 +1,53 @@
+
+
+{
+
+  "activityId": "quick-settings-mcq",
+
+  "fragmentClassName": "FragmentWidget",
+
+  "skipText": "You can skip this lesson for now.\n\nCome back again another time to complete it.",
+
+  "parameters": [
+    {
+      "text": "Widgets have all sorts of uses. I built one myself to show you.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "It’s a work in progress-it’s gonna be really cool when it’s done.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "Try adding the Simm widget to your home screen. Then tap on the widget when your done to come back here.",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "Awesome! You got the widget setup. I can’t wait for you to see what i have planned. Keep an eye out!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    }
+  ]
+  }

@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "phone-settings-explanation-2",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "There are other ways to change your phone’s settings.\n\nFor example, you can quickly change the notification settings for an app by swiping left or right on a notification, then accessing more settings for it.\n\nYou can view all notification settings for an app by opening the Setting’s app and visiting the app-specific settings."
+  }
+
+}

@@ -103,6 +103,23 @@
         android:theme="@style/SwitchCompatTheme"
         android:checked="true"
         tools:ignore="MissingConstraints" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_share_files"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:paddingStart="@dimen/button_padding"
+        android:paddingEnd="@dimen/button_padding"
+        android:background="@drawable/choice_2"
+        android:text="@string/share_files"
+        android:textColor="@color/white"
+        style="@style/SourceSans.Body1"
+        app:layout_constraintTop_toBottomOf="@id/bt_list_of_acknowledgments"
+        android:theme="@style/SwitchCompatTheme"
+        android:checked="true"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_title"

@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "sharing-explanation-2",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "For example, you can select a piece of text on the screen, or choose a photo from your library.\n\nThen either tap the Share button provided in the screen, or alternatively open a menu, and tap the Share button from the menu options.\n\nThis will show you various receiving apps, and selecting an app will open the app’s view for sharing your content."
+  }
+
+}

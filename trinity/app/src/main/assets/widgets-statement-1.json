@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "widgets-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "To view information in a widget, you must first open an app.",
+    "answer": "false"
+  }
+
+}

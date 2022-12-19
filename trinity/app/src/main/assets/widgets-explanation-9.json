@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "widgets-explanation-9",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Ok, I have prepared a new widget just for you.\n\nThe widget will display some special information—its a secret for now!\n\nFirst, let’s do a quick review of how to add widgets."
+  }
+
+}

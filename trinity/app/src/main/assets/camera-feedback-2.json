@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "camera-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Let’s try taking a photo in two different ways—first, with an on-screen button, and after that, by pressing a physical button.",
+    "animation": "grace_feedback1"
+  }
+
+}

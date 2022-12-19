@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "quick-settings-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good start! Let’s take a closer look at Quick Settings.",
+    "animation": "simm_feedback"
+  }
+
+}

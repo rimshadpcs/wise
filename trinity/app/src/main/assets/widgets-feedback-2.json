@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "widgets-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good work. Now let’s add a real widget!",
+    "animation": "grace_feedback1"
+  }
+
+}

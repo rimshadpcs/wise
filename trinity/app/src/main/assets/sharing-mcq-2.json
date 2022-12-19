@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "sharing-mcq-2",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which action would you use to share a photo?",
+
+      "choice1": "Tapping a share button in an app menu, or in an app screen.",
+
+      "choice2": "Long-pressing an app icon.",
+
+      "choice3": "Pressing a forward or back button in a browser.",
+
+      "choice4": "Tapping a “SEND” button in a messaging app.",
+
+      "answer": "Tapping a share button in an app menu, or in an app screen."
+
+    }
+  }

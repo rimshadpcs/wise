@@ -1,8 +1,6 @@
 package com.intractable.simm.view.activities
 
 import android.Manifest
-import android.app.Activity
-import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
@@ -17,7 +15,6 @@ import android.view.KeyEvent
 import android.view.View
 import android.view.WindowInsets
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -31,8 +28,6 @@ import androidx.fragment.app.replace
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.ktx.Firebase
 import com.intractable.simm.R
 import com.intractable.simm.databinding.ActivitySessionBinding
 import com.intractable.simm.gamelogic.Config
@@ -78,7 +73,9 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
         }
 
         sessionViewModel.eventlivedata.value = SessionViewModel.EVENT_NEXT_PAGE
-        disableRightGesture()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            disableRightGesture()
+        }
 
         sessionViewModel.getFragment().observe(this) {
             sessionBinding.progressView.visibility = View.VISIBLE
@@ -88,6 +85,13 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                     supportFragmentManager.commit {
                         setReorderingAllowed(true)
                         replace<ScreenShotFragment>(R.id.fragment_container_view)
+                        this.addToBackStack(null)
+                    }
+                }
+                "FragmentImportContact" -> {
+                    supportFragmentManager.commit {
+                        setReorderingAllowed(true)
+                        replace<FragmentImportContact>(R.id.fragment_container_view)
                         this.addToBackStack(null)
                     }
                 }
@@ -217,12 +221,26 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
                         replace<FragmentComic>(R.id.fragment_container_view)
                     }
                 }
+                "FragmentStory" -> {
+                    sessionBinding.progressView.visibility = View.GONE
+                    supportFragmentManager.commit{
+                        setReorderingAllowed(true)
+                        replace<FragmentComic>(R.id.fragment_container_view)
+                    }
+                }
                 "CallFragment" -> {
                     supportFragmentManager.commit{
                         setReorderingAllowed(true)
                         replace<CallFragment>(R.id.fragment_container_view)
                     }
                 }
+                "FragmentNearby" -> {
+                    supportFragmentManager.commit{
+                        setReorderingAllowed(true)
+                        replace<FragmentNearBy>(R.id.fragment_container_view)
+                    }
+                }
+
             }
         }
 
@@ -395,6 +413,7 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     private fun disableRightGesture() {
         sessionBinding.rootview.doOnLayout {
             val gestureInsets = sessionBinding.rootview.rootWindowInsets.getInsets(WindowInsets.Type.systemGestures())
@@ -433,6 +452,8 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
 
         }
     }
+
+
 
     override fun onRightButtonClicked(text: String?) {
         sessionViewModel.checkForNextQuestion(true)
@@ -520,7 +541,16 @@ WrongBottomSheetDialog.WrongBottomSheetListener{
             }
         }
         else if (requestCode == SessionViewModel.REQUEST_CODE_PERMISSIONS_NEARBY){
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED){
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                sessionViewModel.eventlivedata.value = SessionViewModel.EVENT_CHECK_NEARBY_PERMISSION
+                sessionViewModel.eventlivedata.value = SessionViewModel.EVENT_NONE
+            }else {
+                sessionViewModel.showSkipButton()
+            }
+        }
+        else if (requestCode == SessionViewModel.REQUEST_CODE_READ_AND_WRITE){
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+
                 sessionViewModel.nextOperationPage()
             }else {
                 sessionViewModel.showSkipButton()

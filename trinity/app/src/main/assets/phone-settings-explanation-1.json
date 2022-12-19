@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "phone-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Your phone’s Settings app is the central place to configure your phone. You can change system settings as well as app-specific settings."
+  }
+
+}

@@ -1,0 +1,52 @@
+{
+
+  "activityId": "call",
+  "fragmentClassName": "CallFragment",
+  "skipText": "We can't complete this lesson without access permission \nYou can skip the session if you want \nBut it would affect your plant growth",
+  "parameters": [
+    {
+      "text": "I am going to ask for permission to read your call log \n\nRequesting permission...",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "Good work!\nThere are lot of things your call app can do: \n\nTap on Continue button",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+
+    {
+      "text": "You can see and navigate throuh FAVOURITES, RECENT CALLS, VOICEMAIL, and CONTACTS from the Call app",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+
+    },
+    {
+      "text": "I will open the app for you just go through and comeback to lesson",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    }
+
+  ]
+}

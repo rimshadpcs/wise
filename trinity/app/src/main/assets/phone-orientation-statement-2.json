@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "phone-orientation-statement-2",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "To change from Portrait to Landscape orientation, you can either rotate your phone clockwise, or you can rotate it counter-clockwise.",
+    "answer": "true"
+  }
+
+}

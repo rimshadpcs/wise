@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "phone-orientation-explanation-2",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Remember, when rotating your phone, try to hold it vertically, instead of holding it flat."
+  }
+
+}

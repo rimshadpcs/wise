@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Great! Next, let’s explore various types of permissions.",
+    "animation": "grace_feedback1"
+  }
+
+}

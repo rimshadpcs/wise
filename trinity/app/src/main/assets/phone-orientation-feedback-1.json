@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "phone-orientation-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Excellent start!\n\nLet’s expand your knowledge some more.",
+    "animation": "simm_feedback"
+  }
+
+}

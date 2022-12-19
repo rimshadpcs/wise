@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Let’s look at how to open Quick Settings in your phone."
+  }
+
+}

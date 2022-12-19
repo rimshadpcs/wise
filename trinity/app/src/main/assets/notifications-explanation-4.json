@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "notifications-explanation-4",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "You can control how notifications appear in the Lock Screen and anywhere else in your phone.\n\nTo control how notifications appear, you can change your notification settings in the Settings app.\n\nYou can change the notification settings individually for each app."
+  }
+
+}

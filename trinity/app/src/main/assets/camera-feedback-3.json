@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "camera-feedback-3",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Before we get into this exercise, I need to ask your permission to use your phone’s camera. Tap the button below to see the permission dialog.",
+    "animation": "grace_feedback1"
+  }
+
+}

@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "phone-orientation-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "A great thing about your phone is you can view photos and videos of various sizes in ways that best suit the content.\n\nFor example, some photos are tall and narrow, while others are wider and shorter.\n\nTo view a tall or wide photo, just rotate your phone and change its orientation that suits the photo."
+  }
+
+}

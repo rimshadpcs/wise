@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "about-phone-mcq",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which phone feature would you use to get in touch with a friend?",
+
+      "choice1": "Taking a photo",
+
+      "choice2": "Sending a text message",
+
+      "choice3": "Checking your location on a map",
+
+      "choice4": "Playing a song",
+
+      "answer": "Sending a text message"
+
+    }
+  }

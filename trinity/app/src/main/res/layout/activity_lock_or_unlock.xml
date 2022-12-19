@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activities.LockOrUnlockActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_large_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gracestory_1"
+            android:contentDescription="@null" />
+
+        <View
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_bar_height"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back_button"
+            android:layout_width="@dimen/top_bar_icon_size"
+            android:layout_height="@dimen/top_bar_icon_size"
+            android:layout_marginStart="@dimen/session_side_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+            android:src="@drawable/back"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/unit8"
+            android:layout_marginEnd="@dimen/unit8_7"
+            android:layout_marginTop="@dimen/unit8"
+            android:layout_marginBottom="@dimen/unit8"
+            android:gravity="center"
+            android:text="@string/a_game_of_hide_and_seek"
+            style="@style/SourceSans.Headline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_back_button"
+            app:layout_constraintTop_toTopOf="@+id/top_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+            android:padding="@dimen/unit8"
+            />
+
+        <ImageView
+            android:id="@+id/iv_comic_title"
+            android:layout_width="@dimen/title_image_size"
+            android:layout_height="@dimen/comment_height"
+            android:layout_marginTop="@dimen/unit8_7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/title_box"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/tv_comic_title"
+            android:layout_width="@dimen/title_image_size"
+            android:layout_height="@dimen/comment_height"
+            android:padding="@dimen/unit8_2"
+            android:gravity="center"
+            android:text="The First Comic Title Test"
+            style="@style/SourceSans.Headline5"
+            app:layout_constraintStart_toStartOf="@id/iv_comic_title"
+            app:layout_constraintEnd_toEndOf="@id/iv_comic_title"
+            app:layout_constraintTop_toTopOf="@id/iv_comic_title"
+            app:layout_constraintBottom_toBottomOf="@id/iv_comic_title"
+            android:textColor="@color/black"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/title_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:layout_marginBottom="@dimen/session_side_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/iv_session"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/gestures_one" />
+
+            <ImageView
+                android:id="@+id/ivSimmMainUnderlay"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/comment_height"
+                android:contentDescription="@null"
+                android:src="@drawable/neutral_mouth_closed_floating"
+                app:layout_constraintBottom_toBottomOf="@id/ivSimmMain"
+                app:layout_constraintLeft_toLeftOf="@id/ivSimmMain"
+                app:layout_constraintRight_toRightOf="@id/ivSimmMain"
+                app:layout_constraintTop_toTopOf="@id/ivSimmMain"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ivSimmMain"
+                android:layout_width="@dimen/comment_height"
+                android:layout_height="@dimen/comment_height"
+                android:layout_marginTop="@dimen/session_side_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_session"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/simm_idleblink"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_details"
+                style="@style/SourceSans.Subtitle1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/comment_height"
+                android:layout_marginTop="@dimen/session_side_margin"
+                android:contentDescription="@null"
+                android:paddingTop="@dimen/unit8_2"
+                android:text="@string/use_your_phone_to_take_great_photos_and_videos_that_reflect_your_style_and_creativity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivSimmMain"
+                app:layout_constraintTop_toBottomOf="@id/iv_session" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_start"
+            style="@style/SourceSans.Button"
+            android:layout_width="@dimen/title_image_size"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:layout_marginBottom="@dimen/session_bottom_margin"
+            android:gravity="center|top"
+            android:text="@string/start"
+            android:background="@drawable/shadow_button_bg"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_lock"
+            android:layout_width="@dimen/top_bar_icon_size"
+            android:layout_height="@dimen/top_bar_icon_size"
+            android:layout_marginEnd="@dimen/unit8_2"
+            android:src="@drawable/lock"
+            app:layout_constraintTop_toTopOf="@id/bt_start"
+            app:layout_constraintBottom_toBottomOf="@id/bt_start"
+            app:layout_constraintEnd_toStartOf="@id/bt_start"
+            android:contentDescription="@null"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

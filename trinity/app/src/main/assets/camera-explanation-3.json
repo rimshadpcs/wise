@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "camera-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "When an app uses your phone’s camera, you will see the photo preview in the screen.\n\nWhen you are ready to take the photo, you can either tap a button in your screen, or press one of the side buttons of your phone.\n\nWe will do just that in the next exercise."
+  }
+
+}

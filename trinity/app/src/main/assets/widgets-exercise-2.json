@@ -1,0 +1,30 @@
+{
+  "activityId": "widgets-exercise-1",
+  "fragmentClassName": "FragmentWidget",
+  "parameters": [
+    {
+      "text": "Ready?\n\nGo to your Home Screen and add the Simm widget, then come back here!",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_happy",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Great work! You completed the widgets exercise!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_grin",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    }
+  ]
+}

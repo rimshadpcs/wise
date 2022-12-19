@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "notifications-mcq-2",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which of these actions would help you identify the app that has posted a notification?",
+
+      "choice1": "Dismissing the notification.",
+
+      "choice2": "Swiping right on the notification.",
+
+      "choice3": "Looking at the name and icon.",
+
+      "choice4": "Checking your e-mail.",
+
+      "answer": "Looking at the name and icon."
+
+    }
+  }

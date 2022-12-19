@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Quick Settings can be accessed from any screen, and even when your phone is locked.\n\nLet’s look at a few examples."
+  }
+
+}

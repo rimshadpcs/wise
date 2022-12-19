@@ -1,0 +1,26 @@
+
+
+{
+
+  "activityId": "gesture-storyboard",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Swiping up from the Home Screen opens the app drawer", "animation": "gestures_one"
+      },
+      {
+        "title": "When an app is open, swiping up from bottom of the screen brings you back to the Home Screen", "animation": "gestures_two"
+      },
+      {
+        "title": "Swiping right from left edge of the screen brings you back to the previous screen", "animation": "gestures_three"
+      },
+      {
+        "title": "Swiping left from right edge of the screen as shown, brings you back to the previous screen", "animation": "gestures_four"
+      }
+    ]
+  }
+
+}

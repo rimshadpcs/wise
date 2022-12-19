@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Example 3:\n\nTorch: shine a torch using the flash of your phone’s camera."
+  }
+
+}

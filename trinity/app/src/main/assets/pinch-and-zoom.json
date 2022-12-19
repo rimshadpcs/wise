@@ -1,0 +1,19 @@
+{
+
+  "activityId": "pinch-and-zoom",
+
+  "fragmentClassName": "FragmentHtml",
+  "parameters": {
+    "text": "Use two fingers to increase the size of the object by pinching. Pinch out to magnify the object until it matches the outline.",
+    "sceneOption": "1",
+    "shapeType": "0"
+  },
+  "hints": {
+    "GameState.PinchZoomActivity.ShapeBelowSize": "Pinch in to make the shape larger.",
+    "GameState.PinchZoomActivity.ShapeAboveSize": "Pinch out to make the shape smaller.",
+    "GameState.PinchZoomActivity.TooFast": "Try slowing down.",
+    "GameState.PinchZoomActivity.TooSlow": "Try going faster.",
+    "GameState.PinchZoomActivity.ActivityComplete": "Well done!"
+  }
+
+}

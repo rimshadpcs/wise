@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "contacts-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "You are learning rapidly!\n\nNow let’s try an exercise to add a new contact in your Contacts app.",
+    "animation": "simm_feedback"
+  }
+
+}

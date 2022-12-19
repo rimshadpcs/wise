@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "notifications-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "Touch gestures make it easy to navigate your phone.",
+    "answer": "true"
+  }
+
+}

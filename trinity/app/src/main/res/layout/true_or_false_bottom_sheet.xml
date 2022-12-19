@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/heart_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/candy_green">
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/SourceSans.Body1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/large_box_size"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/well_done_n_nkeep_going"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue_quest"
+        style="@style/SourceSans.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/session_top_margin"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/white_shadow_button_bg"
+        android:gravity="center|top"
+        android:text="@string/ok"
+        android:textColor="@color/candy_green"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue_quests"
+        style="@style/SourceSans.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/session_bottom_margin_pressed"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/no_shadow_white"
+        android:gravity="center|top"
+        android:visibility="invisible"
+        android:text="@string/ok"
+        android:textColor="@color/thunderbird_green"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_continue_quest"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

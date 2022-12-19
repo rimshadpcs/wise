@@ -3,6 +3,32 @@
 
   "sessionList": [
     {
+      "sessionId": "import_contact",
+      "title": "Import contact",
+      "iconImg": "touch_icon",
+      "description": "Did you know 3rd party apps can import infromation to other apps",
+      "longDescription": "Touch with one finger or two fingers, and learn multi-finger gestures.",
+      "comment": "Tap on the lesson title to get more information",
+      "titleAnimation": "gestures_title",
+      "splashComment": "Keep learning!",
+      "activityList": [
+        "import_contact_exercise"
+      ]
+    },
+    {
+      "sessionId": "touch-input",
+      "title": "App Session",
+      "iconImg": "touch_icon",
+      "description": "How to use touch input",
+      "longDescription": "Touch with one finger or two fingers, and learn multi-finger gestures.",
+      "comment": "Tap on the lesson title to get more information",
+      "titleAnimation": "gestures_title",
+      "splashComment": "Keep learning!",
+      "activityList": [
+        "nearby-exercise"
+      ]
+    },
+    {
       "sessionId": "call",
       "title": "Call",
       "iconImg": "settings_icon",
@@ -414,6 +440,20 @@
       "largeBackgroundImg": "savetheworld_title",
       "activityList": [
         "comic-simm-plan"
+      ]
+    },
+
+    {
+      "sessionId": "game-cloud-backup",
+      "title": "Cloud backup",
+      "comment": " #checkmark You can redo previous lessons, look for a checkmark next to the lesson.",
+      "isGame": "true",
+      "expandable": "true",
+      "backgroundImg": "graceintro_hometitle_top",
+      "lowerBackgroundImg": "graceintro_hometitle_bot",
+      "largeBackgroundImg": "graceintro_title",
+      "activityList": [
+        "story-cloud-backup"
       ]
     }
   ]

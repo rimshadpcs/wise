@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "touch-input-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Well done! Let's do a quick quiz to review what you have learnt.",
+    "animation": "simm_feedback"
+  }
+
+}

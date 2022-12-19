@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Just swipe down from the top of your screen to view Quick Settings.",
+    "animation": "quicksettings_one"
+  }
+
+}

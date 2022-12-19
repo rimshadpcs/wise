@@ -8,14 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.analytics.ktx.logEvent
 import com.google.firebase.ktx.Firebase
 import com.intractable.simm.R
 import com.intractable.simm.databinding.FragmentMcqBinding
 import com.intractable.simm.model.QuestionItem
-import com.intractable.simm.utils.Constants
 import com.intractable.simm.view.activities.SessionActivity
 import com.intractable.simm.viewmodel.SessionViewModel
 
@@ -94,12 +91,26 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
 
     private fun validateChoice1(){
         mcqBinding.btChoice1.setBackgroundResource(R.drawable.choice1_selected)
-        if (questionItems.choice1==questionItems.answer){
+
+        if(questionItems.answerId != 0){
+
+            if (questionItems.answerId == 1) {
+                callRightBottomSheet()
+                correct++
+
+            }
+            else{
+                incorrect++
+                callWrongBottomSheet()
+            }
+        }
+
+        else if (questionItems.choice1==questionItems.answer){
             correct++
             callRightBottomSheet()
         }
         else{
-            incorrect++
+            correct++
             callWrongBottomSheet()
 
         }
@@ -107,7 +118,20 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
 
     private fun validateChoice2(){
         mcqBinding.btChoice2.setBackgroundResource(R.drawable.choice2_selected)
-        if (questionItems.choice2 == questionItems.answer
+        if(questionItems.answerId != 0){
+
+            if (questionItems.answerId == 2) {
+                callRightBottomSheet()
+                correct++
+
+            }
+            else{
+                incorrect++
+                callWrongBottomSheet()
+            }
+        }
+
+        else if (questionItems.choice2 == questionItems.answer
         ) {
             correct++
             callRightBottomSheet()
@@ -119,7 +143,21 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
     }
     private fun validateChoice3(){
         mcqBinding.btChoice3.setBackgroundResource(R.drawable.choice3_selected)
-        if (questionItems.choice3 == questionItems.answer
+
+        if(questionItems.answerId != 0){
+
+            if (questionItems.answerId == 3) {
+                callRightBottomSheet()
+                correct++
+
+            }
+            else{
+                incorrect++
+                callWrongBottomSheet()
+            }
+        }
+
+        else if (questionItems.choice3 == questionItems.answer
         ) {
             correct++
             callRightBottomSheet()
@@ -129,10 +167,25 @@ class FragmentMcq : Fragment(),RightBottomSheetDialog.RightBottomSheetListener,
             callWrongBottomSheet()
         }
     }
+
     private fun validateChoice4(){
         mcqBinding.btChoice4.setBackgroundResource(R.drawable.choice4_selected)
 
-        if (questionItems.choice4 == questionItems.answer
+
+        if(questionItems.answerId != 0){
+
+            if (questionItems.answerId == 4) {
+                callRightBottomSheet()
+                correct++
+
+            }
+            else{
+                incorrect++
+                callWrongBottomSheet()
+            }
+        }
+
+        else if (questionItems.choice4 == questionItems.answer
         ) {
             correct++
             callRightBottomSheet()

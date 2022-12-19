@@ -1,0 +1,40 @@
+{
+
+  "activityId": "camera-permissions-sorting",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into a box.\nHint: is it a permission setting that controls access?",
+    "answers": [
+      {
+        "statement": "Only when using the app",
+        "status": "True"
+      },
+      {
+        "statement": "Only once",
+        "status": "True"
+      },
+      {
+        "statement": "Only on Fridays",
+        "status": "False"
+      },
+      {
+        "statement": "Always",
+        "status": "True"
+      },
+      {
+        "statement": "Only on my birthday",
+        "status": "False"
+      },
+      {
+        "statement": "Never",
+        "status": "True"
+      }
+      ],
+    "button_left": "True",
+    "button_right": "False"
+
+  }
+}

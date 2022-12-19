@@ -56,6 +56,7 @@ class StatementAdapter(
     override fun onBindViewHolder(holder: StatementViewHolder, position: Int) {
         val statementViewModel = statementList[position]
         holder.bind(statementViewModel)
+
     }
 
     class StatementViewHolder(

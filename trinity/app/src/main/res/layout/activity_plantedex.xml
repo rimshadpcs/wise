@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.activities.PlantedexActivity">
+
+    <View
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back_button"
+        android:layout_width="@dimen/top_bar_icon_size"
+        android:layout_height="@dimen/top_bar_icon_size"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:contentDescription="@null"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_bar" />
+
+    <TextView
+        android:id="@+id/tv_plant_collection"
+        style="@style/SourceSans.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/unit8"
+        android:text="@string/plant_collection"
+        app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_bar" />
+
+    <TextView
+        android:id="@+id/tv_community_progress"
+        style="@style/SourceSans.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit8_7"
+        android:padding="@dimen/unit8"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_plant_collection"
+        android:text="@string/community_progress"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_campaign_progress"
+        style="@style/SourceSans.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit8_7"
+        android:padding="@dimen/unit8"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_community_progress"
+        android:text="@string/campaign_completed"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/my_plant"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:contentDescription="@null"
+        android:src="@drawable/stage_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/unit8_3"
+        android:layout_marginBottom="@dimen/unit8_3"
+        android:layout_marginEnd="@dimen/large_box_size"
+        app:layout_constraintTop_toBottomOf="@id/tv_campaign_progress" />
+
+    <TextView
+        android:id="@+id/tv_plant_name"
+        style="@style/SourceCodeProBold.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:padding="@dimen/unit8"
+        android:text="@string/tulip"
+        android:textColor="@color/candy_green"
+        app:layout_constraintStart_toEndOf="@id/my_plant"
+        app:layout_constraintBottom_toTopOf="@id/tv_plant_stage_count"/>
+    <TextView
+        android:id="@+id/tv_plant_stage_count"
+        style="@style/SourceCodeProBold.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:padding="@dimen/unit8"
+        android:text="@string/stage_4_5"
+        android:textColor="@color/candy_green"
+        app:layout_constraintStart_toEndOf="@id/my_plant"
+        app:layout_constraintBottom_toTopOf="@id/tv_plant_count"/>
+    <TextView
+        android:id="@+id/tv_plant_count"
+        style="@style/SourceCodeProBold.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:padding="@dimen/unit8"
+        android:text="@string/_3_30"
+        android:textColor="@color/candy_green"
+        app:layout_constraintStart_toEndOf="@id/my_plant"
+        app:layout_constraintBottom_toBottomOf="@id/my_plant"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/plant_collection_height"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="1dp"
+        android:layout_marginBottom="@dimen/unit8_2"
+        android:layout_marginTop="@dimen/unit8_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_plant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_plantidex"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_plantdex"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/plant_collection_height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/Lato.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/comment_height"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:layout_marginBottom="@dimen/session_bottom_margin"
+        android:animateLayoutChanges="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

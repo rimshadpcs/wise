@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "contacts-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Your phone’s Contacts app gives you easy access to saved phone numbers and other contact information for people that you want to keep in touch with.\n\nBy selecting a person in your Contacts list, you can quickly send them a text message, or make a phone call, or even a video call."
+  }
+
+}

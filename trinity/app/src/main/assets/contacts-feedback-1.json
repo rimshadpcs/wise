@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "contacts-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good start!\nLet’s go over some more about contacts.",
+    "animation": "simm_feedback"
+  }
+
+}

@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Great start!\nReady to learn more about your phone?",
+    "animation": "simm_feedback"
+  }
+
+}

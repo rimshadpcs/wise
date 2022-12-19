@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "touch-input-2-explanation",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "For example, to pinch and zoom out of an image, touch the screen with two fingers. Then bring your fingers closer together to “pinch in” and make the image smaller."
+  }
+
+}

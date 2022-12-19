@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "touch-input-feedback-3",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "You did well on the quizzes \uD83D\uDE42 Almost done, let’s wrap this up with a couple of fun exercises!",
+    "animation": "simm_feedback"
+  }
+
+}

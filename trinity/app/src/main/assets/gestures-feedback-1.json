@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "gestures-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "That’s a good start to your lesson! Let’s take a closer look at touch gestures.",
+    "animation": "grace_feedback1"
+  }
+
+}

@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "notifications-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "Notifications help you stay up to date.",
+    "answer": "true"
+  }
+
+}

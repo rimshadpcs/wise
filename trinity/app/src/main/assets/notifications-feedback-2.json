@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "notifications-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Fantastic work!\n\nYou have completed the Notification’s lesson.",
+    "animation": "simm_feedback"
+  }
+
+}

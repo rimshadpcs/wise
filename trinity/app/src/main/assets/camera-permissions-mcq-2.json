@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "camera-permissions-mcq",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "To take photos, which kind of permission would an app ask for?",
+
+      "choice1": "Permission to use your phone’s camera",
+
+      "choice2": "Permission to access your recent location",
+
+      "choice3": "Permission to connect to the internet",
+
+      "choice4": "Permission to track your fitness workouts",
+
+      "answer": "Permission to use your phone’s camera"
+
+    }
+  }

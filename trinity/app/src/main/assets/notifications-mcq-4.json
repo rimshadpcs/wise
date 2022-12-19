@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "notifications-mcq-4",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "What does DND (Do Not Disturb) mode in your phone do?",
+
+      "choice1": "It restarts your phone.",
+
+      "choice2": "Your phone checks for new voicemails.",
+
+      "choice3": "Calls and notifications are silenced.",
+
+      "choice4": "Your phone goes into low power mode.",
+
+      "answer": "Calls and notifications are silenced."
+
+    }
+  }

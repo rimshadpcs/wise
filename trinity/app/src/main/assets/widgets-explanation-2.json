@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "widgets-explanation-2",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Let’s look at a few examples of widgets."
+  }
+
+}

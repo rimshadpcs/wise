@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "contacts-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "In addition to saving a phone number in a contact, you can also save an email address and a photo.",
+    "answer": "true"
+  }
+
+}

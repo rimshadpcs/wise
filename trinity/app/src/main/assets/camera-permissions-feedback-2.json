@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good work! Next, let’s look at a real permission dialog.",
+    "animation": "grace_feedback1"
+  }
+
+}

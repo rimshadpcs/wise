@@ -1,0 +1,16 @@
+{
+
+  "activityId": "touch-input",
+
+  "fragmentClassName": "FragmentHtml",
+  "parameters": {
+    "text": "Touch the screen starting with any corner of the square, and swipe along the edges to draw the entire square.",
+    "sceneOption": "0",
+    "shapeType": "0"
+  },
+  "hints": {
+    "GameState.TraceActivity.ShowingIndicator": "Touch the screen with your finger and follow the moving arrow.",
+    "GameState.TraceActivity.ActivityFailed": "Try touching all corners of the shape as you swipe over it."
+  }
+
+}

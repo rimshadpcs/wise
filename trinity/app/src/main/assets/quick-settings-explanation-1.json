@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "With Quick Settings, you can easily change some of the commonly used settings in your phone.\n\nAs the name suggests, you can access these settings quickly \uD83D\uDE42"
+  }
+
+}

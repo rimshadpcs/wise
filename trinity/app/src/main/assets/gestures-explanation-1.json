@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "gestures-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "The basic touch gestures make it easy for you to navigate your phone, and switch between its screens and apps.\n\nYou can use common touch gestures in apps to complete actions like selecting items, moving items around, and navigating between screens within an app."
+  }
+
+}

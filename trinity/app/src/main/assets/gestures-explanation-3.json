@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "gestures-explanation-3",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "There are gestures to change the size of what you are viewing, like the Pinch-and-Zoom gesture to magnify an item.\n\nLet’s try this gesture in the next screen!"
+  }
+
+}

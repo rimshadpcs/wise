@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "widgets-statement-2",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "You can resize your widget after you add it in Home Screen.",
+    "answer": "true"
+  }
+
+}

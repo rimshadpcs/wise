@@ -1,0 +1,12 @@
+{
+
+  "activityId": "touch-input-triangle",
+
+  "fragmentClassName": "FragmentHtml",
+  "parameters": {
+    "text": "Touch the screen starting with any corner of the triangle, and swipe along the edges to draw the entire triangle.",
+    "sceneOption": "0",
+    "shapeType": "1"
+  }
+
+}

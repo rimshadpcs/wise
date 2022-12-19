@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "quick-settings-mcq-2",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which action would you use to open the full Quick Settings panel?",
+
+      "choice1": "Shaking the phone.",
+
+      "choice2": "Tapping six times on the screen.",
+
+      "choice3": "Pressing the side button three times.",
+
+      "choice4": "Swiping down from the top of the screen twice.",
+
+      "answer": "Swiping down from the top of the screen twice."
+
+    }
+  }

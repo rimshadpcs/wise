@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "sharing-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good work!\n\nNext, let’s try an exercise in sharing a line of text.",
+    "animation": "grace_feedback1"
+  }
+
+}

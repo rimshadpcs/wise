@@ -95,7 +95,16 @@
     <string name="a_game_of_hide_and_seek">A Game of Hide-and-Seek 🎲</string>
     <string name="Log">Log</string>
     <string name="dialer">Dialer</string>
+    <string name="select_a_device">Select a device</string>
+    <string name="recieve">Receive</string>
+    <string name="ask_sender">Ask sender to tap Discover</string>
+    <string name="qrtext">Scan the QR code to install the application</string>
+    <string name="upload">Upload</string>
+    <string name="send_simm_image">Send Simm Image</string>
+    <string name="discover">Discover</string>
+    <string name="sending_file">Sending File</string>
     <string name="community_progress">Community Progress</string>
     <string name="campaign_completed">Campaign completed</string>
+    <string name="share_files">Share files</string>
 
 </resources>

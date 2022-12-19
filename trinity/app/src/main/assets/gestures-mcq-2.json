@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "gesture-mcq-2",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which touch gesture do you activate by swiping from the bottom of the screen?",
+
+      "choice1": "Go to Home Screen",
+
+      "choice2": "Turn off the phone",
+
+      "choice3": "Lower the volume",
+
+      "choice4": "Play music",
+
+      "answer": "Go to Home Screen"
+
+    }
+  }

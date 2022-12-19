@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Example 1:\n\nAirplane mode: use this to turn off your phone’s network access. For example: when you are in an airplane."
+  }
+
+}

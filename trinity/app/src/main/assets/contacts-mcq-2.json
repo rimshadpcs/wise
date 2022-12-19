@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "contacts-mcq-2",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which action will you take to edit an existing contact for a person?",
+
+      "choice1": "Opening the Web Browser, and typing the persons name, then opening the first search result you find.",
+
+      "choice2": "Opening the File Browser, and browsing the folders to look for the person’s name.",
+
+      "choice3": "Opening the Music Player, and viewing the music that was shared by the person.",
+
+      "choice4": "Opening the Contacts app, and scrolling through the list to find an entry with the person’s name.",
+
+      "answer": "Opening the Contacts app, and scrolling through the list to find an entry with the person’s name."
+
+    }
+  }

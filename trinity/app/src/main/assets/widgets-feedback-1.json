@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "widgets-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Excellent! Let’s go over widgets in more detail.",
+    "animation": "grace_feedback1"
+  }
+
+}

@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "phone-orientation-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good work on the quizzes!\n\nNow let’s try changing your phone’s orientation and see what it looks like.",
+    "animation": "simm_feedback"
+  }
+
+}

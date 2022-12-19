@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "phone-orientation-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which would be most suitable to view a wide image?",
+
+      "choice1": "Turning up the screen brightness.",
+
+      "choice2": "Switching the phone ringer off.",
+
+      "choice3": "Charging your phone completely.",
+
+      "choice4": "Holding your phone in landscape orientation.",
+
+      "answer": "Holding your phone in landscape orientation."
+
+    }
+  }

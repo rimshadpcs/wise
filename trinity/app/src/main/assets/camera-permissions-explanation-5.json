@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "camera-permissions-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "You will often see these options in permission dialogs.\n\nWhile using app: allow access only when you are using the app.\n\nOnly this time: the app must ask again when it wants to request access.\n\nNever: deny access."
+  }
+
+}

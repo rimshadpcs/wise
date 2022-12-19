@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "widgets-explanation-3",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Get the current weather and the day's summary."
+  }
+
+}

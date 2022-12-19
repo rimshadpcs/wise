@@ -1,0 +1,17 @@
+
+
+{
+
+  "activityId": "simm-widget-storyboard-1",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Simm widget with Plant", "image": "widget_ready_example"
+      }
+    ]
+  }
+
+}

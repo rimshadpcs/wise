@@ -1,0 +1,20 @@
+{
+
+  "activityId": "keypad-html",
+
+  "fragmentClassName": "FragmentKeypad",
+  "parameters": {
+    "text": "Type a 4-letter word in the text box below, then try to match it with the number pad.",
+    "sceneOption": "8",
+    "sessionOption": "0"
+  },
+  "hints": {
+    "GameState.GestureActivity.SwipingUp": "Touch the screen and swipe up to follow the indicator.",
+    "GameState.GestureActivity.SwipingLeft": "Swipe left as shown.",
+    "GameState.GestureActivity.TooFarLeft": "Swipe left and follow the indicator.",
+    "GameState.GestureActivity.TooFarRight": "Swipe right and follow the indicator.",
+    "GameState.GestureActivity.ScreenClick": "Tap the yellow card.",
+    "GameState.GestureActivity.ActivityComplete": "Well done! You have completed the gesture exercise."
+  }
+
+}

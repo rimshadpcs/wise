@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "widgets-explanation-8",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Find a widget you like from the app. Touch and hold the widget, then drag it to an empty spot in your Home Screen. That’s it! Your widget is ready to use.",
+    "animation": "widgets_four"
+  }
+
+}

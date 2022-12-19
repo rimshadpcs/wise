@@ -1,0 +1,58 @@
+
+
+{
+
+  "activityId": "quick-settings-exercise",
+
+  "fragmentClassName": "FragmentQuickSettings",
+
+  "skipText": "You can skip this lesson for now.\n\nCome back again another time to complete it.",
+
+  "parameters": [
+    {
+      "text": "You have learned a lot about Quick Settings.\n\nNow let’s try adding a real Quick Setting in your phone.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Your task: Add the Simm Quick Setting in your Quick Settings panel.\n\nI will guide you through it in the next screens.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "1. Open the Quick Settings panel. Then tap the Edit button.\n\n2. Find the Simm setting. It looks like a star.\n\n3. Drag the Simm setting into main panel. Then tap on it. That's it!",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+
+    {
+      "text": "Well done!\n\nYou completed the Quick Settings challenge!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_excited_feedback",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "hasCountDown": "false",
+      "img": ""
+    }
+  ],
+  "hints": {
+    "case 1": "You added the tile. Now click on the tile icon.",
+    "case 2": "Now click on the tile icon turn of the light"
+  }
+  }

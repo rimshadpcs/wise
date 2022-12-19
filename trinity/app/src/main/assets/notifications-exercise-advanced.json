@@ -1,0 +1,60 @@
+{
+
+  "activityId": "notifications-exercise-advanced",
+
+  "fragmentClassName": "FragmentNotification",
+  "notification_session_type": 2,
+  "skipText": "You can skip this lesson for now.\n\nCome back again another time to complete it.",
+
+  "parameters": [
+    {
+      "text": "Let’s test your knowledge of notifications with a little game of Hide-and-Seek!\n\nI am going to hide somewhere in your phone, you have to go and look for me.\n\nReady to play?",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_excited_feedback",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "I am looking for a hiding spot.",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "I found my hiding spot. I am going to hide now \uD83D\uDE48\uD83D\uDE42",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_excited_feedback",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Come and find me! \uD83D\uDC40\n\nHint: I am hiding in a notification that didn’t alert you or make any sound. So you will have to swipe down from top of your screen, look for a notification that could be “my hiding spot”, then tap on it.",
+      "color": "white",
+      "shouldSendNotification": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_silhouette",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "You found me.\n\nYou WIN!! \uD83D\uDE00",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "surprised",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "true",
+      "hasCountDown": "false",
+      "img": ""
+    }
+  ]
+
+}

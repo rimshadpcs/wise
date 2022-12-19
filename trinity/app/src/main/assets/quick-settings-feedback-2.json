@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "quick-settings-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good work! You are close to completing this lesson, just one more exercise to go.",
+    "animation": "simm_feedback"
+  }
+
+}

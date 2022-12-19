@@ -1,0 +1,67 @@
+{
+
+  "activityId": "contact_exercise",
+
+  "fragmentClassName": "FragmentContact",
+  "skipText": "Hmm...that didnt work. That's alright, you can skip this lesson for now.\n\nCome back again another time to complete it.",
+  "parameters": [
+    {
+      "text": "I am going to ask for permission to read your contacts.\n\nRequesting permission...",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "Try adding a new contact as follows:\n1. Tap the button below to launch the Contacts app.\n2. Create a new contact, set the \"first name\" field of the contact to \"Simm\".\n3. Save the new contact.\n4. When you are done, invoke the back gesture to come back here.",
+      "color": "white",
+      "shouldPauseForUserAction": "true ",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Looking for new contact...",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true",
+      "TextError": "I did not find a contact with first name Simm.\n\nYou can skip this lesson for now.\n\nCome back again another time to complete it."
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false",
+      "TextError": "I did not find a contact with first name Simm.\n\nYou can skip this lesson for now.\n\nCome back again another time to complete it."
+    },
+    {
+      "text": "I found a new contact with first name Simm.\n\nGood work, you added a new contact successfully!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_excited_feedback",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    }
+  ]
+}

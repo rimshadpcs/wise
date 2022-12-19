@@ -1,0 +1,65 @@
+{
+
+  "activityId": "camera-exercise",
+
+  "fragmentClassName": "FragmentCamera",
+  "skipText": "no skip functionality in this session",
+  "parameters": [
+    {
+      "text": "Tap the red button to take a photo.",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "That's a good photo!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Nice work. That was one way to take a photo.\n\nLet's try the other way by pressing a physical button.\n\nTap the button below to proceed.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_happy",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Press any side-button to take a photo.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "That's another good photo!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Excellent!\n\nYou have learned two ways to take photos, choose whichever is convenient for you the next time you take photos.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_impressed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    }
+  ]
+}

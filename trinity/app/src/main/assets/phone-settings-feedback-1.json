@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "phone-settings-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good start, you are learning more and more every day.\n\nKeep going!",
+    "animation": "simm_feedback"
+  }
+
+}

@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "quick-settings-mcq",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which action would you use to open Quick Settings?",
+
+      "choice1": "Pressing the power button.",
+
+      "choice2": "Tapping the screen a few times.",
+
+      "choice3": "Swiping down from the top of the screen.",
+
+      "choice4": "Rotating the phone in a clockwise direction.",
+
+      "answer": "Swiping down from the top of the screen."
+
+    }
+  }

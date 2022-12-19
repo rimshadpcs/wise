@@ -1,0 +1,36 @@
+{
+
+  "activityId": "share_sheet",
+
+  "fragmentClassName": "FragmentShareSheet",
+
+  "parameters": [
+    {
+      "text": "Tap the button below to open the Sharing Dialog, and share this text:\n\n\"Learn about digital technology with the Simm app!\"\n\nIf you dont wish to share it at the moment, just tap anywhere outside the Sharing Dialog to dismiss sharing.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_happy",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Nice work! You completed the sharing exercise.",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_happy",
+      "hasCountDown": "false",
+      "TextError": "Nice work. Although you didnt share the text, you have learnt what the Sharing Dialog looks like!"
+
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    }
+
+  ]
+}

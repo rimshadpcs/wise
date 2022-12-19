@@ -1,0 +1,44 @@
+{
+
+  "activityId": "screen_shot",
+  "fragmentClassName": "ScreenShotFragment",
+  "skipText": "You can skip this lesson for now.\n\nCome back again another time to complete it.",
+
+  "parameters": [
+    {
+      "text": "I am going to ask for permission to read your files \n\nRequesting permission...",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "Good work!\nClick your phone's lock/unclock button and volume down at the same time",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+
+    },
+    {
+      "text": "Good work! That's how screenshots are made",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false",
+      "TextError": "Ok, you may not tried that, but you know how to do that"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    }
+
+  ]
+}

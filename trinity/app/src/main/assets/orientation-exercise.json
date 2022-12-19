@@ -1,0 +1,37 @@
+{
+
+  "activityId": "orientation-exercise",
+
+  "fragmentClassName": "FragmentOrientation",
+
+  "parameters": [
+    {
+      "text": "Rotate your phone to Landscape Orientation to get a better view of this image.",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "orientation_img"
+    },
+    {
+      "text": "Nice work!\n\nThis view is suitable for wide images like this one.\n\nNow rotate your phone back to Portrait Orientation.",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "orientation_img"
+    },
+    {
+      "text": "Excellent! You have completed the phone orientation exercise.\n\n",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_open"
+    }
+  ]
+}

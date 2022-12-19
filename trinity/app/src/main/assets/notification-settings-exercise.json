@@ -1,0 +1,54 @@
+
+
+{
+
+  "activityId": "notification-settings-exercise",
+
+  "fragmentClassName": "NotificationSettingsFragment",
+
+  "skipText": "You can skip this lesson for now.\n\nCome back again another time to complete it.",
+
+  "parameters": [
+    {
+      "text": "In the next screen, we will change a setting in your Simm notifications.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "I will open the Notification settings screen for you.\n\nChange the “Vibration” setting to “ON”, then use the back gesture to come back here.\n\nTap the button below to open Notification settings.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false",
+      "TextError": "Open Settings->Apps->Simm->Notifications\n\nIn notification settings screen, tap on the channel “Notification learning session”. Scroll down to “Vibration” setting and change it to “ON”.\n"
+    },
+    {
+      "text": "Good work! You changed the notification setting.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_excited_feedback",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    }
+  ]
+}

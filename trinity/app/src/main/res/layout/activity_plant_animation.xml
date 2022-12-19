@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_black"
+    tools:context=".view.activities.PlantAnimationActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ivSimmFinish"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/plant_animation_height"
+        app:lottie_rawRes="@raw/purpletulipstage_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_plant_stage_description"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        android:contentDescription="@null"
+        />
+
+    <TextView
+        android:id="@+id/tv_plant_stage_description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/comment_height"
+        android:layout_marginTop="@dimen/unit8"
+        android:layout_marginStart="@dimen/session_side_margin"
+        android:layout_marginEnd="@dimen/session_side_margin"
+        android:layout_marginBottom="@dimen/fragment_margin_bottom"
+        style="@style/Lato.Body1"
+        android:visibility="invisible"
+        android:animateLayoutChanges="true"
+        android:text="@string/lesson_stage_plant"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

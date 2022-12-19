@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "gesture-mcq-3",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "How do you activate the “touch and hold” gesture?",
+
+      "choice1": "Tap the screen while holding your phone",
+
+      "choice2": "Hold your phone with two hands",
+
+      "choice3": "Touch an item on the screen and keep your finger on it for a moment",
+
+      "choice4": "Press the side button for two seconds",
+
+      "answer": "Touch an item on the screen and keep your finger on it for a moment"
+
+    }
+  }

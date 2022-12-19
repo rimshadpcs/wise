@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "touch-input-1-explanation",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "There are many touch-based gestures that you can use to operate your phone. Some of these involve swiping with a finger, and some are multi-finger gestures.\n\nThey are really easy to learn!"
+  }
+
+}

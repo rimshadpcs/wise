@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.FragmentOrientation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPortrait"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="185dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/orientation_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_txt"
+            style="@style/SourceSans.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/frame_box_bg"
+            android:paddingStart="22dp"
+            android:paddingTop="@dimen/unit6"
+            android:paddingEnd="22dp"
+            android:paddingRight="22dp"
+            android:paddingBottom="22dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/iv_img"
+            tools:targetApi="o"
+            tools:text="@string/orientation_screen_portrait" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lastpage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/session_top_margin"
+            android:layout_marginBottom="@dimen/unit8_2"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_character"
+                android:layout_width="@dimen/large_box_size"
+                android:layout_height="@dimen/large_box_size"
+                android:layout_marginStart="@dimen/session_side_margin"
+                android:contentDescription="@null"
+                android:src="@drawable/happy_mouth_open"
+                app:layout_constraintBottom_toTopOf="@+id/frame_box"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/frame_box"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_image_size"
+                android:layout_marginStart="@dimen/session_side_margin"
+                android:layout_marginEnd="@dimen/session_side_margin"
+                android:background="@drawable/frame_box_bg"
+                android:padding="@dimen/text_body_padding"
+                android:paddingBottom="@dimen/unit8_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_txt3"
+                    style="@style/SourceSans.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:targetApi="o" />
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btContinue"
+            style="@style/SourceSans.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginTop="@dimen/unit8"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:layout_marginBottom="@dimen/session_bottom_margin"
+            android:background="@drawable/shadow_button_bg"
+            android:gravity="center|top"
+            android:text="@string/continu"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:id="@+id/layout_land"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="21dp"
+            android:layout_weight="0.7"
+            android:layout_marginBottom="21dp"
+            android:src="@drawable/orientation_img"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_img2"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.3"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/frame_box_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSans.Body1"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/tv_txt2"
+                android:layout_marginEnd="10dp"
+                android:textSize="16sp"
+                tools:text="@string/orientation_screen_land"
+                tools:targetApi="o" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

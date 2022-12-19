@@ -1,0 +1,16 @@
+{
+
+  "activityId": "touch-input-circle",
+
+  "fragmentClassName": "FragmentHtml",
+  "parameters": {
+    "text": "Touch the screen at any point on the circle, and swipe along its circumference to complete a full circle.",
+    "sceneOption": "0",
+    "shapeType": "2"
+  },
+  "hints": {
+    "GameState.TraceActivity.ShowingIndicator": "Touch the screen with your finger and follow the moving arrow.",
+    "GameState.TraceActivity.CircleFailed": "Swipe your finger along the grey line to draw the circle."
+  }
+
+}

@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "sharing-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "What would you share from an app by using Android’s sharing dialog?",
+
+      "choice1": "Photos",
+
+      "choice2": "Quick Settings",
+
+      "choice3": "Notifications",
+
+      "choice4": "Touch Gestures",
+
+      "answer": "Photos"
+
+    }
+  }

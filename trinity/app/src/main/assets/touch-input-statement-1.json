@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "touch-input-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "You can use two or more fingers to provide touch input.",
+    "answer": "true"
+  }
+
+}

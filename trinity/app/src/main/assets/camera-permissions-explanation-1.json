@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "camera-permissions-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "To access your data and certain features in your phone, apps must first ask your permission.\n\nLet’s look at a permission request.\n"
+  }
+
+}

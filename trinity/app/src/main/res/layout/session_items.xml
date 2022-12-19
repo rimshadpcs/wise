@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="HomeBinding">
+
+        <variable
+            name="homeModel"
+            type="com.intractable.simm.model.SessionModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="-2dp"
+        android:layout_marginEnd="-2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lesson_title_bar_size"
+                android:background="@{homeModel.backgroundImg}"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/main_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/main_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/main_layout">
+
+                    <ImageView
+                        android:id="@+id/iv_lesson_icon"
+                        android:layout_width="@dimen/lesson_icon_size"
+                        android:layout_height="@dimen/lesson_icon_size"
+                        android:layout_marginStart="@dimen/unit8"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        app:imageResource="@{homeModel.listIcon}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@id/main_container"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_lesson_status_icon"
+                        android:layout_width="@dimen/unit8_2"
+                        android:layout_height="@dimen/unit8_2"
+                        android:layout_marginStart="@dimen/unit8_2"
+                        android:contentDescription="@null"
+                        android:src="@drawable/tick_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/iv_lesson_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_lesson_number"
+                        style="@style/SourceSans.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/unit8_2"
+                        android:text="@{homeModel.lessonNumber}"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/iv_lesson_status_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_lesson_name"
+                        style="@style/SourceSans.Headline6"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/unit8_3"
+                        android:text="@{homeModel.title}"
+                        android:textColor="@color/white"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_lesson_number"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/comic_container"
+                android:layout_width="match_parent"
+                android:layout_height="99dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_comic_number"
+                    style="@style/SourceSans.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/unit8_2"
+                    android:text="@{homeModel.lessonNumber}"
+                    android:textColor="@color/black"
+                    app:layout_constraintLeft_toLeftOf="@id/comic_container"
+                    app:layout_constraintTop_toTopOf="@id/tv_comic_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_comic_name"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/iv_comic_status_icon"
+                    android:layout_width="@dimen/unit8_2"
+                    android:layout_height="@dimen/unit8_2"
+                    android:layout_marginStart="@dimen/unit8_2"
+                    android:contentDescription="@null"
+                    android:src="@drawable/tick_icon"
+                    app:layout_constraintLeft_toRightOf="@id/tv_comic_number"
+                    app:layout_constraintTop_toTopOf="@id/tv_comic_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_comic_name" />
+
+                <TextView
+                    android:id="@+id/tv_comic_name"
+                    style="@style/SourceSans.Headline6"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/lesson_comic_title_size"
+                    android:layout_marginStart="@dimen/unit8_2"
+                    android:layout_marginTop="2dp"
+                    android:text="@{homeModel.title}"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    app:layout_constraintStart_toEndOf="@id/iv_comic_status_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_highscore"
+                    style="@style/SourceSans.Subtitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/lesson_scrollview_highscore_size"
+                    android:layout_marginStart="@dimen/unit8_2"
+                    android:layout_marginTop="2dp"
+                    android:text="@{homeModel.gameHighScore}"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    app:layout_constraintStart_toStartOf="@id/comic_container"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_comic_number" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lesson_expandable_bar_size"
+                android:background="@{homeModel.lowerBackgroundImg}"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/lesson_access_layout"
+                        android:layout_width="@dimen/lesson_icon_size"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/unit8"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <ImageView
+                            android:id="@+id/iv_lesson_access_status"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/lock"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/lesson_access_layout_extra"
+                        android:layout_width="@dimen/unit8_2"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/unit8_3"
+                        app:layout_constraintStart_toEndOf="@id/lesson_access_layout"/>
+
+                    <TextView
+                        android:id="@+id/tv_lesson_description"
+                        style="@style/SourceSans.Body1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/chip_home"
+                        android:layout_margin="@dimen/unit8"
+                        app:layout_constraintStart_toEndOf="@id/lesson_access_layout_extra"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="@dimen/unit8_2"
+                        android:textColor="@color/white"
+                        tools:ignore="RtlSymmetry" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_next_arrow"
+                        android:layout_width="@dimen/lesson_next_arrow_width"
+                        android:layout_height="@dimen/lesson_next_arrow_width"
+                        android:src="@drawable/comicarrow_icong"
+                        android:contentDescription="@null"
+                        android:layout_marginEnd="@dimen/unit8_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/session_list_separator_color" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

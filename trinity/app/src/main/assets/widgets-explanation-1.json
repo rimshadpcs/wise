@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "widgets-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "With widgets, you can quickly view brief information from an app without having to open the app."
+  }
+
+}

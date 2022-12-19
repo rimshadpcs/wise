@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "notifications-statement-3",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "Clearing a notification causes an app to delete data",
+    "answer": "false"
+  }
+
+}

@@ -1,0 +1,22 @@
+
+
+{
+
+  "activityId": "quick-settings-storyboard-1",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Swipe down from top of the screen to open Quick Settings.",
+        "animation": "quicksettings_one"
+      },
+      {
+        "title": "Swipe down again to open the full Quick Settings panel.",
+        "animation": "quicksettings_two"
+      }
+    ]
+  }
+
+}

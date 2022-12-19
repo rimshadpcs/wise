@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "phone-settings-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which feature is designed to draw your attention to your phone?",
+
+      "choice1": "Screen lock with passcode",
+
+      "choice2": "Keyboard to enter text",
+
+      "choice3": "Haptics with vibration",
+
+      "choice4": "Bluetooth radio for communication",
+
+      "answer": "Haptics with vibration"
+
+    }
+  }

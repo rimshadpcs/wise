@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "notifications-explanation-3",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "You can view notifications in your phone’s Lock Screen by simply turning on your phone screen.\n\nWhen your phone is unlocked, swiping down from top of the screen will bring up notifications again.\n\nYou can take action on a notification by tapping on it, or even dismissing it from the notification list.\n\nSome notifications have special actions that are provided by their apps.\n\n"
+  }
+
+}

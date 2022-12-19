@@ -1,0 +1,52 @@
+{
+
+  "activityId": "widgets-sorting-1",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into a box.\nHint: Is the action or information from a widget, or from a notification?",
+    "answers": [
+      {
+        "statement": "Upcoming events for today from your calendar",
+        "status": "Widget"
+      },
+      {
+        "statement": "A calendar event has just started",
+        "status": "Notification"
+      },
+      {
+        "statement": "A selection of your favorite music that can be accessed easily from your Home Screen",
+        "status": "Widget"
+      },
+      {
+        "statement": "Your music app informs you that a new album has been released by your favorite artist",
+        "status": "Notification"
+      },
+      {
+        "statement": "Resize the information from an app in your Home Screen",
+        "status": "Widget"
+      },
+      {
+        "statement": "Dismiss the new information provided by an app",
+        "status": "Notification"
+      },
+      {
+        "statement": "Battery levels of your phone and wireless headphones",
+        "status": "Widget"
+      },
+      {
+        "statement": "Search bar from a browser to start searching on the web",
+        "status": "Widget"
+      },
+      {
+        "statement": "You have just received a text message from your friend",
+        "status": "Notification"
+      }
+      ],
+    "button_left": "Widget",
+    "button_right": "Notification"
+
+  }
+}

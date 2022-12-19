@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "phone-orientation-mcq-2",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "How should you hold your phone while changing its orientation?",
+
+      "choice1": "Vertically",
+
+      "choice2": "Flat with the ground",
+
+      "choice3": "On its side",
+
+      "choice4": "Upside down",
+
+      "answer": "Vertically"
+
+    }
+  }

@@ -1,0 +1,52 @@
+{
+
+  "activityId": "quick-settings-sorting-1",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into a box.\nHint: is it a Quick Setting action?",
+    "answers": [
+      {
+        "statement": "Turning on Bluetooth",
+        "status": "Quick Setting"
+      },
+      {
+        "statement": "Opening Photos App",
+        "status": "Not Quick Setting"
+      },
+      {
+        "statement": "Turning on Wifi",
+        "status": "Quick Setting"
+      },
+      {
+        "statement": "Changing the wallpaper",
+        "status": "Not Quick Setting"
+      },
+      {
+        "statement": "Turning off Wifi",
+        "status": "Quick Setting"
+      },
+      {
+        "statement": "Enabling app permissions",
+        "status": "Not Quick Setting"
+      },
+      {
+        "statement": "Turning on plane mode",
+        "status": "Quick Setting"
+      },
+      {
+        "statement": "Changing your phone’s passcode",
+        "status": "Not Quick Setting"
+      },
+      {
+        "statement": "Turning off bluetooth",
+        "status": "Quick Setting"
+      }
+      ],
+    "button_left": "Quick Setting",
+    "button_right": "Not Quick Setting"
+
+  }
+}

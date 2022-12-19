@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "quick-settings-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "To use Quick Settings, your phone must be unlocked.",
+    "answer": "false"
+  }
+
+}

@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "touch-input-statement-2",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "You can type on the screen with one finger to write a word.",
+    "answer": "true"
+  }
+
+}

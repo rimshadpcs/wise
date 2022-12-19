@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "sharing-mcq-3",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "What happens when you tap the Share button after selecting a piece of text to share?",
+
+      "choice1": "A dialog asks you to save or delete the text.",
+
+      "choice2": "A browser searches the text on the web.",
+
+      "choice3": "A dialog asks you to choose a sharing destination.",
+
+      "choice4": "A email app composes a new email with the selected text.",
+
+      "answer": "A dialog asks you to choose a sharing destination."
+
+    }
+  }

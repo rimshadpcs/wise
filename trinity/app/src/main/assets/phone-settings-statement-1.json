@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "phone-settings-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "Your can change your app settings to vibrate when a notification appears, or have no vibration.",
+    "answer": "true"
+  }
+
+}

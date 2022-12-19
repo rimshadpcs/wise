@@ -1,0 +1,249 @@
+{
+
+  "activityId": "comic-grace-story",
+
+  "fragmentClassName": "FragmentComic",
+  "parameters": {
+    "title": "GraceStoryyyyyyyyyyy",
+    "sceneOption": "3",
+    "sessionOption": "0",
+    "comic": [
+      {
+        "background": "graceintro_1",
+        "speechBubbles": [
+          {
+            "displayText": "I am so thrilled to introduce you to a special friend. She knows a lot about Digital Photography…",
+            "fontSize": "35",
+            "textPosition": "0,100",
+            "textBoxSize": "443,206",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p1",
+            "bubblePosition": "0,272",
+            "bubbleSize": "496,413"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_1",
+        "speechBubbles": [
+          {
+            "displayText": "…and Cybersecurity. I have learned a lot from her, and you can too! Her name is…",
+            "fontSize": "35",
+            "textPosition": "0,100",
+            "textBoxSize": "443,206",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p1",
+            "bubblePosition": "0,272",
+            "bubbleSize": "496,413"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_2",
+        "speechBubbles": [
+          {
+            "displayText": "<B><i>...GRACE!</i></B>",
+            "fontSize": "95",
+            "textPosition": "0,10",
+            "textBoxSize": "540,278",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p2_1",
+            "bubblePosition": "0,435",
+            "bubbleSize": "540,350"
+          },
+          {
+            "displayText": "Hey%user_name!",
+            "fontSize": "38",
+            "textPosition": "-7,-55",
+            "textBoxSize": "257,152",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p2_2",
+            "bubblePosition": "-121,77",
+            "bubbleSize": "316,278"
+          },
+          {
+            "displayText": "I heard from Simm about you, so excited to meet you and help you learn!",
+            "fontSize": "33",
+            "textPosition": "0,-68",
+            "textBoxSize": "277,297",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p2_3",
+            "bubblePosition": "-76,-255",
+            "bubbleSize": "372,424"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_3",
+        "speechBubbles": [
+          {
+            "displayText": "I am a photographer. I enjoy taking photos of nature, mostly birds and animals, with my phone.",
+            "fontSize": "32",
+            "textPosition": "0,42",
+            "textBoxSize": "251,310",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p3_1",
+            "bubblePosition": "-102,270",
+            "bubbleSize": "314,393"
+          },
+          {
+            "displayText": "That’s so exciting!",
+            "fontSize": "32",
+            "textPosition": "0,8",
+            "textBoxSize": "226,176",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p3_2",
+            "bubblePosition": "-53,-206",
+            "bubbleSize": "226,176"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_3",
+        "speechBubbles": [
+          {
+            "displayText": "And I am an expert in Cybersecurity and Digital Wellbeing!",
+            "fontSize": "32",
+            "textPosition": "0,42",
+            "textBoxSize": "251,310",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p3_1",
+            "bubblePosition": "-102,270",
+            "bubbleSize": "314,393"
+          },
+          {
+            "displayText": "You have so much to teach us!",
+            "fontSize": "32",
+            "textPosition": "0,8",
+            "textBoxSize": "226,176",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p3_2",
+            "bubblePosition": "-53,-206",
+            "bubbleSize": "226,176"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_3",
+        "speechBubbles": [
+          {
+            "displayText": "Oh, you should check out the amazing photos I took with my new phone. First, let me talk to %user_name.",
+            "fontSize": "32",
+            "textPosition": "0,42",
+            "textBoxSize": "251,310",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p3_1",
+            "bubblePosition": "-102,270",
+            "bubbleSize": "314,393"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_4",
+        "speechBubbles": [
+          {
+            "displayText": "There is a lot you can do with your phone’s camera.",
+            "fontSize": "32",
+            "textPosition": "-25,11",
+            "textBoxSize": "362,193",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p4_1",
+            "bubblePosition": "0,365",
+            "bubbleSize": "477,214"
+          },
+          {
+            "displayText": "You can use it anytime and anywhere, take fun selfies, and capture the moments with friends and family.",
+            "fontSize": "32",
+            "textPosition": "0,-43",
+            "textBoxSize": "275,401",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p4_2",
+            "bubblePosition": "-123,32",
+            "bubbleSize": "275,488"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_4",
+        "speechBubbles": [
+          {
+            "displayText": "And best of all, share your photos with your friends!",
+            "fontSize": "37",
+            "textPosition": "-25,11",
+            "textBoxSize": "362,193",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p4_1",
+            "bubblePosition": "0,365",
+            "bubbleSize": "477,214"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_4",
+        "speechBubbles": [
+          {
+            "displayText": "I am going to teach you all about your phone’s camera...",
+            "fontSize": "32",
+            "textPosition": "-25,11",
+            "textBoxSize": "362,193",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p4_1",
+            "bubblePosition": "0,365",
+            "bubbleSize": "477,214"
+          },
+          {
+            "displayText": "...and much more about Cybersecurity and Digital Wellbeing.\\nI can’t wait to get you started on it!!",
+            "fontSize": "32",
+            "textPosition": "0,-43",
+            "textBoxSize": "275,401",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p4_2",
+            "bubblePosition": "-123,32",
+            "bubbleSize": "275,488"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_3",
+        "speechBubbles": [
+          {
+            "displayText": "Oh, I almost forgot, dont forget to check out your plants. Tap the Leaves button in Home Screen to see all of your plants.",
+            "fontSize": "32",
+            "textPosition": "0,42",
+            "textBoxSize": "251,310",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p3_1",
+            "bubblePosition": "-102,270",
+            "bubbleSize": "314,393"
+          },
+          {
+            "displayText": "Will do!",
+            "fontSize": "32",
+            "textPosition": "0,8",
+            "textBoxSize": "226,176",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p3_2",
+            "bubblePosition": "-53,-206",
+            "bubbleSize": "226,176"
+          }
+        ]
+      },
+      {
+        "background": "graceintro_4",
+        "speechBubbles": [
+          {
+            "displayText": "See you soon, and Happy Learning!",
+            "fontSize": "37",
+            "textPosition": "-25,11",
+            "textBoxSize": "362,193",
+            "textAlignment": "Center",
+            "bubbleImage": "graceintrobubble_p4_1",
+            "bubblePosition": "0,365",
+            "bubbleSize": "477,214"
+          }
+        ]
+      }
+    ]
+  }
+
+}

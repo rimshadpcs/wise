@@ -1,0 +1,27 @@
+{
+  "sessionList": [
+    {
+      "sessionId": "storyboard-tests-input",
+      "title": "Storyboard tests",
+      "iconImg": "touch_icon",
+      "description": "Storyboard tests",
+      "longDescription": "Touch with one finger or two fingers, and learn gestures",
+      "comment": "Tap on the lesson title to read its description",
+      "activityList": [
+        "storyboard-animation-tests"
+      ]
+    },
+    {
+      "sessionId": "animation-tests-input",
+      "title": "Animation tests",
+      "iconImg": "touch_icon",
+      "description": "Animation tests",
+      "longDescription": "Touch with one finger or two fingers, and learn gestures",
+      "comment": "Tap on the lesson title to read its description",
+      "activityList": [
+        "animation-tests"
+      ]
+    }
+  ]
+}
+

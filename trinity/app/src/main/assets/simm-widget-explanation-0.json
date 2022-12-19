@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "simm-widget-explanation-0",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Ready for the reveal?"
+  }
+
+}

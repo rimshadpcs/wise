@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "widgets-statement-3",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "You can move the widget to a different location in your Home Screen after adding it.",
+    "answer": "true"
+  }
+
+}

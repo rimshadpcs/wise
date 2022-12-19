@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "gestures-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Excellent! Let’s finish this lesson with a gesture exercise.",
+    "animation": "grace_feedback1"
+  }
+
+}

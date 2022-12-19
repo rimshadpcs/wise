@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "camera-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which permission will an app request from you in order to take a photo?",
+
+      "choice1": "Accessing your location.",
+
+      "choice2": "Using your phone’s camera.",
+
+      "choice3": "Connecting to a local network with Bluetooth.",
+
+      "choice4": "Listening to audio with your phone’s microphone.",
+
+      "answer": "Using your phone’s camera."
+
+    }
+  }

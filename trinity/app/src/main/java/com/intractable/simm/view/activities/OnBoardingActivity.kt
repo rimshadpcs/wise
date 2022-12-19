@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
 import com.google.firebase.ktx.Firebase
 import com.intractable.simm.R
 import com.intractable.simm.databinding.ActivityOnboardingBinding
@@ -49,7 +50,6 @@ class OnBoardingActivity : AppCompatActivity(){
 
 
         Config.instance.progressManager.checkAndUpdateAppIfNeeded()
-
 
         if(restorePrefData()){
             val i = Intent(applicationContext,HomeActivity::class.java )

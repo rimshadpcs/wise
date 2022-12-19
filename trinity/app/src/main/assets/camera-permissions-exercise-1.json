@@ -1,0 +1,57 @@
+{
+
+  "activityId": "camera_permissions",
+
+  "fragmentClassName": "FragmentPermissions",
+  "skipText": "You can skip this lesson for now.\n\nCome back again another time to complete it.",
+
+  "parameters": [
+    {
+      "text": "I am going to request Camera permission.\n\nThis is just for the learning exercise, and I won't be actually using your phone's camera for the moment.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_happy",
+      "hasCountDown": "false"
+    },
+
+    {
+      "text": "Ready?\n\nTap the Continue button to see the permission dialog.",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_happy",
+      "hasCountDown": "false"
+    },
+
+    {
+      "text": "Sending permission request, it will appear in a moment...",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_headtilt",
+      "hasCountDown": "true"
+    },
+
+    {
+      "text": "Great work! You are a pro!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "grace_impressed",
+      "hasCountDown": "false"
+    },
+
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "img": "",
+      "hasCountDown": "false"
+    }
+  ],
+  "hints": {
+    "case 1": "Looks like you have already granted the permission"
+  }
+}

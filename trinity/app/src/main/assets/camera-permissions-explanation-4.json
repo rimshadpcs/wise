@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "camera-permissions-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Here is a permission request to take photos.",
+    "animation": "systemsettings_three"
+  }
+
+}

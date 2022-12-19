@@ -1,0 +1,22 @@
+
+
+{
+
+  "activityId": "quick-settings-storyboard",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Tap the Edit button.",
+        "animation": "quicksettings_three"
+      },
+      {
+        "title": "Select a new Setting and drag it to your favorites as shown.",
+        "animation": "quicksettings_four"
+      }
+    ]
+  }
+
+}

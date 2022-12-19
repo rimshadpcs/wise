@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "touch-input-3-explanation",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Let’s start with an easy touch exercise..."
+  }
+
+}

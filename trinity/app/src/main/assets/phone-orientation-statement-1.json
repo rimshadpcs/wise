@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "phone-orientation-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "Your phone can be held in Portrait or Landscape orientation.",
+    "answer": "true"
+  }
+
+}

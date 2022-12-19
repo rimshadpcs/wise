@@ -1,0 +1,26 @@
+
+
+{
+
+  "activityId": "touch-input-mcq",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which of the following actions uses Touch Input?",
+
+      "choice1": "Swiping up and down to scroll through the screen.",
+
+      "choice2": "Pressing a physical button on the phone to power it on.",
+
+      "choice3": "Plugging a data cable into the phone.",
+
+      "choice4": "Shaking the phone.",
+
+      "answer": "Swiping up and down to scroll through the screen.",
+
+
+    }
+  }

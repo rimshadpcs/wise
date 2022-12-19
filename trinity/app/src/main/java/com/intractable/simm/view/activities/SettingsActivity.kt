@@ -84,6 +84,11 @@ class SettingsActivity : AppCompatActivity() {
                 startActivity(intent)
             }
 
+            settingsBinding.btShareFiles.setOnClickListener {
+                val intent = Intent(this, SocialActivity::class.java)
+                startActivity(intent)
+            }
+
         }
 
     }

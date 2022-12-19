@@ -1,0 +1,15 @@
+
+
+{
+
+  "activityId": "screen-lock-time-mcq",
+
+  "fragmentClassName": "FragmentMcqTimeout",
+
+  "parameters":
+    {
+
+      "question": "How long does it take for your phone to auto lock after inactivity?"
+
+    }
+  }

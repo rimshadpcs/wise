@@ -1,0 +1,102 @@
+
+
+{
+
+  "activityId": "animation-tests",
+
+  "fragmentClassName": "FragmentStoryboard",
+  "parameters": {
+    "pages":
+    [
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "gestures_title"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "grace_feedback1"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "navigation_title"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "notifications_title"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "phone_title"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "plantgrowth_sparkle"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "progressbar_sparkle"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "settings_title"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "simm_feedback1"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "widgets_title"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "simm_blink_glance"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "simm_idleblink"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "simmtalking_exclamationmark"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "simmtalking_lines"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "grace_congrats"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "simm_thumbsup"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "sparkle_animation"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "walking_pothos"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "alltulipstage_one"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "purpletulipstage_two"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "purpletulipstage_three"
+      },
+      {
+        "title": "Learn to rearrange Quick Settings on your phone",
+        "animation": "purpletulipstage_four"
+      }
+    ]
+  }
+
+}

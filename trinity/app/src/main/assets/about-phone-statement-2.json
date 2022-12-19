@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-statement-2",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "You can watch videos on your phone.",
+    "answer": "true"
+  }
+
+}

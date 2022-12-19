@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="PlantdexBinding">
+        <variable
+            name="plantModel"
+            type="com.intractable.simm.model.PlantItem" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_plant_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comment_height"
+            android:padding="@dimen/unit8_2"
+            android:src="@drawable/grow"
+            app:layoutDescription="@null"
+            android:contentDescription="@null"
+            app:imageResource="@{plantModel.plantImage}"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "notifications-mcq-1",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Which touch gesture would you use to view your notifications?",
+
+      "choice1": "Tapping thrice on the screen.",
+
+      "choice2": "Swiping left from your screens edge.",
+
+      "choice3": "Swiping down from top of screen.",
+
+      "choice4": "Swiping a circle on the screen.",
+
+      "answer": "Swiping down from top of screen."
+
+    }
+  }

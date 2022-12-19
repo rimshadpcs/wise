@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "contacts-explanation-2",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "You can save more than one phone number for a single contact and label each number to identify it, such as Work, Home, or Mobile.\n\nFurther, you can enter information like email addresses, links to personal website, postal addresses, and even notes about the person."
+  }
+
+}

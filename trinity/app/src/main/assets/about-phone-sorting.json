@@ -1,0 +1,52 @@
+{
+
+  "activityId": "about-phone-sorting",
+
+  "fragmentClassName": "FragmentTrueOrFalse",
+
+  "parameters": {
+
+    "question": "Drag each item into a box.\nHint: can you do this with your phone?",
+    "answers": [
+      {
+        "statement": "Play a video game",
+        "status": "Yes"
+      },
+      {
+        "statement": "Buy things online",
+        "status": "Yes"
+      },
+      {
+        "statement": "Levitate an object",
+        "status": "No"
+      },
+      {
+        "statement": "Learn to meditate",
+        "status": "Yes"
+      },
+      {
+        "statement": "Record videos",
+        "status": "Yes"
+      },
+      {
+        "statement": "Make it rain",
+        "status": "No"
+      },
+      {
+        "statement": "Schedule a meeting",
+        "status": "Yes"
+      },
+      {
+        "statement": "Track your fitness workouts",
+        "status": "Yes"
+      },
+      {
+        "statement": "Telepathy",
+        "status": "No"
+      }
+    ],
+    "button_left": "Yes",
+    "button_right": "No"
+
+  }
+}

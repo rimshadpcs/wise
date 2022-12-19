@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "camera-permissions-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "After granting permissions to an app, you have the option to change the permissions at a later point through your phone’s Settings app."
+  }
+
+}

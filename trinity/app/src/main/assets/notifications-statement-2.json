@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "notifications-statement-2",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "You can control notifications for each app separately.",
+    "answer": "true"
+  }
+
+}

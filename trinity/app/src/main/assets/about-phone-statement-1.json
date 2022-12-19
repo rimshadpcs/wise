@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "about-phone-statement-1",
+
+  "fragmentClassName": "FragmentRightOrWrong",
+  "parameters": {
+    "statement": "You can only use your phone to make phone calls.",
+    "answer": "false"
+  }
+
+}

@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "phone-settings-feedback-2",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Good, you have learnt so much already.\n\nNext, let’s do an exercise which involves changing an actual setting.",
+    "animation": "simm_feedback"
+  }
+
+}

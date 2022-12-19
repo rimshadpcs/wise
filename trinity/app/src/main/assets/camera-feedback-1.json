@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "camera-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Your skills are growing! Let’s learn more about your phone’s camera.",
+    "animation": "grace_feedback1"
+  }
+
+}

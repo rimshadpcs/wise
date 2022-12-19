@@ -1,0 +1,16 @@
+{
+
+  "activityId": "touch-input-circle",
+
+  "fragmentClassName": "FragmentHtml",
+  "parameters": {
+    "text": "This time, swipe along the shapes to draw a flower!",
+    "sceneOption": "0",
+    "shapeType": "3"
+  },
+  "hints": {
+    "GameState.TraceActivity.ShowingIndicator": "Touch the screen with your finger and follow the moving arrow.",
+    "GameState.TraceActivity.FlowerFailed": "Swipe your finger along the grey lines to draw a flower."
+  }
+
+}

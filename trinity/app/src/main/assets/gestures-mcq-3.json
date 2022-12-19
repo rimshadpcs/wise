@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "gesture-mcq-3",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "How do you open the app drawer?",
+
+      "choice1": "Swipe up from bottom of the Home Screen",
+
+      "choice2": "Swipe up from the Lock Screen",
+
+      "choice3": "Press the volume button",
+
+      "choice4": "Swipe down on the Home Screen",
+
+      "answer": "Swipe up from bottom of the Home Screen"
+
+    }
+  }

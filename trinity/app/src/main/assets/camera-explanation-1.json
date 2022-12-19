@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "camera-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Taking photos is one of the most popular activities with smartphone users!\n\nYour phone’s camera is always with you, so it’s convenient to take photos and videos anytime and anywhere!"
+  }
+
+}

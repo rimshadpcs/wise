@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "widgets-explanation-6",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "In your Home Screen, touch an empty space and hold down on it. This will bring up a system menu.",
+    "animation": "widgets_one"
+  }
+
+}

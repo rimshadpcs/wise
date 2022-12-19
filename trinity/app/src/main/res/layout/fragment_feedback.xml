@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.FragmentFeedback">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/iv_simm_encouraging"
+                android:layout_width="@dimen/large_box_size"
+                android:layout_height="@dimen/large_box_size"
+                android:layout_marginTop="@dimen/unit8"
+                android:layout_marginStart="@dimen/session_side_margin"
+                android:layout_marginEnd="@dimen/session_side_margin"
+                app:layout_constraintBottom_toTopOf="@id/tv_feedbak"
+                app:layout_constraintStart_toStartOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/simm_feedback"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tv_feedbak"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/large_box_size"
+                android:layout_marginTop="@dimen/unit8"
+                android:contentDescription="@null"
+                android:padding="@dimen/text_body_padding"
+                android:gravity="start"
+                android:text="@string/use_your_phone_to_take_great_photos_and_videos_that_reflect_your_style_and_creativity"
+                style="@style/SourceSans.Body1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:targetApi="o" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_Continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:layout_marginTop="@dimen/unit8"
+            android:layout_marginBottom="@dimen/session_bottom_margin"
+            android:layout_marginStart="@dimen/session_side_margin"
+            android:layout_marginEnd="@dimen/session_side_margin"
+            android:background="@drawable/shadow_button_bg"
+            android:textColor="@color/white"
+            android:text="@string/continu"
+            android:visibility="invisible"
+            style="@style/SourceSans.Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

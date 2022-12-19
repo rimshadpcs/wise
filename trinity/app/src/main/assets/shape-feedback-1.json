@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "shape-feedback-1",
+
+  "fragmentClassName": "FragmentFeedback",
+  "parameters": {
+    "text": "Well done! You rock!",
+    "img": "neutral_mouth_open"
+  }
+
+}

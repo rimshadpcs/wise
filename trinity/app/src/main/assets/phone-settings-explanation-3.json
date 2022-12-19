@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "phone-settings-explanation-3",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Notification settings can be configured to make the notifications prominent with sound and vibration, or simply only sound and no vibration, or entirely silent without any sound or vibration."
+  }
+
+}

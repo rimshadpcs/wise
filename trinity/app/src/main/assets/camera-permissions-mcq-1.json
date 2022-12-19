@@ -1,0 +1,25 @@
+
+
+{
+
+  "activityId": "camera-permissions-mcq",
+
+  "fragmentClassName": "FragmentMcq",
+
+  "parameters":
+    {
+
+      "question": "Why is it important to be aware of the permissions you give to apps?",
+
+      "choice1": "To ensure your privacy is protected",
+
+      "choice2": "To help improve apps",
+
+      "choice3": "So apps can never access your information",
+
+      "choice4": "So apps can easily access your information",
+
+      "answer": "To ensure your privacy is protected"
+
+    }
+  }

@@ -1,6 +1,9 @@
 package com.intractable.simm.di
 import android.content.Context
+import android.graphics.Color
+import android.graphics.PorterDuff
 import com.intractable.simm.R
+import com.intractable.simm.utils.MiddleDividerItemDecoration
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,6 +43,10 @@ object AppModule{
     fun provideNextButtonString(
         @ApplicationContext context: Context): String = context.getString(R.string.next)
     /* OperationResultActivity string resources ENDS here*/
-
+    @Singleton
+    @Provides
+    fun provideMyService(middleDividerItemDecoration: MiddleDividerItemDecoration): MiddleDividerItemDecoration {
+        return middleDividerItemDecoration
+    }
 
 }

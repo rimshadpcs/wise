@@ -1,0 +1,90 @@
+{
+  "sessionList": [
+
+    {
+      "sessionId": "touch-input",
+      "title": "Touch Input",
+      "iconImg": "touch_icon",
+      "description": "How to use touch input",
+      "longDescription": "Touch with one finger or two fingers, and learn gestures",
+      "comment": "Tap on the lesson title to read its description",
+      "activityList": [
+        "touch-input"
+      ]
+    },
+
+    {
+      "sessionId": "what-can-your-phone-do",
+      "title": "Your Phone",
+      "iconImg": "learn_icon",
+      "description": "About your phone",
+      "longDescription": "Learn about your phone's capabilities",
+      "comment": "You can redo exercises that have a checkmark next to them",
+      "endAnim": "grace_congrats",
+      "activityList": [
+        "storyboard-what-can-your-phone-do"
+      ]
+    },
+
+    {
+      "sessionId": "notifications",
+      "title": "Notifications",
+      "iconImg": "bell_icon",
+      "description": "Understanding notifications",
+      "longDescription": "Stay updated with new information from notifications",
+      "comment": "Your plant has grown so much, keep learning to grow it fully!",
+      "endAnim": "grace_congrats",
+      "activityList": ["question_2_session_1", "question_1_session_1", "question_0_session_1", "question_7_session_1", "question_3_session_1"]
+
+    },
+
+    {
+      "sessionId": "quick-settings",
+      "title": "Quick Settings",
+      "iconImg": "settings_icon",
+      "description": "Access your Quick Settings with a swipe gesture",
+      "longDescription": "Customize your Quick Settings for frequently used settings",
+      "comment": "You have learnt so much already in these lessons!",
+      "activityList": [
+        "quick-settings-sorting", "quick-settings-storyboard", "quick-settings-mcq", "quick-settings-exercise"
+      ]
+    },
+
+    {
+      "sessionId": "gesture-navigation",
+      "title": "Navigation",
+      "iconImg": "productivity_icon",
+      "description": "Navigating your phone with gestures",
+      "longDescription": "Navigate between apps and system screens easily with touch gestures",
+      "comment": "Take a look at your plant collection to see all of your plants",
+      "activityList": [
+        "gesture-storyboard", "gesture-mcq-1", "gesture-mcq-2", "gesture-mcq-3"
+      ]
+    },
+
+    { "sessionId": "widgets",
+      "title": "Widgets",
+      "iconImg": "widgets_icon",
+      "description": "Stay informed with Widgets",
+      "longDescription": "Learn to add widgets to your phone's Home Screen",
+      "comment": "You have made a good start in your learning journey!",
+      "endAnim": "grace_congrats",
+      "activityList": [ "widgets-storyboard", "widgets-mcq-1", "widgets-mcq-2", "widgets-exercise"]
+    },
+
+    {
+      "sessionId": "camera_permissions",
+      "title": "Permissions",
+      "iconImg": "camera_icon",
+      "description": "Understanding app permissions",
+      "longDescription": "Learn about how you can control an app's access to your phone and its data",
+      "comment": "I am working hard to bring you more lessons, stay tuned!",
+      "endAnim": "grace_congrats",
+      "activityList": [
+        "camera-permissions-mcq", "camera-permissions-storyboard", "camera_permissions", "camera-permissions-sorting"
+      ]
+    }
+
+  ]
+}
+

@@ -35,4 +35,6 @@ class SessionModel:Serializable {
     var isOnboarding = false
     var lockPageCharacter: String = ""
     var completionStatus: StorageManager.SessionStatus = StorageManager.SessionStatus.NotDone
+    var isGame = false
+    var gameHighScore = "Highscore: 0/100"
 }

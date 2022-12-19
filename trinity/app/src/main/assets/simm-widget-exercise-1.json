@@ -1,0 +1,53 @@
+{
+
+  "activityId": "simm-exercise-1",
+
+  "fragmentClassName": "FragmentNotification",
+  "notification_session_type": 3,
+
+  "skipText": "You can skip this lesson for now.\n\nCome back again another time to complete it.",
+
+  "parameters": [
+    {
+      "text": "The notifications will make it easy for you to keep track of your daily learning, so you can advance steadily in your learning journey.\n\nRemember, your daily lessons take just one or two minutes to complete!\n",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "And sometimes, I might send you a quick tip through a notification. Look out for those!",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "I am sending a notification now to show you what it looks like.\n\nTap on it to complete the exercise.",
+      "color": "white",
+      "shouldSendNotification": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "true"
+    },
+    {
+      "text": "Well done. You have made it so far!\n\nTo keep advancing, don't forget to tap on the daily notifications!\n\nAnd keep an eye on your Simm widget to check up on your plant.",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_excited_feedback",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldSendNotification": "false",
+      "shouldGoToNextActivity": "true",
+      "hasCountDown": "false",
+      "img": ""
+    }
+  ]
+
+}

@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "Your phone has many Quick Settings, so you will see a few when you swipe down.\n\nTo view more settings, swipe down one more time. Then swipe left or right in the Quick Settings panel."
+  }
+
+}

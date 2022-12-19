@@ -1,0 +1,12 @@
+
+
+{
+
+  "activityId": "quick-settings-explanation-1",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "text": "It's easy to organize your Quick Settings.\n\nLet’s see how to add a new Quick Setting to your favorites."
+  }
+
+}

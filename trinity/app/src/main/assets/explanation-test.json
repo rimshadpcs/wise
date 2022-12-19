@@ -1,0 +1,13 @@
+
+
+{
+
+  "activityId": "explanation-test",
+
+  "fragmentClassName": "FragmentExplanation",
+  "parameters": {
+    "animation": "gestures_title",
+    "text": "There are so many things you can do with your smartphone!\n\nYour phone empowers you to live better through digital technology, by giving you easy access to the digital world!"
+  }
+
+}

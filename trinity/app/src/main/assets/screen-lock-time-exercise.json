@@ -1,0 +1,110 @@
+{
+
+  "activityId": "screen-lock-time-exercise",
+
+  "fragmentClassName": "ScreenLockTimeFragment",
+
+  "skipText": "You can skip this session by clicking the skip button",
+
+  "parameters": [
+    {
+      "text": "Your screen's timeout time is %timeout",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_open",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Tap continue to open the settings page to see and change your screen's timeout time",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Your screen's timeout time has changed, and is now %timeout",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "You can find and change that setting by opening Settings->Display->Screen timeout",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+
+
+    {
+      "text": "Your passcode timeout is %lockTime",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Tap continue to open the settings page to see and change your phone's passcode timeout time",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "true",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Your passcode timeout time has changed is now %lockTime",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "You can find and change that setting by opening Settings->Security->Gear icon next to Screen lock",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "neutral_mouth_closed",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "Excellent!\n\nYou completed the exercise!",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "false",
+      "img": "simm_excited_feedback",
+      "hasCountDown": "false"
+    },
+    {
+      "text": "",
+      "color": "white",
+      "shouldPauseForUserAction": "false",
+      "shouldGoToNextActivity": "true",
+      "hasCountDown": "false",
+      "img": ""
+    }
+  ]
+
+}
